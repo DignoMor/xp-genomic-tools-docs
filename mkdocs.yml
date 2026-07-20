@@ -1,0 +1,45 @@
+site_name: xp-genomic-tools
+site_description: User docs for RGTools and companion CLIs (release 0.1.0a1)
+site_url: https://dignomor.github.io/xp-genomic-tools-docs/
+repo_url: https://github.com/DignoMor/xp-genomic-tools
+repo_name: DignoMor/xp-genomic-tools
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Install: install.md
+  - Concepts: concepts.md
+  - Formats: formats.md
+  - CLI:
+      - Overview: cli/index.md
+      - GenomicElementTools: cli/GenomicElementTools.md
+      - ExogeneousSequenceTools: cli/ExogeneousSequenceTools.md
+  - Library (RGTools): library.md
+  - FAQ: faq.md
