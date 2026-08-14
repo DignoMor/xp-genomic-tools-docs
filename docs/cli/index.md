@@ -1,6 +1,6 @@
 # CLI overview
 
-Two console scripts ship with **0.1.0a1**:
+Two console scripts ship with **0.1.0a2**:
 
 | Command | Purpose |
 | --- | --- |

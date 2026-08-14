@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+
+from release_test_helpers import preserve_agent_resources, stage_docs_revision
 
 
 DOCS_ROOT = Path(__file__).resolve().parents[1]
@@ -16,22 +19,75 @@ GENERATED = DOCS_ROOT / "docs/reference/cli/generated"
 
 
 class CliParserGenerationAcceptanceTest(unittest.TestCase):
+    def test_stale_generated_snapshot_is_detectable_before_regeneration(self) -> None:
+        """SPEC010/SPEC016: an existing parser inventory is compared before overwrite."""
+        with tempfile.TemporaryDirectory() as directory:
+            staged_root = Path(directory) / "staged-docs"
+            page = GENERATED / "genomic-element-tools.md"
+            original = page.read_text()
+            stale = re.sub(
+                r"<!-- Parser inventory: .*? -->",
+                '<!-- Parser inventory: [{"path":"stale"}] -->',
+                original,
+                count=1,
+            )
+            page.write_text(stale)
+            try:
+                staged_root.mkdir()
+                docs_revision = stage_docs_revision(DOCS_ROOT, staged_root)
+                completed = subprocess.run(
+                    [
+                        sys.executable,
+                        "scripts/build_release_docs.py",
+                        "--code-root",
+                        str(CODE_ROOT),
+                        "--site-dir",
+                        str(Path(directory) / "site"),
+                        "--code-revision",
+                        subprocess.check_output(
+                            ["git", "-C", str(CODE_ROOT), "rev-parse", "HEAD"],
+                            text=True,
+                        ).strip(),
+                        "--docs-revision",
+                        docs_revision,
+                        "--raw-source-root",
+                        str(staged_root),
+                    ],
+                    cwd=DOCS_ROOT,
+                    capture_output=True,
+                    text=True,
+                )
+            finally:
+                page.write_text(original)
+            self.assertNotEqual(completed.returncode, 0)
+            self.assertIn("is stale", completed.stderr)
+
     def test_built_references_cover_the_real_parser_trees(self) -> None:
         """The generated CLI pages are a complete release parser snapshot."""
         with tempfile.TemporaryDirectory() as directory:
-            completed = subprocess.run(
-                [
+            staged_root = Path(directory) / "staged-docs"
+            staged_root.mkdir()
+            docs_revision = stage_docs_revision(DOCS_ROOT, staged_root)
+            with preserve_agent_resources(DOCS_ROOT):
+                completed = subprocess.run(
+                    [
                     sys.executable,
                     "scripts/build_release_docs.py",
                     "--code-root",
                     str(CODE_ROOT),
                     "--site-dir",
                     directory,
-                ],
-                cwd=DOCS_ROOT,
-                capture_output=True,
-                text=True,
-            )
+                    "--code-revision",
+                    subprocess.check_output(["git", "-C", str(CODE_ROOT), "rev-parse", "HEAD"], text=True).strip(),
+                    "--docs-revision",
+                    docs_revision,
+                    "--raw-source-root",
+                    str(staged_root),
+                    ],
+                    cwd=DOCS_ROOT,
+                    capture_output=True,
+                    text=True,
+                )
         self.assertEqual(
             completed.returncode,
             0,
