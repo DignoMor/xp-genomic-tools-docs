@@ -31,7 +31,8 @@ needed).
 ## Annotations (`.npy` / `.npz`)
 
 Per-region arrays written beside region tables. Row order must match the region
-table order. Used as stats, tracks, or masks depending on the command.
+table order. Used as stats, tracks, or masks depending on the command. Masks
+have a stricter representation; see the [boolean mask reference](reference/formats/boolean-mask.md).
 
 ## MEME motifs
 

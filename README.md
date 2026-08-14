@@ -19,4 +19,19 @@ mkdocs serve
 mkdocs build
 ```
 
+## Release acceptance build
+
+Install `requirements.txt` into this repository's `.venv`, create the prescribed
+`code/.venv` from the sibling code checkout, then run:
+
+```bash
+.venv/bin/python scripts/build_release_docs.py \
+  --code-root ../code \
+  --site-dir site
+```
+
+The command regenerates representative CLI syntax from the real argparse tree,
+builds MkDocs in strict mode, and verifies the built static references and
+`llms.txt` entry point.
+
 Pushing `main` deploys the site via GitHub Pages (see `.github/workflows/pages.yml`).

@@ -42,4 +42,12 @@ nav:
       - GenomicElementTools: cli/GenomicElementTools.md
       - ExogeneousSequenceTools: cli/ExogeneousSequenceTools.md
   - Library (RGTools): library.md
+  - Reference:
+      - Convention: reference/conventions.md
+      - Python:
+          - GeneralElements.load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
+      - Formats:
+          - Boolean mask: reference/formats/boolean-mask.md
+      - CLI:
+          - mask_op intersect: reference/cli/mask-op-intersect.md
   - FAQ: faq.md

@@ -47,3 +47,7 @@ from ExogeneousSequenceTools.cli import ExogeneousSequenceTools
 ```
 
 For most users, the console scripts are enough.
+
+## Detailed reference
+
+- [`GeneralElements.load_mask_from_arr`](reference/python/general-elements/load-mask-from-arr.md)
