@@ -1,0 +1,11 @@
+{
+  "qualified_name": "ExogeneousSequenceTools",
+  "parser_reference": "../generated/exogeneous-sequence-tools.md",
+  "commands": [
+    "assemble add_adapter", "assemble concat", "assemble barcode",
+    "mutagenesis", "gen_track single_loc",
+    "track_dim_reduction max", "track_dim_reduction argmax",
+    "track_dim_reduction min", "track_dim_reduction argmin",
+    "print_stat", "motif_search", "onehot"
+  ]
+}

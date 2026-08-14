@@ -1,0 +1,31 @@
+{
+  "required_fields": ["Purpose", "Availability", "Inputs", "Types", "Shapes", "Dtypes", "Defaults", "Choices", "Constraints", "Outputs", "Ordering", "Side effects", "Failures"],
+  "entries": [
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "count_single_bw", "symbols": ["count_single_bw"], "formats": ["reference/formats/cli/genomic-element-tools/counttable", "reference/formats/cli/genomic-element-tools/trebed", "reference/formats/cli/genomic-element-tools/bed6poly", "reference/formats/cli/genomic-element-tools/wtes"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "count_paired_bw", "symbols": ["count_paired_bw"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "pad_region", "symbols": ["pad_region"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "bed2tssbed", "symbols": ["bed2tssbed"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "onehot", "symbols": ["onehot"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "motif_search", "symbols": ["motif_search"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "track2tss_bed", "symbols": ["track2tss_bed"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "filter_motif_score", "symbols": ["filter_motif_score"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "get_context_ge nearest", "symbols": ["get_context_ge nearest"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "get_context_ge windowed_argmax", "symbols": ["get_context_ge windowed_argmax"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "mask_op intersect", "symbols": ["mask_op intersect"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "mask_op union", "symbols": ["mask_op union"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "mask_op opposite", "symbols": ["mask_op opposite"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "import stat_list", "symbols": ["import stat_list"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "import allele_expanded_ES", "symbols": ["import allele_expanded_ES"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export stat_list", "symbols": ["export stat_list"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export ExogeneousSequences", "symbols": ["export ExogeneousSequences"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export WTES", "symbols": ["export WTES"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export allele_expanded_ES", "symbols": ["export allele_expanded_ES"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export CountTable", "symbols": ["export CountTable"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export Heatmap", "symbols": ["export Heatmap"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export ChromFilteredGE", "symbols": ["export ChromFilteredGE"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export MaskedGE", "symbols": ["export MaskedGE"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export TREbed", "symbols": ["export TREbed"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export MergedGE", "symbols": ["export MergedGE"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export bed6poly", "symbols": ["export bed6poly"]}
+  ]
+}

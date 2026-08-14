@@ -81,4 +81,20 @@ nav:
           - ListFile format: reference/formats/foundation/list-file.md
       - CLI:
           - mask_op intersect: reference/cli/mask-op-intersect.md
+          - GenomicElementTools reference: reference/cli/genomic-element-tools/index.md
+      - CLI output formats:
+          - CountTable: reference/formats/cli/genomic-element-tools/counttable.md
+          - TREbed: reference/formats/cli/genomic-element-tools/trebed.md
+          - bed6poly: reference/formats/cli/genomic-element-tools/bed6poly.md
+          - WTES: reference/formats/cli/genomic-element-tools/wtes.md
+          - GenomicElementTools (generated): reference/cli/generated/genomic-element-tools.md
+          - ExogeneousSequenceTools (generated): reference/cli/generated/exogeneous-sequence-tools.md
+          - ExogeneousSequenceTools reference: reference/cli/exogeneous-sequence-tools/index.md
+      - ExogeneousSequenceTools formats:
+          - Exogenous FASTA: reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
+          - Assembly outputs: reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md
+          - Mutagenesis: reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md
+          - Track and stat arrays: reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md
+          - Motif outputs: reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md
+          - One-hot outputs: reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md
   - FAQ: faq.md
