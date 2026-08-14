@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import shutil
 import subprocess
+import re
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Iterator
@@ -12,10 +13,33 @@ from typing import Iterator
 def stage_docs_revision(docs_root: Path, destination: Path) -> str:
     """Create a disposable docs checkout whose commit contains all raw targets."""
     shutil.copytree(docs_root / "docs", destination / "docs")
+    code_root = docs_root.parent / "code"
+    code_revision = subprocess.check_output(
+        ["git", "-C", str(code_root), "rev-parse", "HEAD"], text=True
+    ).strip()
+    for resource in (destination / "docs/llms.txt", destination / "docs/llms-full.txt"):
+        content = resource.read_text()
+        content = re.sub(r"(?m)^Code revision: `[0-9a-f]{40}`$", f"Code revision: `{code_revision}`", content)
+        resource.write_text(content)
     subprocess.run(["git", "init", "-q"], cwd=destination, check=True)
     subprocess.run(["git", "add", "docs"], cwd=destination, check=True)
     subprocess.run(
         ["git", "-c", "user.name=acceptance", "-c", "user.email=acceptance@example.invalid", "commit", "-qm", "staged docs"],
+        cwd=destination,
+        check=True,
+    )
+    first_revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=destination, text=True).strip()
+    for resource in (destination / "docs/llms.txt", destination / "docs/llms-full.txt"):
+        content = resource.read_text()
+        content = re.sub(
+            r"(raw\.githubusercontent\.com/[^/]+/[^/]+/)[0-9a-f]{40}(/docs/)",
+            rf"\g<1>{first_revision}\g<2>",
+            content,
+        )
+        resource.write_text(content)
+    subprocess.run(["git", "add", "docs"], cwd=destination, check=True)
+    subprocess.run(
+        ["git", "-c", "user.name=acceptance", "-c", "user.email=acceptance@example.invalid", "commit", "-qm", "bind staged resources"],
         cwd=destination,
         check=True,
     )
