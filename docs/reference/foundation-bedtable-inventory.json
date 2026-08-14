@@ -1,0 +1,26 @@
+{
+  "release": "0.1.0a2",
+  "entries": [
+    {"qualified_name": "RGTools.exceptions", "path": "reference/python/foundation/exceptions", "members": ["RGToolsInternalException", "GTFHandleFilterException", "GTFRecordNoFeatureException", "BedTableException", "BedTableLoadException", "InvalidBedRegionException", "InvalidStrandnessException"]},
+    {"qualified_name": "RGTools.logging.Logger", "path": "reference/python/foundation/logger", "members": ["Logger", "indent", "unindent", "take_log"]},
+    {"qualified_name": "RGTools.utils", "path": "reference/python/foundation/utils", "members": ["str2bool", "str2none", "reverse_complement", "NumpyEncoder"]},
+    {"qualified_name": "RGTools.ListFile.ListFile", "path": "reference/python/foundation/list-file", "members": ["ListFile", "read_file", "write_list_to_file", "get_contents", "get_num_lines"]},
+    {"qualified_name": "RGTools.BedTable.BedRegion", "path": "reference/python/bedtable/bed-region", "members": ["BedRegion", "to_dict", "get_fields", "pad_region", "__getitem__", "__eq__", "__lt__", "__le__", "__gt__", "__ne__"]},
+    {"qualified_name": "RGTools.BedTable.BedTableIterator", "path": "reference/python/bedtable/iterator", "members": ["BedTableIterator", "__iter__", "__next__"]},
+    {"qualified_name": "RGTools.BedTable.BedTable3", "path": "reference/python/bedtable/bed-table3", "members": ["BedTable3", "column_names", "column_types", "extra_column_names", "extra_column_dtype", "load_from_file", "load_from_dataframe", "load_from_bed_regions", "apply_logical_filter", "region_subset", "to_dataframe", "write", "get_chrom_names", "get_start_locs", "get_end_locs", "get_region_by_index", "iter_regions", "search_region", "concat", "subset_by_index", "copy", "__len__"]},
+    {"qualified_name": "RGTools.BedTable.BedTable6", "path": "reference/python/bedtable/bed-table6", "members": ["BedTable6", "column_names", "column_types", "get_region_names", "get_region_scores", "get_region_strands", "region_subset", "load_from_BedTable3"]},
+    {"qualified_name": "RGTools.BedTable.BedTable3Plus", "path": "reference/python/bedtable/bed-table-plus", "members": ["BedTable3Plus", "column_names", "column_types", "extra_column_names", "extra_column_dtype", "get_region_extra_column"]},
+    {"qualified_name": "RGTools.BedTable.BedTable6Plus", "path": "reference/python/bedtable/bed-table-plus", "members": ["BedTable6Plus", "column_names", "column_types", "extra_column_names", "extra_column_dtype", "get_region_extra_column"]},
+    {"qualified_name": "RGTools.BedTable.BedTablePairEnd", "path": "reference/python/bedtable/bed-table-pair-end", "members": ["BedTablePairEnd", "column_names", "column_types", "extra_column_names", "extra_column_dtype", "get_other_region_chroms", "get_other_region_starts", "get_other_region_ends", "get_pair_names", "get_pair_scores", "get_region_strands", "get_other_region_strands", "get_region_extra_column", "search_pair_extra_column", "search_second_region"]},
+    {"qualified_name": "BED-like region tables", "path": "reference/formats/foundation/bed-like", "members": ["bed3", "bed6", "bed3gene", "bed6gene", "narrowPeak", "TREbed", "bedGraph"]},
+    {"qualified_name": "bed3 format", "path": "reference/formats/foundation/bed3", "members": ["bed3", "chrom", "start", "end"]},
+    {"qualified_name": "bed6 format", "path": "reference/formats/foundation/bed6", "members": ["bed6", "name", "score", "strand"]},
+    {"qualified_name": "bed3gene format", "path": "reference/formats/foundation/bed3gene", "members": ["bed3gene", "gene_symbol"]},
+    {"qualified_name": "bed6gene format", "path": "reference/formats/foundation/bed6gene", "members": ["bed6gene", "gene_symbol"]},
+    {"qualified_name": "narrowPeak format", "path": "reference/formats/foundation/narrowpeak", "members": ["narrowPeak", "signalValue", "pValue", "qValue", "peak"]},
+    {"qualified_name": "TREbed format", "path": "reference/formats/foundation/trebed", "members": ["TREbed", "fwdTSS", "revTSS"]},
+    {"qualified_name": "bedGraph format", "path": "reference/formats/foundation/bedgraph", "members": ["bedGraph", "dataValue"]},
+    {"qualified_name": "BedTablePairEnd format", "path": "reference/formats/foundation/pair-end", "members": ["BedTablePairEnd", "chrom2", "start2", "end2", "strand2", "not BEDPE"]},
+    {"qualified_name": "ListFile format", "path": "reference/formats/foundation/list-file", "members": ["one item per line", "stdin", "stdout"]}
+  ]
+}

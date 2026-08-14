@@ -1,0 +1,11 @@
+{
+  "entries": [
+    {"kind": "python", "path": "reference/python/signal/bw-track/", "symbols": ["BaseBwTrack", "BaseBwTrack constructor", "BaseBwTrack.quantify_signal", "BaseBwTrack.get_supported_quantification_type", "BaseBwTrack.count_single_region", "SingleBwTrack", "SingleBwTrack constructor", "SingleBwTrack.count_single_region", "PairedBwTrack", "PairedBwTrack constructor", "PairedBwTrack.count_single_region"], "format": "reference/formats/signal/bigwig/"},
+    {"kind": "python", "path": "reference/python/gtf/gtf-utils/", "symbols": ["GTFRecord", "GTFRecord.search_general_info", "GTFRecord.search_add_info", "GTFHandle", "GTFHandle constructor", "GTFHandle.__iter__", "GTFHandle.__next__", "GTFHandle.filter_by_general_record", "GTFHandle.filter_by_add_record", "GTFHandle.get_comments", "GTFHandle.count_total", "GTFHandle.filter_check"], "format": "reference/formats/gtf/gencode/"},
+    {"kind": "python", "path": "reference/python/snp/ensembl-rest-search/", "symbols": ["EnsemblRestSearch", "EnsemblRestSearch constructor", "EnsemblRestSearch.genome_version2url_dict", "EnsemblRestSearch.get_rsid_from_location", "EnsemblRestSearch.get_rsid_snp_simple_info", "EnsemblRestSearch.prioritize_rsids"], "format": "reference/formats/snp/ensembl-simple-info/"},
+    {"kind": "format", "path": "reference/formats/signal/bigwig/", "symbols": ["BigWig"]},
+    {"kind": "format", "path": "reference/formats/gtf/gencode/", "symbols": ["GTF"]},
+    {"kind": "format", "path": "reference/formats/snp/ensembl-simple-info/", "symbols": ["Ensembl SNP simple info"]}
+  ],
+  "required_fields": ["Purpose", "Availability", "Inputs", "Types", "Shapes", "Dtypes", "Defaults", "Choices", "Constraints", "Outputs", "Ordering", "Side effects", "Failures"]
+}

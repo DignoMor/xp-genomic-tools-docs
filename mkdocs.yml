@@ -46,8 +46,39 @@ nav:
       - Convention: reference/conventions.md
       - Python:
           - GeneralElements.load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
+          - Element collections: reference/python/elements/index.md
+          - MemeMotif: reference/python/motifs/meme-motif.md
+          - BigWig signal tracks: reference/python/signal/bw-track.md
+          - GENCODE GTF streaming: reference/python/gtf/gtf-utils.md
+          - EnsemblRestSearch: reference/python/snp/ensembl-rest-search.md
+          - Foundation exceptions: reference/python/foundation/exceptions.md
+          - Foundation Logger: reference/python/foundation/logger.md
+          - Foundation utilities: reference/python/foundation/utils.md
+          - ListFile: reference/python/foundation/list-file.md
+          - BedRegion: reference/python/bedtable/bed-region.md
+          - BedTableIterator: reference/python/bedtable/iterator.md
+          - BedTable3: reference/python/bedtable/bed-table3.md
+          - BedTable6: reference/python/bedtable/bed-table6.md
+          - BedTable Plus: reference/python/bedtable/bed-table-plus.md
+          - BedTablePairEnd (experimental): reference/python/bedtable/bed-table-pair-end.md
       - Formats:
           - Boolean mask: reference/formats/boolean-mask.md
+          - FASTA: reference/formats/elements/fasta.md
+          - Annotation arrays: reference/formats/elements/annotation-arrays.md
+          - MEME motif: reference/formats/motifs/meme.md
+          - BigWig signal: reference/formats/signal/bigwig.md
+          - GENCODE GTF: reference/formats/gtf/gencode.md
+          - Ensembl SNP simple info: reference/formats/snp/ensembl-simple-info.md
+          - BED-like region tables: reference/formats/foundation/bed-like.md
+          - bed3: reference/formats/foundation/bed3.md
+          - bed6: reference/formats/foundation/bed6.md
+          - bed3gene: reference/formats/foundation/bed3gene.md
+          - bed6gene: reference/formats/foundation/bed6gene.md
+          - narrowPeak: reference/formats/foundation/narrowpeak.md
+          - TREbed: reference/formats/foundation/trebed.md
+          - bedGraph: reference/formats/foundation/bedgraph.md
+          - BedTablePairEnd format (experimental): reference/formats/foundation/pair-end.md
+          - ListFile format: reference/formats/foundation/list-file.md
       - CLI:
           - mask_op intersect: reference/cli/mask-op-intersect.md
   - FAQ: faq.md
