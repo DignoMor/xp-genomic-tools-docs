@@ -53,6 +53,62 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
             f"stdout:\n{completed.stdout}\nstderr:\n{completed.stderr}",
         )
 
+    def test_release_rejects_method_at_same_library_article_list_level(
+        self,
+    ) -> None:
+        """SPEC001: Library article nesting keeps operations under their collection."""
+        library_path = DOCS_ROOT / "docs/library.md"
+        original = library_path.read_text()
+        nested = (
+            "- [GeneralElements, GenomicElements, and ExogeneousSequences]"
+            "(reference/python/elements/index.md)\n"
+            "    - [`GeneralElements.load_mask_from_arr`]"
+            "(reference/python/general-elements/load-mask-from-arr.md)\n"
+        )
+        peer = (
+            "- [GeneralElements, GenomicElements, and ExogeneousSequences]"
+            "(reference/python/elements/index.md)\n"
+            "  - [`GeneralElements.load_mask_from_arr`]"
+            "(reference/python/general-elements/load-mask-from-arr.md)\n"
+        )
+        self.assertIn(nested, original)
+
+        try:
+            library_path.write_text(original.replace(nested, peer))
+            with tempfile.TemporaryDirectory() as directory:
+                completed = self._run_release_build(directory)
+        finally:
+            library_path.write_text(original)
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("Library article list", completed.stderr)
+
+    def test_release_rejects_unmarked_method_navigation_label(self) -> None:
+        """SPEC001: method pages are labeled as methods in Python navigation."""
+        config_path = DOCS_ROOT / "mkdocs.yml"
+        original_config = config_path.read_text()
+        method_label = (
+            "                  - load_mask_from_arr(): "
+            "reference/python/general-elements/load-mask-from-arr.md\n"
+        )
+        unmarked_label = (
+            "                  - load_mask_from_arr: "
+            "reference/python/general-elements/load-mask-from-arr.md\n"
+        )
+        self.assertIn(method_label, original_config)
+
+        try:
+            config_path.write_text(
+                original_config.replace(method_label, unmarked_label)
+            )
+            with tempfile.TemporaryDirectory() as directory:
+                completed = self._run_release_build(directory)
+        finally:
+            config_path.write_text(original_config)
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("presented as a method", completed.stderr)
+
     def test_release_rejects_method_nested_under_wrong_api_group(self) -> None:
         """SPEC001: operation pages remain beneath their declaring API type."""
         config_path = DOCS_ROOT / "mkdocs.yml"
@@ -60,12 +116,12 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
         correct_navigation = """          - Element collections:
               - Overview: reference/python/elements/index.md
               - GeneralElements:
-                  - load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
+                  - load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
 """
         wrong_navigation = """          - Element collections:
               - Overview: reference/python/elements/index.md
               - GenomicElements:
-                  - load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
+                  - load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
 """
         self.assertIn(correct_navigation, original_config)
 

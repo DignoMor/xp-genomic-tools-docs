@@ -49,9 +49,12 @@ class NavigationAncestryParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.ancestors: dict[str, list[tuple[str, ...]]] = defaultdict(list)
+        self.titles: dict[str, list[str]] = defaultdict(list)
         self._list_item_labels: list[str | None] = []
         self._label_index: int | None = None
         self._label_text: list[str] = []
+        self._link_target: str | None = None
+        self._link_text: list[str] = []
 
     def handle_starttag(
         self, tag: str, attrs: list[tuple[str, str | None]]
@@ -72,14 +75,19 @@ class NavigationAncestryParser(HTMLParser):
             return
         href = attributes.get("href")
         if href is not None:
+            target = _library_target(href)
             groups = tuple(
                 label for label in self._list_item_labels[:-1] if label is not None
             )
-            self.ancestors[_library_target(href)].append(groups)
+            self.ancestors[target].append(groups)
+            self._link_target = target
+            self._link_text = []
 
     def handle_data(self, data: str) -> None:
         if self._label_index is not None:
             self._label_text.append(data)
+        elif self._link_target is not None:
+            self._link_text.append(data)
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "label" and self._label_index is not None:
@@ -87,8 +95,38 @@ class NavigationAncestryParser(HTMLParser):
             self._list_item_labels[self._label_index] = label
             self._label_index = None
             self._label_text = []
+        elif tag == "a" and self._link_target is not None:
+            title = " ".join("".join(self._link_text).split())
+            self.titles[self._link_target].append(title)
+            self._link_target = None
+            self._link_text = []
         elif tag == "li":
             self._list_item_labels.pop()
+
+
+class ArticleListDepthParser(HTMLParser):
+    """Record the enclosing list-item depth of each Library article link."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.depths: dict[str, int] = {}
+        self._list_depth = 0
+
+    def handle_starttag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        if tag == "li":
+            self._list_depth += 1
+            return
+        if tag != "a":
+            return
+        href = dict(attrs).get("href")
+        if href is not None:
+            self.depths[_library_target(href)] = self._list_depth
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "li":
+            self._list_depth -= 1
 
 
 def _run(command: list[str]) -> subprocess.CompletedProcess[str]:
@@ -503,6 +541,22 @@ def _validate_built_artifact(
             + ", ".join(sorted(missing_library_links))
         )
 
+    article_lists = ArticleListDepthParser()
+    article_lists.feed(library_article)
+    collection_depth = article_lists.depths.get("reference/python/elements/")
+    method_depth = article_lists.depths.get(
+        "reference/python/general-elements/load-mask-from-arr/"
+    )
+    if (
+        collection_depth is None
+        or method_depth is None
+        or method_depth <= collection_depth
+    ):
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must be nested beneath its "
+            "declaring collection in the Library article list"
+        )
+
     navigation = NavigationAncestryParser()
     navigation.feed(library_html)
     method_ancestors = navigation.ancestors[
@@ -514,6 +568,14 @@ def _validate_built_artifact(
         raise RuntimeError(
             "GeneralElements.load_mask_from_arr must be nested beneath its "
             "declaring API group in built navigation"
+        )
+    method_titles = navigation.titles[
+        "reference/python/general-elements/load-mask-from-arr/"
+    ]
+    if not method_titles or any("()" not in title for title in method_titles):
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must be presented as a method "
+            "in built navigation"
         )
 
     for name in ("python", "cli"):

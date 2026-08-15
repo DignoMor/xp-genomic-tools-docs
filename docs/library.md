@@ -53,7 +53,7 @@ For most users, the console scripts are enough.
 ### Element collections
 
 - [GeneralElements, GenomicElements, and ExogeneousSequences](reference/python/elements/index.md)
-  - [`GeneralElements.load_mask_from_arr`](reference/python/general-elements/load-mask-from-arr.md)
+    - [`GeneralElements.load_mask_from_arr`](reference/python/general-elements/load-mask-from-arr.md)
 
 ### Foundation
 
