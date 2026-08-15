@@ -50,4 +50,30 @@ For most users, the console scripts are enough.
 
 ## Detailed reference
 
-- [`GeneralElements.load_mask_from_arr`](reference/python/general-elements/load-mask-from-arr.md)
+### Element collections
+
+- [GeneralElements, GenomicElements, and ExogeneousSequences](reference/python/elements/index.md)
+  - [`GeneralElements.load_mask_from_arr`](reference/python/general-elements/load-mask-from-arr.md)
+
+### Foundation
+
+- [Exceptions](reference/python/foundation/exceptions.md)
+- [Logger](reference/python/foundation/logger.md)
+- [Utilities](reference/python/foundation/utils.md)
+- [ListFile](reference/python/foundation/list-file.md)
+
+### BedTable
+
+- [BedRegion](reference/python/bedtable/bed-region.md)
+- [BedTableIterator](reference/python/bedtable/iterator.md)
+- [BedTable3](reference/python/bedtable/bed-table3.md)
+- [BedTable6](reference/python/bedtable/bed-table6.md)
+- [BedTable3Plus and BedTable6Plus](reference/python/bedtable/bed-table-plus.md)
+- [BedTablePairEnd (experimental)](reference/python/bedtable/bed-table-pair-end.md)
+
+### Motifs, signal, GTF, and SNP
+
+- [MemeMotif](reference/python/motifs/meme-motif.md)
+- [BigWig signal tracks](reference/python/signal/bw-track.md)
+- [GENCODE GTF streaming](reference/python/gtf/gtf-utils.md)
+- [EnsemblRestSearch](reference/python/snp/ensembl-rest-search.md)

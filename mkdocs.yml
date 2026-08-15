@@ -45,8 +45,10 @@ nav:
   - Reference:
       - Convention: reference/conventions.md
       - Python:
-          - GeneralElements.load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
-          - Element collections: reference/python/elements/index.md
+          - Element collections:
+              - Overview: reference/python/elements/index.md
+              - GeneralElements:
+                  - load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
           - MemeMotif: reference/python/motifs/meme-motif.md
           - BigWig signal tracks: reference/python/signal/bw-track.md
           - GENCODE GTF streaming: reference/python/gtf/gtf-utils.md

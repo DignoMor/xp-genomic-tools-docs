@@ -14,41 +14,70 @@ CODE_ROOT = DOCS_ROOT.parent / "code"
 
 
 class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
+    def _run_release_build(self, directory: str) -> subprocess.CompletedProcess[str]:
+        staged_root = Path(directory) / "staged-docs"
+        staged_root.mkdir()
+        docs_revision = stage_docs_revision(DOCS_ROOT, staged_root)
+        with preserve_agent_resources(DOCS_ROOT):
+            return subprocess.run(
+                [
+                    sys.executable,
+                    "scripts/build_release_docs.py",
+                    "--code-root",
+                    str(CODE_ROOT),
+                    "--site-dir",
+                    directory,
+                    "--code-revision",
+                    subprocess.check_output(
+                        ["git", "-C", str(CODE_ROOT), "rev-parse", "HEAD"],
+                        text=True,
+                    ).strip(),
+                    "--docs-revision",
+                    docs_revision,
+                    "--raw-source-root",
+                    str(staged_root),
+                ],
+                cwd=DOCS_ROOT,
+                capture_output=True,
+                text=True,
+            )
+
     def test_representative_reference_builds_as_a_release_artifact(self) -> None:
         """SPEC001: the release command proves the representative built-site seam."""
         with tempfile.TemporaryDirectory() as directory:
-            staged_root = Path(directory) / "staged-docs"
-            staged_root.mkdir()
-            docs_revision = stage_docs_revision(DOCS_ROOT, staged_root)
-            with preserve_agent_resources(DOCS_ROOT):
-                completed = subprocess.run(
-                    [
-                        sys.executable,
-                        "scripts/build_release_docs.py",
-                        "--code-root",
-                        str(CODE_ROOT),
-                        "--site-dir",
-                        directory,
-                        "--code-revision",
-                        subprocess.check_output(
-                            ["git", "-C", str(CODE_ROOT), "rev-parse", "HEAD"],
-                            text=True,
-                        ).strip(),
-                        "--docs-revision",
-                        docs_revision,
-                        "--raw-source-root",
-                        str(staged_root),
-                    ],
-                    cwd=DOCS_ROOT,
-                    capture_output=True,
-                    text=True,
-                )
+            completed = self._run_release_build(directory)
 
         self.assertEqual(
             completed.returncode,
             0,
             f"stdout:\n{completed.stdout}\nstderr:\n{completed.stderr}",
         )
+
+    def test_release_rejects_method_nested_under_wrong_api_group(self) -> None:
+        """SPEC001: operation pages remain beneath their declaring API type."""
+        config_path = DOCS_ROOT / "mkdocs.yml"
+        original_config = config_path.read_text()
+        correct_navigation = """          - Element collections:
+              - Overview: reference/python/elements/index.md
+              - GeneralElements:
+                  - load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
+"""
+        wrong_navigation = """          - Element collections:
+              - Overview: reference/python/elements/index.md
+              - GenomicElements:
+                  - load_mask_from_arr: reference/python/general-elements/load-mask-from-arr.md
+"""
+        self.assertIn(correct_navigation, original_config)
+
+        try:
+            config_path.write_text(original_config.replace(correct_navigation, wrong_navigation))
+            with tempfile.TemporaryDirectory() as directory:
+                completed = self._run_release_build(directory)
+        finally:
+            config_path.write_text(original_config)
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("declaring API group", completed.stderr)
 
 
 if __name__ == "__main__":

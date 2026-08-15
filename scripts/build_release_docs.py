@@ -5,8 +5,11 @@ import html
 import json
 import re
 import subprocess
+from collections import defaultdict
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
+from urllib.parse import urljoin, urlparse
 
 
 DOCS_ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +37,58 @@ PRIVATE_MARKERS = re.compile(
     r"(?:/specs/|delivery-specs?|pipeline[-_ ]contracts?|\.scratch/|private/|\bSPEC\d{3}\b)",
     re.IGNORECASE,
 )
+
+
+def _library_target(href: str) -> str:
+    return urlparse(urljoin("https://docs.invalid/library/", href)).path.lstrip("/")
+
+
+class NavigationAncestryParser(HTMLParser):
+    """Collect the rendered navigation groups containing each target."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.ancestors: dict[str, list[tuple[str, ...]]] = defaultdict(list)
+        self._list_item_labels: list[str | None] = []
+        self._label_index: int | None = None
+        self._label_text: list[str] = []
+
+    def handle_starttag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        if tag == "li":
+            self._list_item_labels.append(None)
+            return
+        attributes = dict(attrs)
+        if tag == "label" and "md-nav__link" in (
+            attributes.get("class") or ""
+        ).split():
+            self._label_index = len(self._list_item_labels) - 1
+            self._label_text = []
+            return
+        if tag != "a":
+            return
+        if "md-nav__link" not in (attributes.get("class") or "").split():
+            return
+        href = attributes.get("href")
+        if href is not None:
+            groups = tuple(
+                label for label in self._list_item_labels[:-1] if label is not None
+            )
+            self.ancestors[_library_target(href)].append(groups)
+
+    def handle_data(self, data: str) -> None:
+        if self._label_index is not None:
+            self._label_text.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "label" and self._label_index is not None:
+            label = " ".join("".join(self._label_text).split())
+            self._list_item_labels[self._label_index] = label
+            self._label_index = None
+            self._label_text = []
+        elif tag == "li":
+            self._list_item_labels.pop()
 
 
 def _run(command: list[str]) -> subprocess.CompletedProcess[str]:
@@ -428,6 +483,38 @@ def _validate_built_artifact(
     for name, path in pages.items():
         if not path.is_file():
             raise RuntimeError(f"Missing built {name} reference: {path}")
+
+    library_path = site_dir / "library/index.html"
+    library_html = html.unescape(library_path.read_text())
+    library_article = library_html.split("<article", 1)[1].split("</article>", 1)[0]
+    library_links = {
+        _library_target(href)
+        for href in re.findall(r'href="([^"]+)"', library_article)
+    }
+    expected_python_links = {
+        _site_path(entry["path"]).removesuffix("index.html")
+        for entry in _load_inventories()
+        if entry["path"].startswith("reference/python/")
+    }
+    missing_library_links = expected_python_links - library_links
+    if missing_library_links:
+        raise RuntimeError(
+            "Built Library page omits declared Python references: "
+            + ", ".join(sorted(missing_library_links))
+        )
+
+    navigation = NavigationAncestryParser()
+    navigation.feed(library_html)
+    method_ancestors = navigation.ancestors[
+        "reference/python/general-elements/load-mask-from-arr/"
+    ]
+    if not method_ancestors or any(
+        not groups or groups[-1] != "GeneralElements" for groups in method_ancestors
+    ):
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must be nested beneath its "
+            "declaring API group in built navigation"
+        )
 
     for name in ("python", "cli"):
         rendered = html.unescape(pages[name].read_text())
