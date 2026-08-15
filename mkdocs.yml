@@ -47,8 +47,8 @@ nav:
       - Python:
           - Element collections:
               - Overview: reference/python/elements/index.md
-              - GeneralElements:
-                  - load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
+          - Operations:
+              - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
           - MemeMotif: reference/python/motifs/meme-motif.md
           - BigWig signal tracks: reference/python/signal/bw-track.md
           - GENCODE GTF streaming: reference/python/gtf/gtf-utils.md

@@ -104,31 +104,6 @@ class NavigationAncestryParser(HTMLParser):
             self._list_item_labels.pop()
 
 
-class ArticleListDepthParser(HTMLParser):
-    """Record the enclosing list-item depth of each Library article link."""
-
-    def __init__(self) -> None:
-        super().__init__()
-        self.depths: dict[str, int] = {}
-        self._list_depth = 0
-
-    def handle_starttag(
-        self, tag: str, attrs: list[tuple[str, str | None]]
-    ) -> None:
-        if tag == "li":
-            self._list_depth += 1
-            return
-        if tag != "a":
-            return
-        href = dict(attrs).get("href")
-        if href is not None:
-            self.depths[_library_target(href)] = self._list_depth
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag == "li":
-            self._list_depth -= 1
-
-
 def _run(command: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         command,
@@ -541,37 +516,38 @@ def _validate_built_artifact(
             + ", ".join(sorted(missing_library_links))
         )
 
-    article_lists = ArticleListDepthParser()
-    article_lists.feed(library_article)
-    collection_depth = article_lists.depths.get("reference/python/elements/")
-    method_depth = article_lists.depths.get(
-        "reference/python/general-elements/load-mask-from-arr/"
-    )
-    if (
-        collection_depth is None
-        or method_depth is None
-        or method_depth <= collection_depth
-    ):
+    # Element collections is a class-only grouping: the representative operation
+    # page must stay out of the Library article's collection listing.
+    method_target = "reference/python/general-elements/load-mask-from-arr/"
+    if method_target in library_links:
         raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must be nested beneath its "
-            "declaring collection in the Library article list"
+            "The Element collections Library section is class-only; operation "
+            "pages such as GeneralElements.load_mask_from_arr must not appear there"
         )
 
     navigation = NavigationAncestryParser()
     navigation.feed(library_html)
-    method_ancestors = navigation.ancestors[
-        "reference/python/general-elements/load-mask-from-arr/"
-    ]
-    if not method_ancestors or any(
-        not groups or groups[-1] != "GeneralElements" for groups in method_ancestors
-    ):
+    method_ancestors = navigation.ancestors[method_target]
+    if not method_ancestors:
         raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must be nested beneath its "
-            "declaring API group in built navigation"
+            "GeneralElements.load_mask_from_arr must remain reachable in built "
+            "navigation"
         )
-    method_titles = navigation.titles[
-        "reference/python/general-elements/load-mask-from-arr/"
-    ]
+    # Class/reference-area groupings list types, not operations. The operation
+    # page belongs only under the explicit Operations grouping.
+    for groups in method_ancestors:
+        if "Element collections" in groups:
+            raise RuntimeError(
+                "GeneralElements.load_mask_from_arr must not occupy the "
+                "class-only Element collections navigation group"
+            )
+        if not groups or groups[-1] != "Operations":
+            raise RuntimeError(
+                "GeneralElements.load_mask_from_arr must appear under the "
+                "explicit Operations grouping, not as a peer of classes, "
+                "modules, or reference areas"
+            )
+    method_titles = navigation.titles[method_target]
     if not method_titles or any("()" not in title for title in method_titles):
         raise RuntimeError(
             "GeneralElements.load_mask_from_arr must be presented as a method "
