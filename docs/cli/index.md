@@ -1,6 +1,6 @@
 # CLI overview
 
-Two console scripts ship with **0.1.0a2** (MotifTools ships in **0.2.0a1**):
+Three console scripts ship with **0.2.0a1**:
 
 | Command | Purpose |
 | --- | --- |

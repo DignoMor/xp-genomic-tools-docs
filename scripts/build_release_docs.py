@@ -30,11 +30,11 @@ REFERENCE_FIELDS = (
     "Side effects",
     "Failures",
 )
-RELEASE = "0.1.0a2"
+RELEASE = "0.2.0a1"
 CLI_RELEASES = {
     "GenomicElementTools": RELEASE,
     "ExogeneousSequenceTools": RELEASE,
-    "MotifTools": "0.2.0a1",
+    "MotifTools": RELEASE,
 }
 PAGES_BASE = "https://dignomor.github.io/xp-genomic-tools-docs/"
 DOCS_RAW_BASE = "https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs"
@@ -408,7 +408,7 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.1.0a2`. Invoke it through the
+Supported in `GenomicElementTools` for release `{CLI_RELEASES['GenomicElementTools']}`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Syntax
