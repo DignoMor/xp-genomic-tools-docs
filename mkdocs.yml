@@ -41,6 +41,7 @@ nav:
       - Overview: cli/index.md
       - GenomicElementTools: cli/GenomicElementTools.md
       - ExogeneousSequenceTools: cli/ExogeneousSequenceTools.md
+      - MotifTools: cli/MotifTools.md
   - Library (RGTools): library.md
   - Reference:
       - Convention: reference/conventions.md
@@ -50,6 +51,7 @@ nav:
           - Operations:
               - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
           - MemeMotif: reference/python/motifs/meme-motif.md
+          - MotifGeneration: reference/python/motifs/motif-generation.md
           - BigWig signal tracks: reference/python/signal/bw-track.md
           - GENCODE GTF streaming: reference/python/gtf/gtf-utils.md
           - EnsemblRestSearch: reference/python/snp/ensembl-rest-search.md
@@ -91,7 +93,9 @@ nav:
           - WTES: reference/formats/cli/genomic-element-tools/wtes.md
           - GenomicElementTools (generated): reference/cli/generated/genomic-element-tools.md
           - ExogeneousSequenceTools (generated): reference/cli/generated/exogeneous-sequence-tools.md
+          - MotifTools (generated): reference/cli/generated/motif-tools.md
           - ExogeneousSequenceTools reference: reference/cli/exogeneous-sequence-tools/index.md
+          - MotifTools reference: reference/cli/motif-tools/index.md
       - ExogeneousSequenceTools formats:
           - Exogenous FASTA: reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
           - Assembly outputs: reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md

@@ -1,0 +1,9 @@
+{
+  "commands": [
+    "anti_motif",
+    "random_seq",
+    "pwm_seq",
+    "barcodes"
+  ],
+  "parser_reference": "../generated/motif-tools.md"
+}

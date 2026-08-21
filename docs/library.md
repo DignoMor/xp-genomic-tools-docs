@@ -34,6 +34,7 @@ import RGTools.SNP_utils
 | Regions + genome FASTA + annotations | `GenomicElements` |
 | FASTA-only sequence sets | `ExogeneousSequences` |
 | MEME motif files | `MemeMotif` |
+| Anti-motif transforms | `RGTools.MotifGeneration.make_anti_motifs` |
 | BigWig signal | `SingleBwTrack` / paired track helpers |
 | One-item-per-line lists | `ListFile` |
 
@@ -44,6 +45,7 @@ The CLI classes are importable if you need programmatic entry:
 ```python
 from GenomicElementTools.cli import GenomicElementTools
 from ExogeneousSequenceTools.cli import ExogeneousSequenceTools
+from MotifTools.cli import MotifTools
 ```
 
 For most users, the console scripts are enough.
@@ -76,6 +78,7 @@ element-collection class page above.
 ### Motifs, signal, GTF, and SNP
 
 - [MemeMotif](reference/python/motifs/meme-motif.md)
+- [MotifGeneration](reference/python/motifs/motif-generation.md)
 - [BigWig signal tracks](reference/python/signal/bw-track.md)
 - [GENCODE GTF streaming](reference/python/gtf/gtf-utils.md)
 - [EnsemblRestSearch](reference/python/snp/ensembl-rest-search.md)

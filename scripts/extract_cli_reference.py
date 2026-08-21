@@ -87,6 +87,10 @@ def extract(tool: str, code_root: Path) -> list[dict[str, Any]]:
         from ExogeneousSequenceTools.cli import ExogeneousSequenceTools  # type: ignore[import-not-found]
 
         builder = ExogeneousSequenceTools
+    elif tool == "MotifTools":
+        from MotifTools.cli import MotifTools  # type: ignore[import-not-found]
+
+        builder = MotifTools
     else:
         raise ValueError(f"Unsupported CLI: {tool}")
     parser = argparse.ArgumentParser(prog=tool)
@@ -97,7 +101,7 @@ def extract(tool: str, code_root: Path) -> list[dict[str, Any]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--code-root", type=Path, required=True)
-    parser.add_argument("--tool", choices=("GenomicElementTools", "ExogeneousSequenceTools"), required=True)
+    parser.add_argument("--tool", choices=("GenomicElementTools", "ExogeneousSequenceTools", "MotifTools"), required=True)
     args = parser.parse_args()
     print(json.dumps(extract(args.tool, args.code_root), sort_keys=True, separators=(",", ":")))
 

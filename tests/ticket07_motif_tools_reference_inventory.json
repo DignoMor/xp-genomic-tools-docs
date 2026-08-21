@@ -1,0 +1,22 @@
+{
+  "required_fields": [
+    "Purpose", "Availability", "Inputs", "Types", "Shapes", "Dtypes", "Defaults",
+    "Choices", "Constraints", "Outputs", "Ordering", "Side effects", "Failures"
+  ],
+  "entries": [
+    {
+      "symbols": [
+        "MotifTools",
+        "anti_motif",
+        "random_seq",
+        "pwm_seq",
+        "barcodes"
+      ],
+      "path": "reference/cli/motif-tools"
+    },
+    {
+      "symbols": ["make_anti_motifs", "MotifGeneration"],
+      "path": "reference/python/motifs/motif-generation"
+    }
+  ]
+}
