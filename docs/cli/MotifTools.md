@@ -30,7 +30,7 @@ complete with an atomic rename. Successful path commands are silent.
 | --- | --- | --- |
 | `anti_motif` | Implemented | Derive an anti-motif MEME collection from an input MEME file |
 | `pwm_seq` | Implemented | Sample sequences from one named PWM |
-| `random_seq` | Planned | Generate random sequences with optional motif exclusions |
+| `random_seq` | Implemented (unconstrained) | Generate random sequences without motif exclusions |
 | `barcodes` | Planned | Enumerate motif-filtered barcodes |
 
 ### `anti_motif`
@@ -66,6 +66,23 @@ MotifTools pwm_seq --motif_file motifs.meme --motif_name MY_MOTIF --num_sequence
 ```
 
 Reusable Python API: [`RGTools.MotifGeneration.iter_pwm_sequences`](../reference/python/motifs/motif-generation.md).
+
+### `random_seq`
+
+Generate a requested number of fixed-length random sequences by sampling uniformly
+with replacement from an ordered alphabet (default `ACGT`). FASTA record
+identifiers are `random_seq_<index>` (zero-based). Motif exclusion flags appear in
+`--help` but are **not yet delivered**; omit `--motif_file` and `--exclude` for
+unconstrained generation.
+
+Example:
+
+```bash
+MotifTools random_seq --sequence_length 20 --num_sequences 1000 --seed 0 --output controls.fasta
+MotifTools random_seq --sequence_length 8 --num_sequences 5 --alphabet XY --output -
+```
+
+Reusable Python API: [`RGTools.MotifGeneration.iter_random_sequences`](../reference/python/motifs/motif-generation.md).
 
 ## Python module entrypoint
 

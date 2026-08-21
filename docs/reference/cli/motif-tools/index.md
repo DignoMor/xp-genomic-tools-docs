@@ -7,7 +7,8 @@ defaults, and the complete flag inventory live in the
 ## Shared contract
 
 **Purpose.** Motif-centric generation and transformation. Ticket `0.2.0a1`
-delivers `anti_motif` and `pwm_seq`; remaining sequence generators are planned.
+delivers `anti_motif`, `pwm_seq`, and unconstrained `random_seq`; barcodes and
+motif exclusion remain planned.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogeneous-sequence
@@ -109,10 +110,38 @@ within the installed release.
 PWM rows, alphabet/PWM mismatches, and shared output-contract violations raise
 validation errors before output begins.
 
+## `random_seq` (unconstrained)
+
+**Purpose.** Generate fixed-length random sequences without motif constraints.
+
+**Inputs.**
+
+| Flag | Required | Meaning |
+| --- | --- | --- |
+| `--sequence_length` | yes | Positive sequence length |
+| `--num_sequences` | yes | Positive output count |
+| `--alphabet` | no | Ordered unique-character alphabet (default `ACGT`) |
+| `--seed` | no | Deterministic seed (`0` is valid) |
+| `--output` | yes | Output FASTA path or `-` |
+| `--force` | no | Replace an existing destination file |
+
+**Behavior.** Validate alphabet, lengths, and counts, then sample every position
+uniformly with replacement from the user-ordered alphabet. Duplicate sequences
+are allowed. Generation order equals RNG draw order. Sampling uses an isolated
+random-number generator.
+
+**Outputs.** UTF-8 FASTA with identifiers `random_seq_<index>` in generation order.
+
+**Not yet delivered.** `--motif_file`, `--exclude`, and `--max_attempts` motif
+exclusion behavior.
+
+**Failures.** Invalid lengths, counts, alphabets, unsupported exclusion inputs,
+and shared output-contract violations raise validation errors before output begins.
+
 ## Planned commands
 
-`random_seq` and `barcodes` appear in `--help` but are not yet implemented in
-this release. Invoking them exits with a concise validation error.
+`barcodes` appears in `--help` but is not yet implemented in this release.
+Invoking it exits with a concise validation error.
 
 ## Reference fields
 

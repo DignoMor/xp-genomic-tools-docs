@@ -3,8 +3,8 @@
 **Purpose/availability:** `import RGTools.MotifGeneration` exposes reusable motif
 generation and transformation algorithms behind `MotifTools`. Symbols are not
 re-exported from the top-level `RGTools` namespace. Ticket `0.2.0a1` ships
-`make_anti_motifs` and `iter_pwm_sequences`; remaining iterators and exclusion
-types are planned.
+`make_anti_motifs`, `iter_pwm_sequences`, and unconstrained
+`iter_random_sequences`; motif exclusion and barcode iterators remain planned.
 
 ## `make_anti_motifs(meme) -> MemeMotif`
 
@@ -59,13 +59,34 @@ sequences within the installed release.
 alphabet/PWM mismatches, and invalid PWM rows raise contextual `ValueError`
 before yielding.
 
+## `iter_random_sequences(sequence_length, num_sequences, *, alphabet="ACGT", seed=None) -> Iterator[str]`
+
+Sample fixed-length sequences uniformly from a user-ordered alphabet with
+replacement.
+
+**Inputs.** Positive integer sequence length and count; optional alphabet string
+(default `ACGT`) whose characters must be unique; optional integer seed (`0` is
+valid).
+
+**Behavior.** Validate lengths, counts, and alphabet before yielding. Sample every
+position uniformly with replacement from the supplied alphabet order. Duplicate
+output sequences are allowed. Motif exclusion is **not yet delivered**.
+
+**Outputs.** An iterator of sequence strings in RNG draw order.
+
+**Reproducibility.** Identical inputs and a fixed seed reproduce order and
+sequences within the installed release.
+
+**Failures.** Non-positive lengths or counts, empty alphabets, duplicate alphabet
+characters, and unsupported exclusion inputs raise contextual `ValueError` before
+yielding.
+
 ## Planned API (not yet shipped)
 
 | Symbol | Role |
 | --- | --- |
 | `MotifExclusion` | Immutable motif name + score cutoff for exclusions |
 | `SequenceGenerationExhaustedError` | Typed exhaustion for constrained generators |
-| `iter_random_sequences` | Deterministic random sequence generation |
 | `iter_barcodes` | Deterministic barcode enumeration |
 
 ## Reference fields
