@@ -3,7 +3,7 @@
 
 # `ExogeneousSequenceTools` CLI reference
 
-Supported in release `0.1.0a2`. This page is generated from the installed
+Supported in release `0.2.0a1`. This page is generated from the installed
 argparse tree and includes every top-level and nested command path.
 
 ## Purpose
