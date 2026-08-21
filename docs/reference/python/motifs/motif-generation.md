@@ -2,9 +2,9 @@
 
 **Purpose/availability:** `import RGTools.MotifGeneration` exposes reusable motif
 generation and transformation algorithms behind `MotifTools`. Symbols are not
-re-exported from the top-level `RGTools` namespace. Ticket `0.2.0a1` ships
-`make_anti_motifs`, `iter_pwm_sequences`, unconstrained and exclusion-enabled
-`iter_random_sequences`; barcode iteration remains planned.
+re-exported from the top-level `RGTools` namespace. Release `0.2.0a1` ships
+`make_anti_motifs`, `iter_pwm_sequences`, exclusion-enabled
+`iter_random_sequences`, and `iter_barcodes`.
 
 ## `MotifExclusion`
 

@@ -31,6 +31,11 @@ REFERENCE_FIELDS = (
     "Failures",
 )
 RELEASE = "0.1.0a2"
+CLI_RELEASES = {
+    "GenomicElementTools": RELEASE,
+    "ExogeneousSequenceTools": RELEASE,
+    "MotifTools": "0.2.0a1",
+}
 PAGES_BASE = "https://dignomor.github.io/xp-genomic-tools-docs/"
 DOCS_RAW_BASE = "https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs"
 PRIVATE_MARKERS = re.compile(
@@ -349,7 +354,7 @@ validation errors propagate from the command implementation.
 
 # `{tool}` CLI reference
 
-Supported in release `0.1.0a2`. This page is generated from the installed
+Supported in release `{CLI_RELEASES[tool]}`. This page is generated from the installed
 argparse tree and includes every top-level and nested command path.
 
 ## Purpose

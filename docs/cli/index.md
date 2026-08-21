@@ -6,7 +6,7 @@ Two console scripts ship with **0.1.0a2** (MotifTools ships in **0.2.0a1**):
 | --- | --- |
 | [`GenomicElementTools`](GenomicElementTools.md) | Genome-anchored regions: pad, count BigWig, motifs, import/export, masks |
 | [`ExogeneousSequenceTools`](ExogeneousSequenceTools.md) | FASTA sequence sets: assemble, mutagenesis, tracks, motifs |
-| [`MotifTools`](MotifTools.md) | Motif generation and transforms: anti-motifs (more commands planned) |
+| [`MotifTools`](MotifTools.md) | Motif generation: `random_seq`, `pwm_seq`, `barcodes`, `anti_motif` |
 
 ## Invocation
 
