@@ -1,0 +1,30 @@
+{
+  "required_fields": [
+    "Purpose", "Availability", "Inputs", "Types", "Shapes", "Dtypes", "Defaults",
+    "Choices", "Constraints", "Outputs", "Ordering", "Side effects", "Failures"
+  ],
+  "entries": [
+    {
+      "symbols": [
+        "MotifTools",
+        "anti_motif",
+        "random_seq",
+        "pwm_seq",
+        "barcodes"
+      ],
+      "path": "reference/cli/motif-tools"
+    },
+    {
+      "symbols": [
+        "MotifGeneration",
+        "make_anti_motifs",
+        "iter_pwm_sequences",
+        "iter_random_sequences",
+        "iter_barcodes",
+        "MotifExclusion",
+        "SequenceGenerationExhaustedError"
+      ],
+      "path": "reference/python/motifs/motif-generation"
+    }
+  ]
+}

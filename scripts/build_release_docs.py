@@ -30,7 +30,12 @@ REFERENCE_FIELDS = (
     "Side effects",
     "Failures",
 )
-RELEASE = "0.1.0a2"
+RELEASE = "0.2.0a1"
+CLI_RELEASES = {
+    "GenomicElementTools": RELEASE,
+    "ExogeneousSequenceTools": RELEASE,
+    "MotifTools": RELEASE,
+}
 PAGES_BASE = "https://dignomor.github.io/xp-genomic-tools-docs/"
 DOCS_RAW_BASE = "https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs"
 PRIVATE_MARKERS = re.compile(
@@ -178,6 +183,7 @@ def _load_inventories() -> list[dict[str, Any]]:
         DOCS_ROOT / "tests/ticket04_reference_inventory.json",
         DOCS_ROOT / "tests/ticket05_reference_inventory.json",
         DOCS_ROOT / "tests/ticket06_reference_inventory.json",
+        DOCS_ROOT / "tests/ticket07_motif_tools_reference_inventory.json",
     ]
     entries: list[dict[str, Any]] = []
     for inventory_path in inventories:
@@ -215,6 +221,7 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         ("BedTable reference", "reference/python/bedtable/bed-table3/", "reference/python/bedtable/bed-table3.md"),
         ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
         ("ExogeneousSequenceTools CLI", "reference/cli/exogeneous-sequence-tools/", "reference/cli/exogeneous-sequence-tools/index.md"),
+        ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
         ("Formats", "formats/", "formats.md"),
         ("Boolean-mask dtype rule", "reference/formats/boolean-mask/#dtype", "reference/formats/boolean-mask.md#dtype"),
     ]
@@ -347,7 +354,7 @@ validation errors propagate from the command implementation.
 
 # `{tool}` CLI reference
 
-Supported in release `0.1.0a2`. This page is generated from the installed
+Supported in release `{CLI_RELEASES[tool]}`. This page is generated from the installed
 argparse tree and includes every top-level and nested command path.
 
 ## Purpose
@@ -401,7 +408,7 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.1.0a2`. Invoke it through the
+Supported in `GenomicElementTools` for release `{CLI_RELEASES['GenomicElementTools']}`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Syntax
@@ -608,7 +615,11 @@ def _validate_built_artifact(
             raise RuntimeError(f"Unresolved format reference: {singular_format}")
 
     # Generated parser snapshots must match the installed code, including all flags.
-    for tool, filename in (("GenomicElementTools", "genomic-element-tools.md"), ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md")):
+    for tool, filename in (
+        ("GenomicElementTools", "genomic-element-tools.md"),
+        ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
+        ("MotifTools", "motif-tools.md"),
+    ):
         expected = _extract_cli_tree(code_root, tool)
         generated = (DOCS_ROOT / "docs/reference/cli/generated" / filename).read_text()
         if json.dumps(expected, sort_keys=True, separators=(",", ":")) not in generated:
@@ -670,6 +681,7 @@ def main() -> None:
     for tool, filename in (
         ("GenomicElementTools", "genomic-element-tools.md"),
         ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
+        ("MotifTools", "motif-tools.md"),
     ):
         records = _extract_cli_tree(code_root, tool)
         generated_path = GENERATED_CLI_DIRECTORY / filename
