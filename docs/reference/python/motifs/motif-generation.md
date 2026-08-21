@@ -104,11 +104,26 @@ alphabets; invalid exclusion inputs; and impossible constrained generation raise
 contextual `ValueError` or `SequenceGenerationExhaustedError` before partial output
 is implied to callers.
 
-## Planned API (not yet shipped)
+## `iter_barcodes(barcode_length, *, alphabet="ACGT", meme=None, exclusions=(), max_candidates=1000000) -> Iterator[str]`
 
-| Symbol | Role |
-| --- | --- |
-| `iter_barcodes` | Deterministic barcode enumeration |
+Enumerate barcode sequences in supplied-alphabet Cartesian order.
+
+**Inputs.** Positive integer barcode length; optional alphabet string (default
+`ACGT`) whose characters must be unique; optional MEME collection and ordered
+`MotifExclusion` values; optional positive pre-exclusion candidate limit.
+
+**Behavior.** Validate length, alphabet, exclusion context, and candidate
+cardinality before yielding. Stream the Cartesian product in supplied-alphabet
+order without materializing the full candidate or accepted space. With exclusions,
+retain only candidates that pass the shared motif-exclusion evaluator. Surviving
+barcodes keep Cartesian order.
+
+**Outputs.** An iterator of barcode strings in accepted enumeration order. An empty
+iterator represents a legitimate zero-result library.
+
+**Failures.** Non-positive lengths or limits, duplicate alphabets, oversized
+candidate spaces, and invalid exclusion inputs raise contextual `ValueError` before
+yielding.
 
 ## Reference fields
 

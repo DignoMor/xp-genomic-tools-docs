@@ -31,7 +31,7 @@ complete with an atomic rename. Successful path commands are silent.
 | `anti_motif` | Implemented | Derive an anti-motif MEME collection from an input MEME file |
 | `pwm_seq` | Implemented | Sample sequences from one named PWM |
 | `random_seq` | Implemented | Generate random sequences with optional motif exclusions |
-| `barcodes` | Planned | Enumerate motif-filtered barcodes |
+| `barcodes` | Implemented | Enumerate motif-filtered barcodes exhaustively |
 
 ### `anti_motif`
 
@@ -86,6 +86,24 @@ When exclusions cannot be satisfied within the per-output attempt budget (defaul
 10,000), the command exits with code 1 and writes no partial final file.
 
 Reusable Python API: [`RGTools.MotifGeneration.iter_random_sequences`](../reference/python/motifs/motif-generation.md).
+
+### `barcodes`
+
+Enumerate every barcode of a requested length in supplied-alphabet Cartesian order.
+Optional motif exclusions retain only candidates that pass the same cutoff rules as
+`random_seq`. The pre-exclusion candidate count is checked against
+`--max_candidates` (default 1,000,000) before work begins. FASTA identifiers are
+`barcode_<index>` in accepted order. When no barcodes survive exclusion, the command
+succeeds silently and writes zero-byte FASTA output.
+
+Example:
+
+```bash
+MotifTools barcodes --barcode_length 6 --output barcodes.fasta
+MotifTools barcodes --barcode_length 4 --alphabet ACGT --motif_file motifs.meme --exclude MY_MOTIF=8.5 --output filtered.fasta
+```
+
+Reusable Python API: [`RGTools.MotifGeneration.iter_barcodes`](../reference/python/motifs/motif-generation.md).
 
 ## Python module entrypoint
 

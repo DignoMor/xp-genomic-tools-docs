@@ -7,8 +7,7 @@ defaults, and the complete flag inventory live in the
 ## Shared contract
 
 **Purpose.** Motif-centric generation and transformation. Ticket `0.2.0a1`
-delivers `anti_motif`, `pwm_seq`, and exclusion-enabled `random_seq`; barcodes
-remain planned.
+delivers `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogeneous-sequence
@@ -145,10 +144,33 @@ and leave no partial final file.
 exclusions, alphabet/MEME-alphabet violations, and shared output-contract
 violations raise validation errors before output begins.
 
-## Planned commands
+## `barcodes`
 
-`barcodes` appears in `--help` but is not yet implemented in this release.
-Invoking it exits with a concise validation error.
+**Purpose.** Exhaustively enumerate motif-filtered barcodes in supplied-alphabet order.
+
+**Inputs.**
+
+| Flag | Required | Meaning |
+| --- | --- | --- |
+| `--barcode_length` | yes | Positive barcode length |
+| `--alphabet` | no | Ordered unique-character alphabet (default `ACGT`) |
+| `--motif_file` | no | MEME collection required when exclusions are used |
+| `--exclude` | no | Repeatable `MOTIF=CUTOFF` |
+| `--max_candidates` | no | Pre-exclusion candidate limit (default `1000000`) |
+| `--output` | yes | Output FASTA path or `-` |
+| `--force` | no | Replace an existing destination file |
+
+**Behavior.** Preflight the candidate count `len(alphabet) ** barcode_length` against
+`--max_candidates`, then stream the Cartesian product in supplied-alphabet order.
+Shared motif exclusions retain only surviving candidates. Identifiers are
+`barcode_<index>` in accepted order.
+
+**Outputs.** UTF-8 FASTA with accepted barcode order, or zero bytes when no barcode
+survives.
+
+**Failures.** Invalid lengths, alphabets, oversized candidate spaces, exclusion
+validation failures, and shared output-contract violations raise validation errors
+before output begins.
 
 ## Reference fields
 
