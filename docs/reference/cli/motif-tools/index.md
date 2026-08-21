@@ -7,8 +7,8 @@ defaults, and the complete flag inventory live in the
 ## Shared contract
 
 **Purpose.** Motif-centric generation and transformation. Ticket `0.2.0a1`
-delivers `anti_motif`, `pwm_seq`, and unconstrained `random_seq`; barcodes and
-motif exclusion remain planned.
+delivers `anti_motif`, `pwm_seq`, and exclusion-enabled `random_seq`; barcodes
+remain planned.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogeneous-sequence
@@ -110,9 +110,9 @@ within the installed release.
 PWM rows, alphabet/PWM mismatches, and shared output-contract violations raise
 validation errors before output begins.
 
-## `random_seq` (unconstrained)
+## `random_seq`
 
-**Purpose.** Generate fixed-length random sequences without motif constraints.
+**Purpose.** Generate fixed-length random sequences with optional motif exclusions.
 
 **Inputs.**
 
@@ -121,22 +121,29 @@ validation errors before output begins.
 | `--sequence_length` | yes | Positive sequence length |
 | `--num_sequences` | yes | Positive output count |
 | `--alphabet` | no | Ordered unique-character alphabet (default `ACGT`) |
+| `--motif_file` | no | MEME collection required when exclusions are used |
+| `--exclude` | no | Repeatable `MOTIF=CUTOFF` |
 | `--seed` | no | Deterministic seed (`0` is valid) |
+| `--max_attempts` | no | Per-output attempt budget when exclusions are active (default `10000`) |
 | `--output` | yes | Output FASTA path or `-` |
 | `--force` | no | Replace an existing destination file |
 
-**Behavior.** Validate alphabet, lengths, and counts, then sample every position
-uniformly with replacement from the user-ordered alphabet. Duplicate sequences
-are allowed. Generation order equals RNG draw order. Sampling uses an isolated
-random-number generator.
+**Behavior.** Validate alphabet, lengths, counts, and exclusion context, then sample
+every position uniformly with replacement from the user-ordered alphabet. Without
+exclusions, arbitrary literal unique-character alphabets are supported. With
+exclusions, reject candidates whose windows on either strand meet selected MEME
+score cutoffs using the collection background. Each requested output receives a
+fresh attempt budget. Sampling uses an isolated random-number generator.
 
 **Outputs.** UTF-8 FASTA with identifiers `random_seq_<index>` in generation order.
 
-**Not yet delivered.** `--motif_file`, `--exclude`, and `--max_attempts` motif
-exclusion behavior.
+**Exhaustion.** When the attempt budget is exhausted for one output, raise
+`SequenceGenerationExhaustedError`, exit `1` at the CLI, emit stderr diagnostics,
+and leave no partial final file.
 
-**Failures.** Invalid lengths, counts, alphabets, unsupported exclusion inputs,
-and shared output-contract violations raise validation errors before output begins.
+**Failures.** Invalid lengths, counts, alphabets, unused motif files, malformed
+exclusions, alphabet/MEME-alphabet violations, and shared output-contract
+violations raise validation errors before output begins.
 
 ## Planned commands
 

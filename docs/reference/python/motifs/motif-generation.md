@@ -3,8 +3,24 @@
 **Purpose/availability:** `import RGTools.MotifGeneration` exposes reusable motif
 generation and transformation algorithms behind `MotifTools`. Symbols are not
 re-exported from the top-level `RGTools` namespace. Ticket `0.2.0a1` ships
-`make_anti_motifs`, `iter_pwm_sequences`, and unconstrained
-`iter_random_sequences`; motif exclusion and barcode iterators remain planned.
+`make_anti_motifs`, `iter_pwm_sequences`, unconstrained and exclusion-enabled
+`iter_random_sequences`; barcode iteration remains planned.
+
+## `MotifExclusion`
+
+Immutable motif name and finite score cutoff for candidate rejection.
+
+**Fields.** `motif_name`, `cutoff`.
+
+**Constraints.** Motif must exist in the supplied MEME collection; cutoff must be
+finite. Scores equal to the cutoff count as matches.
+
+## `SequenceGenerationExhaustedError`
+
+Typed failure when constrained random generation cannot satisfy all requested
+outputs within the per-output attempt budget.
+
+**Fields.** `requested_count`, `completed_count`, `attempt_limit`, `exclusions`.
 
 ## `make_anti_motifs(meme) -> MemeMotif`
 
@@ -59,34 +75,39 @@ sequences within the installed release.
 alphabet/PWM mismatches, and invalid PWM rows raise contextual `ValueError`
 before yielding.
 
-## `iter_random_sequences(sequence_length, num_sequences, *, alphabet="ACGT", seed=None) -> Iterator[str]`
+## `iter_random_sequences(sequence_length, num_sequences, *, alphabet="ACGT", seed=None, meme=None, exclusions=(), max_attempts=10000) -> Iterator[str]`
 
 Sample fixed-length sequences uniformly from a user-ordered alphabet with
 replacement.
 
 **Inputs.** Positive integer sequence length and count; optional alphabet string
 (default `ACGT`) whose characters must be unique; optional integer seed (`0` is
-valid).
+valid); optional MEME collection and ordered `MotifExclusion` values; optional
+positive per-output attempt budget when exclusions are active.
 
-**Behavior.** Validate lengths, counts, and alphabet before yielding. Sample every
-position uniformly with replacement from the supplied alphabet order. Duplicate
-output sequences are allowed. Motif exclusion is **not yet delivered**.
+**Behavior.** Validate lengths, counts, alphabet, and exclusion context before
+yielding. Sample every position uniformly with replacement from the supplied
+alphabet order. Without exclusions, arbitrary literal unique-character alphabets
+are supported. With exclusions, reject candidates when any selected motif window
+on either strand scores greater than or equal to its cutoff using the MEME
+background. Each requested output receives a fresh attempt budget. Duplicate
+accepted sequences are allowed.
 
-**Outputs.** An iterator of sequence strings in RNG draw order.
+**Outputs.** An iterator of sequence strings in accepted generation order.
 
 **Reproducibility.** Identical inputs and a fixed seed reproduce order and
-sequences within the installed release.
+sequences within the installed release. Reordering equivalent exclusions does not
+change accepted output.
 
-**Failures.** Non-positive lengths or counts, empty alphabets, duplicate alphabet
-characters, and unsupported exclusion inputs raise contextual `ValueError` before
-yielding.
+**Failures.** Non-positive lengths, counts, or attempt budgets; empty or duplicate
+alphabets; invalid exclusion inputs; and impossible constrained generation raise
+contextual `ValueError` or `SequenceGenerationExhaustedError` before partial output
+is implied to callers.
 
 ## Planned API (not yet shipped)
 
 | Symbol | Role |
 | --- | --- |
-| `MotifExclusion` | Immutable motif name + score cutoff for exclusions |
-| `SequenceGenerationExhaustedError` | Typed exhaustion for constrained generators |
 | `iter_barcodes` | Deterministic barcode enumeration |
 
 ## Reference fields

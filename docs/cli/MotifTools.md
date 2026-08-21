@@ -30,7 +30,7 @@ complete with an atomic rename. Successful path commands are silent.
 | --- | --- | --- |
 | `anti_motif` | Implemented | Derive an anti-motif MEME collection from an input MEME file |
 | `pwm_seq` | Implemented | Sample sequences from one named PWM |
-| `random_seq` | Implemented (unconstrained) | Generate random sequences without motif exclusions |
+| `random_seq` | Implemented | Generate random sequences with optional motif exclusions |
 | `barcodes` | Planned | Enumerate motif-filtered barcodes |
 
 ### `anti_motif`
@@ -70,17 +70,20 @@ Reusable Python API: [`RGTools.MotifGeneration.iter_pwm_sequences`](../reference
 ### `random_seq`
 
 Generate a requested number of fixed-length random sequences by sampling uniformly
-with replacement from an ordered alphabet (default `ACGT`). FASTA record
-identifiers are `random_seq_<index>` (zero-based). Motif exclusion flags appear in
-`--help` but are **not yet delivered**; omit `--motif_file` and `--exclude` for
-unconstrained generation.
+with replacement from an ordered alphabet (default `ACGT`). Optional motif exclusions
+reject candidates whose windows on either strand meet selected MEME score cutoffs.
+FASTA record identifiers are `random_seq_<index>` (zero-based).
 
 Example:
 
 ```bash
 MotifTools random_seq --sequence_length 20 --num_sequences 1000 --seed 0 --output controls.fasta
 MotifTools random_seq --sequence_length 8 --num_sequences 5 --alphabet XY --output -
+MotifTools random_seq --sequence_length 12 --num_sequences 10 --motif_file motifs.meme --exclude MY_MOTIF=8.5 --seed 0 --output filtered.fasta
 ```
+
+When exclusions cannot be satisfied within the per-output attempt budget (default
+10,000), the command exits with code 1 and writes no partial final file.
 
 Reusable Python API: [`RGTools.MotifGeneration.iter_random_sequences`](../reference/python/motifs/motif-generation.md).
 
