@@ -15,7 +15,7 @@
       "path": "reference/cli/motif-tools"
     },
     {
-      "symbols": ["make_anti_motifs", "MotifGeneration"],
+      "symbols": ["make_anti_motifs", "iter_pwm_sequences", "iter_random_sequences", "MotifGeneration"],
       "path": "reference/python/motifs/motif-generation"
     }
   ]

@@ -7,7 +7,8 @@ defaults, and the complete flag inventory live in the
 ## Shared contract
 
 **Purpose.** Motif-centric generation and transformation. Ticket `0.2.0a1`
-delivers `anti_motif`; sequence generators remain planned.
+delivers `anti_motif`, `pwm_seq`, and unconstrained `random_seq`; barcodes and
+motif exclusion remain planned.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogeneous-sequence
@@ -77,10 +78,70 @@ backgrounds) and motif order are preserved. The source collection is never mutat
 **Failures.** Empty collections, invalid PWM rows, non-positive backgrounds, and
 malformed MEME input raise validation errors before output begins.
 
+## `pwm_seq`
+
+**Purpose.** Sample sequences from one named motif PWM.
+
+**Inputs.**
+
+| Flag | Required | Meaning |
+| --- | --- | --- |
+| `--motif_file` | yes | Supported-subset MEME input path |
+| `--motif_name` | yes | Motif name to sample |
+| `--num_sequences` | yes | Positive integer count |
+| `--seed` | no | Deterministic seed (`0` is valid) |
+| `--output` | yes | Output FASTA path or `-` |
+| `--force` | no | Replace an existing destination file |
+
+**Behavior.** Validate the MEME collection and selected motif, then sample each
+output position categorically from the corresponding PWM row using the collection
+alphabet. Output length equals motif length. Duplicate sequences are allowed.
+Sampling uses an isolated random-number generator and never mutates source motif
+arrays.
+
+**Outputs.** UTF-8 FASTA with LF line endings, one unwrapped sequence line per
+record, identifiers `pwm_<motif_name>_<index>` in generation order, and a final
+newline when nonempty.
+
+**Reproducibility.** Identical inputs and a fixed seed reproduce FASTA bytes
+within the installed release.
+
+**Failures.** Empty collections, unknown motif names, invalid counts, invalid
+PWM rows, alphabet/PWM mismatches, and shared output-contract violations raise
+validation errors before output begins.
+
+## `random_seq` (unconstrained)
+
+**Purpose.** Generate fixed-length random sequences without motif constraints.
+
+**Inputs.**
+
+| Flag | Required | Meaning |
+| --- | --- | --- |
+| `--sequence_length` | yes | Positive sequence length |
+| `--num_sequences` | yes | Positive output count |
+| `--alphabet` | no | Ordered unique-character alphabet (default `ACGT`) |
+| `--seed` | no | Deterministic seed (`0` is valid) |
+| `--output` | yes | Output FASTA path or `-` |
+| `--force` | no | Replace an existing destination file |
+
+**Behavior.** Validate alphabet, lengths, and counts, then sample every position
+uniformly with replacement from the user-ordered alphabet. Duplicate sequences
+are allowed. Generation order equals RNG draw order. Sampling uses an isolated
+random-number generator.
+
+**Outputs.** UTF-8 FASTA with identifiers `random_seq_<index>` in generation order.
+
+**Not yet delivered.** `--motif_file`, `--exclude`, and `--max_attempts` motif
+exclusion behavior.
+
+**Failures.** Invalid lengths, counts, alphabets, unsupported exclusion inputs,
+and shared output-contract violations raise validation errors before output begins.
+
 ## Planned commands
 
-`random_seq`, `pwm_seq`, and `barcodes` appear in `--help` but are not yet
-implemented in this release. Invoking them exits with a concise validation error.
+`barcodes` appears in `--help` but is not yet implemented in this release.
+Invoking it exits with a concise validation error.
 
 ## Reference fields
 
