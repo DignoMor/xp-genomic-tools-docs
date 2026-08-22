@@ -1,6 +1,6 @@
 # xp-genomic-tools exhaustive public reference (0.2.0a2)
 
-Code revision: `d10a5597818c95dea78ae90efb810d4084c73d1f`
+Code revision: `f90e15c7dce8a0cd799b61ccc45a638d3132523f`
 Documentation revision: `8cecd9f6d994c6df6d567bf4e608ef39851502a9`
 
 ## `reference/cli/exogeneous-sequence-tools/index.md`
