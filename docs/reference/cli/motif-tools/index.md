@@ -6,8 +6,9 @@ defaults, and the complete flag inventory live in the
 
 ## Shared contract
 
-**Purpose.** Motif-centric generation and transformation. Ticket `0.2.0a1`
-delivers `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`.
+**Purpose.** Motif-centric generation and transformation. Release `0.2.0a2`
+includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
+delivered in `0.2.0a1`.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogeneous-sequence

@@ -1,5 +1,5 @@
 {
-  "release": "0.2.0a1",
+  "release": "0.2.0a2",
   "entries": [
     {"qualified_name": "RGTools.exceptions", "path": "reference/python/foundation/exceptions", "members": ["RGToolsInternalException", "GTFHandleFilterException", "GTFRecordNoFeatureException", "BedTableException", "BedTableLoadException", "InvalidBedRegionException", "InvalidStrandnessException"]},
     {"qualified_name": "RGTools.logging.Logger", "path": "reference/python/foundation/logger", "members": ["Logger", "indent", "unindent", "take_log"]},

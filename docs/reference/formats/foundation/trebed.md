@@ -2,11 +2,15 @@
 
 ## Purpose
 
-Represent a BED3 interval with a name and forward/reverse TSS columns.
+Represent a BED3 interval with a name and forward/reverse TSS columns using the
+PINTS-compatible six-column TSS-annotated BED serialization.
 
 ## Availability
 
-Supported in release `0.1.0a2` as a GenomicElements region type.
+Supported in release `0.1.0a2` as a GenomicElements region type. TSS missingness
+and genomic-position rules below are format-level. Stricter indexing rules for
+`GenomicElementTools select_tss_relative_track` are documented with that
+command.
 
 ## Inputs
 
@@ -34,7 +38,14 @@ The key is `TREbed`.
 
 ## Constraints
 
-This release specifies the columns only; the TSS coordinate base, ordering, and relationship to the interval remain unspecified and are not validated.
+- Each of `fwdTSS` and `revTSS` is either `-1` (missing TSS on that strand) or a
+  nonnegative genomic position.
+- Equal forward and reverse TSS values, and both fields missing, are readable.
+- Format-level readability is not operation-level indexability: the format
+  reader does not require a nonmissing TSS to lie inside `[start,end)`.
+  Operations that index from a selected TSS (for example
+  `GenomicElementTools select_tss_relative_track`) enforce interval membership
+  and complete scored-window availability themselves.
 
 ## Outputs
 
