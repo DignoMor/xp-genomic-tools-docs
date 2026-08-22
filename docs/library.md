@@ -35,6 +35,7 @@ import RGTools.SNP_utils
 | FASTA-only sequence sets | `ExogeneousSequences` |
 | MEME motif files | `MemeMotif` |
 | Anti-motif transforms | `RGTools.MotifGeneration.make_anti_motifs` |
+| TSS-relative coordinates | `RGTools.TSSRelativeCoordinates` |
 | BigWig signal | `SingleBwTrack` / paired track helpers |
 | One-item-per-line lists | `ListFile` |
 
@@ -79,6 +80,7 @@ element-collection class page above.
 
 - [MemeMotif](reference/python/motifs/meme-motif.md)
 - [MotifGeneration](reference/python/motifs/motif-generation.md)
+- [TSSRelativeCoordinates](reference/python/general-elements/tss-relative-coordinates.md)
 - [BigWig signal tracks](reference/python/signal/bw-track.md)
 - [GENCODE GTF streaming](reference/python/gtf/gtf-utils.md)
 - [EnsemblRestSearch](reference/python/snp/ensembl-rest-search.md)
