@@ -42,8 +42,10 @@ describes a genomic-forward window of width `track_window_size` beginning at
    `genomic - start`.
 3. Strand `-`: reported coordinate is the genomic-right 5-prime base; index is
    `genomic - start - (track_window_size - 1)`.
-4. The scored window must fit inside the interval; otherwise conversion raises.
+4. The scored window must fit inside the interval; otherwise conversion raises
+   contextual `ValueError` (no clipping, wrapping, or shrinking).
 
 **Failures.** Invalid strand, zero coordinates, nonpositive
 `track_window_size`, invalid intervals, and out-of-bounds windows raise
-contextual `ValueError`.
+contextual `ValueError`. Callers that need TREbed row identity (such as
+`select_tss_relative_track`) add that context when re-raising.

@@ -196,13 +196,19 @@ is `window_size - 1`). Selection takes the first maximum in ascending
 TSS-relative order and matches with an inclusive cutoff
 (`max_score >= min_score`). A selected TSS of `-1` is a row-level no-match; the
 unselected TSS is ignored. A nonmissing selected TSS must lie inside
-`[start,end)`, and every relaxed-window position must map inside the row.
+`[start,end)`, and every relaxed-window position must map to a complete scored
+window inside the row's logical track length (storage padding beyond that
+length is never searched). These operation-level indexing rules are stricter
+than format-level TREbed readability.
 
 **Outputs / ordering / failures.** Writes integer coordinates and a boolean mask
-as `(N,1)` annotations in input row order. Matches emit the selected nonzero
-coordinate and `true`; no-matches emit `0` and `false`. Boolean/nonnumeric
-tracks, nonfinite cutoffs, unavailable windows, and alignment errors raise
-`ValueError`.
+as `(N,1)` annotations in input row order only after every row is validated.
+Matches emit the selected nonzero coordinate and `true`; no-matches emit `0`
+and `false`. Boolean/nonnumeric tracks, invalid window size or relaxation,
+zero target, nonfinite cutoffs, searched NaN (with row/track-index context),
+out-of-interval selected TSS, unavailable windows, and track shape/alignment
+errors raise `ValueError` before destinations are created or changed. Score
+`-inf` is unmatchable; `+inf` is a qualifying maximum.
 
 ### `get_context_ge nearest`
 
