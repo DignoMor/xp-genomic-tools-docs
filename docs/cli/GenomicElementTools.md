@@ -83,11 +83,16 @@ Nested under `import` / `export`:
 | --- | --- | --- |
 | `mask_op` | [`intersect`](../reference/cli/mask-op-intersect.md), `union`, `opposite` | Logical ops on mask arrays |
 
-### TSS-relative selection
+### TSS-relative selection and mutagenesis
 
 | Command | Role |
 | --- | --- |
 | `select_tss_relative_track` | Select a TSS-relative track score; emit coordinate + mask annotations |
+| `tss_relative_mutagenesis` | Apply sequential TSS-relative replacements from a round manifest → output bundle |
+
+End-to-end composition (`select_tss_relative_track` → masks / `MaskedGE` →
+`tss_relative_mutagenesis`) is described in the
+[TSS-relative mutagenesis workflow](../guides/tss-relative-mutagenesis.md).
 
 ## Examples
 

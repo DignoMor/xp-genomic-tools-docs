@@ -47,3 +47,20 @@ Common annotation roles:
 
 Exact required flags differ by subcommand; use `--help` on the command you are
 running.
+
+## TSS-relative regulatory terminology
+
+These terms appear in TREbed workflows, TSS-relative track selection, and
+`tss_relative_mutagenesis`. They are distinct concepts:
+
+| Term | Meaning |
+| --- | --- |
+| **Transcription regulatory element (TRE)** | A named genomic interval modeled with forward and reverse transcription start site (TSS) annotations. In XP Genomic Tools this is usually one row in a TREbed collection. |
+| **TREbed** | The six-column region format (`chrom`, `start`, `end`, `name`, `fwdTSS`, `revTSS`) for TRE rows. Format-level readability does not guarantee that a selected TSS is usable for indexing; element-centric commands enforce stricter rules. |
+| **TSS-relative coordinate** | A signed, no-zero offset from a selected TSS base: `+1` is the TSS, positive values are downstream, negative values are upstream, and zero is invalid. Selection may emit `0` as a no-match sentinel; mutagenesis rejects it. |
+| **Mutation target group** | The cross-round trajectory for one target FASTA record ID. Regions expand across target groups before the first round; all rounds must share the same ID set, joined by ID rather than file order. |
+| **Mutation round** | One manifest row: one coordinate stat, one target FASTA, and one strand applied sequentially to every derived sequence. Later rounds see the results of earlier rounds. |
+| **Replaced window** | The exact sequence segment removed immediately before a round inserts its target. Optional `replaced/<round_id>.fasta` audit files capture these windows using the same IDs and order as the final output. |
+
+See the [TSS-relative mutagenesis workflow](guides/tss-relative-mutagenesis.md) for
+a composed CLI example.

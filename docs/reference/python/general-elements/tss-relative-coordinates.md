@@ -48,4 +48,12 @@ describes a genomic-forward window of width `track_window_size` beginning at
 **Failures.** Invalid strand, zero coordinates, nonpositive
 `track_window_size`, invalid intervals, and out-of-bounds windows raise
 contextual `ValueError`. Callers that need TREbed row identity (such as
-`select_tss_relative_track`) add that context when re-raising.
+`select_tss_relative_track` and `tss_relative_mutagenesis`) add that context
+when re-raising.
+
+## Related commands
+
+- `GenomicElementTools select_tss_relative_track` — choose a TSS-relative
+  coordinate from a score track and emit `(N,1)` coordinate and mask annotations.
+- `GenomicElementTools tss_relative_mutagenesis` — place replacement windows at
+  supplied TSS-relative coordinates using the same conversion rules.
