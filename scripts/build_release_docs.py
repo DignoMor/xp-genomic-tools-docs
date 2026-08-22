@@ -30,7 +30,7 @@ REFERENCE_FIELDS = (
     "Side effects",
     "Failures",
 )
-RELEASE = "0.2.0a2"
+RELEASE = "0.3.0a1"
 CLI_RELEASES = {
     "GenomicElementTools": RELEASE,
     "ExogeneousSequenceTools": RELEASE,

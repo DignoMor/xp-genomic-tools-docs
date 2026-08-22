@@ -7,10 +7,11 @@ PINTS-compatible six-column TSS-annotated BED serialization.
 
 ## Availability
 
-Supported in release `0.1.0a2` as a GenomicElements region type. TSS missingness
+Supported in release `0.3.0a1` as a GenomicElements region type. TSS missingness
 and genomic-position rules below are format-level. Stricter indexing rules for
-`GenomicElementTools select_tss_relative_track` are documented with that
-command.
+`GenomicElementTools select_tss_relative_track` and
+`GenomicElementTools tss_relative_mutagenesis` are documented with those
+commands.
 
 ## Inputs
 
@@ -44,7 +45,8 @@ The key is `TREbed`.
 - Format-level readability is not operation-level indexability: the format
   reader does not require a nonmissing TSS to lie inside `[start,end)`.
   Operations that index from a selected TSS (for example
-  `GenomicElementTools select_tss_relative_track`) enforce interval membership
+  `GenomicElementTools select_tss_relative_track` and
+  `GenomicElementTools tss_relative_mutagenesis`) enforce interval membership
   and complete scored-window availability themselves.
 
 ## Outputs

@@ -1,6 +1,6 @@
 # GenomicElementTools command reference
 
-This is the semantic reference for release `0.1.0a2`. It covers every shipped
+This is the semantic reference for release `0.3.0a1`. It covers every shipped
 top-level command and nested path. Exact usage, aliases, parser-required flags,
 choices, defaults, and parser help are maintained in the [generated argparse
 reference](../generated/genomic-element-tools.md); the sections below add the
@@ -15,7 +15,7 @@ tab-separated, and selected annotations align by first dimension with the
 current region order.
 
 **Availability.** `GenomicElementTools` is the shipped console entry point in
-`0.1.0a2`; no separate count-table console entry point is shipped. Missing required flags or invalid
+`0.3.0a1`; no separate count-table console entry point is shipped. Missing required flags or invalid
 argparse choices exit with standard argparse status 2. Runtime data and
 contract violations generally raise `ValueError` or the underlying library
 exception; exact exception messages are not part of the interface.
@@ -218,6 +218,108 @@ directories, and track shape/alignment errors raise before destinations are
 created or changed. Score `-inf` is unmatchable; `+inf` is a qualifying
 maximum. Compose the mask with `mask_op` and subset regions plus aligned
 coordinate stats with `export MaskedGE`.
+
+### `tss_relative_mutagenesis`
+
+**Purpose / Inputs.** Apply one or more sequential TSS-relative replacement
+rounds to sequences extracted from a TREbed collection. Requires shared region
+flags with `--region_file_type TREbed`, `--fasta_path`, required
+`--round_manifest`, and required `--output_dir`. Optional
+`--write_replaced_windows` emits per-round audit FASTAs; optional `--force`
+authorizes replacing an existing output directory after successful staging.
+
+**Round manifest.** Tab-separated manifest with an exact header:
+`round_id`, `coordinate_stat`, `target_fasta`, `strand`. One data row defines
+one mutation round; row order is execution order. The manifest must contain at
+least one round. Round IDs are nonempty, unique, and safe as filename
+components (letters, digits, `.`, `_`, `-` only). Paths in `coordinate_stat`
+and `target_fasta` resolve relative to the manifest's parent directory when not
+absolute.
+
+**Coordinate stats.** Each round's `coordinate_stat` is an integer `(N,1)`
+annotation aligned to the original TREbed row order, where `N` is the region
+count. Float-valued integral coordinates are not coerced. Coordinate zero is
+invalid and rejected during preflight.
+
+**Target FASTAs.** Each round's `target_fasta` supplies one or more mutation
+targets as FASTA records. Record IDs must be nonempty, unique, free of ASCII
+whitespace, and must not contain the reserved output delimiter `|`. Every target
+sequence must be nonempty IUPAC DNA (case is preserved). All targets within one
+round must have equal positive length; different rounds may use different
+lengths. The first round defines the target-ID set and output order; every later
+round must contain exactly the same ID set (later file order is ignored when
+joining by ID).
+
+**Mutation target groups.** A target group is the cross-round trajectory sharing
+one target ID. Before round one, each original region expands across every target
+group. With `N` regions and `M` target IDs per round, exactly `N × M` derived
+sequences exist throughout all rounds. Derived-sequence order is region-major,
+then first-round target-ID order.
+
+**Strand / TSS semantics.** Each round's `strand` is exactly `+` or `-` and
+applies to every row and target group in that round. Plus rounds use `fwdTSS`;
+minus rounds use `revTSS`. A selected TSS of `-1` or a nonmissing selected TSS
+outside `[start,end)` fails preflight. Placement uses the shared
+`RGTools.TSSRelativeCoordinates` rules with the round's target length as the
+replacement-window width. On minus rounds, target sequences are
+reverse-complemented with IUPAC rules before insertion.
+
+**Sequential rounds.** Rounds execute in manifest order. Each round replaces a
+window equal to its target length inside the current derived sequence, so every
+output sequence preserves the original region length after every round.
+Overlapping rounds are allowed; later rounds overwrite earlier bases in
+overlapping windows. Every replacement window must fit completely inside the
+extracted region sequence before any round mutates sequences.
+
+**Outputs / ordering.** Publishes an output-directory bundle (no stdout data
+mode). Required artifacts:
+
+- `sequences.fasta` — exactly `N × M` final records
+- `manifest.tsv` — long-form mutation-event table with exactly `N × M × R` rows
+  for `R` rounds
+
+With `--write_replaced_windows`, the bundle also contains
+`replaced/<round_id>.fasta` for every round. Each replaced-window record holds
+the exact sequence removed immediately before that round inserts its target
+(same IDs and record order as `sequences.fasta`; sequence length equals that
+round's target length). For overlapping rounds, a later replaced window
+includes changes from earlier rounds.
+
+**Sequence IDs.** Stable FASTA IDs have the form
+`rNNNNNN|chrom:start-end|target=TARGET_ID`, where the row number is one-based
+and expands beyond six digits when needed. The row ordinal distinguishes
+duplicate genomic intervals. `chrom` and target IDs must not contain `|`.
+
+**Output manifest.** Tab-separated with exact columns, in order:
+`sequence_id`, `region_row`, `chrom`, `start`, `end`, `region_name`,
+`target_id`, `round_index`, `round_id`, `strand`, `tss_relative_coordinate`,
+`target_length`. One row per derived sequence per round. `region_row` and
+`round_index` are one-based; genomic interval fields remain BED zero-based
+half-open. Rows are ordered by derived-sequence order, then round order within
+each sequence.
+
+**Publication / `--force`.** The output parent directory must already exist and
+be writable; the command does not create missing parents. Without `--force`, an
+existing output directory is rejected. The complete bundle is written to a
+unique sibling staging directory, then published with rename-based replacement.
+An ordinary publication failure restores the prior bundle. Interrupted staging
+or backup siblings beside the output directory are detected and reported for
+manual recovery rather than automatic cleanup. `--force` authorizes replacement
+only of the exact resolved output directory.
+
+**Preflight failures.** Validation runs before staging final artifacts:
+TREbed-only region type; genome coverage; reserved `|` in chromosome names;
+manifest header and round IDs; coordinate shape, dtype, and alignment; target
+files, alphabets, lengths, and cross-round ID sets; selected TSS availability
+and interval membership; coordinate zero; replacement-window bounds for every
+derived sequence and round. Errors identify the round, region row, target
+group, and coordinate where possible.
+
+**Composition.** Typical upstream steps are
+[`select_tss_relative_track`](#select_tss_relative_track) (coordinate stat and
+mask), [`mask_op`](#mask_op-intersect) (combine masks), and
+[`export MaskedGE`](#export-maskedge) (subset regions and aligned coordinate
+stats). See the [TSS-relative mutagenesis workflow](../../../guides/tss-relative-mutagenesis.md).
 
 ### `get_context_ge nearest`
 

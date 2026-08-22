@@ -1,5 +1,5 @@
 site_name: xp-genomic-tools
-site_description: User docs for RGTools and companion CLIs (GenomicElementTools, ExogeneousSequenceTools, and MotifTools 0.2.0a2)
+site_description: User docs for RGTools and companion CLIs (GenomicElementTools, ExogeneousSequenceTools, and MotifTools 0.3.0a1)
 site_url: https://dignomor.github.io/xp-genomic-tools-docs/
 repo_url: https://github.com/DignoMor/xp-genomic-tools
 repo_name: DignoMor/xp-genomic-tools
@@ -36,6 +36,8 @@ nav:
   - Home: index.md
   - Install: install.md
   - Concepts: concepts.md
+  - Guides:
+      - TSS-relative mutagenesis: guides/tss-relative-mutagenesis.md
   - Formats: formats.md
   - CLI:
       - Overview: cli/index.md

@@ -2,7 +2,7 @@
 
 ## Is this a stable release?
 
-No. **0.2.0a2** is an alpha. Pin the git tag and expect CLI/API changes in later
+No. **0.3.0a1** is an alpha. Pin the git tag and expect CLI/API changes in later
 cuts.
 
 ## Why is it spelled “Exogeneous”?
@@ -13,7 +13,7 @@ Search and import with that spelling (`ExogeneousSequenceTools`,
 
 ## Is CountTableTools available?
 
-Not in **0.2.0a2**. `RGTools`, `GenomicElementTools`,
+Not in **0.3.0a1**. `RGTools`, `GenomicElementTools`,
 `ExogeneousSequenceTools`, and `MotifTools` ship.
 
 ## Where do I find every CLI flag?
