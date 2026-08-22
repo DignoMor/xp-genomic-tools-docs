@@ -179,22 +179,30 @@ library errors.
 
 ### `select_tss_relative_track`
 
-**Purpose / Inputs.** Select one TSS-relative score from required `--track_npy`
-relative to a TREbed TSS. Requires `--strand`, nonzero `--target_coord`, finite
-`--min_score`, `--coordinate_opath`, and `--mask_opath`. Shared region flags are
-required and `--region_file_type` must be `TREbed`.
+**Purpose / Inputs.** Select a TSS-relative score from required `--track_npy`
+relative to a TREbed TSS. Requires `--strand` (`+` or `-`), nonzero
+`--target_coord`, finite `--min_score`, `--coordinate_opath`, and
+`--mask_opath`. Shared region flags are required and `--region_file_type` must
+be `TREbed`.
 
-**Defaults / constraints.** `--relaxation` defaults to `0` and
-`--track_window_size` defaults to `1`. The delivered path supports only strand
-`+`, relaxation `0`, and window size `1`; other combinations fail explicitly.
-Matching uses an inclusive cutoff (`score >= min_score`). A selected
-`fwdTSS` of `-1` is a row-level no-match; `revTSS` is ignored on the plus strand.
-A nonmissing selected TSS must lie inside `[start,end)`.
+**Defaults / constraints.** `--relaxation` defaults to `0` (exact coordinate)
+and expands to `2r+1` ascending no-zero coordinates for `r > 0`.
+`--track_window_size` defaults to `1` for point tracks; set it to the motif
+width when consuming motif-search tracks. Strand `+` uses `fwdTSS`; strand `-`
+uses `revTSS`. Tracks stay genomic-forward indexed: plus coordinates identify
+the genomic-left strand-oriented 5-prime base of the scored window, and minus
+coordinates identify the genomic-right 5-prime base (internal trailing padding
+is `window_size - 1`). Selection takes the first maximum in ascending
+TSS-relative order and matches with an inclusive cutoff
+(`max_score >= min_score`). A selected TSS of `-1` is a row-level no-match; the
+unselected TSS is ignored. A nonmissing selected TSS must lie inside
+`[start,end)`, and every relaxed-window position must map inside the row.
 
 **Outputs / ordering / failures.** Writes integer coordinates and a boolean mask
-as `(N,1)` annotations in input row order. Matches emit the requested nonzero
-coordinate and `true`; no-matches emit `0` and `false`. Alignment, invalid
-inputs, and undelivered modes raise `ValueError`.
+as `(N,1)` annotations in input row order. Matches emit the selected nonzero
+coordinate and `true`; no-matches emit `0` and `false`. Boolean/nonnumeric
+tracks, nonfinite cutoffs, unavailable windows, and alignment errors raise
+`ValueError`.
 
 ### `get_context_ge nearest`
 

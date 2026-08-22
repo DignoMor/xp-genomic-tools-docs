@@ -2,10 +2,9 @@
 
 **Purpose/availability:** `import RGTools.TSSRelativeCoordinates` exposes
 reusable no-zero TSS-relative coordinate arithmetic. Symbols are not re-exported
-from the top-level `RGTools` namespace. The current release slice delivers
-no-zero offsetting and exact plus-strand point-index conversion
-(`track_window_size=1`). Minus-strand conversion, nonzero relaxation windows,
-and wider scored windows are not yet delivered and raise `ValueError`.
+from the top-level `RGTools` namespace. The module converts between strand-oriented
+TSS-relative coordinates and genomic-forward track indices for point tracks and
+wider scored windows.
 
 ## Coordinate system
 
@@ -23,22 +22,28 @@ Offset a no-zero TSS-relative coordinate by an integer delta.
 ## `iter_relaxed_window(target, relaxation) -> Iterator[int]`
 
 Yield ascending TSS-relative coordinates for a symmetric window around
-`target`.
+`target`. A nonnegative relaxation radius `r` yields exactly `2r+1`
+coordinates and skips zero (for example `target=-1`, `r=1` → `[-2, -1, 1]`).
 
-**Delivered behavior.** `relaxation == 0` yields exactly `[target]`.
-
-**Failures.** `target == 0` or nonzero `relaxation` raises `ValueError`.
+**Failures.** `target == 0` or negative `relaxation` raises `ValueError`.
 
 ## `tss_relative_to_track_index(*, strand, coord, start, end, tss, track_window_size=1) -> int`
 
 Convert a TSS-relative coordinate to a row-local genomic-forward track index for
 interval `[start, end)`.
 
-**Delivered behavior.** Strand `+` with `track_window_size=1`:
+Track arrays remain genomic-forward for both strands. A value at index `i`
+describes a genomic-forward window of width `track_window_size` beginning at
+`start + i`.
 
-1. Genomic position is `tss + coord - 1` when `coord > 0`, else `tss + coord`.
-2. Track index is `genomic - start`.
-3. The index must satisfy `0 <= index < (end - start)`.
+1. Genomic position of the reported strand-oriented 5-prime base is
+   `tss + coord - 1` when `coord > 0`, else `tss + coord`.
+2. Strand `+`: reported coordinate is the genomic-left 5-prime base; index is
+   `genomic - start`.
+3. Strand `-`: reported coordinate is the genomic-right 5-prime base; index is
+   `genomic - start - (track_window_size - 1)`.
+4. The scored window must fit inside the interval; otherwise conversion raises.
 
-**Failures.** Invalid zero coordinates, invalid intervals, out-of-bounds indices,
-strand `-`, and `track_window_size != 1` raise contextual `ValueError`.
+**Failures.** Invalid strand, zero coordinates, nonpositive
+`track_window_size`, invalid intervals, and out-of-bounds windows raise
+contextual `ValueError`.
