@@ -183,7 +183,7 @@ library errors.
 relative to a TREbed TSS. Requires `--strand` (`+` or `-`), nonzero
 `--target_coord`, finite `--min_score`, `--coordinate_opath`, and
 `--mask_opath`. Shared region flags are required and `--region_file_type` must
-be `TREbed`.
+be `TREbed`. Track and output paths accept `.npy` or single-array `.npz`.
 
 **Defaults / constraints.** `--relaxation` defaults to `0` (exact coordinate)
 and expands to `2r+1` ascending no-zero coordinates for `r > 0`.
@@ -204,11 +204,20 @@ than format-level TREbed readability.
 **Outputs / ordering / failures.** Writes integer coordinates and a boolean mask
 as `(N,1)` annotations in input row order only after every row is validated.
 Matches emit the selected nonzero coordinate and `true`; no-matches emit `0`
-and `false`. Boolean/nonnumeric tracks, invalid window size or relaxation,
-zero target, nonfinite cutoffs, searched NaN (with row/track-index context),
-out-of-interval selected TSS, unavailable windows, and track shape/alignment
-errors raise `ValueError` before destinations are created or changed. Score
-`-inf` is unmatchable; `+inf` is a qualifying maximum.
+and `false`. Existing destinations are refused unless `--force` is supplied;
+either existing path blocks both publications. Forced replacement stages
+complete files beside each destination (`.stem.staging.npy` /
+`.stem.staging.npz`), backs up existing files (`.basename.bak`), publishes both
+with `os.replace`, and rolls back from backups on ordinary commit failure.
+Interrupted staging or backup remnants are reported without automatic cleanup.
+Boolean/nonnumeric tracks,
+unsupported suffixes, multi-array NPZ inputs, invalid window size or
+relaxation, zero target, nonfinite cutoffs, searched NaN (with row/track-index
+context), out-of-interval selected TSS, unavailable windows, missing parent
+directories, and track shape/alignment errors raise before destinations are
+created or changed. Score `-inf` is unmatchable; `+inf` is a qualifying
+maximum. Compose the mask with `mask_op` and subset regions plus aligned
+coordinate stats with `export MaskedGE`.
 
 ### `get_context_ge nearest`
 
