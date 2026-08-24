@@ -51,6 +51,13 @@ failures raise contextual `ValueError`; unknown in-memory motif names raise
 `KeyError`. Parsing and writing do not mutate stored motif arrays or
 collection metadata.
 
+## Side effects
+
+Parsing only reads the source and constructs in-memory motif data. Writing to
+a filesystem path creates or replaces the target file; writing to a text
+stream emits text to that stream. Neither operation mutates stored motif
+arrays or collection metadata.
+
 ## Reference fields
 
 **Purpose:** minimal MEME text interchange. **Availability:** documented with
@@ -62,7 +69,7 @@ floating probabilities. **Shapes:** motif matrix `(w, alphabet_length)`.
 names; background and PWM numerical envelope above; URL grammar and singular
 cardinality above; full dialects beyond optional input-only URL are out of
 scope. **Outputs:** parsed motifs or compatible text to a path or text stream
-without URL records. **Ordering:** motif and row order retained. **Side
-effects:** path writing creates/replaces the target file; stream writing only
+without URL records. **Ordering:** motif and row order retained. **Side effects:**
+path writing creates/replaces the target file; stream writing only
 writes text; no mutation of source arrays. **Failures:** contextual
 `ValueError` for validation; `KeyError` for unknown names.
