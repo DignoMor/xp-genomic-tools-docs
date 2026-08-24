@@ -1,15 +1,15 @@
 # xp-genomic-tools public reference (0.3.0a1)
 
-Code revision: `91dfbfc948a269770f16814cdbc9f7280a010398`
+Code revision: `c02d7a6ad09960550b5c1758d5b3aa7353cd8e71`
 
 Canonical Pages and immutable raw-source fallbacks:
 
-- Exhaustive plain-text reference: https://dignomor.github.io/xp-genomic-tools-docs/llms-full.txt (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/llms-full.txt)
-- Reference conventions: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/conventions.md)
-- Python reference: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/python/elements/index.md)
-- BedTable reference: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table3/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/python/bedtable/bed-table3.md)
-- GenomicElementTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/cli/genomic-element-tools/index.md)
-- ExogeneousSequenceTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/cli/exogeneous-sequence-tools/index.md)
-- MotifTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/cli/motif-tools/index.md)
-- Formats: https://dignomor.github.io/xp-genomic-tools-docs/formats/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/formats.md)
-- Boolean-mask dtype rule: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/#dtype (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/58185b5361a91a4b48be482b57ba27bfe3d9acf0/docs/reference/formats/boolean-mask.md#dtype)
+- Exhaustive plain-text reference: https://dignomor.github.io/xp-genomic-tools-docs/llms-full.txt (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/llms-full.txt)
+- Reference conventions: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/conventions.md)
+- Python reference: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/python/elements/index.md)
+- BedTable reference: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table3/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/python/bedtable/bed-table3.md)
+- GenomicElementTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/cli/genomic-element-tools/index.md)
+- ExogeneousSequenceTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/cli/exogeneous-sequence-tools/index.md)
+- MotifTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/cli/motif-tools/index.md)
+- Formats: https://dignomor.github.io/xp-genomic-tools-docs/formats/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/formats.md)
+- Boolean-mask dtype rule: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/#dtype (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/4ca8217922cdb34ba74a9baba896fea13665e608/docs/reference/formats/boolean-mask.md#dtype)

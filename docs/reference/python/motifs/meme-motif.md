@@ -21,13 +21,16 @@ metadata. `add_motif(name, motif_info)` requires keys
 must sum to approximately 1 (`atol=1e-6`). `clone_empty()` copies metadata but
 no motifs. `write_meme_file(destination)` writes the supported subset to a
 filesystem path or a text stream with identical text, including six-decimal
-PWM rows, without mutating collection metadata or motif arrays.
+PWM rows, without mutating collection metadata or motif arrays and without
+emitting any parsed URL records.
 
 Every operation has string names, list metadata, and NumPy PWM shapes above;
 there are no implicit defaults beyond constructor `None`. Unknown names raise
 `KeyError`. Incomplete info, shape mismatch, duplicate names, invalid
-backgrounds, or invalid PWM rows raise contextual `ValueError`. Full MEME
-URL/command/alternate-name blocks are unsupported.
+backgrounds, invalid PWM rows, or malformed/duplicate/misplaced URL records
+raise contextual `ValueError`. Parsed URL values are discarded and are not
+exposed by getters. Command lines, alternate motif names, and other full-MEME
+dialect blocks remain unsupported.
 
 ## Static scoring operations
 
@@ -45,20 +48,30 @@ input sequence position.
 ## MEME format
 
 Supported text contains `MEME version`, `ALPHABET=`, `strands:`, background
-frequencies, and each `MOTIF` plus `letter-probability matrix` rows. It is a
+frequencies, and each `MOTIF` plus `letter-probability matrix` rows. After a
+complete matrix, input may include zero or one exact-uppercase `URL <token>`
+record; the value is ignored and canonical output omits it. This remains a
 minimal read/write subset, not full MEME. See the MEME format reference for the
 validation envelope (unique names, finite non-negative normalized PWMs and
-backgrounds, truncated-matrix rejection, and path/stream write equivalence).
+backgrounds, truncated-matrix rejection, URL grammar, and path/stream write
+equivalence).
 
 ## Reference fields
 
 **Purpose:** parse, build, serialize, and score motifs. **Availability:** with
 the installed `RGTools` release that documents this page. **Inputs:** MEME
-paths, metadata, PWM arrays, and sequences. **Types:** strings, lists,
-dictionaries, floats, NumPy arrays, and text streams for write destinations.
-**Shapes:** PWM `(motif_length, alphabet_length)`; scores follow positions.
-**Dtypes:** floating probability and score arrays. **Defaults:**
-`file_path=None`, uniform background, forward strand. **Choices:** `+`, `-`,
-`both`; minimal MEME subset. **Constraints:** unique motif names; dimensions,
-normalization, and sequence length agree. **Outputs:** metadata, PWM arrays,
-scores, and MEME text. **Ordering:** motif and score order is preserved. **Side effects:** path writing creates/replaces the target file; stream writing emits only MEME text; parsing retains no handle and does not mutate caller arrays after store. **Failures:** contextual `ValueError` for malformed input or invalid PWM/metadata; `KeyError` for unknown names; invalid strand/length raise documented errors.
+paths, metadata, PWM arrays, sequences, and optional ignored input-only URL
+records. **Types:** strings, lists, dictionaries, floats, NumPy arrays, and
+text streams for write destinations. **Shapes:** PWM
+`(motif_length, alphabet_length)`; scores follow positions. **Dtypes:**
+floating probability and score arrays. **Defaults:** `file_path=None`, uniform
+background, forward strand. **Choices:** `+`, `-`, `both`; minimal MEME subset
+including optional input-only URL. **Constraints:** unique motif names;
+dimensions, normalization, and sequence length agree; URL records follow the
+strict grammar and are not retained. **Outputs:** metadata, PWM arrays,
+scores, and MEME text without URL records. **Ordering:** motif and score order
+is preserved. **Side effects:** path writing creates/replaces the target file;
+stream writing emits only MEME text; parsing retains no handle and does not
+mutate caller arrays after store. **Failures:** contextual `ValueError` for
+malformed input, invalid PWM/metadata, or invalid URL records; `KeyError` for
+unknown names; invalid strand/length raise documented errors.
