@@ -1,6 +1,6 @@
 # GenomicElementTools command reference
 
-This is the semantic reference for release `0.3.0a1`. It covers every shipped
+This is the semantic reference for release `0.3.0a2`. It covers every shipped
 top-level command and nested path. Exact usage, aliases, parser-required flags,
 choices, defaults, and parser help are maintained in the [generated argparse
 reference](../generated/genomic-element-tools.md); the sections below add the
@@ -15,7 +15,7 @@ tab-separated, and selected annotations align by first dimension with the
 current region order.
 
 **Availability.** `GenomicElementTools` is the shipped console entry point in
-`0.3.0a1`; no separate count-table console entry point is shipped. Missing required flags or invalid
+`0.3.0a2`; no separate count-table console entry point is shipped. Missing required flags or invalid
 argparse choices exit with standard argparse status 2. Runtime data and
 contract violations generally raise `ValueError` or the underlying library
 exception; exact exception messages are not part of the interface.

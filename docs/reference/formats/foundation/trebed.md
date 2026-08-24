@@ -7,7 +7,7 @@ PINTS-compatible six-column TSS-annotated BED serialization.
 
 ## Availability
 
-Supported in release `0.3.0a1` as a GenomicElements region type. TSS missingness
+Supported in release `0.3.0a2` as a GenomicElements region type. TSS missingness
 and genomic-position rules below are format-level. Stricter indexing rules for
 `GenomicElementTools select_tss_relative_track` and
 `GenomicElementTools tss_relative_mutagenesis` are documented with those
