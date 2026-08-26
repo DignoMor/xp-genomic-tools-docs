@@ -1,6 +1,6 @@
 # GenomicElementTools command reference
 
-This is the semantic reference for release `0.3.0a2`. It covers every shipped
+This is the semantic reference for release `0.3.0a3`. It covers every shipped
 top-level command and nested path. Exact usage, aliases, parser-required flags,
 choices, defaults, and parser help are maintained in the [generated argparse
 reference](../generated/genomic-element-tools.md); the sections below add the
@@ -15,7 +15,7 @@ tab-separated, and selected annotations align by first dimension with the
 current region order.
 
 **Availability.** `GenomicElementTools` is the shipped console entry point in
-`0.3.0a2`; no separate count-table console entry point is shipped. Missing required flags or invalid
+`0.3.0a3`; no separate count-table console entry point is shipped. Missing required flags or invalid
 argparse choices exit with standard argparse status 2. Runtime data and
 contract violations generally raise `ValueError` or the underlying library
 exception; exact exception messages are not part of the interface.
@@ -430,10 +430,29 @@ lengths, stat alignment, and CSV output errors fail.
 
 ### `export Heatmap`
 
-Takes parallel `--track_npy`/`--title`/`--negative` lists, percentile controls
-(`--per_track_max_percentile` default 99; `--vmax_percentile` default 50), and
-`--opath`. Writes a visual image only (no reusable format page); tracks align
-to regions. Parallel-list, percentile, rendering, and I/O failures fail.
+Takes parallel `--track_npy`/`--title`/`--negative` lists, optional repeated
+`--absolute` values, percentile controls (`--per_track_max_percentile` default
+99; `--vmax_percentile` default 50), and `--opath`. Writes a visual image only
+(no reusable format page); tracks align to regions.
+
+`--absolute` chooses per-track rendering. Omit it to keep every track in
+magnitude mode (same as `--absolute True` for each track). If you pass any
+`--absolute` values, provide exactly one per track: `True` keeps magnitude
+mode, and `False` selects signed mode. Parallel-list length mismatches fail.
+
+Magnitude mode converts values to absolute magnitudes, uses sequential red or
+blue coloring from `--negative`, may negate the mean profile when `--negative`
+is true, and zero-pads shorter rows. Signed mode keeps raw negative and
+positive values in the heatmap and mean, ignores `--negative` for polarity and
+palette, uses the fixed `RdBu_r` diverging colormap with a panel color bar,
+pads shorter rows as missing rather than zero, and centers the scale exactly at
+zero with symmetric limits. Explicit non-finite cells are masked in both modes
+and excluded from scale estimation, shared row-order keys, and position-wise
+means. Mixed panels share one ascending row order based on each region's
+maximum finite absolute magnitude across tracks, with original order retained
+for ties. A track-row or entire track with no finite value fails with the track
+title and region-row context. Parallel-list, percentile, rendering, and I/O
+failures fail.
 
 ### `export ChromFilteredGE`
 
