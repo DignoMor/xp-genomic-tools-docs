@@ -430,10 +430,25 @@ lengths, stat alignment, and CSV output errors fail.
 
 ### `export Heatmap`
 
-Takes parallel `--track_npy`/`--title`/`--negative` lists, percentile controls
-(`--per_track_max_percentile` default 99; `--vmax_percentile` default 50), and
-`--opath`. Writes a visual image only (no reusable format page); tracks align
-to regions. Parallel-list, percentile, rendering, and I/O failures fail.
+Takes parallel `--track_npy`/`--title`/`--negative` lists, optional repeated
+`--absolute` values, percentile controls (`--per_track_max_percentile` default
+99; `--vmax_percentile` default 50), and `--opath`. Writes a visual image only
+(no reusable format page); tracks align to regions.
+
+`--absolute` chooses per-track rendering. Omit it to keep every track in
+magnitude mode (same as `--absolute True` for each track). If you pass any
+`--absolute` values, provide exactly one per track: `True` keeps magnitude
+mode, and `False` selects signed mode. Parallel-list length mismatches fail.
+
+Magnitude mode converts values to absolute magnitudes, uses sequential red or
+blue coloring from `--negative`, may negate the mean profile when `--negative`
+is true, and zero-pads shorter rows. Signed mode keeps raw negative and
+positive values in the heatmap and mean, ignores `--negative` for polarity and
+palette, uses the fixed `RdBu_r` diverging colormap with a panel color bar, and
+centers the scale exactly at zero with symmetric limits. Mixed panels share one
+ascending row order based on each region's maximum absolute magnitude across
+tracks, with original order retained for ties. Parallel-list, percentile,
+rendering, and I/O failures fail.
 
 ### `export ChromFilteredGE`
 
