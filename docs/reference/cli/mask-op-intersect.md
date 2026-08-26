@@ -9,7 +9,7 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a3`. Invoke it through the
+Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Syntax
@@ -94,3 +94,19 @@ Argparse exits for missing required flags or invalid region-type choices. The
 command raises `ValueError` for fewer than two masks, non-boolean masks, shape
 or region-count mismatches, multi-array NPZ input, or an unsupported region
 schema encountered while loading.
+
+## Example
+
+Intersect two boolean masks aligned to the same three-region BED3 table:
+
+```bash
+GenomicElementTools mask_op intersect \
+  --region_file_path regions.bed3 \
+  --region_file_type bed3 \
+  --mask_npy mask_a.npy \
+  --mask_npy mask_b.npy \
+  --opath intersect.npy
+```
+
+Each input mask has shape `(3,)` or `(3, 1)` with boolean dtype. The saved
+`intersect.npy` contains the element-wise logical AND with shape `(3, 1)`.

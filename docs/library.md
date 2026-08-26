@@ -2,7 +2,7 @@
 
 `RGTools` is the importable Python library behind the CLIs. For end-to-end
 workflows, prefer the [CLI pages](cli/index.md). This page is a light import
-overview for **0.3.0a3**.
+overview for **0.3.0a4**.
 
 ## Common imports
 
@@ -56,6 +56,7 @@ For most users, the console scripts are enough.
 ### Element collections
 
 - [GeneralElements, GenomicElements, and ExogeneousSequences](reference/python/elements/index.md)
+- [`GenomicElements`](reference/python/elements/genomic-elements.md)
 
 Operations such as `GeneralElements.load_mask_from_arr` are documented on the
 element-collection class page above.

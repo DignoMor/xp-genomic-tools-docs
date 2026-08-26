@@ -1,7 +1,7 @@
-# xp-genomic-tools exhaustive public reference (0.3.0a3)
+# xp-genomic-tools exhaustive public reference (0.3.0a4)
 
 Code revision: `3cc748914e3b0de3c692728802d4c3654d3fe458`
-Documentation revision: `5db075b8e4a7d59c871a2d653ee404a931d62d2a`
+Documentation revision: `395d663e6fde965644664038bce273b2db6a22db`
 
 ## `reference/cli/exogeneous-sequence-tools/index.md`
 
@@ -156,7 +156,7 @@ Creates requested outputs; inputs are not modified.
 Missing flags exit 2; validation and I/O failures exit non-zero.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/exogeneous-sequence-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/exogeneous-sequence-tools/index.md
 
 ## `reference/cli/generated/exogeneous-sequence-tools.md`
 
@@ -165,7 +165,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4
 
 # `ExogeneousSequenceTools` CLI reference
 
-Supported in release `0.3.0a3`. This page is generated from the installed
+Supported in release `0.3.0a4`. This page is generated from the installed
 argparse tree and includes every top-level and nested command path.
 
 ## Purpose
@@ -557,7 +557,7 @@ Argparse exits for missing required values and invalid choices; runtime
 validation errors propagate from the command implementation.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/generated/exogeneous-sequence-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/generated/exogeneous-sequence-tools.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/generated/exogeneous-sequence-tools.md
 
 ## `reference/cli/generated/genomic-element-tools.md`
 
@@ -566,7 +566,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4
 
 # `GenomicElementTools` CLI reference
 
-Supported in release `0.3.0a3`. This page is generated from the installed
+Supported in release `0.3.0a4`. This page is generated from the installed
 argparse tree and includes every top-level and nested command path.
 
 ## Purpose
@@ -1437,7 +1437,7 @@ Argparse exits for missing required values and invalid choices; runtime
 validation errors propagate from the command implementation.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/generated/genomic-element-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/generated/genomic-element-tools.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/generated/genomic-element-tools.md
 
 ## `reference/cli/generated/motif-tools.md`
 
@@ -1446,7 +1446,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4
 
 # `MotifTools` CLI reference
 
-Supported in release `0.3.0a3`. This page is generated from the installed
+Supported in release `0.3.0a4`. This page is generated from the installed
 argparse tree and includes every top-level and nested command path.
 
 ## Purpose
@@ -1590,7 +1590,7 @@ Argparse exits for missing required values and invalid choices; runtime
 validation errors propagate from the command implementation.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/generated/motif-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/generated/motif-tools.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/generated/motif-tools.md
 
 ## `reference/cli/genomic-element-tools/index.md`
 
@@ -2090,7 +2090,7 @@ RSIDs are resolved through Ensembl; `raise` propagates not-found/network errors,
 while `drop` omits unresolved rows. Surviving rows retain input order.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/genomic-element-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/genomic-element-tools/index.md
 
 ## `reference/cli/mask-op-intersect.md`
 
@@ -2105,7 +2105,7 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a3`. Invoke it through the
+Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Syntax
@@ -2191,8 +2191,24 @@ command raises `ValueError` for fewer than two masks, non-boolean masks, shape
 or region-count mismatches, multi-array NPZ input, or an unsupported region
 schema encountered while loading.
 
+## Example
+
+Intersect two boolean masks aligned to the same three-region BED3 table:
+
+```bash
+GenomicElementTools mask_op intersect \
+  --region_file_path regions.bed3 \
+  --region_file_type bed3 \
+  --mask_npy mask_a.npy \
+  --mask_npy mask_b.npy \
+  --opath intersect.npy
+```
+
+Each input mask has shape `(3,)` or `(3, 1)` with boolean dtype. The saved
+`intersect.npy` contains the element-wise logical AND with shape `(3, 1)`.
+
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/mask-op-intersect/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/mask-op-intersect.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/mask-op-intersect.md
 
 ## `reference/cli/motif-tools/index.md`
 
@@ -2384,7 +2400,7 @@ preserve source motif order. **Side effects:** atomic path writes only.
 tracebacks for expected failures.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/cli/motif-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/cli/motif-tools/index.md
 
 ## `reference/conventions.md`
 
@@ -2415,7 +2431,7 @@ The documentation build refreshes generated syntax from the selected code
 checkout and fails if the built reference lacks a required field.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/conventions.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/conventions.md
 
 ## `reference/formats/boolean-mask.md`
 
@@ -2491,7 +2507,7 @@ region-count mismatch, or a multi-array NPZ archive. File-system and NumPy load
 errors propagate from the underlying reader.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/boolean-mask.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/boolean-mask.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md`
 
@@ -2536,7 +2552,7 @@ Creates output files.
 Invalid choices, cardinality, or I/O fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/assembly-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md`
 
@@ -2580,7 +2596,7 @@ Output files are created by writers.
 Malformed or unreadable files fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md`
 
@@ -2620,7 +2636,7 @@ Creates one output file per motif.
 Invalid MEME/FASTA or incompatible lengths fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/motif-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md`
 
@@ -2662,7 +2678,7 @@ Creates output FASTA.
 Invalid files, arrays, or offsets fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md`
 
@@ -2702,7 +2718,7 @@ Creates requested output path.
 Mixed lengths or invalid input fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/onehot-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md`
 
@@ -2743,7 +2759,7 @@ Creates output NPY files.
 Wrong dimensions and malformed ranges fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md
 
 ## `reference/formats/cli/genomic-element-tools/bed6poly.md`
 
@@ -2813,7 +2829,7 @@ Malformed BED6, unsupported genome version, network errors, and unresolved
 variants fail under `raise`; unresolved variants are omitted under `drop`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/bed6poly/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/genomic-element-tools/bed6poly.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/genomic-element-tools/bed6poly.md
 
 ## `reference/formats/cli/genomic-element-tools/counttable.md`
 
@@ -2878,7 +2894,7 @@ Parallel-list, identifier, alignment, numeric conversion, and file errors fail
 with parser, `ValueError`, or I/O errors as applicable.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/counttable/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/genomic-element-tools/counttable.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/genomic-element-tools/counttable.md
 
 ## `reference/formats/cli/genomic-element-tools/trebed.md`
 
@@ -2947,7 +2963,7 @@ Missing files, invalid coordinates, shape mismatch, schema errors, and output
 I/O failures raise the applicable library or I/O exception.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/genomic-element-tools/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/genomic-element-tools/trebed.md
 
 ## `reference/formats/cli/genomic-element-tools/wtes.md`
 
@@ -3018,7 +3034,7 @@ unreadable inputs, and output I/O failures raise the applicable library/I/O
 exception.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/wtes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/cli/genomic-element-tools/wtes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/cli/genomic-element-tools/wtes.md
 
 ## `reference/formats/elements/annotation-arrays.md`
 
@@ -3077,7 +3093,7 @@ save writes. **Failures:** invalid dtype/shape/count/type or multi-array NPZ
 raises `ValueError`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/elements/annotation-arrays/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/elements/annotation-arrays.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/elements/annotation-arrays.md
 
 ## `reference/formats/elements/fasta.md`
 
@@ -3117,7 +3133,7 @@ indexing reads; writers create files and export refuses overwrite. **Failures:**
 missing chromosomes, malformed FASTA, and existing paths fail as stated.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/elements/fasta/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/elements/fasta.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/elements/fasta.md
 
 ## `reference/formats/foundation/bed-like.md`
 
@@ -3176,7 +3192,7 @@ Read/write operations perform file or standard-stream I/O.
 Wrong column count or unsupported type key raises `BedTableLoadException` or the caller's unsupported-type error. I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed-like/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/bed-like.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/bed-like.md
 
 ## `reference/formats/foundation/bed3.md`
 
@@ -3235,7 +3251,7 @@ Read/write operations perform file or standard-stream I/O.
 Wrong column count raises `BedTableLoadException`; I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed3/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/bed3.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/bed3.md
 
 ## `reference/formats/foundation/bed3gene.md`
 
@@ -3294,7 +3310,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed3gene/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/bed3gene.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/bed3gene.md
 
 ## `reference/formats/foundation/bed6.md`
 
@@ -3353,7 +3369,7 @@ Read/write operations perform file or standard-stream I/O.
 Wrong column count raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed6/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/bed6.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/bed6.md
 
 ## `reference/formats/foundation/bed6gene.md`
 
@@ -3412,7 +3428,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed6gene/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/bed6gene.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/bed6gene.md
 
 ## `reference/formats/foundation/bedgraph.md`
 
@@ -3471,7 +3487,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bedgraph/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/bedgraph.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/bedgraph.md
 
 ## `reference/formats/foundation/list-file.md`
 
@@ -3530,7 +3546,7 @@ File or stream I/O.
 Standard OS/IO and conversion errors propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/list-file/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/list-file.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/list-file.md
 
 ## `reference/formats/foundation/narrowpeak.md`
 
@@ -3589,7 +3605,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/narrowpeak/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/narrowpeak.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/narrowpeak.md
 
 ## `reference/formats/foundation/pair-end.md`
 
@@ -3651,7 +3667,7 @@ Loads replace rows and rebuild the inverse index; writes perform file or standar
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/pair-end/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/pair-end.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/pair-end.md
 
 ## `reference/formats/foundation/trebed.md`
 
@@ -3723,7 +3739,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/foundation/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/foundation/trebed.md
 
 ## `reference/formats/gtf/gencode.md`
 
@@ -3788,7 +3804,7 @@ Invalid strand raises `RGToolsInternalException`; malformed records or
 unsupported attribute syntax may raise parsing errors.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/gtf/gencode/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/gtf/gencode.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/gtf/gencode.md
 
 ## `reference/formats/motifs/meme.md`
 
@@ -3869,7 +3885,7 @@ writes text; no mutation of source arrays. **Failures:** contextual
 `ValueError` for validation; `KeyError` for unknown names.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/motifs/meme/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/motifs/meme.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/motifs/meme.md
 
 ## `reference/formats/signal/bigwig.md`
 
@@ -3935,7 +3951,7 @@ Reading opens a pyBigWig resource and performs no file writes.
 Invalid paths, malformed files, or read failures propagate from `pyBigWig`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/signal/bigwig/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/signal/bigwig.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/signal/bigwig.md
 
 ## `reference/formats/snp/ensembl-simple-info.md`
 
@@ -3997,7 +4013,7 @@ A variation without a chromosome mapping raises an exception; HTTP failures
 propagate from `requests`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/snp/ensembl-simple-info/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/formats/snp/ensembl-simple-info.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/formats/snp/ensembl-simple-info.md
 
 ## `reference/python/bedtable/bed-region.md`
 
@@ -4060,7 +4076,7 @@ Missing/invalid strand raises `InvalidStrandnessException`; invalid padded coord
 `BedRegion`, `to_dict`, `get_fields`, `pad_region`, `__getitem__`, `__eq__`, `__lt__`, `__le__`, `__gt__`, and `__ne__`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-region/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/bedtable/bed-region.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/bedtable/bed-region.md
 
 ## `reference/python/bedtable/bed-table-pair-end.md`
 
@@ -4126,7 +4142,7 @@ Schema/column mismatch raises `BedTableLoadException`; inherited filter and I/O 
 `BedTablePairEnd`, `column_names`, `column_types`, `extra_column_names`, `extra_column_dtype`, `get_other_region_chroms`, `get_other_region_starts`, `get_other_region_ends`, `get_pair_names`, `get_pair_scores`, `get_region_strands`, `get_other_region_strands`, `get_region_extra_column`, `search_pair_extra_column`, and `search_second_region`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table-pair-end/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/bedtable/bed-table-pair-end.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/bedtable/bed-table-pair-end.md
 
 ## `reference/python/bedtable/bed-table-plus.md`
 
@@ -4189,7 +4205,7 @@ Schema mismatch raises `BedTableLoadException`; unknown extra columns and invali
 `BedTable3Plus` and `BedTable6Plus` each expose `column_names`, `column_types`, `extra_column_names`, `extra_column_dtype`, and `get_region_extra_column`, in addition to inherited BedTable operations.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table-plus/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/bedtable/bed-table-plus.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/bedtable/bed-table-plus.md
 
 ## `reference/python/bedtable/bed-table3.md`
 
@@ -4252,7 +4268,7 @@ Column/schema mismatch raises `BedTableLoadException`; non-boolean or wrong-leng
 `BedTable3`, `column_names`, `column_types`, `extra_column_names`, `extra_column_dtype`, `load_from_file`, `load_from_dataframe`, `load_from_bed_regions`, `apply_logical_filter`, `region_subset`, `to_dataframe`, `write`, `get_chrom_names`, `get_start_locs`, `get_end_locs`, `get_region_by_index`, `iter_regions`, `search_region`, `concat`, `subset_by_index`, `copy`, and `__len__`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table3/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/bedtable/bed-table3.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/bedtable/bed-table3.md
 
 ## `reference/python/bedtable/bed-table6.md`
 
@@ -4315,7 +4331,7 @@ Inherited `BedTableLoadException`, `ValueError`, and I/O failures apply.
 `BedTable6`, `column_names`, `column_types`, `get_region_names`, `get_region_scores`, `get_region_strands`, `region_subset`, and `load_from_BedTable3`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table6/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/bedtable/bed-table6.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/bedtable/bed-table6.md
 
 ## `reference/python/bedtable/iterator.md`
 
@@ -4374,7 +4390,133 @@ Advances iterator state.
 `StopIteration` signals exhaustion.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/iterator/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/bedtable/iterator.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/bedtable/iterator.md
+
+## `reference/python/elements/genomic-elements.md`
+
+# `GenomicElements`
+
+## Status
+
+Supported for the current reference release. See the site home page for the
+bound release identity.
+
+## Purpose
+
+Combine a headerless typed region table with a genome FASTA and expose
+region-aligned sequence extraction, annotation filtering, merge, and export
+operations shared with `GeneralElements`.
+
+## Canonical import
+
+```python
+from RGTools import GenomicElements
+```
+
+## Signature
+
+Curated constructor and member signatures rendered from the aligned release
+source:
+
+::: RGTools.GenomicElements.GenomicElements
+    options:
+      members:
+        - __init__
+        - fasta_path
+        - region_file_type
+        - region_file_path
+        - get_num_regions
+        - get_region_file_suffix2class_dict
+        - BedTable6Gene
+        - BedTable3Gene
+        - BedTableNarrowPeak
+        - BedTableBedGraph
+        - BedTableTREBed
+        - merge_genomic_elements
+        - export_exogeneous_sequences
+        - get_all_region_seqs
+        - get_region_bed_table
+        - apply_logical_filter
+      show_root_heading: true
+      show_source: false
+      heading_level: 4
+      inherited_members: false
+      filters:
+        - "!^_"
+
+## Parameters
+
+Constructor arguments are `region_file_path`, `region_file_type`, and
+`fasta_path`. Paths are strings or path-like values. `region_file_type` must
+be one of the keys returned by `get_region_file_suffix2class_dict()`. Region
+order from the file is preserved because sorting is disabled at load time.
+
+## Return or yield behavior
+
+The constructor returns a live collection object. Methods return region tables,
+sequence lists, filtered collections, exported files, or inherited annotation
+views as documented on each member below and on
+[GeneralElements operations](../general-elements/load-mask-from-arr.md).
+
+## Raised exceptions
+
+Invalid `region_file_type` raises `ValueError` during construction. Missing
+chromosomes, incompatible merge inputs, and annotation alignment failures raise
+`ValueError`. Index errors propagate from underlying tables.
+
+## Constraints
+
+Region rows and every loaded annotation share first-dimension alignment. Merge
+requires matching region type and FASTA path. `export_exogeneous_sequences`
+refuses an existing output path.
+
+## Ordering
+
+Region row `i`, extracted sequence `i`, and annotation row `i` refer to the
+same locus. Merge optionally sorts the combined table; otherwise loaded order
+is preserved.
+
+## Side effects
+
+Construction reads the region table and caches the FASTA path. Methods may read
+or write files (`apply_logical_filter`, `export_exogeneous_sequences`, merge
+output). Inherited annotation loaders mutate in-memory arrays only until an
+explicit save.
+
+## Lifecycle behavior
+
+Call `close()` (inherited) to release the cached FASTA index. The destructor
+attempts best-effort cleanup. Prefer explicit `close()` in long-running scripts.
+
+## Supported protocols and inheritance
+
+`GenomicElements` subclasses `GeneralElements`. Supported inherited operations
+include `get_region_seq`, `get_region_lens`, `get_all_region_one_hot`,
+annotation load/save/getters, `apply_logical_filter`, `close`, and
+`one_hot_encoding`. Parser assembly helpers and underscore-prefixed internals
+are not part of the supported public surface.
+
+## Example
+
+```python
+from RGTools import GenomicElements
+
+ge = GenomicElements("regions.bed3", "bed3", "genome.fa")
+print(ge.get_num_regions())
+sequences = ge.get_all_region_seqs()
+table = ge.get_region_bed_table()
+ge.close()
+```
+
+## Related formats or commands
+
+- [FASTA region sequences](../../formats/elements/fasta.md)
+- [BED-like region tables](../../formats/foundation/bed-like.md)
+- [Annotation arrays](../../formats/elements/annotation-arrays.md)
+- [`GenomicElementTools mask_op intersect`](../../cli/mask-op-intersect.md)
+
+Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/genomic-elements/
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/elements/genomic-elements.md
 
 ## `reference/python/elements/index.md`
 
@@ -4428,33 +4570,10 @@ propagate). Type metadata is in memory only, never serialized.
 
 ## `GenomicElements`
 
-**Purpose/availability:** `from RGTools import GenomicElements` combines a
-headerless typed region table with a genome FASTA. **Constructor** (`__init__`):
-`GenomicElements(region_file_path, region_file_type, fasta_path)`; paths are
-strings/path-like values, type is one of `bed3`, `bed6`, `bed3gene`, `bed6gene`,
-`narrowPeak`, `TREbed`, `bedGraph`. Region order is preserved (sorting is
-disabled) for annotation alignment. Invalid type raises `ValueError`.
-
-**Properties/methods:** `get_region_bed_table()` returns a copy;
-`get_all_region_seqs()` returns one sequence per row and fails if a chromosome
-is absent; `apply_logical_filter(logical, new_region_file_path)` writes a new
-region table, carries every annotation through the same boolean selection, and
-returns a new collection; `export_exogeneous_sequences(fasta_path)` writes
-`chrom:start-end` FASTA headers, refuses an existing path, and raises
-`ValueError` for missing chromosomes; `get_num_regions` and every
-`GeneralElements` operation are inherited. Static public factories are
-`get_region_file_suffix2class_dict`, `BedTable6Gene`, `BedTable3Gene`,
-`BedTableNarrowPeak`, `BedTableBedGraph`, `BedTableTREBed`, plus the supported
-CLI-adjacent helpers `set_parser_genome` and
-`set_parser_genomic_element_region`, and
-`merge_genomic_elements(left_ge, right_ge, output_region_path, anno2merge,
-sort_new_ge=True)`. Merge requires matching region type and FASTA path and
-raises `ValueError` on incompatible annotations.
-
-Unrelated parser-construction internals remain excluded from this reference.
-
-**Inputs/types/shapes/dtypes/defaults/choices/outputs/order/failures:** see
-the constructor, annotation rules above, and the [region and FASTA formats](../../formats/elements/fasta.md).
+See the dedicated [`GenomicElements`](genomic-elements.md) reference page for the
+supported constructor, curated members, mkdocstrings-rendered signatures, and
+complete semantic contract. Parser assembly helpers are internal and excluded
+from that public page.
 
 ## `ExogeneousSequences`
 
@@ -4493,7 +4612,7 @@ releases resources. **Failures:** invalid paths, keys, shapes, dtypes, missing
 chromosomes, and incompatible merges raise documented errors.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/elements/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/elements/index.md
 
 ## `reference/python/foundation/exceptions.md`
 
@@ -4556,7 +4675,7 @@ None.
 `RGToolsInternalException`, `GTFHandleFilterException`, `GTFRecordNoFeatureException`, `BedTableException`, `BedTableLoadException`, `InvalidBedRegionException`, and `InvalidStrandnessException`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/exceptions/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/foundation/exceptions.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/foundation/exceptions.md
 
 ## `reference/python/foundation/list-file.md`
 
@@ -4615,7 +4734,7 @@ Reading replaces in-memory contents. Writing creates/replaces the target or writ
 Filesystem and invalid dtype errors propagate from the underlying Python/NumPy operations.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/list-file/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/foundation/list-file.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/foundation/list-file.md
 
 ## `reference/python/foundation/logger.md`
 
@@ -4674,7 +4793,7 @@ Stream output is written immediately; path output is opened in append mode per c
 `unindent` at level zero raises `ValueError`; filesystem failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/logger/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/foundation/logger.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/foundation/logger.md
 
 ## `reference/python/foundation/utils.md`
 
@@ -4733,7 +4852,7 @@ None.
 Unknown reverse-complement symbols raise `KeyError`; JSON unsupported values retain standard encoder failures.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/utils/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/foundation/utils.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/foundation/utils.md
 
 ## `reference/python/general-elements/load-mask-from-arr.md`
 
@@ -4805,7 +4924,7 @@ Raises `ValueError` when dtype is not boolean, the first dimension differs from
 the region count, or the shape is neither `(N,)` nor `(N, 1)`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/load-mask-from-arr/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/general-elements/load-mask-from-arr.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/general-elements/load-mask-from-arr.md
 
 ## `reference/python/general-elements/tss-relative-coordinates.md`
 
@@ -4876,7 +4995,7 @@ when re-raising.
   supplied TSS-relative coordinates using the same conversion rules.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/tss-relative-coordinates/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/general-elements/tss-relative-coordinates.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/general-elements/tss-relative-coordinates.md
 
 ## `reference/python/gtf/gtf-utils.md`
 
@@ -5015,7 +5134,7 @@ Counts records passing the active filter, consuming and reopening iteration.
 Walks the active filter to validate it; `n_lines` optionally limits the walk.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/gtf/gtf-utils/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/gtf/gtf-utils.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/gtf/gtf-utils.md
 
 ## `reference/python/motifs/meme-motif.md`
 
@@ -5098,7 +5217,7 @@ malformed input, invalid PWM/metadata, or invalid URL records; `KeyError` for
 unknown names; invalid strand/length raise documented errors.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/motifs/meme-motif/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/motifs/meme-motif.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/motifs/meme-motif.md
 
 ## `reference/python/motifs/motif-generation.md`
 
@@ -5248,7 +5367,7 @@ collections. **Types:** `MemeMotif`, NumPy PWM arrays. **Shapes:** PWM
 - [`MotifTools` CLI](../../cli/motif-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/motifs/motif-generation/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/motifs/motif-generation.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/motifs/motif-generation.md
 
 ## `reference/python/signal/bw-track.md`
 
@@ -5378,7 +5497,7 @@ Queries both tracks using the same padded interval. `+` returns plus, `-`
 returns transformed minus, and `.` returns the sum of both quantifications.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/signal/bw-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/signal/bw-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/signal/bw-track.md
 
 ## `reference/python/snp/ensembl-rest-search.md`
 
@@ -5489,4 +5608,4 @@ Fetches each candidate, excludes non-SNP-like variants, and returns the
 remaining candidate with the most alternate alleles.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/snp/ensembl-rest-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/5db075b8e4a7d59c871a2d653ee404a931d62d2a/docs/reference/python/snp/ensembl-rest-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/395d663e6fde965644664038bce273b2db6a22db/docs/reference/python/snp/ensembl-rest-search.md

@@ -7,6 +7,7 @@ import re
 import subprocess
 from collections import defaultdict
 from html.parser import HTMLParser
+from importlib.metadata import version
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin, urlparse
@@ -30,7 +31,35 @@ REFERENCE_FIELDS = (
     "Side effects",
     "Failures",
 )
-RELEASE = "0.3.0a3"
+API_SEMANTIC_FIELDS = (
+    "Status",
+    "Purpose",
+    "Canonical import",
+    "Signature",
+    "Parameters",
+    "Return or yield behavior",
+    "Raised exceptions",
+    "Constraints",
+    "Ordering",
+    "Side effects",
+    "Lifecycle behavior",
+    "Supported protocols and inheritance",
+    "Example",
+    "Related formats or commands",
+)
+GENOMIC_ELEMENTS_PATH = "reference/python/elements/genomic-elements"
+REDIRECTS = {
+    "reference/cli/generated/genomic-element-tools.md": (
+        "reference/cli/genomic-element-tools/index.md"
+    ),
+}
+
+
+def _release_version() -> str:
+    return version("RGTools")
+
+
+RELEASE = _release_version()
 CLI_RELEASES = {
     "GenomicElementTools": RELEASE,
     "ExogeneousSequenceTools": RELEASE,
@@ -198,17 +227,19 @@ def _load_inventories() -> list[dict[str, Any]]:
             if format_name in format_paths:
                 entries.append({"path": format_paths[format_name], "symbols": [format_name]})
         for qualified_name, members in payload.get("classes", {}).items():
-            class_path = (
-                "reference/python/motifs/meme-motif"
-                if qualified_name == "MemeMotif"
-                else "reference/python/elements/index"
-            )
-            entries.append(
-                {
-                    "path": class_path,
-                    "symbols": [qualified_name, *members],
-                }
-            )
+            if qualified_name == "MemeMotif":
+                class_path = "reference/python/motifs/meme-motif"
+            elif qualified_name == "GenomicElements":
+                class_path = GENOMIC_ELEMENTS_PATH
+            else:
+                class_path = "reference/python/elements/index"
+            entry: dict[str, Any] = {
+                "path": class_path,
+                "symbols": [qualified_name, *members],
+            }
+            if qualified_name == "GenomicElements":
+                entry["required_fields"] = API_SEMANTIC_FIELDS
+            entries.append(entry)
     return entries
 
 
@@ -489,6 +520,22 @@ Argparse exits for missing required flags or invalid region-type choices. The
 command raises `ValueError` for fewer than two masks, non-boolean masks, shape
 or region-count mismatches, multi-array NPZ input, or an unsupported region
 schema encountered while loading.
+
+## Example
+
+Intersect two boolean masks aligned to the same three-region BED3 table:
+
+```bash
+GenomicElementTools mask_op intersect \\
+  --region_file_path regions.bed3 \\
+  --region_file_type bed3 \\
+  --mask_npy mask_a.npy \\
+  --mask_npy mask_b.npy \\
+  --opath intersect.npy
+```
+
+Each input mask has shape `(3,)` or `(3, 1)` with boolean dtype. The saved
+`intersect.npy` contains the element-wise logical AND with shape `(3, 1)`.
 """
 
 
@@ -566,6 +613,55 @@ def _validate_built_artifact(
         missing = [field for field in REFERENCE_FIELDS if f">{field}<" not in rendered]
         if missing:
             raise RuntimeError(f"Built {name} reference lacks fields: {missing}")
+
+    cli_rendered = html.unescape(pages["cli"].read_text())
+    if ">Example<" not in cli_rendered:
+        raise RuntimeError("Built CLI mask_op intersect page lacks Example section")
+
+    genomic_page = site_dir / _site_path(GENOMIC_ELEMENTS_PATH)
+    if not genomic_page.is_file():
+        raise RuntimeError(f"Missing built GenomicElements page: {genomic_page}")
+    genomic_rendered = html.unescape(genomic_page.read_text())
+    genomic_text = re.sub(r"<[^>]+>", " ", genomic_rendered)
+    genomic_text = re.sub(r"\s+", " ", genomic_text)
+    missing_api = [
+        field for field in API_SEMANTIC_FIELDS if f">{field}<" not in genomic_rendered
+    ]
+    if missing_api:
+        raise RuntimeError(
+            f"Built GenomicElements page lacks semantic sections: {missing_api}"
+        )
+    for internal in (
+        "set_parser_genome",
+        "set_parser_genomic_element_region",
+    ):
+        if internal in genomic_text:
+            raise RuntimeError(
+                f"GenomicElements page exposes internal member {internal!r}"
+            )
+    if "from RGTools import GenomicElements" not in genomic_text:
+        raise RuntimeError("GenomicElements page lacks canonical import")
+
+    for source, target in REDIRECTS.items():
+        redirect_html = site_dir / _site_path(source.removesuffix(".md"))
+        if not redirect_html.is_file():
+            raise RuntimeError(f"Missing redirect page for {source}")
+        redirect_content = redirect_html.read_text()
+        target_path = target.removesuffix(".md").removesuffix("/index")
+        target_slug = Path(target_path).name
+        if "Parser inventory" in redirect_content:
+            raise RuntimeError(
+                f"Redirect source {source} still renders duplicate generated reference"
+            )
+        if target_slug not in redirect_content and target_path not in redirect_content:
+            raise RuntimeError(
+                f"Redirect from {source} does not target {target_path}"
+            )
+        if not re.search(
+            r"(window\.location\.replace|http-equiv=.refresh|location\.href)",
+            redirect_content,
+        ):
+            raise RuntimeError(f"Redirect page for {source} lacks redirect mechanism")
 
     format_html = " ".join(html.unescape(pages["format"].read_text()).split())
     for required in ("numpy.bool_", "Integer masks", "(N, 1)"):

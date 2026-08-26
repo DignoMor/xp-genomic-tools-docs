@@ -113,12 +113,14 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
         original_config = config_path.read_text()
         correct_navigation = """          - Element collections:
               - Overview: reference/python/elements/index.md
+              - GenomicElements: reference/python/elements/genomic-elements.md
           - Operations:
               - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
           - MemeMotif: reference/python/motifs/meme-motif.md
 """
         wrong_navigation = """          - Element collections:
               - Overview: reference/python/elements/index.md
+              - GenomicElements: reference/python/elements/genomic-elements.md
               - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
           - MemeMotif: reference/python/motifs/meme-motif.md
 """

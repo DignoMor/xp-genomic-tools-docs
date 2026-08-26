@@ -48,33 +48,10 @@ propagate). Type metadata is in memory only, never serialized.
 
 ## `GenomicElements`
 
-**Purpose/availability:** `from RGTools import GenomicElements` combines a
-headerless typed region table with a genome FASTA. **Constructor** (`__init__`):
-`GenomicElements(region_file_path, region_file_type, fasta_path)`; paths are
-strings/path-like values, type is one of `bed3`, `bed6`, `bed3gene`, `bed6gene`,
-`narrowPeak`, `TREbed`, `bedGraph`. Region order is preserved (sorting is
-disabled) for annotation alignment. Invalid type raises `ValueError`.
-
-**Properties/methods:** `get_region_bed_table()` returns a copy;
-`get_all_region_seqs()` returns one sequence per row and fails if a chromosome
-is absent; `apply_logical_filter(logical, new_region_file_path)` writes a new
-region table, carries every annotation through the same boolean selection, and
-returns a new collection; `export_exogeneous_sequences(fasta_path)` writes
-`chrom:start-end` FASTA headers, refuses an existing path, and raises
-`ValueError` for missing chromosomes; `get_num_regions` and every
-`GeneralElements` operation are inherited. Static public factories are
-`get_region_file_suffix2class_dict`, `BedTable6Gene`, `BedTable3Gene`,
-`BedTableNarrowPeak`, `BedTableBedGraph`, `BedTableTREBed`, plus the supported
-CLI-adjacent helpers `set_parser_genome` and
-`set_parser_genomic_element_region`, and
-`merge_genomic_elements(left_ge, right_ge, output_region_path, anno2merge,
-sort_new_ge=True)`. Merge requires matching region type and FASTA path and
-raises `ValueError` on incompatible annotations.
-
-Unrelated parser-construction internals remain excluded from this reference.
-
-**Inputs/types/shapes/dtypes/defaults/choices/outputs/order/failures:** see
-the constructor, annotation rules above, and the [region and FASTA formats](../../formats/elements/fasta.md).
+See the dedicated [`GenomicElements`](genomic-elements.md) reference page for the
+supported constructor, curated members, mkdocstrings-rendered signatures, and
+complete semantic contract. Parser assembly helpers are internal and excluded
+from that public page.
 
 ## `ExogeneousSequences`
 
