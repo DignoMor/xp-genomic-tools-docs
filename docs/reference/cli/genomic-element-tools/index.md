@@ -444,11 +444,15 @@ Magnitude mode converts values to absolute magnitudes, uses sequential red or
 blue coloring from `--negative`, may negate the mean profile when `--negative`
 is true, and zero-pads shorter rows. Signed mode keeps raw negative and
 positive values in the heatmap and mean, ignores `--negative` for polarity and
-palette, uses the fixed `RdBu_r` diverging colormap with a panel color bar, and
-centers the scale exactly at zero with symmetric limits. Mixed panels share one
-ascending row order based on each region's maximum absolute magnitude across
-tracks, with original order retained for ties. Parallel-list, percentile,
-rendering, and I/O failures fail.
+palette, uses the fixed `RdBu_r` diverging colormap with a panel color bar,
+pads shorter rows as missing rather than zero, and centers the scale exactly at
+zero with symmetric limits. Explicit non-finite cells are masked in both modes
+and excluded from scale estimation, shared row-order keys, and position-wise
+means. Mixed panels share one ascending row order based on each region's
+maximum finite absolute magnitude across tracks, with original order retained
+for ties. A track-row or entire track with no finite value fails with the track
+title and region-row context. Parallel-list, percentile, rendering, and I/O
+failures fail.
 
 ### `export ChromFilteredGE`
 
