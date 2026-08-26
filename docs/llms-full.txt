@@ -4827,14 +4827,20 @@ Track arrays remain genomic-forward for both strands. A value at index `i`
 describes a genomic-forward window of width `track_window_size` beginning at
 `start + i`.
 
-1. Genomic position of the reported strand-oriented 5-prime base is
-   `tss + coord - 1` when `coord > 0`, else `tss + coord`.
+1. Genomic position of the reported strand-oriented 5-prime base uses
+   `linear(coord) = coord - 1` when `coord > 0`, else `coord`. Strand `+`
+   uses `tss + linear(coord)`; strand `-` uses `tss - linear(coord)` so
+   negative coordinates are transcription-upstream.
 2. Strand `+`: reported coordinate is the genomic-left 5-prime base; index is
    `genomic - start`.
 3. Strand `-`: reported coordinate is the genomic-right 5-prime base; index is
    `genomic - start - (track_window_size - 1)`.
 4. The scored window must fit inside the interval; otherwise conversion raises
    contextual `ValueError` (no clipping, wrapping, or shrinking).
+
+**Compatibility.** Through `0.3.0a2`, minus-strand conversion incorrectly used
+`tss + linear(coord)` for both strands. Planned `0.3.0a3` corrects direction so
+minus-strand negative coordinates map toward larger genomic positions.
 
 **Failures.** Invalid strand, zero coordinates, nonpositive
 `track_window_size`, invalid intervals, and out-of-bounds windows raise
