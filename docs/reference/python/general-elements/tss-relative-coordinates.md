@@ -48,7 +48,7 @@ describes a genomic-forward window of width `track_window_size` beginning at
    contextual `ValueError` (no clipping, wrapping, or shrinking).
 
 **Compatibility.** Through `0.3.0a2`, minus-strand conversion incorrectly used
-`tss + linear(coord)` for both strands. Planned `0.3.0a3` corrects direction so
+`tss + linear(coord)` for both strands. `0.3.0a3` corrects direction so
 minus-strand negative coordinates map toward larger genomic positions.
 
 **Failures.** Invalid strand, zero coordinates, nonpositive
