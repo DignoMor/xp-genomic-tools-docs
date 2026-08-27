@@ -71,4 +71,4 @@ IDs and row order follow the BED table, not chromosome sorting.
 
 - [Python quickstart](python-quickstart.md) for the same inputs in `RGTools`
 - [GenomicElementTools CLI reference](../reference/cli/genomic-element-tools/index.md)
-- [MotifTools CLI reference](../reference/cli/motif-tools/index.md)
+- [Motif generation and search guide](../guides/motif-generation-and-search.md)

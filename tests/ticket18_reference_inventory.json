@@ -1,0 +1,76 @@
+{
+  "release": "0.3.0a4",
+  "guide_path": "guides/motif-generation-and-search",
+  "title": "Motif generation and search",
+  "synthetic_asset": "docs/get-started/assets/quickstart-synthetic-motif.meme",
+  "ownership_terms": [
+    "MotifTools",
+    "GenomicElementTools",
+    "ExogeneousSequenceTools",
+    "motif-centric",
+    "element-centric",
+    "exogenous-sequence-centric"
+  ],
+  "reference_links": [
+    "reference/cli/motif-tools/pwm-seq",
+    "reference/cli/motif-tools/random-seq",
+    "reference/cli/genomic-element-tools/motif-search",
+    "reference/cli/exogeneous-sequence-tools/motif-search",
+    "reference/python/motifs/meme-motif",
+    "reference/python/motifs/motif-generation",
+    "reference/formats/motifs/meme"
+  ],
+  "pwm_example": {
+    "command": [
+      "MotifTools",
+      "pwm_seq",
+      "--motif_file",
+      "{meme}",
+      "--motif_name",
+      "QUICKSTART_MOTIF",
+      "--num_sequences",
+      "2",
+      "--seed",
+      "0",
+      "--output",
+      "{output}"
+    ],
+    "expected_fasta": ">pwm_QUICKSTART_MOTIF_0\nGCG\n>pwm_QUICKSTART_MOTIF_1\nACG\n"
+  },
+  "exogenous_search": {
+    "command": [
+      "ExogeneousSequenceTools",
+      "motif_search",
+      "--fasta",
+      "{fasta}",
+      "--motif_file",
+      "{meme}",
+      "--output_header",
+      "es_scores"
+    ],
+    "expected_shape": [2, 3]
+  },
+  "genomic_search": {
+    "command": [
+      "GenomicElementTools",
+      "motif_search",
+      "--fasta_path",
+      "{genome}",
+      "--region_file_path",
+      "{regions}",
+      "--region_file_type",
+      "bed3",
+      "--motif_file",
+      "{meme}",
+      "--output_header",
+      "ge_scores"
+    ],
+    "expected_shape": [2, 4]
+  },
+  "task_markers": [
+    "Determinism",
+    "seed",
+    "SequenceGenerationExhaustedError",
+    "MEME"
+  ]
+}

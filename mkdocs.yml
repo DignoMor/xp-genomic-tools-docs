@@ -66,6 +66,7 @@ nav:
   - How-to guides:
       - Genomic elements workflow: guides/genomic-elements.md
       - TSS-relative mutagenesis: guides/tss-relative-mutagenesis.md
+      - Motif generation and search: guides/motif-generation-and-search.md
   - Formats: formats.md
   - CLI:
       - Overview: cli/index.md
