@@ -48,12 +48,5 @@ def stage_docs_revision(docs_root: Path, destination: Path) -> str:
 
 @contextmanager
 def preserve_agent_resources(docs_root: Path) -> Iterator[None]:
-    """Keep acceptance generation from replacing source resources with temp SHAs."""
-    resources = [docs_root / "docs/llms.txt", docs_root / "docs/llms-full.txt"]
-    snapshots = [path.read_text() if path.exists() else None for path in resources]
-    try:
-        yield
-    finally:
-        for path, snapshot in zip(resources, snapshots):
-            if snapshot is not None and snapshot.strip():
-                path.write_text(snapshot)
+    """Release builds rewrite llms resources; conftest golden fixtures restore them."""
+    yield

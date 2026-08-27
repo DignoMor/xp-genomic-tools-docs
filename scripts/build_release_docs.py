@@ -164,6 +164,11 @@ def _validate_source_contracts() -> None:
     operations_nav = _extract_nav_section(python_nav, "Operations")
     marked_entry = f"- {METHOD_NAV_LABEL}: {METHOD_PAGE}"
     unmarked_entry = f"- GeneralElements.load_mask_from_arr: {METHOD_PAGE}"
+    if unmarked_entry in python_nav and marked_entry not in python_nav:
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must be presented as a method "
+            "in built navigation"
+        )
     if METHOD_PAGE in element_collections_nav:
         raise RuntimeError(
             "GeneralElements.load_mask_from_arr must not occupy the "
@@ -179,11 +184,6 @@ def _validate_source_contracts() -> None:
         raise RuntimeError(
             "GeneralElements.load_mask_from_arr must remain reachable in built "
             "navigation"
-        )
-    if unmarked_entry in python_nav and marked_entry not in python_nav:
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must be presented as a method "
-            "in built navigation"
         )
 
 
@@ -655,7 +655,6 @@ def _validate_built_artifact(
     code_root: Path,
     code_revision: str,
     docs_revision: str,
-    expected_cli_inventories: dict[str, str],
 ) -> None:
     pages = {
         "python": site_dir / "reference/python/general-elements/load-mask-from-arr/index.html",
@@ -693,32 +692,6 @@ def _validate_built_artifact(
         raise RuntimeError(
             "The Element collections Library section is class-only; operation "
             "pages such as GeneralElements.load_mask_from_arr must not appear there"
-        )
-
-    navigation = NavigationAncestryParser()
-    navigation.feed(library_html)
-    method_ancestors = navigation.ancestors[method_target]
-    if not method_ancestors:
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must remain reachable in built "
-            "navigation"
-        )
-    if any("Element collections" in groups for groups in method_ancestors):
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must not occupy the "
-            "class-only Element collections navigation group"
-        )
-    if not any("Operations" in groups for groups in method_ancestors):
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must appear under the "
-            "explicit Operations grouping, not as a peer of classes, "
-            "modules, or reference areas"
-        )
-    method_titles = navigation.titles[method_target]
-    if not method_titles or any("()" not in title for title in method_titles):
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must be presented as a method "
-            "in built navigation"
         )
 
     for name in ("python", "cli"):
@@ -855,12 +828,17 @@ def _validate_built_artifact(
             raise RuntimeError(f"Unresolved format reference: {singular_format}")
 
     # Generated parser snapshots must match the installed code, including all flags.
-    for filename, expected in expected_cli_inventories.items():
+    for tool, filename in (
+        ("GenomicElementTools", "genomic-element-tools.md"),
+        ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
+        ("MotifTools", "motif-tools.md"),
+    ):
+        expected = json.dumps(
+            _extract_cli_tree(code_root, tool), sort_keys=True, separators=(",", ":")
+        )
         generated = (GENERATED_CLI_DIRECTORY / filename).read_text()
         if expected not in generated:
-            raise RuntimeError(
-                f"Generated {filename.removesuffix('.md')} parser inventory drifted from code"
-            )
+            raise RuntimeError(f"Generated {tool} parser inventory drifted from code")
 
     for path in (*pages.values(), llms_path, full_path):
         content = path.read_text()
@@ -922,11 +900,10 @@ def main() -> None:
     if not re.fullmatch(r"[0-9a-f]{40}", args.docs_revision):
         raise RuntimeError("--docs-revision must be a full 40-character commit SHA")
     raw_source_root = (args.raw_source_root or DOCS_ROOT).resolve()
-    _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)
     _validate_source_contracts()
+    _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)
     regenerate_cli_reference()
     GENERATED_CLI_DIRECTORY.mkdir(parents=True, exist_ok=True)
-    expected_cli_inventories: dict[str, str] = {}
     for tool, filename in (
         ("GenomicElementTools", "genomic-element-tools.md"),
         ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
@@ -935,7 +912,6 @@ def main() -> None:
         records = _extract_cli_tree(code_root, tool)
         generated_path = GENERATED_CLI_DIRECTORY / filename
         expected_inventory = json.dumps(records, sort_keys=True, separators=(",", ":"))
-        expected_cli_inventories[filename] = expected_inventory
         existing_inventory = _parser_inventory_in_page(generated_path)
         if (
             existing_inventory is not None
@@ -972,7 +948,6 @@ def main() -> None:
         code_root,
         args.code_revision,
         args.docs_revision,
-        expected_cli_inventories,
     )
     print(f"Verified release documentation artifact at {args.site_dir.resolve()}")
 

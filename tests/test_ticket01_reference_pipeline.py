@@ -209,9 +209,19 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
         self.assertIn("GenomicElements", completed.stderr)
 
     def test_release_rejects_missing_mask_example_section(self) -> None:
+        if "## Example\n" not in AUTHORED_MASK_INTERSECT.read_text():
+            subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(DOCS_ROOT),
+                    "checkout",
+                    "--",
+                    str(AUTHORED_MASK_INTERSECT.relative_to(DOCS_ROOT)),
+                ],
+                check=True,
+            )
         original = AUTHORED_MASK_INTERSECT.read_text()
-        if "## Example\n" not in original:
-            original = original.replace("## Examples removed\n", "## Example\n", 1)
         patched = original.replace("## Example\n", "## Examples removed\n", 1)
         self.assertNotEqual(original, patched)
         try:
