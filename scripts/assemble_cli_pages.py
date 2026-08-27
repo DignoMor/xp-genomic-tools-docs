@@ -217,8 +217,6 @@ def _assemble_landing_page(
     if tool.intent_groups:
         if "## Browse by task" not in body:
             body = f"{body.rstrip()}\n\n{render_browse_by_task(tool)}"
-        if "## Exact command paths" not in body:
-            body = f"{body.rstrip()}\n\n{render_exact_path_index(tool)}"
         if "## Legacy heading anchors" not in body:
             body = f"{body.rstrip()}\n\n{render_legacy_anchors(tool)}"
     elif "## Command index" not in body:
@@ -241,6 +239,8 @@ def _assemble_landing_page(
             else:
                 lines.append(f"- [`{command}`]({parser_path_to_slug(command)}.md)")
         body = f"{body.rstrip()}\n\n" + "\n".join(lines).rstrip() + "\n"
+    if "## Exact command paths" not in body:
+        body = f"{body.rstrip()}\n\n{render_exact_path_index(tool)}"
     if "## Syntax" not in body:
         root = next(record for record in records if record["path"] == "(root)")
         body = f"{body.rstrip()}\n\n{render_syntax_fragment(tool, root).rstrip()}\n"

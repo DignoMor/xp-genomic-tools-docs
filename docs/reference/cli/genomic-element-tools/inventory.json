@@ -31,7 +31,6 @@
     "track2tss_bed",
     "tss_relative_mutagenesis"
   ],
-  "parser_reference": "../generated/genomic-element-tools.md",
   "entries": [
     {
       "path": "reference/cli/genomic-element-tools",

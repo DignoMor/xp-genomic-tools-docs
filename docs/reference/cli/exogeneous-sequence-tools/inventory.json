@@ -13,7 +13,6 @@
     "track_dim_reduction max",
     "track_dim_reduction min"
   ],
-  "parser_reference": "../generated/exogeneous-sequence-tools.md",
   "entries": [
     {
       "path": "reference/cli/exogeneous-sequence-tools",

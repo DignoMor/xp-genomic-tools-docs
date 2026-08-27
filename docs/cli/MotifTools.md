@@ -115,5 +115,5 @@ python -m MotifTools anti_motif --motif_file motifs.meme --output anti.meme
 ## Reference
 
 - [MotifTools command reference](../reference/cli/motif-tools/index.md)
-- [Generated parser inventory](../reference/cli/generated/motif-tools.md)
+- [CLI exact command-path index](../reference/cli/exact-path-index.md)
 - [MEME motif format](../reference/formats/motifs/meme.md)

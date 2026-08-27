@@ -115,6 +115,8 @@ nav:
           - BedTablePairEnd format (experimental): reference/formats/foundation/pair-end.md
           - ListFile format: reference/formats/foundation/list-file.md
       - CLI:
+          - Grouped index: reference/cli/index.md
+          - Exact command paths: reference/cli/exact-path-index.md
           - GenomicElementTools:
               - Overview: reference/cli/genomic-element-tools/index.md
               - Region and signal:

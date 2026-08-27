@@ -25,7 +25,7 @@ class Ticket06ExogeneousSequenceToolsReferenceTest(unittest.TestCase):
             "print_stat", "motif_search", "onehot",
         }
         self.assertEqual(set(inventory["commands"]), expected)
-        self.assertEqual(inventory["parser_reference"], "../generated/exogeneous-sequence-tools.md")
+        self.assertNotIn("parser_reference", inventory)
 
     def test_semantic_reference_links_reusable_formats(self) -> None:
         root = ROOT / "docs/reference/cli/exogeneous-sequence-tools"

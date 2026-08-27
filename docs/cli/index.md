@@ -1,6 +1,8 @@
 # CLI overview
 
-Three console scripts ship with **0.3.0a4**:
+Three console scripts ship with **0.3.0a4**. Browse by ownership in the
+[grouped CLI index](../reference/cli/index.md) or look up a known invocation in
+the [exact command-path index](../reference/cli/exact-path-index.md).
 
 | Command | Purpose |
 | --- | --- |

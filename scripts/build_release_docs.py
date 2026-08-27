@@ -20,10 +20,17 @@ if str(SCRIPTS_ROOT) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_ROOT))
 
 from cli_inventory import (  # noqa: E402
+    load_site_inventory,
     load_tool_inventory,
+    validate_all_tool_inventories,
+    validate_built_cli_indexes,
     validate_built_tool_landing,
+    validate_built_tool_landing_no_generated_links,
     validate_genomic_element_tools_inventory,
+    validate_retired_generated_references,
+    validate_site_inventory,
     validate_tool_inventory,
+    write_generated_cli_indexes,
 )
 from cli_page_registry import ALL_TOOLS, GENOMIC_ELEMENT_TOOLS, REDIRECTS  # noqa: E402
 from python_api_inventory import (  # noqa: E402
@@ -317,6 +324,8 @@ def _validate_raw_source_revision(
             if target.as_posix() in (
                 "docs/reference/python/index.md",
                 "docs/reference/python/alphabetical-index.md",
+                "docs/reference/cli/index.md",
+                "docs/reference/cli/exact-path-index.md",
             ):
                 continue
             local = DOCS_ROOT / target
@@ -368,6 +377,8 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
         ("Python reference", "reference/python/", "reference/python/index.md"),
         ("BedTable reference", "reference/python/bedtable/bed-table3/", "reference/python/bedtable/bed-table3.md"),
+        ("CLI grouped index", "reference/cli/", "reference/cli/index.md"),
+        ("CLI exact-path index", "reference/cli/exact-path-index/", "reference/cli/exact-path-index.md"),
         ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
         ("ExogeneousSequenceTools CLI", "reference/cli/exogeneous-sequence-tools/", "reference/cli/exogeneous-sequence-tools/index.md"),
         ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
@@ -889,10 +900,17 @@ def _validate_built_artifact(
                 )
 
     validate_built_python_api(site_dir, _load_python_inventory())
+    cli_inventory = load_site_inventory()
+    validate_site_inventory(cli_inventory)
+    validate_all_tool_inventories()
+    validate_retired_generated_references()
+    validate_built_cli_indexes(site_dir, cli_inventory)
     validate_genomic_element_tools_inventory()
     validate_built_tool_landing(
         site_dir, GENOMIC_ELEMENT_TOOLS, load_tool_inventory(GENOMIC_ELEMENT_TOOLS)
     )
+    for tool in ALL_TOOLS:
+        validate_built_tool_landing_no_generated_links(site_dir, tool)
 
 
 def main() -> None:
@@ -937,6 +955,11 @@ def main() -> None:
     validate_inventory_schema(python_inventory)
     validate_inventory_sources(python_inventory)
     write_generated_indexes(python_inventory)
+    cli_inventory = load_site_inventory()
+    validate_site_inventory(cli_inventory)
+    write_generated_cli_indexes(cli_inventory)
+    validate_all_tool_inventories()
+    validate_retired_generated_references()
     validate_genomic_element_tools_inventory()
     _validate_source_contracts()
     _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)

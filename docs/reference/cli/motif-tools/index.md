@@ -4,8 +4,8 @@
 # MotifTools command reference
 
 Semantic reference for the shipped `MotifTools` CLI. Parser-derived syntax,
-defaults, and the complete flag inventory live in the
-[generated argparse reference](../generated/motif-tools.md).
+defaults, and the complete flag inventory appear on each canonical command
+page and in the [site-wide exact-path index](../exact-path-index.md).
 
 ## Shared contract
 
@@ -30,7 +30,7 @@ collection remains in `GenomicElementTools` and `ExogeneousSequenceTools`.
 **Outputs.** Supported-subset MEME files with six-decimal PWM rows, or MEME text
 on stdout when `--output -`.
 
-**Defaults.** Parser defaults appear in the generated reference; `anti_motif`
+**Defaults.** Parser defaults appear on each command page; `anti_motif`
 has no command-specific defaults beyond optional `--force`.
 
 **Choices.** Top-level subcommands: `anti_motif`, `random_seq`, `pwm_seq`,
@@ -122,6 +122,17 @@ Argparse exits for missing required flags or invalid choices; runtime validation
 - [`barcodes`](barcodes.md)
 - [`pwm_seq`](pwm-seq.md)
 - [`random_seq`](random-seq.md)
+
+## Exact command paths
+
+Every invocable command path and non-invocable command group appears exactly once for direct lookup.
+
+| Command path | Canonical page |
+| --- | --- |
+| `anti_motif` | [`anti_motif`](anti-motif.md) |
+| `barcodes` | [`barcodes`](barcodes.md) |
+| `pwm_seq` | [`pwm_seq`](pwm-seq.md) |
+| `random_seq` | [`random_seq`](random-seq.md) |
 
 ## Syntax
 

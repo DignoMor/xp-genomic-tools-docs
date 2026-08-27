@@ -4,11 +4,11 @@
 # GenomicElementTools command reference
 
 This is the semantic reference for release `0.3.0a4`. It covers every shipped
-top-level command and nested path. Exact usage, aliases, parser-required flags,
-choices, defaults, and parser help are maintained in the [generated argparse
-reference](../generated/genomic-element-tools.md); the sections below add the
-constraints that argparse cannot express. The inventory used for completeness
-checks is [`inventory.json`](inventory.json).
+top-level command and nested path. Parser-derived usage, aliases, required
+flags, choices, defaults, and help appear on each canonical command page and in
+the [site-wide exact-path index](../exact-path-index.md); the sections below
+add constraints that argparse cannot express. The inventory used for
+completeness checks is [`inventory.json`](inventory.json).
 
 ## Availability
 
@@ -23,9 +23,8 @@ group into region and signal work (BigWig quantification, padding, TSS point
 BED, context lookup, [TSS-relative](../../python/general-elements/tss-relative-coordinates.md)
 selection and mutagenesis), sequence and motif scoring on extracted windows,
 boolean mask algebra, and nested import/export of regions plus attached
-annotations. Parser-derived syntax for every path appears in the generated
-reference linked above; the pages below document semantics argparse cannot
-express.
+annotations. Parser-derived syntax for every path appears on the canonical
+command pages linked below.
 
 ## Example
 
@@ -134,45 +133,6 @@ Group landing: [`get_context_ge`](get-context-ge.md).
 
 - [`get_context_ge nearest`](get-context-ge/nearest.md)
 - [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md)
-
-## Exact command paths
-
-Every invocable command path and non-invocable command group appears exactly once for direct lookup.
-
-| Command path | Canonical page |
-| --- | --- |
-| `bed2tssbed` | [`bed2tssbed`](bed2tssbed.md) |
-| `count_paired_bw` | [`count_paired_bw`](count-paired-bw.md) |
-| `count_single_bw` | [`count_single_bw`](count-single-bw.md) |
-| `export` | [`export`](export.md) |
-| `export ChromFilteredGE` | [`export ChromFilteredGE`](export/chrom-filtered-ge.md) |
-| `export CountTable` | [`export CountTable`](export/count-table.md) |
-| `export ExogeneousSequences` | [`export ExogeneousSequences`](export/exogeneous-sequences.md) |
-| `export Heatmap` | [`export Heatmap`](export/heatmap.md) |
-| `export MaskedGE` | [`export MaskedGE`](export/masked-ge.md) |
-| `export MergedGE` | [`export MergedGE`](export/merged-ge.md) |
-| `export TREbed` | [`export TREbed`](export/trebed.md) |
-| `export WTES` | [`export WTES`](export/wtes.md) |
-| `export allele_expanded_ES` | [`export allele_expanded_ES`](export/allele-expanded-es.md) |
-| `export bed6poly` | [`export bed6poly`](export/bed6poly.md) |
-| `export stat_list` | [`export stat_list`](export/stat-list.md) |
-| `filter_motif_score` | [`filter_motif_score`](filter-motif-score.md) |
-| `get_context_ge` | [`get_context_ge`](get-context-ge.md) |
-| `get_context_ge nearest` | [`get_context_ge nearest`](get-context-ge/nearest.md) |
-| `get_context_ge windowed_argmax` | [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md) |
-| `import` | [`import`](import.md) |
-| `import allele_expanded_ES` | [`import allele_expanded_ES`](import/allele-expanded-es.md) |
-| `import stat_list` | [`import stat_list`](import/stat-list.md) |
-| `mask_op` | [`mask_op`](mask-op.md) |
-| `mask_op intersect` | [`mask_op intersect`](mask-op/intersect.md) |
-| `mask_op opposite` | [`mask_op opposite`](mask-op/opposite.md) |
-| `mask_op union` | [`mask_op union`](mask-op/union.md) |
-| `motif_search` | [`motif_search`](motif-search.md) |
-| `onehot` | [`onehot`](onehot.md) |
-| `pad_region` | [`pad_region`](pad-region.md) |
-| `select_tss_relative_track` | [`select_tss_relative_track`](select-tss-relative-track.md) |
-| `track2tss_bed` | [`track2tss_bed`](track2tss-bed.md) |
-| `tss_relative_mutagenesis` | [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md) |
 
 ## Legacy heading anchors
 
@@ -345,6 +305,45 @@ Canonical reference: [`track2tss_bed`](track2tss-bed.md).
 ### `tss_relative_mutagenesis`
 
 Canonical reference: [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md).
+
+## Exact command paths
+
+Every invocable command path and non-invocable command group appears exactly once for direct lookup.
+
+| Command path | Canonical page |
+| --- | --- |
+| `bed2tssbed` | [`bed2tssbed`](bed2tssbed.md) |
+| `count_paired_bw` | [`count_paired_bw`](count-paired-bw.md) |
+| `count_single_bw` | [`count_single_bw`](count-single-bw.md) |
+| `export` | [`export`](export.md) |
+| `export ChromFilteredGE` | [`export ChromFilteredGE`](export/chrom-filtered-ge.md) |
+| `export CountTable` | [`export CountTable`](export/count-table.md) |
+| `export ExogeneousSequences` | [`export ExogeneousSequences`](export/exogeneous-sequences.md) |
+| `export Heatmap` | [`export Heatmap`](export/heatmap.md) |
+| `export MaskedGE` | [`export MaskedGE`](export/masked-ge.md) |
+| `export MergedGE` | [`export MergedGE`](export/merged-ge.md) |
+| `export TREbed` | [`export TREbed`](export/trebed.md) |
+| `export WTES` | [`export WTES`](export/wtes.md) |
+| `export allele_expanded_ES` | [`export allele_expanded_ES`](export/allele-expanded-es.md) |
+| `export bed6poly` | [`export bed6poly`](export/bed6poly.md) |
+| `export stat_list` | [`export stat_list`](export/stat-list.md) |
+| `filter_motif_score` | [`filter_motif_score`](filter-motif-score.md) |
+| `get_context_ge` | [`get_context_ge`](get-context-ge.md) |
+| `get_context_ge nearest` | [`get_context_ge nearest`](get-context-ge/nearest.md) |
+| `get_context_ge windowed_argmax` | [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md) |
+| `import` | [`import`](import.md) |
+| `import allele_expanded_ES` | [`import allele_expanded_ES`](import/allele-expanded-es.md) |
+| `import stat_list` | [`import stat_list`](import/stat-list.md) |
+| `mask_op` | [`mask_op`](mask-op.md) |
+| `mask_op intersect` | [`mask_op intersect`](mask-op/intersect.md) |
+| `mask_op opposite` | [`mask_op opposite`](mask-op/opposite.md) |
+| `mask_op union` | [`mask_op union`](mask-op/union.md) |
+| `motif_search` | [`motif_search`](motif-search.md) |
+| `onehot` | [`onehot`](onehot.md) |
+| `pad_region` | [`pad_region`](pad-region.md) |
+| `select_tss_relative_track` | [`select_tss_relative_track`](select-tss-relative-track.md) |
+| `track2tss_bed` | [`track2tss_bed`](track2tss-bed.md) |
+| `tss_relative_mutagenesis` | [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md) |
 
 ## Syntax
 

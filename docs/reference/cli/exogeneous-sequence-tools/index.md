@@ -5,10 +5,10 @@
 
 This is the semantic reference for the `ExogeneousSequenceTools` console
 script in release `0.3.0a4`. It covers all seven top-level commands and every
-nested path. Exact parser spelling, required status, choices, defaults, and
-help text are generated from the installed argparse tree:
-[generated syntax](../generated/exogeneous-sequence-tools.md). The inventory
-used for completeness checks is [`inventory.json`](inventory.json).
+nested path. Parser-derived spelling, required status, choices, defaults, and
+help appear on each canonical command page and in the
+[site-wide exact-path index](../exact-path-index.md). The inventory used
+for completeness checks is [`inventory.json`](inventory.json).
 
 ## Shared model and process behavior
 
@@ -120,6 +120,28 @@ Group landing: [track_dim_reduction](track-dim-reduction.md).
 - [`track_dim_reduction argmin`](track-dim-reduction/argmin.md)
 - [`track_dim_reduction max`](track-dim-reduction/max.md)
 - [`track_dim_reduction min`](track-dim-reduction/min.md)
+
+## Exact command paths
+
+Every invocable command path and non-invocable command group appears exactly once for direct lookup.
+
+| Command path | Canonical page |
+| --- | --- |
+| `assemble` | [`assemble`](assemble.md) |
+| `assemble add_adapter` | [`assemble add_adapter`](assemble/add-adapter.md) |
+| `assemble barcode` | [`assemble barcode`](assemble/barcode.md) |
+| `assemble concat` | [`assemble concat`](assemble/concat.md) |
+| `gen_track` | [`gen_track`](gen-track.md) |
+| `gen_track single_loc` | [`gen_track single_loc`](gen-track/single-loc.md) |
+| `motif_search` | [`motif_search`](motif-search.md) |
+| `mutagenesis` | [`mutagenesis`](mutagenesis.md) |
+| `onehot` | [`onehot`](onehot.md) |
+| `print_stat` | [`print_stat`](print-stat.md) |
+| `track_dim_reduction` | [`track_dim_reduction`](track-dim-reduction.md) |
+| `track_dim_reduction argmax` | [`track_dim_reduction argmax`](track-dim-reduction/argmax.md) |
+| `track_dim_reduction argmin` | [`track_dim_reduction argmin`](track-dim-reduction/argmin.md) |
+| `track_dim_reduction max` | [`track_dim_reduction max`](track-dim-reduction/max.md) |
+| `track_dim_reduction min` | [`track_dim_reduction min`](track-dim-reduction/min.md) |
 
 ## Syntax
 

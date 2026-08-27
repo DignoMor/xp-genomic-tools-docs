@@ -2,10 +2,10 @@
 
 This is the semantic reference for the `ExogeneousSequenceTools` console
 script in release `0.3.0a4`. It covers all seven top-level commands and every
-nested path. Exact parser spelling, required status, choices, defaults, and
-help text are generated from the installed argparse tree:
-[generated syntax](../generated/exogeneous-sequence-tools.md). The inventory
-used for completeness checks is [`inventory.json`](inventory.json).
+nested path. Parser-derived spelling, required status, choices, defaults, and
+help appear on each canonical command page and in the
+[site-wide exact-path index](../exact-path-index.md). The inventory used
+for completeness checks is [`inventory.json`](inventory.json).
 
 ## Shared model and process behavior
 

@@ -1,8 +1,8 @@
 # MotifTools command reference
 
 Semantic reference for the shipped `MotifTools` CLI. Parser-derived syntax,
-defaults, and the complete flag inventory live in the
-[generated argparse reference](../generated/motif-tools.md).
+defaults, and the complete flag inventory appear on each canonical command
+page and in the [site-wide exact-path index](../exact-path-index.md).
 
 ## Shared contract
 
@@ -27,7 +27,7 @@ collection remains in `GenomicElementTools` and `ExogeneousSequenceTools`.
 **Outputs.** Supported-subset MEME files with six-decimal PWM rows, or MEME text
 on stdout when `--output -`.
 
-**Defaults.** Parser defaults appear in the generated reference; `anti_motif`
+**Defaults.** Parser defaults appear on each command page; `anti_motif`
 has no command-specific defaults beyond optional `--force`.
 
 **Choices.** Top-level subcommands: `anti_motif`, `random_seq`, `pwm_seq`,

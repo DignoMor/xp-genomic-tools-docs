@@ -5,7 +5,6 @@
     "pwm_seq",
     "random_seq"
   ],
-  "parser_reference": "../generated/motif-tools.md",
   "entries": [
     {
       "path": "reference/cli/motif-tools",

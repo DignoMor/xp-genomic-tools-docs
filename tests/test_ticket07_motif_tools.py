@@ -19,7 +19,7 @@ class Ticket07MotifToolsReferenceTest(unittest.TestCase):
         inventory = json.loads((REFERENCE / "inventory.json").read_text())
         expected = {"anti_motif", "random_seq", "pwm_seq", "barcodes"}
         self.assertEqual(set(inventory["commands"]), expected)
-        self.assertEqual(inventory["parser_reference"], "../generated/motif-tools.md")
+        self.assertNotIn("parser_reference", inventory)
 
     def test_semantic_reference_documents_anti_motif_provenance(self) -> None:
         text = (REFERENCE / "anti-motif.md").read_text()
