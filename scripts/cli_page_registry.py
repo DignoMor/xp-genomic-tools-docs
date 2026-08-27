@@ -208,6 +208,10 @@ REDIRECTS = {
     "reference/cli/generated/exogeneous-sequence-tools.md": "reference/cli/exogeneous-sequence-tools/index.md",
     "reference/cli/generated/motif-tools.md": "reference/cli/motif-tools/index.md",
     "reference/cli/mask-op-intersect.md": "reference/cli/genomic-element-tools/mask-op/intersect.md",
+    "cli/index.md": "reference/cli/index.md",
+    "cli/GenomicElementTools.md": "reference/cli/genomic-element-tools/index.md",
+    "cli/ExogeneousSequenceTools.md": "reference/cli/exogeneous-sequence-tools/index.md",
+    "cli/MotifTools.md": "reference/cli/motif-tools/index.md",
 }
 
 

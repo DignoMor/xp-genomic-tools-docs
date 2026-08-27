@@ -54,9 +54,12 @@ plugins:
         reference/cli/generated/exogeneous-sequence-tools.md: reference/cli/exogeneous-sequence-tools/index.md
         reference/cli/generated/motif-tools.md: reference/cli/motif-tools/index.md
         reference/cli/mask-op-intersect.md: reference/cli/genomic-element-tools/mask-op/intersect.md
+        cli/index.md: reference/cli/index.md
+        cli/GenomicElementTools.md: reference/cli/genomic-element-tools/index.md
+        cli/ExogeneousSequenceTools.md: reference/cli/exogeneous-sequence-tools/index.md
+        cli/MotifTools.md: reference/cli/motif-tools/index.md
 
 nav:
-  - Home: index.md
   - Get started:
       - Overview: get-started/index.md
       - Install: install.md
@@ -64,133 +67,128 @@ nav:
       - CLI quickstart: get-started/cli-quickstart.md
   - Concepts: concepts.md
   - How-to guides:
+      - Overview: guides/index.md
       - Genomic elements workflow: guides/genomic-elements.md
       - TSS-relative mutagenesis: guides/tss-relative-mutagenesis.md
       - Motif generation and search: guides/motif-generation-and-search.md
-  - Formats: formats.md
-  - CLI:
-      - Overview: cli/index.md
-      - GenomicElementTools: cli/GenomicElementTools.md
-      - ExogeneousSequenceTools: cli/ExogeneousSequenceTools.md
-      - MotifTools: cli/MotifTools.md
-  - Library (RGTools): library.md
-  - Reference:
-      - Convention: reference/conventions.md
-      - Python:
-          - Grouped index: reference/python/index.md
-          - Alphabetical index: reference/python/alphabetical-index.md
-          - Element collections:
-              - Overview: reference/python/elements/index.md
-              - GeneralElements: reference/python/general-elements/general-elements.md
-              - GenomicElements: reference/python/elements/genomic-elements.md
-              - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
-          - Operations:
-              - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
-          - MemeMotif: reference/python/motifs/meme-motif.md
-          - MotifGeneration: reference/python/motifs/motif-generation.md
-          - TSSRelativeCoordinates: reference/python/general-elements/tss-relative-coordinates.md
-          - BigWig signal tracks: reference/python/signal/bw-track.md
-          - GENCODE GTF streaming: reference/python/gtf/gtf-utils.md
-          - EnsemblRestSearch: reference/python/snp/ensembl-rest-search.md
-          - Foundation exceptions: reference/python/foundation/exceptions.md
-          - Foundation Logger: reference/python/foundation/logger.md
-          - Foundation utilities: reference/python/foundation/utils.md
-          - ListFile: reference/python/foundation/list-file.md
-          - BedRegion: reference/python/bedtable/bed-region.md
-          - BedTableIterator: reference/python/bedtable/iterator.md
-          - BedTable3: reference/python/bedtable/bed-table3.md
-          - BedTable6: reference/python/bedtable/bed-table6.md
-          - BedTable Plus: reference/python/bedtable/bed-table-plus.md
-          - BedTablePairEnd (experimental): reference/python/bedtable/bed-table-pair-end.md
-      - Formats:
-          - Boolean mask: reference/formats/boolean-mask.md
-          - FASTA: reference/formats/elements/fasta.md
-          - Annotation arrays: reference/formats/elements/annotation-arrays.md
-          - MEME motif: reference/formats/motifs/meme.md
-          - BigWig signal: reference/formats/signal/bigwig.md
-          - GENCODE GTF: reference/formats/gtf/gencode.md
-          - Ensembl SNP simple info: reference/formats/snp/ensembl-simple-info.md
-          - BED-like region tables: reference/formats/foundation/bed-like.md
-          - bed3: reference/formats/foundation/bed3.md
-          - bed6: reference/formats/foundation/bed6.md
-          - bed3gene: reference/formats/foundation/bed3gene.md
-          - bed6gene: reference/formats/foundation/bed6gene.md
-          - narrowPeak: reference/formats/foundation/narrowpeak.md
-          - TREbed: reference/formats/foundation/trebed.md
-          - bedGraph: reference/formats/foundation/bedgraph.md
-          - BedTablePairEnd format (experimental): reference/formats/foundation/pair-end.md
-          - ListFile format: reference/formats/foundation/list-file.md
-      - CLI:
-          - Grouped index: reference/cli/index.md
-          - Exact command paths: reference/cli/exact-path-index.md
-          - GenomicElementTools:
-              - Overview: reference/cli/genomic-element-tools/index.md
-              - Region and signal:
-                  - bed2tssbed: reference/cli/genomic-element-tools/bed2tssbed.md
-                  - count_paired_bw: reference/cli/genomic-element-tools/count-paired-bw.md
-                  - count_single_bw: reference/cli/genomic-element-tools/count-single-bw.md
-                  - pad_region: reference/cli/genomic-element-tools/pad-region.md
-                  - get_context_ge nearest: reference/cli/genomic-element-tools/get-context-ge/nearest.md
-                  - get_context_ge windowed_argmax: reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
-                  - track2tss_bed: reference/cli/genomic-element-tools/track2tss-bed.md
-                  - select_tss_relative_track: reference/cli/genomic-element-tools/select-tss-relative-track.md
-              - Sequence and motif:
-                  - onehot: reference/cli/genomic-element-tools/onehot.md
-                  - motif_search: reference/cli/genomic-element-tools/motif-search.md
-                  - filter_motif_score: reference/cli/genomic-element-tools/filter-motif-score.md
-                  - tss_relative_mutagenesis: reference/cli/genomic-element-tools/tss-relative-mutagenesis.md
-              - import:
-                  - Overview: reference/cli/genomic-element-tools/import.md
-                  - import allele_expanded_ES: reference/cli/genomic-element-tools/import/allele-expanded-es.md
-                  - import stat_list: reference/cli/genomic-element-tools/import/stat-list.md
-              - export:
-                  - Overview: reference/cli/genomic-element-tools/export.md
-                  - export ChromFilteredGE: reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
-                  - export CountTable: reference/cli/genomic-element-tools/export/count-table.md
-                  - export ExogeneousSequences: reference/cli/genomic-element-tools/export/exogeneous-sequences.md
-                  - export Heatmap: reference/cli/genomic-element-tools/export/heatmap.md
-                  - export MaskedGE: reference/cli/genomic-element-tools/export/masked-ge.md
-                  - export MergedGE: reference/cli/genomic-element-tools/export/merged-ge.md
-                  - export TREbed: reference/cli/genomic-element-tools/export/trebed.md
-                  - export WTES: reference/cli/genomic-element-tools/export/wtes.md
-                  - export allele_expanded_ES: reference/cli/genomic-element-tools/export/allele-expanded-es.md
-                  - export bed6poly: reference/cli/genomic-element-tools/export/bed6poly.md
-                  - export stat_list: reference/cli/genomic-element-tools/export/stat-list.md
-              - mask_op:
-                  - Overview: reference/cli/genomic-element-tools/mask-op.md
-                  - mask_op intersect: reference/cli/genomic-element-tools/mask-op/intersect.md
-                  - mask_op opposite: reference/cli/genomic-element-tools/mask-op/opposite.md
-                  - mask_op union: reference/cli/genomic-element-tools/mask-op/union.md
-              - get_context_ge:
-                  - Overview: reference/cli/genomic-element-tools/get-context-ge.md
-                  - get_context_ge nearest: reference/cli/genomic-element-tools/get-context-ge/nearest.md
-                  - get_context_ge windowed_argmax: reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
-          - ExogeneousSequenceTools:
-              - Overview: reference/cli/exogeneous-sequence-tools/index.md
-              - assemble:
-                  - Overview: reference/cli/exogeneous-sequence-tools/assemble.md
-                  - assemble add_adapter: reference/cli/exogeneous-sequence-tools/assemble/add-adapter.md
-                  - assemble barcode: reference/cli/exogeneous-sequence-tools/assemble/barcode.md
-                  - assemble concat: reference/cli/exogeneous-sequence-tools/assemble/concat.md
-              - gen_track:
-                  - Overview: reference/cli/exogeneous-sequence-tools/gen-track.md
-                  - gen_track single_loc: reference/cli/exogeneous-sequence-tools/gen-track/single-loc.md
-              - track_dim_reduction:
-                  - Overview: reference/cli/exogeneous-sequence-tools/track-dim-reduction.md
-                  - track_dim_reduction argmax: reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax.md
-                  - track_dim_reduction argmin: reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin.md
-                  - track_dim_reduction max: reference/cli/exogeneous-sequence-tools/track-dim-reduction/max.md
-                  - track_dim_reduction min: reference/cli/exogeneous-sequence-tools/track-dim-reduction/min.md
-              - mutagenesis: reference/cli/exogeneous-sequence-tools/mutagenesis.md
-              - print_stat: reference/cli/exogeneous-sequence-tools/print-stat.md
-              - motif_search: reference/cli/exogeneous-sequence-tools/motif-search.md
-              - onehot: reference/cli/exogeneous-sequence-tools/onehot.md
-          - MotifTools:
-              - Overview: reference/cli/motif-tools/index.md
-              - anti_motif: reference/cli/motif-tools/anti-motif.md
-              - barcodes: reference/cli/motif-tools/barcodes.md
-              - pwm_seq: reference/cli/motif-tools/pwm-seq.md
-              - random_seq: reference/cli/motif-tools/random-seq.md
+  - Python API:
+      - Overview: library.md
+      - Conventions: reference/conventions.md
+      - Grouped index: reference/python/index.md
+      - Alphabetical index: reference/python/alphabetical-index.md
+      - Element collections:
+          - Overview: reference/python/elements/index.md
+          - GeneralElements: reference/python/general-elements/general-elements.md
+          - GenomicElements: reference/python/elements/genomic-elements.md
+          - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
+      - Operations:
+          - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
+      - MemeMotif: reference/python/motifs/meme-motif.md
+      - MotifGeneration: reference/python/motifs/motif-generation.md
+      - TSSRelativeCoordinates: reference/python/general-elements/tss-relative-coordinates.md
+      - BigWig signal tracks: reference/python/signal/bw-track.md
+      - GENCODE GTF streaming: reference/python/gtf/gtf-utils.md
+      - EnsemblRestSearch: reference/python/snp/ensembl-rest-search.md
+      - Foundation exceptions: reference/python/foundation/exceptions.md
+      - Foundation Logger: reference/python/foundation/logger.md
+      - Foundation utilities: reference/python/foundation/utils.md
+      - ListFile: reference/python/foundation/list-file.md
+      - BedRegion: reference/python/bedtable/bed-region.md
+      - BedTableIterator: reference/python/bedtable/iterator.md
+      - BedTable3: reference/python/bedtable/bed-table3.md
+      - BedTable6: reference/python/bedtable/bed-table6.md
+      - BedTable Plus: reference/python/bedtable/bed-table-plus.md
+      - BedTablePairEnd (experimental): reference/python/bedtable/bed-table-pair-end.md
+  - CLI commands:
+      - Grouped index: reference/cli/index.md
+      - Exact command paths: reference/cli/exact-path-index.md
+      - GenomicElementTools:
+          - Overview: reference/cli/genomic-element-tools/index.md
+          - Region and signal:
+              - bed2tssbed: reference/cli/genomic-element-tools/bed2tssbed.md
+              - count_paired_bw: reference/cli/genomic-element-tools/count-paired-bw.md
+              - count_single_bw: reference/cli/genomic-element-tools/count-single-bw.md
+              - pad_region: reference/cli/genomic-element-tools/pad-region.md
+              - get_context_ge nearest: reference/cli/genomic-element-tools/get-context-ge/nearest.md
+              - get_context_ge windowed_argmax: reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
+              - track2tss_bed: reference/cli/genomic-element-tools/track2tss-bed.md
+              - select_tss_relative_track: reference/cli/genomic-element-tools/select-tss-relative-track.md
+          - Sequence and motif:
+              - onehot: reference/cli/genomic-element-tools/onehot.md
+              - motif_search: reference/cli/genomic-element-tools/motif-search.md
+              - filter_motif_score: reference/cli/genomic-element-tools/filter-motif-score.md
+              - tss_relative_mutagenesis: reference/cli/genomic-element-tools/tss-relative-mutagenesis.md
+          - import:
+              - Overview: reference/cli/genomic-element-tools/import.md
+              - import allele_expanded_ES: reference/cli/genomic-element-tools/import/allele-expanded-es.md
+              - import stat_list: reference/cli/genomic-element-tools/import/stat-list.md
+          - export:
+              - Overview: reference/cli/genomic-element-tools/export.md
+              - export ChromFilteredGE: reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
+              - export CountTable: reference/cli/genomic-element-tools/export/count-table.md
+              - export ExogeneousSequences: reference/cli/genomic-element-tools/export/exogeneous-sequences.md
+              - export Heatmap: reference/cli/genomic-element-tools/export/heatmap.md
+              - export MaskedGE: reference/cli/genomic-element-tools/export/masked-ge.md
+              - export MergedGE: reference/cli/genomic-element-tools/export/merged-ge.md
+              - export TREbed: reference/cli/genomic-element-tools/export/trebed.md
+              - export WTES: reference/cli/genomic-element-tools/export/wtes.md
+              - export allele_expanded_ES: reference/cli/genomic-element-tools/export/allele-expanded-es.md
+              - export bed6poly: reference/cli/genomic-element-tools/export/bed6poly.md
+              - export stat_list: reference/cli/genomic-element-tools/export/stat-list.md
+          - mask_op:
+              - Overview: reference/cli/genomic-element-tools/mask-op.md
+              - mask_op intersect: reference/cli/genomic-element-tools/mask-op/intersect.md
+              - mask_op opposite: reference/cli/genomic-element-tools/mask-op/opposite.md
+              - mask_op union: reference/cli/genomic-element-tools/mask-op/union.md
+          - get_context_ge:
+              - Overview: reference/cli/genomic-element-tools/get-context-ge.md
+              - get_context_ge nearest: reference/cli/genomic-element-tools/get-context-ge/nearest.md
+              - get_context_ge windowed_argmax: reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
+      - ExogeneousSequenceTools:
+          - Overview: reference/cli/exogeneous-sequence-tools/index.md
+          - assemble:
+              - Overview: reference/cli/exogeneous-sequence-tools/assemble.md
+              - assemble add_adapter: reference/cli/exogeneous-sequence-tools/assemble/add-adapter.md
+              - assemble barcode: reference/cli/exogeneous-sequence-tools/assemble/barcode.md
+              - assemble concat: reference/cli/exogeneous-sequence-tools/assemble/concat.md
+          - gen_track:
+              - Overview: reference/cli/exogeneous-sequence-tools/gen-track.md
+              - gen_track single_loc: reference/cli/exogeneous-sequence-tools/gen-track/single-loc.md
+          - track_dim_reduction:
+              - Overview: reference/cli/exogeneous-sequence-tools/track-dim-reduction.md
+              - track_dim_reduction argmax: reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax.md
+              - track_dim_reduction argmin: reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin.md
+              - track_dim_reduction max: reference/cli/exogeneous-sequence-tools/track-dim-reduction/max.md
+              - track_dim_reduction min: reference/cli/exogeneous-sequence-tools/track-dim-reduction/min.md
+          - mutagenesis: reference/cli/exogeneous-sequence-tools/mutagenesis.md
+          - print_stat: reference/cli/exogeneous-sequence-tools/print-stat.md
+          - motif_search: reference/cli/exogeneous-sequence-tools/motif-search.md
+          - onehot: reference/cli/exogeneous-sequence-tools/onehot.md
+      - MotifTools:
+          - Overview: reference/cli/motif-tools/index.md
+          - anti_motif: reference/cli/motif-tools/anti-motif.md
+          - barcodes: reference/cli/motif-tools/barcodes.md
+          - pwm_seq: reference/cli/motif-tools/pwm-seq.md
+          - random_seq: reference/cli/motif-tools/random-seq.md
+  - Data formats:
+      - Overview: formats.md
+      - Boolean mask: reference/formats/boolean-mask.md
+      - FASTA: reference/formats/elements/fasta.md
+      - Annotation arrays: reference/formats/elements/annotation-arrays.md
+      - MEME motif: reference/formats/motifs/meme.md
+      - BigWig signal: reference/formats/signal/bigwig.md
+      - GENCODE GTF: reference/formats/gtf/gencode.md
+      - Ensembl SNP simple info: reference/formats/snp/ensembl-simple-info.md
+      - BED-like region tables: reference/formats/foundation/bed-like.md
+      - bed3: reference/formats/foundation/bed3.md
+      - bed6: reference/formats/foundation/bed6.md
+      - bed3gene: reference/formats/foundation/bed3gene.md
+      - bed6gene: reference/formats/foundation/bed6gene.md
+      - narrowPeak: reference/formats/foundation/narrowpeak.md
+      - TREbed: reference/formats/foundation/trebed.md
+      - bedGraph: reference/formats/foundation/bedgraph.md
+      - BedTablePairEnd format (experimental): reference/formats/foundation/pair-end.md
+      - ListFile format: reference/formats/foundation/list-file.md
       - CLI output formats:
           - CountTable: reference/formats/cli/genomic-element-tools/counttable.md
           - TREbed: reference/formats/cli/genomic-element-tools/trebed.md

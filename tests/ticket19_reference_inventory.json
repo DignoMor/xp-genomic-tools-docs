@@ -1,0 +1,60 @@
+{
+  "release": "0.3.0a4",
+  "top_level_nav": [
+    "Get started",
+    "Concepts",
+    "How-to guides",
+    "Python API",
+    "CLI commands",
+    "Data formats",
+    "FAQ"
+  ],
+  "legacy_cli_redirects": [
+    {
+      "source": "cli/index",
+      "target_slug": "reference/cli"
+    },
+    {
+      "source": "cli/GenomicElementTools",
+      "target_slug": "genomic-element-tools"
+    },
+    {
+      "source": "cli/ExogeneousSequenceTools",
+      "target_slug": "exogeneous-sequence-tools"
+    },
+    {
+      "source": "cli/MotifTools",
+      "target_slug": "motif-tools"
+    }
+  ],
+  "llms_full_required_segments": [
+    "get-started/",
+    "guides/",
+    "reference/python",
+    "reference/cli",
+    "reference/formats"
+  ],
+  "llms_compact_required_links": [
+    "get-started/",
+    "guides/",
+    "library/",
+    "reference/cli/",
+    "formats/",
+    "faq/"
+  ],
+  "random_seq_example": {
+    "path": "reference/cli/motif-tools/random-seq",
+    "expected_sequence": "GCCGCAGC"
+  },
+  "landing_paths": {
+    "python_api": "library",
+    "cli_commands": "reference/cli",
+    "data_formats": "formats",
+    "how_to_guides": "guides"
+  },
+  "guide_topics": [
+    "genomic-elements",
+    "tss-relative-mutagenesis",
+    "motif-generation-and-search"
+  ]
+}

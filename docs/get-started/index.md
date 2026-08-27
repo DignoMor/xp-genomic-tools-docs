@@ -16,5 +16,5 @@ with this site. Download them from the quickstart pages or copy them from a
 built checkout under `docs/get-started/assets/`.
 
 After your first run, skim [Concepts](../concepts.md) for shared terminology and
-open the [Reference](../reference/python/index.md) area for exact API and CLI
-lookup.
+open [Python API](../library.md) or [CLI commands](../reference/cli/index.md) for
+exact lookup.

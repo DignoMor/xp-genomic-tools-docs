@@ -87,6 +87,23 @@ CANONICAL_MASK_INTERSECT = "reference/cli/genomic-element-tools/mask-op/intersec
 METHOD_PAGE = "reference/python/general-elements/load-mask-from-arr.md"
 METHOD_NAV_LABEL = "GeneralElements.load_mask_from_arr()"
 LIBRARY_COLLECTIONS_HEADER = "### Element collections"
+PYTHON_API_NAV_HEADING = "Python API"
+TOP_LEVEL_NAV_DESTINATIONS = (
+    "Get started",
+    "Concepts",
+    "How-to guides",
+    PYTHON_API_NAV_HEADING,
+    "CLI commands",
+    "Data formats",
+    "FAQ",
+)
+LLMS_FULL_REQUIRED_SEGMENTS = (
+    "get-started/",
+    "guides/",
+    "reference/python",
+    "reference/cli",
+    "reference/formats",
+)
 
 
 def _release_version() -> str:
@@ -109,6 +126,31 @@ PRIVATE_MARKERS = re.compile(
 
 def _library_target(href: str) -> str:
     return urlparse(urljoin("https://docs.invalid/library/", href)).path.lstrip("/")
+
+
+def _extract_top_level_nav_labels(config_text: str) -> list[str]:
+    if "nav:" not in config_text:
+        return []
+    nav_section = config_text.split("nav:", 1)[1]
+    labels: list[str] = []
+    for line in nav_section.splitlines():
+        if line.startswith("  - ") and not line.startswith("    "):
+            labels.append(line[4:].split(":")[0].strip())
+    return labels
+
+
+def _public_markdown_paths() -> list[Path]:
+    docs_dir = DOCS_ROOT / "docs"
+    paths: list[Path] = []
+    for path in sorted(docs_dir.rglob("*.md")):
+        parts = path.parts
+        if "authored" in parts or "fragments" in parts or "generated" in parts:
+            continue
+        if path.parent.name == "cli" and path.name != "index.md":
+            # Legacy per-tool summaries redirect to canonical reference landings.
+            continue
+        paths.append(path)
+    return paths
 
 
 def _markdown_has_heading(text: str, heading: str) -> bool:
@@ -168,6 +210,13 @@ def _validate_source_contracts() -> None:
         )
 
     mkdocs_text = MKDOCS_CONFIG.read_text()
+    top_level_nav = _extract_top_level_nav_labels(mkdocs_text)
+    if top_level_nav != list(TOP_LEVEL_NAV_DESTINATIONS):
+        raise RuntimeError(
+            "Top-level navigation must be "
+            + ", ".join(TOP_LEVEL_NAV_DESTINATIONS)
+            + f"; found {top_level_nav!r}"
+        )
     for source, target in REDIRECTS.items():
         normalized = f"{source}: {target}"
         if normalized not in mkdocs_text:
@@ -175,7 +224,7 @@ def _validate_source_contracts() -> None:
                 f"Missing redirect mapping for {source} -> {target}"
             )
 
-    python_nav = _extract_nav_section(mkdocs_text, "Python")
+    python_nav = _extract_nav_section(mkdocs_text, PYTHON_API_NAV_HEADING)
     if not python_nav:
         raise RuntimeError(
             "GeneralElements.load_mask_from_arr must remain reachable in built "
@@ -376,19 +425,26 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
     raw_base = f"{DOCS_RAW_BASE}/{docs_revision}/docs"
     canonical = PAGES_BASE
     links = [
+        ("Home", "", "index.md"),
         ("Get started", "get-started/", "get-started/index.md"),
         ("Python quickstart", "get-started/python-quickstart/", "get-started/python-quickstart.md"),
         ("CLI quickstart", "get-started/cli-quickstart/", "get-started/cli-quickstart.md"),
+        ("Concepts", "concepts/", "concepts.md"),
+        ("How-to guides", "guides/", "guides/index.md"),
+        ("Genomic elements guide", "guides/genomic-elements/", "guides/genomic-elements.md"),
+        ("Motif generation guide", "guides/motif-generation-and-search/", "guides/motif-generation-and-search.md"),
+        ("Python API overview", "library/", "library.md"),
         ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
-        ("Python reference", "reference/python/", "reference/python/index.md"),
-        ("BedTable reference", "reference/python/bedtable/bed-table3/", "reference/python/bedtable/bed-table3.md"),
+        ("Python grouped index", "reference/python/", "reference/python/index.md"),
+        ("Python alphabetical index", "reference/python/alphabetical-index/", "reference/python/alphabetical-index.md"),
         ("CLI grouped index", "reference/cli/", "reference/cli/index.md"),
         ("CLI exact-path index", "reference/cli/exact-path-index/", "reference/cli/exact-path-index.md"),
         ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
         ("ExogeneousSequenceTools CLI", "reference/cli/exogeneous-sequence-tools/", "reference/cli/exogeneous-sequence-tools/index.md"),
         ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
-        ("Formats", "formats/", "formats.md"),
+        ("Data formats overview", "formats/", "formats.md"),
         ("Boolean-mask dtype rule", "reference/formats/boolean-mask/#dtype", "reference/formats/boolean-mask.md#dtype"),
+        ("FAQ", "faq/", "faq.md"),
     ]
     compact = [
         f"# xp-genomic-tools public reference ({RELEASE})",
@@ -406,12 +462,6 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         )
     (DOCS_ROOT / "docs/llms.txt").write_text("\n".join(compact) + "\n")
 
-    reference_files = sorted(
-        path
-        for path in (DOCS_ROOT / "docs/reference").rglob("*.md")
-        if "authored" not in path.parts
-        and ("generated" not in path.parts or path.name.endswith(".md"))
-    )
     full = [
         f"# xp-genomic-tools exhaustive public reference ({RELEASE})",
         "",
@@ -419,14 +469,14 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         f"Documentation revision: `{docs_revision}`",
         "",
     ]
-    for reference_path in reference_files:
-        relative = reference_path.relative_to(DOCS_ROOT / "docs").as_posix()
+    for markdown_path in _public_markdown_paths():
+        relative = markdown_path.relative_to(DOCS_ROOT / "docs").as_posix()
         canonical_relative = relative.removesuffix("/index.md").removesuffix(".md")
         full.extend(
             [
                 f"## `{relative}`",
                 "",
-                reference_path.read_text().strip(),
+                markdown_path.read_text().strip(),
                 "",
                 f"Canonical: {canonical}{canonical_relative}/",
                 f"Raw: {raw_base}/{relative}",
@@ -844,6 +894,9 @@ def _validate_built_artifact(
     for required in ("llms-full.txt", "reference/python", "reference/cli", "reference/formats"):
         if required not in compact:
             raise RuntimeError(f"llms.txt lacks {required!r}")
+    for required in LLMS_FULL_REQUIRED_SEGMENTS:
+        if required not in exhaustive:
+            raise RuntimeError(f"llms-full.txt lacks public segment {required!r}")
     if dtype_url not in compact:
         raise RuntimeError("llms.txt does not link directly to the mask dtype rule")
 

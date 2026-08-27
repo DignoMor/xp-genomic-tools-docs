@@ -24,7 +24,7 @@ This site documents release **0.3.0a4**.
 
 1. Open [Get started](get-started/index.md) and pick the [Python](get-started/python-quickstart.md) or [CLI](get-started/cli-quickstart.md) quickstart
 2. [Install](install.md) from the `0.3.0a4` code tag when you need setup detail
-3. Skim [Concepts](concepts.md) and [Formats](formats.md)
-4. Use the [CLI overview](cli/index.md) or [Library (RGTools)](library.md) for deeper lookup
+3. Skim [Concepts](concepts.md) and [Data formats](formats.md)
+4. Use [Python API](library.md) or [CLI commands](reference/cli/index.md) for exact lookup; browse [How-to guides](guides/index.md) for workflows
 
 Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.3.0a4`).

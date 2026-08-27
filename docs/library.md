@@ -1,8 +1,8 @@
 # Library (RGTools)
 
 `RGTools` is the importable Python library behind the CLIs. For end-to-end
-workflows, prefer the [CLI pages](cli/index.md). This page is a light import
-overview for **0.3.0a4**.
+workflows, prefer the [CLI commands reference](reference/cli/index.md). This page
+is a light import overview for **0.3.0a4**.
 
 ## Common imports
 

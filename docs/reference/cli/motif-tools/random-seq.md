@@ -94,7 +94,7 @@ Identical inputs reproduce these FASTA bytes in release `0.3.0a4`:
 >random_seq_0
 TTAGTTGT
 >random_seq_1
-GCCGGCCG
+GCCGCAGC
 ```
 
 ## Syntax

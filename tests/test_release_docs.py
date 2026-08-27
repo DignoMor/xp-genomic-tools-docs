@@ -90,11 +90,11 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
         config_path = DOCS_ROOT / "mkdocs.yml"
         original_config = config_path.read_text()
         method_label = (
-            "              - GeneralElements.load_mask_from_arr(): "
+            "          - GeneralElements.load_mask_from_arr(): "
             "reference/python/general-elements/load-mask-from-arr.md\n"
         )
         unmarked_label = (
-            "              - GeneralElements.load_mask_from_arr: "
+            "          - GeneralElements.load_mask_from_arr: "
             "reference/python/general-elements/load-mask-from-arr.md\n"
         )
         self.assertIn(method_label, original_config)
@@ -115,22 +115,22 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
         """SPEC001: Element collections is class-only in Python navigation."""
         config_path = DOCS_ROOT / "mkdocs.yml"
         original_config = config_path.read_text()
-        correct_navigation = """          - Element collections:
-              - Overview: reference/python/elements/index.md
-              - GeneralElements: reference/python/general-elements/general-elements.md
-              - GenomicElements: reference/python/elements/genomic-elements.md
-              - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
-          - Operations:
-              - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
-          - MemeMotif: reference/python/motifs/meme-motif.md
+        correct_navigation = """      - Element collections:
+          - Overview: reference/python/elements/index.md
+          - GeneralElements: reference/python/general-elements/general-elements.md
+          - GenomicElements: reference/python/elements/genomic-elements.md
+          - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
+      - Operations:
+          - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
+      - MemeMotif: reference/python/motifs/meme-motif.md
 """
-        wrong_navigation = """          - Element collections:
-              - Overview: reference/python/elements/index.md
-              - GeneralElements: reference/python/general-elements/general-elements.md
-              - GenomicElements: reference/python/elements/genomic-elements.md
-              - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
-              - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
-          - MemeMotif: reference/python/motifs/meme-motif.md
+        wrong_navigation = """      - Element collections:
+          - Overview: reference/python/elements/index.md
+          - GeneralElements: reference/python/general-elements/general-elements.md
+          - GenomicElements: reference/python/elements/genomic-elements.md
+          - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
+          - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
+      - MemeMotif: reference/python/motifs/meme-motif.md
 """
         self.assertIn(correct_navigation, original_config)
 
@@ -148,10 +148,10 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
         """SPEC001: operation pages are not peers of classes or reference areas."""
         config_path = DOCS_ROOT / "mkdocs.yml"
         original_config = config_path.read_text()
-        grouped = """          - Operations:
-              - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
+        grouped = """      - Operations:
+          - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
 """
-        peer = """          - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
+        peer = """      - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
 """
         self.assertIn(grouped, original_config)
 
