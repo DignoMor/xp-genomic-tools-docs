@@ -24,6 +24,10 @@ jobs:
           python-version: "3.12"
       - name: Install MkDocs
         run: pip install -r requirements.txt
+      - name: Install RGTools for API reference
+        run: |
+          TAG=$(python -c "import re; t=open('mkdocs.yml').read(); print(re.search(r'MotifTools ([0-9.]+a\d+)', t).group(1))")
+          pip install "git+https://github.com/DignoMor/xp-genomic-tools.git@${TAG}"
       - name: Build site
         run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
