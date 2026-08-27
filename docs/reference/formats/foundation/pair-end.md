@@ -9,7 +9,10 @@ Represent two linked intervals and pair metadata in one headerless TSV row.
 
 ## Availability
 
-Experimental in release `0.1.0a2`; consumed by `BedTablePairEnd`.
+Experimental.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -54,3 +57,7 @@ Loads replace rows and rebuild the inverse index; writes perform file or standar
 ## Failures
 
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
+
+## Related API and CLI
+
+- [`BedTablePairEnd`](../../python/bedtable/bed-table-pair-end.md) (experimental)

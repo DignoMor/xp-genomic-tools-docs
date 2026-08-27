@@ -1,77 +1,115 @@
 # `MemeMotif`
 
-**Purpose/availability:** `from RGTools import MemeMotif` parses and writes the
-supported minimal MEME subset and scores motifs. **Constructor** (`__init__`):
-`MemeMotif(file_path=None)`; `None` creates an empty collection, otherwise the
-file is parsed under the supported validation envelope. No file handle remains
-open.
+## Status
 
-## Metadata and collection operations
+Supported for the current reference release.
 
-`get_meme_version`/`set_meme_version`, `get_alphabet`/`set_alphabet`,
-`get_strands`/`set_strands`, and `get_bg_freq`/`set_bg_freq` expose and update
-version, alphabet string, strand list, and background-frequency list.
-`get_motif_list()` preserves file/add order. `get_motif_pwm(name)` returns a
-probability NumPy array of shape `(motif_length, alphabet_length)`.
-`get_motif_alphabet_length`, `get_motif_length`,
-`get_motif_num_source_sites`, and `get_motif_source_eval` return per-motif
-metadata. `add_motif(name, motif_info)` requires keys
-`alphabet_length`, `motif_length`, `num_source_sites`, `source_eval`, and
-`pwm`; names must be unique; PWM values must be finite and non-negative; rows
-must sum to approximately 1 (`atol=1e-6`). `clone_empty()` copies metadata but
-no motifs. `write_meme_file(destination)` writes the supported subset to a
-filesystem path or a text stream with identical text, including six-decimal
-PWM rows, without mutating collection metadata or motif arrays and without
-emitting any parsed URL records.
+## Purpose
 
-Every operation has string names, list metadata, and NumPy PWM shapes above;
-there are no implicit defaults beyond constructor `None`. Unknown names raise
-`KeyError`. Incomplete info, shape mismatch, duplicate names, invalid
-backgrounds, invalid PWM rows, or malformed/duplicate/misplaced URL records
-raise contextual `ValueError`. Parsed URL values are discarded and are not
-exposed by getters. Command lines, alternate motif names, and other full-MEME
-dialect blocks remain unsupported.
+Parse, build, serialize, and score motifs in the supported minimal MEME subset.
+`from RGTools import MemeMotif` is the canonical import for the collection
+class.
 
-## Static scoring operations
+## Canonical import
 
-`calculate_pwm_score(seq, pwm, alphabet="ACGT", bg_freq=None,
-reverse_complement=False)` returns a scalar log-odds score. Sequence length
-must equal PWM rows; uniform background is used when omitted; optional reverse
-complement uses the library DNA convention. `search_one_motif(seq,
-motif_alphabet, motif_pwm, bg_freq=None, strand="+")` returns one score per
-sequence position, padding trailing windows with the minimum score. `strand`
-choices are `+`, `-`, and `both`; `both` takes the maximum forward/RC score.
-Invalid strand and length mismatch raise an error (`ValueError` for score
-length; search raises `ValueError` for invalid strand). Scores are ordered by
-input sequence position.
+```python
+from RGTools import MemeMotif
+```
 
-## MEME format
+## Signature
 
-Supported text contains `MEME version`, `ALPHABET=`, `strands:`, background
-frequencies, and each `MOTIF` plus `letter-probability matrix` rows. After a
-complete matrix, input may include zero or one exact-uppercase `URL <token>`
-record; the value is ignored and canonical output omits it. This remains a
-minimal read/write subset, not full MEME. See the MEME format reference for the
-validation envelope (unique names, finite non-negative normalized PWMs and
-backgrounds, truncated-matrix rejection, URL grammar, and path/stream write
-equivalence).
+Curated constructor, metadata, collection, and scoring members rendered from
+the aligned release source:
 
-## Reference fields
+::: RGTools.MemeMotif.MemeMotif
+    options:
+      members:
+        - __init__
+        - write_meme_file
+        - clone_empty
+        - get_meme_version
+        - set_meme_version
+        - get_alphabet
+        - set_alphabet
+        - get_strands
+        - set_strands
+        - get_bg_freq
+        - set_bg_freq
+        - get_motif_list
+        - get_motif_pwm
+        - get_motif_alphabet_length
+        - get_motif_length
+        - get_motif_num_source_sites
+        - get_motif_source_eval
+        - add_motif
+        - calculate_pwm_score
+        - search_one_motif
+      show_root_heading: true
+      show_source: false
+      heading_level: 4
+      inherited_members: false
+      filters:
+        - "!^_"
 
-**Purpose:** parse, build, serialize, and score motifs. **Availability:** with
-the installed `RGTools` release that documents this page. **Inputs:** MEME
-paths, metadata, PWM arrays, sequences, and optional ignored input-only URL
-records. **Types:** strings, lists, dictionaries, floats, NumPy arrays, and
-text streams for write destinations. **Shapes:** PWM
-`(motif_length, alphabet_length)`; scores follow positions. **Dtypes:**
-floating probability and score arrays. **Defaults:** `file_path=None`, uniform
-background, forward strand. **Choices:** `+`, `-`, `both`; minimal MEME subset
-including optional input-only URL. **Constraints:** unique motif names;
-dimensions, normalization, and sequence length agree; URL records follow the
-strict grammar and are not retained. **Outputs:** metadata, PWM arrays,
-scores, and MEME text without URL records. **Ordering:** motif and score order
-is preserved. **Side effects:** path writing creates/replaces the target file;
-stream writing emits only MEME text; parsing retains no handle and does not
-mutate caller arrays after store. **Failures:** contextual `ValueError` for
-malformed input, invalid PWM/metadata, or invalid URL records; `KeyError` for
-unknown names; invalid strand/length raise documented errors.
+## Parameters
+
+`MemeMotif(file_path=None)` accepts an optional MEME path; `None` creates an
+empty collection. `add_motif` requires motif metadata keys and a PWM array.
+Scoring methods accept sequence strings, PWM arrays, alphabet, background, and
+optional strand or reverse-complement flags.
+
+## Return or yield behavior
+
+Metadata getters return strings, lists, or floats. PWM getters return NumPy
+arrays with shape `(motif_length, alphabet_length)`. Scoring methods return
+scalar log-odds values or per-position score arrays padded to sequence length.
+`write_meme_file` returns `None`.
+
+## Raised exceptions
+
+Malformed input, invalid PWM or background rows, duplicate names, truncated
+matrices, and malformed optional URL records raise contextual `ValueError`.
+Unknown motif names raise `KeyError`. Invalid strand or sequence length
+mismatch raise `ValueError`.
+
+## Constraints
+
+PWM rows must be finite, non-negative, and sum to approximately 1
+(`atol=1e-6`). Motif names must be unique. Parsed URL values are discarded and
+never emitted by `write_meme_file`. This remains a minimal MEME subset, not
+full MEME dialect support.
+
+## Ordering
+
+Motif list order follows file or `add_motif` order. `search_one_motif` scores
+are ordered by input sequence position.
+
+## Side effects
+
+Path writing creates or replaces the destination file or stream. Parsing retains
+no file handle after construction and does not mutate caller arrays after
+store.
+
+## Lifecycle behavior
+
+No long-lived file handle after parse or write. Collections live in memory until
+released by the caller.
+
+## Supported protocols and inheritance
+
+Standard Python object. Static scoring helpers are declared on the class.
+
+## Example
+
+```python
+from RGTools import MemeMotif
+
+meme = MemeMotif("motifs.meme")
+score = MemeMotif.calculate_pwm_score("ACGT", meme.get_motif_pwm("M1"))
+```
+
+## Related formats or commands
+
+- [MEME motif format](../../formats/motifs/meme.md)
+- [`MotifGeneration`](motif-generation.md)
+- [`MotifTools` CLI](../../cli/motif-tools/index.md)

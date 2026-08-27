@@ -19,10 +19,10 @@ class Ticket07MotifToolsReferenceTest(unittest.TestCase):
         inventory = json.loads((REFERENCE / "inventory.json").read_text())
         expected = {"anti_motif", "random_seq", "pwm_seq", "barcodes"}
         self.assertEqual(set(inventory["commands"]), expected)
-        self.assertEqual(inventory["parser_reference"], "../generated/motif-tools.md")
+        self.assertNotIn("parser_reference", inventory)
 
     def test_semantic_reference_documents_anti_motif_provenance(self) -> None:
-        text = (REFERENCE / "index.md").read_text()
+        text = (REFERENCE / "anti-motif.md").read_text()
         for phrase in (
             "anti_motif",
             "provenance",
@@ -53,20 +53,33 @@ class Ticket07MotifToolsReferenceTest(unittest.TestCase):
             site = Path(directory)
             required = inventory["required_fields"]
             cli_html = html.unescape((site / "reference/cli/motif-tools/index.html").read_text())
+            anti_html = html.unescape((site / "reference/cli/motif-tools/anti-motif/index.html").read_text())
             for field in required:
                 self.assertIn(field, cli_html)
+                self.assertIn(field, anti_html)
             for symbol in inventory["entries"][0]["symbols"]:
                 self.assertIn(symbol, cli_html)
+            for phrase in ("provenance", "nsites", "E-value", "never mutated"):
+                self.assertIn(phrase, anti_html)
             api_page = site / "reference/python/motifs/motif-generation/index.html"
             self.assertTrue(api_page.is_file(), api_page)
             api_html = html.unescape(api_page.read_text())
-            for field in required:
+            api_fields = (
+                "Status", "Purpose", "Canonical import", "Signature", "Example",
+            )
+            for field in api_fields:
                 self.assertIn(field, api_html)
-            for symbol in inventory["entries"][1]["symbols"]:
+            for symbol in inventory["entries"][-1]["symbols"]:
                 self.assertIn(symbol, api_html)
             generated = site / "reference/cli/generated/motif-tools/index.html"
             self.assertTrue(generated.is_file(), generated)
-            self.assertIn("anti_motif", generated.read_text())
+            redirect_content = generated.read_text()
+            self.assertRegex(
+                redirect_content,
+                r"(window\.location\.replace|http-equiv=.refresh|location\.href)",
+                msg="generated MotifTools URL must redirect to the canonical landing",
+            )
+            self.assertIn("motif-tools", redirect_content)
 
 
 if __name__ == "__main__":

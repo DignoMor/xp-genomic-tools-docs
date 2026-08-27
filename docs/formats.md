@@ -1,6 +1,8 @@
 # Formats
 
-Short reference for inputs and outputs used by `RGTools` and the CLIs.
+Short reference for inputs and outputs used by `RGTools` and the CLIs. Open the
+Data formats section in the site navigation for field-level contracts; this page
+summarizes the most common representations.
 
 ## Region tables (BedTable family)
 

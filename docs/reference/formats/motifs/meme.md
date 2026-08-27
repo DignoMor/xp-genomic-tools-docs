@@ -1,75 +1,94 @@
 # MEME motif format
 
-## Purpose and availability
+## Purpose
 
-Minimal MEME text read/write supported by `RGTools.MemeMotif` (from the
-aligned release that documents this page).
+Minimal MEME text interchange supported by `RGTools.MemeMotif` and motif-search
+commands on the genomic-element and exogenous-sequence CLIs.
 
-## Inputs and schema
+## Availability
 
-Supported files include `MEME version`, `ALPHABET=...`, `strands: ...`, a
-`Background letter frequencies` header and one frequency line, then zero or
-more `MOTIF <name>` blocks. Each motif has a `letter-probability matrix:`
-header with `alength`, `w`, `nsites`, and `E`, followed by exactly `w` rows of
-`alength` probabilities.
+Supported in the current reference release (`0.3.0a4`).
 
-After a complete probability matrix, the supported **input** profile also
-accepts zero or one optional per-motif `URL` record: the exact uppercase
-keyword `URL`, whitespace, and exactly one opaque non-whitespace token. The
-value is ignored in memory. Canonical writers never emit a `URL` record. This
-is the standard optional MEME per-motif URL field (verified against JASPAR
-matrix `MA0139.2` as a motivating producer), not a blanket JASPAR-compatibility
-promise.
+Available since `0.1.0a2`.
 
-## Types, shapes, defaults, ordering, outputs
+## Inputs
 
-Names and headers are strings; metadata lists are ordered; each PWM has shape
-`(w, alphabet_length)` with floating probabilities. Motifs retain file/add
-order. `write_meme_file` writes the same supported-subset text to a filesystem
-path or a text stream, using six-decimal PWM rows and omitting any parsed URL
-records. Construction has no extra semantic defaults beyond the file values.
+Supported files include:
 
-## Constraints and failures
+- `MEME version …`
+- `ALPHABET=…` declaring the motif alphabet in file order
+- `strands: …` declaring searchable strands
+- `Background letter frequencies` header and one frequency line aligned to the alphabet
+- Per motif: `MOTIF <name>`, `letter-probability matrix:` header (`alength`, `w`,
+  `nsites`, `E`), then exactly `w` probability rows of `alength` values
+- After a complete PWM, zero or one optional input-only `URL` record (`URL` plus
+  one opaque token; value is ignored and never re-emitted)
 
-The supported envelope rejects:
+## Types
 
-- missing or malformed required headers or matrix headers
-- truncated matrices or rows with the wrong width
-- duplicate motif names
-- invalid numerical metadata (`alength`, `w`, `nsites`, `E`)
-- background frequencies that are missing letters, misaligned with the
-  alphabet, non-finite, negative, or not summing to 1 within `atol=1e-3`
-- PWM values that are non-finite, negative, or whose rows do not sum to 1
-  within `atol=1e-6`
-- bare `URL`, `URL` with extra tokens, a second `URL` for the same motif, or a
-  `URL` before any motif
-- a URL-like line where a PWM row is still required (matrix failure)
+Headers and motif names are strings. Background frequencies and PWM values are
+floating probabilities. Metadata lists retain file order.
 
-Lowercase `url`, prefix-like `URLfoo`, command lines, alternate motif names,
-and other full-MEME dialect blocks remain outside this subset. Validation
-failures raise contextual `ValueError`; unknown in-memory motif names raise
-`KeyError`. Parsing and writing do not mutate stored motif arrays or
-collection metadata.
+## Shapes
+
+Each motif PWM has shape `(w, alphabet_length)` where `w` is motif width and
+`alphabet_length` matches `ALPHABET`.
+
+## Dtypes
+
+PWM and background values are floating point. Parsed URL tokens are not retained.
+
+## Defaults
+
+Construction has no semantic defaults beyond values read from the file.
+
+## Choices
+
+This is a minimal MEME subset. Full MEME dialect blocks (command lines,
+alternate names, lowercase `url`, multiple URLs, and other extensions) are out
+of scope.
+
+## Constraints
+
+- Motif names must be unique.
+- Background frequencies must align with the alphabet, be finite, nonnegative,
+  and sum to 1 within `atol=1e-3`.
+- PWM rows must be finite, nonnegative, and sum to 1 within `atol=1e-6`.
+- Optional `URL` grammar is singular per motif and must not appear before any
+  motif or inside an incomplete matrix.
+- `search_one_motif` and CLI motif search interpret strand from the MEME `strands`
+  field and optional reverse-complement flags; `+`, `-`, and `both` modes apply
+  at operation level.
+
+## Outputs
+
+Parsed in-memory motifs or compatible MEME text via `write_meme_file` to a path
+or text stream. Canonical writers omit parsed URL records and use six-decimal
+PWM rows.
+
+## Ordering
+
+Motif list order follows file or `add_motif` order. PWM rows follow file order.
+`calculate_pwm_score` and search helpers return per-position **log-odds** scores
+ordered by sequence position.
 
 ## Side effects
 
-Parsing only reads the source and constructs in-memory motif data. Writing to
-a filesystem path creates or replaces the target file; writing to a text
-stream emits text to that stream. Neither operation mutates stored motif
-arrays or collection metadata.
+Parsing reads the source and constructs in-memory motif data. Path writing
+creates or replaces the destination file. Neither operation mutates caller PWM
+arrays after store.
 
-## Reference fields
+## Failures
 
-**Purpose:** minimal MEME text interchange. **Availability:** documented with
-the installed `MemeMotif` release. **Inputs:** headers, metadata, PWM rows, and
-optional ignored input-only `URL` records. **Types:** text, names, lists, and
-floating probabilities. **Shapes:** motif matrix `(w, alphabet_length)`.
-**Dtypes:** floating matrix values. **Defaults:** values come from the file.
-**Choices:** documented minimal headers and blocks. **Constraints:** unique
-names; background and PWM numerical envelope above; URL grammar and singular
-cardinality above; full dialects beyond optional input-only URL are out of
-scope. **Outputs:** parsed motifs or compatible text to a path or text stream
-without URL records. **Ordering:** motif and row order retained. **Side effects:**
-path writing creates/replaces the target file; stream writing only
-writes text; no mutation of source arrays. **Failures:** contextual
-`ValueError` for validation; `KeyError` for unknown names.
+Malformed headers, truncated matrices, duplicate names, invalid numerical
+metadata, malformed URL records, and PWM/background envelope violations raise
+contextual `ValueError`. Unknown motif names raise `KeyError`.
+
+## Related API and CLI
+
+- [`MemeMotif`](../../python/motifs/meme-motif.md)
+- [`MotifGeneration`](../../python/motifs/motif-generation.md)
+- [`MotifTools`](../../cli/motif-tools/index.md)
+- [`GenomicElementTools motif_search`](../../cli/genomic-element-tools/motif-search.md)
+- [`ExogeneousSequenceTools motif_search`](../../cli/exogeneous-sequence-tools/motif-search.md)
+- [Motif-search track outputs (CLI)](../cli/exogeneous-sequence-tools/motif-outputs.md)

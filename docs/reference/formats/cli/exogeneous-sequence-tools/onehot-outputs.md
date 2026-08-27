@@ -9,7 +9,11 @@ raise `ValueError`.
 ## Purpose
 Channel-first one-hot sequence arrays.
 ## Availability
-Release `0.1.0a2`.
+
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
+
 ## Inputs
 Equal-length exogenous FASTA.
 ## Types
@@ -32,3 +36,7 @@ FASTA row and channel order.
 Creates requested output path.
 ## Failures
 Mixed lengths or invalid input fail.
+
+## Related API and CLI
+
+- [`ExogeneousSequenceTools onehot`](../../../cli/exogeneous-sequence-tools/onehot.md)

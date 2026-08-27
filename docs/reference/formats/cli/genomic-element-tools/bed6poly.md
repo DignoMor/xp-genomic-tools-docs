@@ -6,7 +6,9 @@ BED6-plus polymorphism output from `GenomicElementTools export bed6poly`.
 
 ## Availability
 
-Supported in release `0.1.0a2`; variant lookup uses Ensembl REST.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -62,3 +64,8 @@ Performs network requests to Ensembl and creates or replaces `--opath`.
 
 Malformed BED6, unsupported genome version, network errors, and unresolved
 variants fail under `raise`; unresolved variants are omitted under `drop`.
+
+## Related API and CLI
+
+- [`GenomicElementTools export bed6poly`](../../../cli/genomic-element-tools/export/bed6poly.md)
+- [Ensembl SNP simple-info profile](../../snp/ensembl-simple-info.md)

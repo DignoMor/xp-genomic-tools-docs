@@ -6,7 +6,9 @@ Represent a BED3 interval with one numeric `dataValue` signal column.
 
 ## Availability
 
-Supported in release `0.1.0a2` as a GenomicElements region type.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -51,3 +53,8 @@ Read/write operations perform file or standard-stream I/O.
 ## Failures
 
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
+
+## Related API and CLI
+
+- [`GenomicElements`](../../python/elements/genomic-elements.md)
+- [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)

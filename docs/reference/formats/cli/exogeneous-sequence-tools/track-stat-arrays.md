@@ -10,7 +10,11 @@ half-open; out-of-range columns are set to `-inf` before reduction.
 ## Purpose
 NumPy track and stat interchange.
 ## Availability
-Release `0.1.0a2`.
+
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
+
 ## Inputs
 `.npy` arrays.
 ## Types
@@ -33,3 +37,9 @@ Row order is preserved.
 Creates output NPY files.
 ## Failures
 Wrong dimensions and malformed ranges fail.
+
+## Related API and CLI
+
+- [`ExogeneousSequenceTools track_dim_reduction`](../../../cli/exogeneous-sequence-tools/track-dim-reduction.md)
+- [`ExogeneousSequenceTools gen_track`](../../../cli/exogeneous-sequence-tools/gen-track.md)
+- [Annotation arrays](../../elements/annotation-arrays.md)

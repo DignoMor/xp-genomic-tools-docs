@@ -3,9 +3,9 @@
 Regulatory genomic utilities for BED-like regions, sequences, motifs, and BigWig
 tracks.
 
-This site documents release **0.3.0a3**.
+This site documents release **0.3.0a4**.
 
-## What ships in 0.3.0a3
+## What ships in 0.3.0a4
 
 | Component | Kind | Role |
 | --- | --- | --- |
@@ -15,16 +15,16 @@ This site documents release **0.3.0a3**.
 | `MotifTools` | CLI | Generate random/PWM sequences, enumerate barcodes, and transform motifs |
 
 !!! warning "Alpha release"
-    **0.3.0a3** is a pre-release. APIs and CLI flags may change. Pin the tag if
+    **0.3.0a4** is a pre-release. APIs and CLI flags may change. Pin the tag if
     you need a fixed cut.
 
 `CountTableTools` is **not** included in this release.
 
 ## Where to start
 
-1. [Install](install.md) from the `0.3.0a3` code tag
-2. Skim [Concepts](concepts.md) and [Formats](formats.md)
-3. Use the [CLI overview](cli/index.md), then the tool pages
-4. For Python imports, see [Library (RGTools)](library.md)
+1. Open [Get started](get-started/index.md) and pick the [Python](get-started/python-quickstart.md) or [CLI](get-started/cli-quickstart.md) quickstart
+2. [Install](install.md) from the `0.3.0a4` code tag when you need setup detail
+3. Skim [Concepts](concepts.md) and [Data formats](formats.md)
+4. Use [Python API](library.md) or [CLI commands](reference/cli/index.md) for exact lookup; browse [How-to guides](guides/index.md) for workflows
 
-Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.3.0a3`).
+Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.3.0a4`).

@@ -23,7 +23,7 @@ BigWig queries.
 
 Region files are not typed by file extension. You pass an explicit
 `--region_file_type` (or equivalent) such as `bed3`, `bed6`, `narrowPeak`, or
-`TREbed`. See [Formats](formats.md).
+`TREbed`. See [Data formats](formats.md).
 
 ## Annotations
 

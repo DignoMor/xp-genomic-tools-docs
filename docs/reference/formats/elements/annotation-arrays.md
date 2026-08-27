@@ -6,48 +6,73 @@ Sidecar NumPy annotations aligned to the current element order.
 
 ## Availability
 
-Supported by `GeneralElements` and both concrete collections in `0.1.0a2`.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
 `.npy` arrays or `.npz` archives containing exactly one array; the caller
 supplies the annotation type because type metadata is not stored.
 
-## Types, shapes, and dtypes
+## Types
 
-| Type | Accepted input | Stored/output | Dtype rule |
-| --- | --- | --- | --- |
-| `stat` | `(N,)` or `(N,1)` | `(N,1)` | any NumPy dtype |
-| `mask` | `(N,)` or `(N,1)` | `(N,1)` | **must be `numpy.bool_`; integer 0/1 is invalid** |
-| `track` | list of N vectors, or `(N,max_len)` | zero-padded `(N,max_region_len)`; getters slice each row | numeric or other NumPy dtype |
-| `array` | `(N,...)`, at least 2-D | unchanged | any NumPy dtype |
+Supported annotation kinds are `track`, `stat`, `mask`, and `array`. NPZ has no
+embedded type or name metadata.
 
-## Defaults and choices
+## Shapes
 
-`load_region_anno_from_npy` defaults to `anno_type="array"`; supported types
-are `track`, `stat`, `mask`, and `array`. NPZ has no type or name metadata.
+| Type | Accepted input | Stored/output |
+| --- | --- | --- |
+| `stat` | `(N,)` or `(N,1)` | `(N,1)` |
+| `mask` | `(N,)` or `(N,1)` | `(N,1)` |
+| `track` | list of N vectors, or `(N,max_len)` | zero-padded `(N,max_region_len)` |
+| `array` | `(N,...)`, at least 2-D | unchanged trailing shape |
 
-## Constraints, ordering, and failures
+## Dtypes
+
+| Type | Dtype rule |
+| --- | --- |
+| `stat` | any NumPy dtype |
+| `mask` | **must be `numpy.bool_`; integer 0/1 is invalid** |
+| `track` | numeric or other NumPy dtype |
+| `array` | any NumPy dtype |
+
+See the [boolean-mask rule](../boolean-mask.md) for the mask dtype requirement.
+
+## Defaults
+
+`load_region_anno_from_npy` defaults to `anno_type="array"`.
+
+## Choices
+
+Load from `.npy` or single-array `.npz`; caller selects annotation type.
+
+## Constraints
 
 The first dimension must equal `N`, the current region count. Track list entry
-`i` must have length equal to region `i`; output row `i` always belongs to
-region `i`. Multi-array NPZ, wrong shape, wrong count, unsupported type, and
-non-boolean masks raise `ValueError`. Save methods write the in-memory array;
-they do not write type metadata. `get_track_list` slices padded tracks back to
-per-region lengths; scalar/index getters return one value or one trailing-shape
-array.
+`i` must have length equal to region `i`. Multi-array NPZ archives are rejected.
 
-See the [boolean-mask rule](../boolean-mask.md) for the same dtype requirement.
+## Outputs
 
-## Reference fields
+Normalized in-memory arrays and NumPy files on save. Type metadata is not
+written to disk.
 
-**Purpose:** persist region-aligned NumPy annotations. **Availability:**
-`0.1.0a2`. **Inputs:** `.npy`, single-array `.npz`, or array-like values.
-**Types:** NumPy arrays and vector lists. **Shapes:** `(N,)`, `(N,1)`,
-`(N,max_region_len)`, or `(N,...)`. **Dtypes:** masks must be `numpy.bool_`;
-others are retained. **Defaults:** annotation type `array`. **Choices:**
-`track`, `stat`, `mask`, `array`; NPY or one-array NPZ. **Constraints:** first
-dimension and track lengths align. **Outputs:** normalized arrays and files.
-**Ordering:** row `i` maps to region `i`. **Side effects:** load mutates;
-save writes. **Failures:** invalid dtype/shape/count/type or multi-array NPZ
-raises `ValueError`.
+## Ordering
+
+Row `i` maps to region or sequence row `i` in the current table order.
+
+## Side effects
+
+Load mutates the target collection; save writes or replaces output files.
+
+## Failures
+
+Wrong shape, wrong count, unsupported type, non-boolean masks, and multi-array
+NPZ raise `ValueError`.
+
+## Related API and CLI
+
+- [`GeneralElements`](../../python/general-elements/general-elements.md)
+- [`GenomicElements`](../../python/elements/genomic-elements.md)
+- [`GenomicElementTools track2tss_bed`](../../cli/genomic-element-tools/track2tss-bed.md)

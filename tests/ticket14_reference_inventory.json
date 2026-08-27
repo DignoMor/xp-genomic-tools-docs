@@ -1,0 +1,201 @@
+{
+  "release": "0.3.0a4",
+  "required_fields": [
+    "Purpose",
+    "Availability",
+    "Inputs",
+    "Types",
+    "Shapes",
+    "Dtypes",
+    "Defaults",
+    "Choices",
+    "Constraints",
+    "Outputs",
+    "Ordering",
+    "Side effects",
+    "Failures"
+  ],
+  "link_heading": "Related API and CLI",
+  "entries": [
+    {
+      "path": "reference/formats/foundation/bed-like",
+      "symbols": ["BED-like"],
+      "related_api": [
+        "reference/python/bedtable/bed-table3",
+        "reference/python/elements/genomic-elements"
+      ],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/pad-region"]
+    },
+    {
+      "path": "reference/formats/foundation/bed3",
+      "symbols": ["bed3"],
+      "related_api": [
+        "reference/python/bedtable/bed-table3",
+        "reference/python/elements/genomic-elements"
+      ],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_api": ["reference/python/bedtable/bed-table3"]
+    },
+    {
+      "path": "reference/formats/foundation/bed6",
+      "symbols": ["bed6"],
+      "related_api": [
+        "reference/python/bedtable/bed-table6",
+        "reference/python/elements/genomic-elements"
+      ],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_api": ["reference/python/bedtable/bed-table6"]
+    },
+    {
+      "path": "reference/formats/foundation/bed3gene",
+      "symbols": ["bed3gene"],
+      "related_api": ["reference/python/elements/genomic-elements"],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_api": ["reference/python/elements/genomic-elements"]
+    },
+    {
+      "path": "reference/formats/foundation/bed6gene",
+      "symbols": ["bed6gene"],
+      "related_api": ["reference/python/elements/genomic-elements"],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_api": ["reference/python/elements/genomic-elements"]
+    },
+    {
+      "path": "reference/formats/foundation/narrowpeak",
+      "symbols": ["narrowPeak"],
+      "related_api": ["reference/python/elements/genomic-elements"],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_api": ["reference/python/elements/genomic-elements"]
+    },
+    {
+      "path": "reference/formats/foundation/trebed",
+      "symbols": ["TREbed"],
+      "since": "0.3.0a3",
+      "related_api": ["reference/python/elements/genomic-elements"],
+      "related_cli": [
+        "reference/cli/genomic-element-tools/select-tss-relative-track",
+        "reference/cli/genomic-element-tools/tss-relative-mutagenesis"
+      ],
+      "backlink_cli": ["reference/cli/genomic-element-tools/select-tss-relative-track"]
+    },
+    {
+      "path": "reference/formats/foundation/bedgraph",
+      "symbols": ["bedGraph"],
+      "related_api": ["reference/python/elements/genomic-elements"],
+      "related_cli": ["reference/cli/genomic-element-tools"],
+      "backlink_api": ["reference/python/elements/genomic-elements"]
+    },
+    {
+      "path": "reference/formats/foundation/pair-end",
+      "symbols": ["BedTablePairEnd"],
+      "experimental": true,
+      "related_api": ["reference/python/bedtable/bed-table-pair-end"],
+      "backlink_api": ["reference/python/bedtable/bed-table-pair-end"]
+    },
+    {
+      "path": "reference/formats/foundation/list-file",
+      "symbols": ["ListFile"],
+      "related_api": ["reference/python/foundation/list-file"],
+      "related_cli": ["reference/cli/genomic-element-tools/import/stat-list"],
+      "backlink_api": ["reference/python/foundation/list-file"]
+    },
+    {
+      "path": "reference/formats/elements/fasta",
+      "symbols": ["FASTA"],
+      "related_api": [
+        "reference/python/elements/genomic-elements",
+        "reference/python/elements/exogeneous-sequences"
+      ],
+      "related_cli": [
+        "reference/cli/genomic-element-tools",
+        "reference/cli/exogeneous-sequence-tools"
+      ],
+      "backlink_api": ["reference/python/elements/genomic-elements"]
+    },
+    {
+      "path": "reference/formats/elements/annotation-arrays",
+      "symbols": ["annotation"],
+      "related_api": [
+        "reference/python/general-elements/general-elements",
+        "reference/python/elements/genomic-elements"
+      ],
+      "related_cli": ["reference/cli/genomic-element-tools/track2tss-bed"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/track2tss-bed"]
+    },
+    {
+      "path": "reference/formats/boolean-mask",
+      "symbols": ["boolean", "mask"],
+      "related_api": ["reference/python/general-elements/load-mask-from-arr"],
+      "related_cli": ["reference/cli/genomic-element-tools/mask-op/intersect"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/mask-op/intersect"]
+    },
+    {
+      "path": "reference/formats/cli/genomic-element-tools/counttable",
+      "symbols": ["CountTable"],
+      "related_cli": ["reference/cli/genomic-element-tools/export/count-table"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/export/count-table"]
+    },
+    {
+      "path": "reference/formats/cli/genomic-element-tools/trebed",
+      "symbols": ["TREbed"],
+      "related_cli": ["reference/cli/genomic-element-tools/export/trebed"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/export/trebed"]
+    },
+    {
+      "path": "reference/formats/cli/genomic-element-tools/bed6poly",
+      "symbols": ["bed6poly"],
+      "related_cli": ["reference/cli/genomic-element-tools/export/bed6poly"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/export/bed6poly"]
+    },
+    {
+      "path": "reference/formats/cli/genomic-element-tools/wtes",
+      "symbols": ["WTES"],
+      "related_cli": ["reference/cli/genomic-element-tools/export/wtes"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/export/wtes"]
+    },
+    {
+      "path": "reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta",
+      "symbols": ["Exogenous FASTA"],
+      "related_api": ["reference/python/elements/exogeneous-sequences"],
+      "related_cli": ["reference/cli/exogeneous-sequence-tools"],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools"]
+    },
+    {
+      "path": "reference/formats/cli/exogeneous-sequence-tools/assembly-outputs",
+      "symbols": ["Assembly"],
+      "related_cli": [
+        "reference/cli/exogeneous-sequence-tools/assemble/add-adapter",
+        "reference/cli/exogeneous-sequence-tools/assemble/barcode"
+      ],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/assemble/add-adapter"]
+    },
+    {
+      "path": "reference/formats/cli/exogeneous-sequence-tools/mutagenesis",
+      "symbols": ["Mutagenesis"],
+      "related_cli": ["reference/cli/exogeneous-sequence-tools/mutagenesis"],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/mutagenesis"]
+    },
+    {
+      "path": "reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays",
+      "symbols": ["track", "stat"],
+      "related_cli": [
+        "reference/cli/exogeneous-sequence-tools/track-dim-reduction/max",
+        "reference/cli/exogeneous-sequence-tools/gen-track/single-loc"
+      ],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/track-dim-reduction/max"]
+    },
+    {
+      "path": "reference/formats/cli/exogeneous-sequence-tools/motif-outputs",
+      "symbols": ["motif"],
+      "related_cli": ["reference/cli/exogeneous-sequence-tools/motif-search"],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/motif-search"]
+    },
+    {
+      "path": "reference/formats/cli/exogeneous-sequence-tools/onehot-outputs",
+      "symbols": ["one-hot", "onehot"],
+      "related_cli": ["reference/cli/exogeneous-sequence-tools/onehot"],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/onehot"]
+    }
+  ]
+}

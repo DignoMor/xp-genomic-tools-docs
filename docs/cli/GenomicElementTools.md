@@ -81,7 +81,7 @@ Nested under `import` / `export`:
 
 | Command | Nested | Role |
 | --- | --- | --- |
-| `mask_op` | [`intersect`](../reference/cli/mask-op-intersect.md), `union`, `opposite` | Logical ops on mask arrays |
+| `mask_op` | [`intersect`](../reference/cli/genomic-element-tools/mask-op/intersect.md), `union`, `opposite` | Logical ops on mask arrays |
 
 ### TSS-relative selection and mutagenesis
 

@@ -1,0 +1,47 @@
+{
+  "release": "0.3.0a4",
+  "guides": [
+    {
+      "path": "guides/genomic-elements",
+      "title": "Load, inspect, and export genomic elements",
+      "required_terms": [
+        "GenomicElements",
+        "Region row order",
+        "export_exogeneous_sequences",
+        "ExogeneousSequences"
+      ],
+      "reference_links": [
+        "reference/python/elements/genomic-elements",
+        "reference/formats/foundation/bed3",
+        "reference/formats/elements/fasta",
+        "reference/cli/genomic-element-tools/export/exogeneous-sequences"
+      ],
+      "executes_python": true
+    },
+    {
+      "path": "guides/tss-relative-mutagenesis",
+      "title": "TSS-relative mutagenesis workflow",
+      "canonical_terms": [
+        "TSS-relative coordinate",
+        "mutation round",
+        "mutation target group",
+        "replaced window",
+        "TREbed"
+      ],
+      "reference_links": [
+        "reference/python/general-elements/tss-relative-coordinates",
+        "reference/cli/genomic-element-tools/select-tss-relative-track",
+        "reference/cli/genomic-element-tools/tss-relative-mutagenesis",
+        "reference/cli/genomic-element-tools/mask-op/intersect",
+        "reference/cli/genomic-element-tools/export/masked-ge",
+        "reference/formats/foundation/trebed"
+      ],
+      "missingness_markers": [
+        "coordinate 0",
+        "mask false",
+        "rejects coordinate zero"
+      ]
+    }
+  ],
+  "nav_label": "Genomic elements workflow"
+}

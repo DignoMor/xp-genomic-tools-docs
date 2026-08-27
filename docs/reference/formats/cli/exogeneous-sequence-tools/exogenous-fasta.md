@@ -13,7 +13,11 @@ malformed FASTA fail with a library/file error and a non-zero CLI exit.
 ## Purpose
 Exogenous sequence interchange.
 ## Availability
-Release `0.1.0a2`.
+
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
+
 ## Inputs
 Multi-record FASTA.
 ## Types
@@ -36,3 +40,8 @@ Source record order.
 Output files are created by writers.
 ## Failures
 Malformed or unreadable files fail.
+
+## Related API and CLI
+
+- [`ExogeneousSequences`](../../../python/elements/exogeneous-sequences.md)
+- [`ExogeneousSequenceTools`](../../../cli/exogeneous-sequence-tools/index.md)

@@ -5,15 +5,44 @@ import html
 import json
 import re
 import subprocess
+import sys
 from collections import defaultdict
 from html.parser import HTMLParser
+from importlib.metadata import version
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin, urlparse
 
 
 DOCS_ROOT = Path(__file__).resolve().parents[1]
-GENERATED_REFERENCE = DOCS_ROOT / "docs/reference/cli/mask-op-intersect.md"
+SCRIPTS_ROOT = DOCS_ROOT / "scripts"
+if str(SCRIPTS_ROOT) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_ROOT))
+
+from cli_inventory import (  # noqa: E402
+    load_site_inventory,
+    load_tool_inventory,
+    validate_all_tool_inventories,
+    validate_built_cli_indexes,
+    validate_built_tool_landing,
+    validate_built_tool_landing_no_generated_links,
+    validate_genomic_element_tools_inventory,
+    validate_retired_generated_references,
+    validate_site_inventory,
+    validate_tool_inventory,
+    write_generated_cli_indexes,
+)
+from cli_page_registry import ALL_TOOLS, GENOMIC_ELEMENT_TOOLS, REDIRECTS  # noqa: E402
+from python_api_inventory import (  # noqa: E402
+    inventory_entries,
+    load_inventory,
+    validate_built_python_api,
+    validate_inventory_schema,
+    validate_inventory_sources,
+    write_generated_indexes,
+)
+from regenerate_cli_reference import main as regenerate_cli_reference  # noqa: E402
+
 GENERATED_CLI_DIRECTORY = DOCS_ROOT / "docs/reference/cli/generated"
 REFERENCE_FIELDS = (
     "Purpose",
@@ -30,7 +59,58 @@ REFERENCE_FIELDS = (
     "Side effects",
     "Failures",
 )
-RELEASE = "0.3.0a3"
+API_SEMANTIC_FIELDS = (
+    "Status",
+    "Purpose",
+    "Canonical import",
+    "Signature",
+    "Parameters",
+    "Return or yield behavior",
+    "Raised exceptions",
+    "Constraints",
+    "Ordering",
+    "Side effects",
+    "Lifecycle behavior",
+    "Supported protocols and inheritance",
+    "Example",
+    "Related formats or commands",
+)
+GENOMIC_ELEMENTS_PATH = "reference/python/elements/genomic-elements"
+GENOMIC_ELEMENTS_SOURCE = DOCS_ROOT / "docs/reference/python/elements/genomic-elements.md"
+LIBRARY_SOURCE = DOCS_ROOT / "docs/library.md"
+MKDOCS_CONFIG = DOCS_ROOT / "mkdocs.yml"
+MASK_AUTHORED_SOURCE = (
+    DOCS_ROOT / "docs/reference/cli/authored/genomic-element-tools/mask-op/intersect.md"
+)
+PYTHON_INVENTORY = DOCS_ROOT / "docs/reference/python/inventory.json"
+CANONICAL_MASK_INTERSECT = "reference/cli/genomic-element-tools/mask-op/intersect"
+METHOD_PAGE = "reference/python/general-elements/load-mask-from-arr.md"
+METHOD_NAV_LABEL = "GeneralElements.load_mask_from_arr()"
+LIBRARY_COLLECTIONS_HEADER = "### Element collections"
+PYTHON_API_NAV_HEADING = "Python API"
+TOP_LEVEL_NAV_DESTINATIONS = (
+    "Get started",
+    "Concepts",
+    "How-to guides",
+    PYTHON_API_NAV_HEADING,
+    "CLI commands",
+    "Data formats",
+    "FAQ",
+)
+LLMS_FULL_REQUIRED_SEGMENTS = (
+    "get-started/",
+    "guides/",
+    "reference/python",
+    "reference/cli",
+    "reference/formats",
+)
+
+
+def _release_version() -> str:
+    return version("RGTools")
+
+
+RELEASE = _release_version()
 CLI_RELEASES = {
     "GenomicElementTools": RELEASE,
     "ExogeneousSequenceTools": RELEASE,
@@ -46,6 +126,142 @@ PRIVATE_MARKERS = re.compile(
 
 def _library_target(href: str) -> str:
     return urlparse(urljoin("https://docs.invalid/library/", href)).path.lstrip("/")
+
+
+def _extract_top_level_nav_labels(config_text: str) -> list[str]:
+    if "nav:" not in config_text:
+        return []
+    nav_section = config_text.split("nav:", 1)[1]
+    labels: list[str] = []
+    for line in nav_section.splitlines():
+        if line.startswith("  - ") and not line.startswith("    "):
+            labels.append(line[4:].split(":")[0].strip())
+    return labels
+
+
+def _public_markdown_paths() -> list[Path]:
+    docs_dir = DOCS_ROOT / "docs"
+    paths: list[Path] = []
+    for path in sorted(docs_dir.rglob("*.md")):
+        parts = path.parts
+        if "authored" in parts or "fragments" in parts or "generated" in parts:
+            continue
+        if path.parent.name == "cli" and path.name != "index.md":
+            # Legacy per-tool summaries redirect to canonical reference landings.
+            continue
+        paths.append(path)
+    return paths
+
+
+def _markdown_has_heading(text: str, heading: str) -> bool:
+    return f"## {heading}\n" in text or f"## {heading}\r\n" in text
+
+
+def _extract_nav_section(config_text: str, heading: str) -> str:
+    match = re.search(
+        rf"(?m)^(?P<indent>[ \t]*)- {re.escape(heading)}:\n"
+        rf"(?P<body>(?:(?!\1- )[^\n]*\n?)*)",
+        config_text,
+    )
+    if match is None:
+        return ""
+    return match.group(0)
+
+
+def _validate_source_contracts() -> None:
+    """Fail fast on source IA and semantic contracts before assemble mutates CLI pages."""
+    genomic_text = GENOMIC_ELEMENTS_SOURCE.read_text()
+    if not genomic_text.strip().startswith("# `GenomicElements`"):
+        raise RuntimeError(
+            "GenomicElements page is missing or placeholder content; "
+            f"restore {GENOMIC_ELEMENTS_SOURCE.relative_to(DOCS_ROOT)}"
+        )
+    missing_api = [
+        field
+        for field in API_SEMANTIC_FIELDS
+        if not _markdown_has_heading(genomic_text, field)
+    ]
+    if missing_api:
+        raise RuntimeError(
+            "GenomicElements page lacks semantic sections: "
+            + ", ".join(missing_api)
+        )
+
+    mask_authored = MASK_AUTHORED_SOURCE.read_text()
+    if not _markdown_has_heading(mask_authored, "Example"):
+        raise RuntimeError(
+            "Built canonical mask_op intersect page lacks Example section"
+        )
+
+    library_text = LIBRARY_SOURCE.read_text()
+    collections_start = library_text.find(LIBRARY_COLLECTIONS_HEADER)
+    if collections_start == -1:
+        raise RuntimeError(
+            f"Library page lacks {LIBRARY_COLLECTIONS_HEADER!r} section"
+        )
+    collections_end = library_text.find("\n### ", collections_start + 1)
+    collections_section = library_text[
+        collections_start : collections_end if collections_end != -1 else None
+    ]
+    if METHOD_PAGE in collections_section:
+        raise RuntimeError(
+            "The Element collections Library section is class-only; operation "
+            "pages such as GeneralElements.load_mask_from_arr must not appear there"
+        )
+
+    mkdocs_text = MKDOCS_CONFIG.read_text()
+    top_level_nav = _extract_top_level_nav_labels(mkdocs_text)
+    if top_level_nav != list(TOP_LEVEL_NAV_DESTINATIONS):
+        raise RuntimeError(
+            "Top-level navigation must be "
+            + ", ".join(TOP_LEVEL_NAV_DESTINATIONS)
+            + f"; found {top_level_nav!r}"
+        )
+    for source, target in REDIRECTS.items():
+        normalized = f"{source}: {target}"
+        if normalized not in mkdocs_text:
+            raise RuntimeError(
+                f"Missing redirect mapping for {source} -> {target}"
+            )
+
+    python_nav = _extract_nav_section(mkdocs_text, PYTHON_API_NAV_HEADING)
+    if not python_nav:
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must remain reachable in built "
+            "navigation"
+        )
+    element_collections_nav = _extract_nav_section(python_nav, "Element collections")
+    operations_nav = _extract_nav_section(python_nav, "Operations")
+    marked_entry = f"- {METHOD_NAV_LABEL}: {METHOD_PAGE}"
+    unmarked_entry = f"- GeneralElements.load_mask_from_arr: {METHOD_PAGE}"
+    marked_present = marked_entry in python_nav
+    unmarked_present = unmarked_entry in python_nav and not marked_present
+    if unmarked_present:
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must be presented as a method "
+            "in built navigation"
+        )
+    if METHOD_PAGE in element_collections_nav:
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must not occupy the "
+            "class-only Element collections navigation group"
+        )
+    if (
+        not marked_present
+        and unmarked_entry not in operations_nav
+        and METHOD_PAGE in python_nav
+    ):
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must appear under the "
+            "explicit Operations grouping, not as a peer of classes, "
+            "modules, or reference areas"
+        )
+    if marked_present and marked_entry not in operations_nav:
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must appear under the "
+            "explicit Operations grouping, not as a peer of classes, "
+            "modules, or reference areas"
+        )
 
 
 class NavigationAncestryParser(HTMLParser):
@@ -150,6 +366,17 @@ def _validate_raw_source_revision(
             missing.append(str(target))
             continue
         if target.parts[:2] == ("docs", "reference"):
+            if "authored" in target.parts or "fragments" in target.parts:
+                continue
+            if len(target.parts) > 2 and target.parts[2] == "cli":
+                continue
+            if target.as_posix() in (
+                "docs/reference/python/index.md",
+                "docs/reference/python/alphabetical-index.md",
+                "docs/reference/cli/index.md",
+                "docs/reference/cli/exact-path-index.md",
+            ):
+                continue
             local = DOCS_ROOT / target
             if committed != local.read_text():
                 raise RuntimeError(
@@ -176,39 +403,21 @@ def _site_path(path: str) -> str:
     return clean + "/index.html"
 
 
+def _load_python_inventory() -> dict[str, Any]:
+    return load_inventory(PYTHON_INVENTORY)
+
+
 def _load_inventories() -> list[dict[str, Any]]:
-    inventories = [
-        DOCS_ROOT / "docs/reference/python/elements/inventory.json",
-        DOCS_ROOT / "docs/reference/foundation-bedtable-inventory.json",
-        DOCS_ROOT / "tests/ticket04_reference_inventory.json",
+    entries: list[dict[str, Any]] = list(inventory_entries(_load_python_inventory()))
+    for inventory_path in (
         DOCS_ROOT / "tests/ticket05_reference_inventory.json",
         DOCS_ROOT / "tests/ticket06_reference_inventory.json",
         DOCS_ROOT / "tests/ticket07_motif_tools_reference_inventory.json",
-    ]
-    entries: list[dict[str, Any]] = []
-    for inventory_path in inventories:
+        DOCS_ROOT / "tests/ticket14_reference_inventory.json",
+        DOCS_ROOT / "tests/ticket15_reference_inventory.json",
+    ):
         payload = json.loads(inventory_path.read_text())
         entries.extend(payload.get("entries", []))
-        for format_name in payload.get("formats", []):
-            format_paths = {
-                "fasta": "reference/formats/elements/fasta",
-                "annotation-arrays": "reference/formats/elements/annotation-arrays",
-                "meme": "reference/formats/motifs/meme",
-            }
-            if format_name in format_paths:
-                entries.append({"path": format_paths[format_name], "symbols": [format_name]})
-        for qualified_name, members in payload.get("classes", {}).items():
-            class_path = (
-                "reference/python/motifs/meme-motif"
-                if qualified_name == "MemeMotif"
-                else "reference/python/elements/index"
-            )
-            entries.append(
-                {
-                    "path": class_path,
-                    "symbols": [qualified_name, *members],
-                }
-            )
     return entries
 
 
@@ -216,14 +425,26 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
     raw_base = f"{DOCS_RAW_BASE}/{docs_revision}/docs"
     canonical = PAGES_BASE
     links = [
+        ("Home", "", "index.md"),
+        ("Get started", "get-started/", "get-started/index.md"),
+        ("Python quickstart", "get-started/python-quickstart/", "get-started/python-quickstart.md"),
+        ("CLI quickstart", "get-started/cli-quickstart/", "get-started/cli-quickstart.md"),
+        ("Concepts", "concepts/", "concepts.md"),
+        ("How-to guides", "guides/", "guides/index.md"),
+        ("Genomic elements guide", "guides/genomic-elements/", "guides/genomic-elements.md"),
+        ("Motif generation guide", "guides/motif-generation-and-search/", "guides/motif-generation-and-search.md"),
+        ("Python API overview", "library/", "library.md"),
         ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
-        ("Python reference", "reference/python/elements/", "reference/python/elements/index.md"),
-        ("BedTable reference", "reference/python/bedtable/bed-table3/", "reference/python/bedtable/bed-table3.md"),
+        ("Python grouped index", "reference/python/", "reference/python/index.md"),
+        ("Python alphabetical index", "reference/python/alphabetical-index/", "reference/python/alphabetical-index.md"),
+        ("CLI grouped index", "reference/cli/", "reference/cli/index.md"),
+        ("CLI exact-path index", "reference/cli/exact-path-index/", "reference/cli/exact-path-index.md"),
         ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
         ("ExogeneousSequenceTools CLI", "reference/cli/exogeneous-sequence-tools/", "reference/cli/exogeneous-sequence-tools/index.md"),
         ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
-        ("Formats", "formats/", "formats.md"),
+        ("Data formats overview", "formats/", "formats.md"),
         ("Boolean-mask dtype rule", "reference/formats/boolean-mask/#dtype", "reference/formats/boolean-mask.md#dtype"),
+        ("FAQ", "faq/", "faq.md"),
     ]
     compact = [
         f"# xp-genomic-tools public reference ({RELEASE})",
@@ -241,11 +462,6 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         )
     (DOCS_ROOT / "docs/llms.txt").write_text("\n".join(compact) + "\n")
 
-    reference_files = sorted(
-        path
-        for path in (DOCS_ROOT / "docs/reference").rglob("*.md")
-        if "generated" not in path.parts or path.name.endswith(".md")
-    )
     full = [
         f"# xp-genomic-tools exhaustive public reference ({RELEASE})",
         "",
@@ -253,14 +469,14 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         f"Documentation revision: `{docs_revision}`",
         "",
     ]
-    for reference_path in reference_files:
-        relative = reference_path.relative_to(DOCS_ROOT / "docs").as_posix()
+    for markdown_path in _public_markdown_paths():
+        relative = markdown_path.relative_to(DOCS_ROOT / "docs").as_posix()
         canonical_relative = relative.removesuffix("/index.md").removesuffix(".md")
         full.extend(
             [
                 f"## `{relative}`",
                 "",
-                reference_path.read_text().strip(),
+                markdown_path.read_text().strip(),
                 "",
                 f"Canonical: {canonical}{canonical_relative}/",
                 f"Raw: {raw_base}/{relative}",
@@ -381,6 +597,25 @@ def _parser_inventory_in_page(path: Path) -> str | None:
     return text.split(marker, 1)[1].split(" -->", 1)[0]
 
 
+def _reject_stale_parser_inventory(
+    generated_path: Path,
+    records: list[dict[str, Any]],
+    *,
+    update_generated: bool,
+) -> None:
+    if update_generated:
+        return
+    existing_inventory = _parser_inventory_in_page(generated_path)
+    if existing_inventory is None:
+        return
+    expected_inventory = json.dumps(records, sort_keys=True, separators=(",", ":"))
+    if existing_inventory != expected_inventory:
+        raise RuntimeError(
+            f"{generated_path.relative_to(DOCS_ROOT)} parser inventory is stale; "
+            "rerun with --update-generated after accepting parser drift"
+        )
+
+
 def _render_cli_reference(reference: dict[str, Any]) -> str:
     rows = []
     for argument in reference["arguments"]:
@@ -489,16 +724,36 @@ Argparse exits for missing required flags or invalid region-type choices. The
 command raises `ValueError` for fewer than two masks, non-boolean masks, shape
 or region-count mismatches, multi-array NPZ input, or an unsupported region
 schema encountered while loading.
+
+## Example
+
+Intersect two boolean masks aligned to the same three-region BED3 table:
+
+```bash
+GenomicElementTools mask_op intersect \\
+  --region_file_path regions.bed3 \\
+  --region_file_type bed3 \\
+  --mask_npy mask_a.npy \\
+  --mask_npy mask_b.npy \\
+  --opath intersect.npy
+```
+
+Each input mask has shape `(3,)` or `(3, 1)` with boolean dtype. The saved
+`intersect.npy` contains the element-wise logical AND with shape `(3, 1)`.
 """
 
 
 def _validate_built_artifact(
-    site_dir: Path, code_root: Path, code_revision: str, docs_revision: str
+    site_dir: Path,
+    code_root: Path,
+    code_revision: str,
+    docs_revision: str,
 ) -> None:
     pages = {
         "python": site_dir / "reference/python/general-elements/load-mask-from-arr/index.html",
         "format": site_dir / "reference/formats/boolean-mask/index.html",
-        "cli": site_dir / "reference/cli/mask-op-intersect/index.html",
+        "cli": site_dir / _site_path(CANONICAL_MASK_INTERSECT.removesuffix(".md")),
+        "cli_redirect": site_dir / "reference/cli/mask-op-intersect/index.html",
     }
     for name, path in pages.items():
         if not path.is_file():
@@ -512,9 +767,9 @@ def _validate_built_artifact(
         for href in re.findall(r'href="([^"]+)"', library_article)
     }
     expected_python_links = {
-        _site_path(entry["path"]).removesuffix("index.html")
-        for entry in _load_inventories()
-        if entry["path"].startswith("reference/python/")
+        _site_path(page["path"]).removesuffix("index.html")
+        for page in _load_python_inventory()["pages"]
+        if page.get("kind") != "method"
     }
     missing_library_links = expected_python_links - library_links
     if missing_library_links:
@@ -532,40 +787,91 @@ def _validate_built_artifact(
             "pages such as GeneralElements.load_mask_from_arr must not appear there"
         )
 
-    navigation = NavigationAncestryParser()
-    navigation.feed(library_html)
-    method_ancestors = navigation.ancestors[method_target]
-    if not method_ancestors:
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must remain reachable in built "
-            "navigation"
-        )
-    # Class/reference-area groupings list types, not operations. The operation
-    # page belongs only under the explicit Operations grouping.
-    for groups in method_ancestors:
-        if "Element collections" in groups:
-            raise RuntimeError(
-                "GeneralElements.load_mask_from_arr must not occupy the "
-                "class-only Element collections navigation group"
-            )
-        if not groups or groups[-1] != "Operations":
-            raise RuntimeError(
-                "GeneralElements.load_mask_from_arr must appear under the "
-                "explicit Operations grouping, not as a peer of classes, "
-                "modules, or reference areas"
-            )
-    method_titles = navigation.titles[method_target]
-    if not method_titles or any("()" not in title for title in method_titles):
-        raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must be presented as a method "
-            "in built navigation"
-        )
-
     for name in ("python", "cli"):
         rendered = html.unescape(pages[name].read_text())
         missing = [field for field in REFERENCE_FIELDS if f">{field}<" not in rendered]
         if missing:
             raise RuntimeError(f"Built {name} reference lacks fields: {missing}")
+
+    cli_rendered = html.unescape(pages["cli"].read_text())
+    if ">Example<" not in cli_rendered:
+        raise RuntimeError(
+            "Built canonical mask_op intersect page lacks Example section"
+        )
+
+    redirect_rendered = pages["cli_redirect"].read_text()
+    if "intersect" not in redirect_rendered:
+        raise RuntimeError(
+            "Legacy mask-op-intersect URL does not redirect toward intersect"
+        )
+
+    for tool in ALL_TOOLS:
+        for parser_path in sorted(tool.invocable_paths | tool.group_paths):
+            page = site_dir / _site_path(tool.page_for(parser_path).removesuffix(".md"))
+            if not page.is_file():
+                raise RuntimeError(
+                    f"Missing built CLI page for {tool.console_name} {parser_path}: {page}"
+                )
+            rendered = html.unescape(page.read_text())
+            missing = [field for field in REFERENCE_FIELDS if f">{field}<" not in rendered]
+            if missing:
+                raise RuntimeError(
+                    f"Built CLI page {tool.page_for(parser_path)} lacks fields: {missing}"
+                )
+            if parser_path in tool.invocable_paths and ">Example<" not in rendered:
+                raise RuntimeError(
+                    f"Built CLI page {tool.page_for(parser_path)} lacks Example section"
+                )
+            if f">{parser_path.split()[-1]}<" not in rendered and parser_path not in rendered:
+                raise RuntimeError(
+                    f"Built CLI page {tool.page_for(parser_path)} lacks command symbol"
+                )
+
+    genomic_page = site_dir / _site_path(GENOMIC_ELEMENTS_PATH)
+    if not genomic_page.is_file():
+        raise RuntimeError(f"Missing built GenomicElements page: {genomic_page}")
+    genomic_html = html.unescape(genomic_page.read_text())
+    if "<article" not in genomic_html:
+        raise RuntimeError(f"Built GenomicElements page lacks article body: {genomic_page}")
+    genomic_rendered = genomic_html.split("<article", 1)[1].split("</article>", 1)[0]
+    genomic_text = re.sub(r"<[^>]+>", " ", genomic_rendered)
+    genomic_text = re.sub(r"\s+", " ", genomic_text)
+    missing_api = [
+        field for field in API_SEMANTIC_FIELDS if f">{field}<" not in genomic_rendered
+    ]
+    if missing_api:
+        raise RuntimeError(
+            f"Built GenomicElements page lacks semantic sections: {missing_api}"
+        )
+    internal_symbols = _load_python_inventory().get("internal_symbols", [])
+    for internal in internal_symbols:
+        if internal in genomic_text:
+            raise RuntimeError(
+                f"GenomicElements page exposes internal member {internal!r}"
+            )
+    if "from RGTools import GenomicElements" not in genomic_text:
+        raise RuntimeError("GenomicElements page lacks canonical import")
+
+    for source, target in REDIRECTS.items():
+        redirect_html = site_dir / _site_path(source.removesuffix(".md"))
+        if not redirect_html.is_file():
+            raise RuntimeError(f"Missing redirect page for {source}")
+        redirect_content = redirect_html.read_text()
+        target_path = target.removesuffix(".md").removesuffix("/index")
+        target_slug = Path(target_path).name
+        if "Parser inventory" in redirect_content:
+            raise RuntimeError(
+                f"Redirect source {source} still renders duplicate generated reference"
+            )
+        if target_slug not in redirect_content and target_path not in redirect_content:
+            raise RuntimeError(
+                f"Redirect from {source} does not target {target_path}"
+            )
+        if not re.search(
+            r"(window\.location\.replace|http-equiv=.refresh|location\.href)",
+            redirect_content,
+        ):
+            raise RuntimeError(f"Redirect page for {source} lacks redirect mechanism")
 
     format_html = " ".join(html.unescape(pages["format"].read_text()).split())
     for required in ("numpy.bool_", "Integer masks", "(N, 1)"):
@@ -588,6 +894,9 @@ def _validate_built_artifact(
     for required in ("llms-full.txt", "reference/python", "reference/cli", "reference/formats"):
         if required not in compact:
             raise RuntimeError(f"llms.txt lacks {required!r}")
+    for required in LLMS_FULL_REQUIRED_SEGMENTS:
+        if required not in exhaustive:
+            raise RuntimeError(f"llms-full.txt lacks public segment {required!r}")
     if dtype_url not in compact:
         raise RuntimeError("llms.txt does not link directly to the mask dtype rule")
 
@@ -620,9 +929,11 @@ def _validate_built_artifact(
         ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
         ("MotifTools", "motif-tools.md"),
     ):
-        expected = _extract_cli_tree(code_root, tool)
-        generated = (DOCS_ROOT / "docs/reference/cli/generated" / filename).read_text()
-        if json.dumps(expected, sort_keys=True, separators=(",", ":")) not in generated:
+        expected = json.dumps(
+            _extract_cli_tree(code_root, tool), sort_keys=True, separators=(",", ":")
+        )
+        generated = (GENERATED_CLI_DIRECTORY / filename).read_text()
+        if expected not in generated:
             raise RuntimeError(f"Generated {tool} parser inventory drifted from code")
 
     for path in (*pages.values(), llms_path, full_path):
@@ -633,6 +944,31 @@ def _validate_built_artifact(
         content = path.read_text()
         if PRIVATE_MARKERS.search(content):
             raise RuntimeError(f"Private specification material leaked into {path}")
+        for internal in internal_symbols:
+            if internal in content:
+                raise RuntimeError(
+                    f"Built page {path} exposes internal symbol {internal!r}"
+                )
+    for agent_path in (llms_path, full_path):
+        agent_content = agent_path.read_text()
+        for internal in internal_symbols:
+            if internal in agent_content:
+                raise RuntimeError(
+                    f"Agent surface {agent_path} exposes internal symbol {internal!r}"
+                )
+
+    validate_built_python_api(site_dir, _load_python_inventory())
+    cli_inventory = load_site_inventory()
+    validate_site_inventory(cli_inventory)
+    validate_all_tool_inventories()
+    validate_retired_generated_references()
+    validate_built_cli_indexes(site_dir, cli_inventory)
+    validate_genomic_element_tools_inventory()
+    validate_built_tool_landing(
+        site_dir, GENOMIC_ELEMENT_TOOLS, load_tool_inventory(GENOMIC_ELEMENT_TOOLS)
+    )
+    for tool in ALL_TOOLS:
+        validate_built_tool_landing_no_generated_links(site_dir, tool)
 
 
 def main() -> None:
@@ -673,10 +1009,19 @@ def main() -> None:
     if not re.fullmatch(r"[0-9a-f]{40}", args.docs_revision):
         raise RuntimeError("--docs-revision must be a full 40-character commit SHA")
     raw_source_root = (args.raw_source_root or DOCS_ROOT).resolve()
+    python_inventory = _load_python_inventory()
+    validate_inventory_schema(python_inventory)
+    validate_inventory_sources(python_inventory)
+    write_generated_indexes(python_inventory)
+    cli_inventory = load_site_inventory()
+    validate_site_inventory(cli_inventory)
+    write_generated_cli_indexes(cli_inventory)
+    validate_all_tool_inventories()
+    validate_retired_generated_references()
+    validate_genomic_element_tools_inventory()
+    _validate_source_contracts()
     _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)
-    reference = _extract_parser_reference(code_root)
-    GENERATED_REFERENCE.parent.mkdir(parents=True, exist_ok=True)
-    GENERATED_REFERENCE.write_text(_render_cli_reference(reference))
+    regenerate_cli_reference()
     GENERATED_CLI_DIRECTORY.mkdir(parents=True, exist_ok=True)
     for tool, filename in (
         ("GenomicElementTools", "genomic-element-tools.md"),
@@ -685,14 +1030,11 @@ def main() -> None:
     ):
         records = _extract_cli_tree(code_root, tool)
         generated_path = GENERATED_CLI_DIRECTORY / filename
-        expected_inventory = json.dumps(records, sort_keys=True, separators=(",", ":"))
-        existing_inventory = _parser_inventory_in_page(generated_path)
-        if existing_inventory is not None and existing_inventory != expected_inventory and not args.update_generated:
-            raise RuntimeError(
-                f"{filename} is stale; rerun with --update-generated, review, and rerun acceptance"
-            )
-        if existing_inventory is None and generated_path.exists() and not args.update_generated:
-            raise RuntimeError(f"{filename} lacks a parser inventory; rerun with --update-generated")
+        _reject_stale_parser_inventory(
+            generated_path,
+            records,
+            update_generated=args.update_generated,
+        )
         generated_path.write_text(_render_cli_tree(tool, records))
 
     _render_agent_resources(args.code_revision, args.docs_revision)
@@ -707,7 +1049,12 @@ def main() -> None:
             str(args.site_dir.resolve()),
         ]
     )
-    _validate_built_artifact(args.site_dir.resolve(), code_root, args.code_revision, args.docs_revision)
+    _validate_built_artifact(
+        args.site_dir.resolve(),
+        code_root,
+        args.code_revision,
+        args.docs_revision,
+    )
     print(f"Verified release documentation artifact at {args.site_dir.resolve()}")
 
 

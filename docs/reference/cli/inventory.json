@@ -1,0 +1,26 @@
+{
+  "release": "0.3.0a4",
+  "tools": [
+    {
+      "id": "genomic-element-tools",
+      "console_name": "GenomicElementTools",
+      "ownership": "Genomic-element-centric",
+      "description": "Genome-anchored BED-like regions with aligned annotation arrays: quantify BigWig signal, pad regions, import and export element collections, boolean mask algebra, TSS-relative selection and mutagenesis, and motif scoring on extracted windows.",
+      "landing": "reference/cli/genomic-element-tools"
+    },
+    {
+      "id": "exogeneous-sequence-tools",
+      "console_name": "ExogeneousSequenceTools",
+      "ownership": "Exogenous-sequence-centric",
+      "description": "Ordered exogenous FASTA libraries with synthetic BED3 coordinates: assemble adapters and barcodes, generate tracks and stats, run indexed mutagenesis, search motifs across sequences, and reduce track dimensionality without a genome reference BED.",
+      "landing": "reference/cli/exogeneous-sequence-tools"
+    },
+    {
+      "id": "motif-tools",
+      "console_name": "MotifTools",
+      "ownership": "Motif-centric",
+      "description": "MEME motif generation and transformation: sample PWM or uniform sequences, enumerate barcode spaces, and derive inverse-weight motif collections. Motif scoring whose primary subject is a genomic-element or exogenous-sequence collection remains in the other console scripts.",
+      "landing": "reference/cli/motif-tools"
+    }
+  ]
+}

@@ -9,7 +9,11 @@ and `+` or `both` strand search according to `--reverse_complement`.
 ## Purpose
 Reusable motif score tracks.
 ## Availability
-Release `0.1.0a2`.
+
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
+
 ## Inputs
 FASTA and supported MEME subset.
 ## Types
@@ -32,3 +36,8 @@ Motif and sequence input order.
 Creates one output file per motif.
 ## Failures
 Invalid MEME/FASTA or incompatible lengths fail.
+
+## Related API and CLI
+
+- [`ExogeneousSequenceTools motif_search`](../../../cli/exogeneous-sequence-tools/motif-search.md)
+- [MEME motif format](../../motifs/meme.md)

@@ -1,57 +1,53 @@
-# `RGTools.BedTable.BedTable6`
-
+# `BedTable6`
+## Status
+Supported for the current reference release.
 ## Purpose
-
 Extend BED3 with `name`, `score`, and `strand`.
-
-## Availability
-
-Supported in release `0.1.0a2`; canonical import is `RGTools.BedTable.BedTable6`.
-
-## Inputs
-
-Construct with the same keyword options as BedTable3. In addition to inherited operations, use `get_region_names`, `get_region_scores`, `get_region_strands`, and `load_from_BedTable3`.
-
-## Types
-
-Columns are `chrom` string, `start`/`end` integer, `name` string, `score` float, `strand` string.
-
-## Shapes
-
-Each getter returns one value per row; conversion from BedTable3 preserves row count.
-
-## Dtypes
-
-Scores are floating-point; other types follow BED6 schema.
-
-## Defaults
-
-Sorting defaults to enabled through BedTable3.
-
-## Choices
-
-`load_from_BedTable3` fills added columns with `.`.
-
-## Constraints
-
-All inherited BedTable3 schema, selection, overlap, and I/O constraints apply.
-
-## Outputs
-
-Getter arrays and BedTable6 instances; inherited methods return the concrete class.
-
-## Ordering
-
-Inherited sorting and row alignment apply.
-
-## Side effects
-
-Load methods replace table contents.
-
-## Failures
-
+## Canonical import
+```python
+from RGTools import BedTable6
+```
+## Signature
+::: RGTools.BedTable.BedTable6
+    options:
+      members:
+        - __init__
+        - column_names
+        - column_types
+        - get_region_names
+        - get_region_scores
+        - get_region_strands
+        - region_subset
+        - load_from_BedTable3
+      show_root_heading: true
+      show_source: false
+      heading_level: 4
+      inherited_members: false
+      filters:
+        - "!^_" 
+## Parameters
+Construct with the same keyword options as `BedTable3`. Use `get_region_names`, `get_region_scores`, `get_region_strands`, and `load_from_BedTable3`.
+## Return or yield behavior
+Getter arrays and `BedTable6` instances; inherited methods return the concrete class.
+## Raised exceptions
 Inherited `BedTableLoadException`, `ValueError`, and I/O failures apply.
+## Constraints
+`load_from_BedTable3` fills added columns with `.`. All inherited BedTable3 schema and overlap constraints apply.
+## Ordering
+Inherited sorting and row alignment apply.
+## Side effects
+Load methods replace table contents.
+## Lifecycle behavior
+Same in-memory lifecycle as `BedTable3`.
+## Supported protocols and inheritance
+Inherits supported `BedTable3` protocols and table operations not re-listed here.
+## Example
+```python
+from RGTools import BedTable6
 
-## Public members
-
-`BedTable6`, `column_names`, `column_types`, `get_region_names`, `get_region_scores`, `get_region_strands`, `region_subset`, and `load_from_BedTable3`.
+table = BedTable6()
+table.load_from_file("regions.bed6")
+names = table.get_region_names()
+```
+## Related formats or commands
+- [bed6 format](../../formats/foundation/bed6.md)
