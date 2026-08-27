@@ -7,7 +7,7 @@
     "count_single_bw",
     "export ChromFilteredGE",
     "export CountTable",
-    "export ExogeneousSequences",
+    "export ExogenousSequences",
     "export Heatmap",
     "export MaskedGE",
     "export MergedGE",
@@ -104,10 +104,10 @@
       ]
     },
     {
-      "path": "reference/cli/genomic-element-tools/export/exogeneous-sequences",
+      "path": "reference/cli/genomic-element-tools/export/exogenous-sequences",
       "symbols": [
-        "export ExogeneousSequences",
-        "ExogeneousSequences"
+        "export ExogenousSequences",
+        "ExogenousSequences"
       ]
     },
     {

@@ -3,7 +3,7 @@
 ## Purpose
 
 Sequence interchange for genome-anchored (`GenomicElements`) and exogenous
-(`ExogeneousSequences`) collections, plus exported region FASTA.
+(`ExogenousSequences`) collections, plus exported region FASTA.
 
 ## Availability
 
@@ -69,13 +69,13 @@ by this API.
 
 ## Exogenous and exported FASTA profile
 
-`ExogeneousSequences` reads all records in file order and exposes synthetic
+`ExogenousSequences` reads all records in file order and exposes synthetic
 BED3 `(id,0,len)` regions. `write_sequences_to_fasta` and genomic export write
 standard `>id` records.
 
 ## Related API and CLI
 
 - [`GenomicElements`](../../python/elements/genomic-elements.md)
-- [`ExogeneousSequences`](../../python/elements/exogeneous-sequences.md)
+- [`ExogenousSequences`](../../python/elements/exogenous-sequences.md)
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
-- [`ExogeneousSequenceTools`](../../cli/exogeneous-sequence-tools/index.md)
+- [`ExogenousSequenceTools`](../../cli/exogenous-sequence-tools/index.md)

@@ -147,7 +147,7 @@ replace an existing bundle after a successful staging pass.
 - Join `manifest.tsv` on `sequence_id` for per-round provenance
 - Compare `replaced/<round_id>.fasta` to final records when auditing overlaps
 
-[`ExogeneousSequenceTools mutagenesis`](../reference/cli/exogeneous-sequence-tools/mutagenesis.md)
+[`ExogenousSequenceTools mutagenesis`](../reference/cli/exogenous-sequence-tools/mutagenesis.md)
 remains a separate one-round, ordinary-offset tool for FASTA-only inputs; it is
 not a substitute for this genomic TSS-relative workflow.
 

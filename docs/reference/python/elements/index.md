@@ -16,12 +16,12 @@ See the dedicated [`GenomicElements`](genomic-elements.md) reference page for
 the supported constructor, curated members, mkdocstrings-rendered signatures,
 and complete semantic contract.
 
-## `ExogeneousSequences`
+## `ExogenousSequences`
 
-See the dedicated [`ExogeneousSequences`](exogeneous-sequences.md) reference
+See the dedicated [`ExogenousSequences`](exogenous-sequences.md) reference
 page for exogenous FASTA loading, synthetic BED3 regions, filtering, and
 supported inherited operations. Narrative prose uses “exogenous”; the public
-class identifier remains `ExogeneousSequences` for this release.
+class identifier remains `ExogenousSequences` for this release.
 
 ## Related operations
 

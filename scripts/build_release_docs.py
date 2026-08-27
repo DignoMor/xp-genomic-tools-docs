@@ -113,7 +113,7 @@ def _release_version() -> str:
 RELEASE = _release_version()
 CLI_RELEASES = {
     "GenomicElementTools": RELEASE,
-    "ExogeneousSequenceTools": RELEASE,
+    "ExogenousSequenceTools": RELEASE,
     "MotifTools": RELEASE,
 }
 PAGES_BASE = "https://dignomor.github.io/xp-genomic-tools-docs/"
@@ -440,7 +440,7 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         ("CLI grouped index", "reference/cli/", "reference/cli/index.md"),
         ("CLI exact-path index", "reference/cli/exact-path-index/", "reference/cli/exact-path-index.md"),
         ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
-        ("ExogeneousSequenceTools CLI", "reference/cli/exogeneous-sequence-tools/", "reference/cli/exogeneous-sequence-tools/index.md"),
+        ("ExogenousSequenceTools CLI", "reference/cli/exogenous-sequence-tools/", "reference/cli/exogenous-sequence-tools/index.md"),
         ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
         ("Data formats overview", "formats/", "formats.md"),
         ("Boolean-mask dtype rule", "reference/formats/boolean-mask/#dtype", "reference/formats/boolean-mask.md#dtype"),
@@ -926,7 +926,7 @@ def _validate_built_artifact(
     # Generated parser snapshots must match the installed code, including all flags.
     for tool, filename in (
         ("GenomicElementTools", "genomic-element-tools.md"),
-        ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
+        ("ExogenousSequenceTools", "exogenous-sequence-tools.md"),
         ("MotifTools", "motif-tools.md"),
     ):
         expected = json.dumps(
@@ -1025,7 +1025,7 @@ def main() -> None:
     GENERATED_CLI_DIRECTORY.mkdir(parents=True, exist_ok=True)
     for tool, filename in (
         ("GenomicElementTools", "genomic-element-tools.md"),
-        ("ExogeneousSequenceTools", "exogeneous-sequence-tools.md"),
+        ("ExogenousSequenceTools", "exogenous-sequence-tools.md"),
         ("MotifTools", "motif-tools.md"),
     ):
         records = _extract_cli_tree(code_root, tool)

@@ -17,7 +17,7 @@ lifecycle. Concrete collections implement the abstract hooks documented below.
 from RGTools import GeneralElements
 ```
 
-Concrete callers normally use `GenomicElements` or `ExogeneousSequences`.
+Concrete callers normally use `GenomicElements` or `ExogenousSequences`.
 
 ## Signature
 

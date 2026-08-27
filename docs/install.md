@@ -32,7 +32,7 @@ pip install -e ".[dev]"
 
 ```bash
 GenomicElementTools --help
-ExogeneousSequenceTools --help
+ExogenousSequenceTools --help
 MotifTools --help
 ```
 
@@ -40,7 +40,7 @@ You can also run:
 
 ```bash
 python -m GenomicElementTools --help
-python -m ExogeneousSequenceTools --help
+python -m ExogenousSequenceTools --help
 python -m MotifTools --help
 ```
 

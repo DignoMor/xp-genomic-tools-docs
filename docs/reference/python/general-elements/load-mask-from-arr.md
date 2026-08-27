@@ -8,7 +8,7 @@ Attach a named boolean selection mask to an element collection.
 
 Supported in release `0.1.0a2`. The method is declared by
 `RGTools.GeneralElements.GeneralElements` and inherited by `GenomicElements`
-and `ExogeneousSequences`. The module is available as
+and `ExogenousSequences`. The module is available as
 `from RGTools import GeneralElements`; concrete collections are the normal
 public callers because `GeneralElements` is abstract.
 

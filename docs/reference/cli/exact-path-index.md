@@ -4,21 +4,21 @@ Every installed console script, invocable command path, and non-invocable comman
 
 | Executable and command path | Canonical page |
 | --- | --- |
-| `ExogeneousSequenceTools assemble` | [assemble](exogeneous-sequence-tools/assemble.md) |
-| `ExogeneousSequenceTools assemble add_adapter` | [assemble add_adapter](exogeneous-sequence-tools/assemble/add-adapter.md) |
-| `ExogeneousSequenceTools assemble barcode` | [assemble barcode](exogeneous-sequence-tools/assemble/barcode.md) |
-| `ExogeneousSequenceTools assemble concat` | [assemble concat](exogeneous-sequence-tools/assemble/concat.md) |
-| `ExogeneousSequenceTools gen_track` | [gen_track](exogeneous-sequence-tools/gen-track.md) |
-| `ExogeneousSequenceTools gen_track single_loc` | [gen_track single_loc](exogeneous-sequence-tools/gen-track/single-loc.md) |
-| `ExogeneousSequenceTools motif_search` | [motif_search](exogeneous-sequence-tools/motif-search.md) |
-| `ExogeneousSequenceTools mutagenesis` | [mutagenesis](exogeneous-sequence-tools/mutagenesis.md) |
-| `ExogeneousSequenceTools onehot` | [onehot](exogeneous-sequence-tools/onehot.md) |
-| `ExogeneousSequenceTools print_stat` | [print_stat](exogeneous-sequence-tools/print-stat.md) |
-| `ExogeneousSequenceTools track_dim_reduction` | [track_dim_reduction](exogeneous-sequence-tools/track-dim-reduction.md) |
-| `ExogeneousSequenceTools track_dim_reduction argmax` | [track_dim_reduction argmax](exogeneous-sequence-tools/track-dim-reduction/argmax.md) |
-| `ExogeneousSequenceTools track_dim_reduction argmin` | [track_dim_reduction argmin](exogeneous-sequence-tools/track-dim-reduction/argmin.md) |
-| `ExogeneousSequenceTools track_dim_reduction max` | [track_dim_reduction max](exogeneous-sequence-tools/track-dim-reduction/max.md) |
-| `ExogeneousSequenceTools track_dim_reduction min` | [track_dim_reduction min](exogeneous-sequence-tools/track-dim-reduction/min.md) |
+| `ExogenousSequenceTools assemble` | [assemble](exogenous-sequence-tools/assemble.md) |
+| `ExogenousSequenceTools assemble add_adapter` | [assemble add_adapter](exogenous-sequence-tools/assemble/add-adapter.md) |
+| `ExogenousSequenceTools assemble barcode` | [assemble barcode](exogenous-sequence-tools/assemble/barcode.md) |
+| `ExogenousSequenceTools assemble concat` | [assemble concat](exogenous-sequence-tools/assemble/concat.md) |
+| `ExogenousSequenceTools gen_track` | [gen_track](exogenous-sequence-tools/gen-track.md) |
+| `ExogenousSequenceTools gen_track single_loc` | [gen_track single_loc](exogenous-sequence-tools/gen-track/single-loc.md) |
+| `ExogenousSequenceTools motif_search` | [motif_search](exogenous-sequence-tools/motif-search.md) |
+| `ExogenousSequenceTools mutagenesis` | [mutagenesis](exogenous-sequence-tools/mutagenesis.md) |
+| `ExogenousSequenceTools onehot` | [onehot](exogenous-sequence-tools/onehot.md) |
+| `ExogenousSequenceTools print_stat` | [print_stat](exogenous-sequence-tools/print-stat.md) |
+| `ExogenousSequenceTools track_dim_reduction` | [track_dim_reduction](exogenous-sequence-tools/track-dim-reduction.md) |
+| `ExogenousSequenceTools track_dim_reduction argmax` | [track_dim_reduction argmax](exogenous-sequence-tools/track-dim-reduction/argmax.md) |
+| `ExogenousSequenceTools track_dim_reduction argmin` | [track_dim_reduction argmin](exogenous-sequence-tools/track-dim-reduction/argmin.md) |
+| `ExogenousSequenceTools track_dim_reduction max` | [track_dim_reduction max](exogenous-sequence-tools/track-dim-reduction/max.md) |
+| `ExogenousSequenceTools track_dim_reduction min` | [track_dim_reduction min](exogenous-sequence-tools/track-dim-reduction/min.md) |
 | `GenomicElementTools bed2tssbed` | [bed2tssbed](genomic-element-tools/bed2tssbed.md) |
 | `GenomicElementTools count_paired_bw` | [count_paired_bw](genomic-element-tools/count-paired-bw.md) |
 | `GenomicElementTools count_single_bw` | [count_single_bw](genomic-element-tools/count-single-bw.md) |
@@ -27,7 +27,7 @@ Every installed console script, invocable command path, and non-invocable comman
 | `GenomicElementTools export bed6poly` | [export bed6poly](genomic-element-tools/export/bed6poly.md) |
 | `GenomicElementTools export ChromFilteredGE` | [export ChromFilteredGE](genomic-element-tools/export/chrom-filtered-ge.md) |
 | `GenomicElementTools export CountTable` | [export CountTable](genomic-element-tools/export/count-table.md) |
-| `GenomicElementTools export ExogeneousSequences` | [export ExogeneousSequences](genomic-element-tools/export/exogeneous-sequences.md) |
+| `GenomicElementTools export ExogenousSequences` | [export ExogenousSequences](genomic-element-tools/export/exogenous-sequences.md) |
 | `GenomicElementTools export Heatmap` | [export Heatmap](genomic-element-tools/export/heatmap.md) |
 | `GenomicElementTools export MaskedGE` | [export MaskedGE](genomic-element-tools/export/masked-ge.md) |
 | `GenomicElementTools export MergedGE` | [export MergedGE](genomic-element-tools/export/merged-ge.md) |

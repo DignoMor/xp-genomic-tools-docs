@@ -39,7 +39,7 @@
     "command": [
       "GenomicElementTools",
       "export",
-      "ExogeneousSequences",
+      "ExogenousSequences",
       "--fasta_path",
       "{genome}",
       "--region_file_path",
@@ -58,7 +58,7 @@
     ],
     "cli": [
       "reference/cli/motif-tools/random-seq",
-      "reference/cli/genomic-element-tools/export/exogeneous-sequences",
+      "reference/cli/genomic-element-tools/export/exogenous-sequences",
       "reference/formats/elements/fasta"
     ]
   },

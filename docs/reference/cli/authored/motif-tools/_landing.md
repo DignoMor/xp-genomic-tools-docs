@@ -12,7 +12,7 @@ delivered in `0.2.0a1`.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogenous-sequence
-collection remains in `GenomicElementTools` and `ExogeneousSequenceTools`.
+collection remains in `GenomicElementTools` and `ExogenousSequenceTools`.
 
 **Inputs.** Supported-subset MEME files for `anti_motif` (see
 [MEME format](../../formats/motifs/meme.md)).
@@ -57,7 +57,7 @@ or uniform alphabets with optional motif exclusions; `barcodes` enumerates
 filtered barcode spaces in supplied-alphabet order; `anti_motif` derives
 inverse-weight motif collections for screening. Motif scoring whose primary
 subject is a genomic-element or exogenous-sequence collection remains in
-`GenomicElementTools` and `ExogeneousSequenceTools`.
+`GenomicElementTools` and `ExogenousSequenceTools`.
 
 ## Example
 

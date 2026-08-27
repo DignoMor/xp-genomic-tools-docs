@@ -5,16 +5,16 @@
 No. **0.3.0a4** is an alpha. Pin the git tag and expect CLI/API changes in later
 cuts.
 
-## Why is it spelled “Exogeneous”?
+## Why is it spelled “Exogenous”?
 
-The package and CLI names use **Exogeneous** (matching the historical code).
-Search and import with that spelling (`ExogeneousSequenceTools`,
-`ExogeneousSequences`).
+**Exogenous** is the canonical product spelling for the Python API, CLI, and
+docs. Search and import with that spelling (`ExogenousSequenceTools`,
+`ExogenousSequences`).
 
 ## Is CountTableTools available?
 
 Not in **0.3.0a4**. `RGTools`, `GenomicElementTools`,
-`ExogeneousSequenceTools`, and `MotifTools` ship.
+`ExogenousSequenceTools`, and `MotifTools` ship.
 
 ## Where do I find every CLI flag?
 
@@ -23,7 +23,7 @@ formats; argparse help is authoritative for flags and defaults.
 
 ```bash
 GenomicElementTools pad_region --help
-ExogeneousSequenceTools assemble add_adapter --help
+ExogenousSequenceTools assemble add_adapter --help
 ```
 
 ## Known issue: empty `filter_motif_score`

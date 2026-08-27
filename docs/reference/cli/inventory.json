@@ -9,11 +9,11 @@
       "landing": "reference/cli/genomic-element-tools"
     },
     {
-      "id": "exogeneous-sequence-tools",
-      "console_name": "ExogeneousSequenceTools",
+      "id": "exogenous-sequence-tools",
+      "console_name": "ExogenousSequenceTools",
       "ownership": "Exogenous-sequence-centric",
       "description": "Ordered exogenous FASTA libraries with synthetic BED3 coordinates: assemble adapters and barcodes, generate tracks and stats, run indexed mutagenesis, search motifs across sequences, and reduce track dimensionality without a genome reference BED.",
-      "landing": "reference/cli/exogeneous-sequence-tools"
+      "landing": "reference/cli/exogenous-sequence-tools"
     },
     {
       "id": "motif-tools",

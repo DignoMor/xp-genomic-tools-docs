@@ -7,7 +7,7 @@ Three console scripts ship with **0.3.0a4**:
 | Command | Canonical landing |
 | --- | --- |
 | `GenomicElementTools` | [GenomicElementTools](../reference/cli/genomic-element-tools/index.md) |
-| `ExogeneousSequenceTools` | [ExogeneousSequenceTools](../reference/cli/exogeneous-sequence-tools/index.md) |
+| `ExogenousSequenceTools` | [ExogenousSequenceTools](../reference/cli/exogenous-sequence-tools/index.md) |
 | `MotifTools` | [MotifTools](../reference/cli/motif-tools/index.md) |
 
 Browse by ownership in the [grouped index](../reference/cli/index.md) or look up a
@@ -17,6 +17,6 @@ After [install](../install.md):
 
 ```bash
 GenomicElementTools --help
-ExogeneousSequenceTools --help
+ExogenousSequenceTools --help
 MotifTools --help
 ```

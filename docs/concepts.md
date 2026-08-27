@@ -43,7 +43,7 @@ Common annotation roles:
 
 - **GenomicElementTools** usually takes `--region_file_path`,
   `--region_file_type`, and often `--fasta_path` for the genome.
-- **ExogeneousSequenceTools** usually takes `--fasta` for the sequence set.
+- **ExogenousSequenceTools** usually takes `--fasta` for the sequence set.
 
 Exact required flags differ by subcommand; use `--help` on the command you are
 running.

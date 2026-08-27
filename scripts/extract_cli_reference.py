@@ -83,10 +83,10 @@ def extract(tool: str, code_root: Path) -> list[dict[str, Any]]:
         from GenomicElementTools.cli import GenomicElementTools  # type: ignore[import-not-found]
 
         builder = GenomicElementTools
-    elif tool == "ExogeneousSequenceTools":
-        from ExogeneousSequenceTools.cli import ExogeneousSequenceTools  # type: ignore[import-not-found]
+    elif tool == "ExogenousSequenceTools":
+        from ExogenousSequenceTools.cli import ExogenousSequenceTools  # type: ignore[import-not-found]
 
-        builder = ExogeneousSequenceTools
+        builder = ExogenousSequenceTools
     elif tool == "MotifTools":
         from MotifTools.cli import MotifTools  # type: ignore[import-not-found]
 
@@ -101,7 +101,7 @@ def extract(tool: str, code_root: Path) -> list[dict[str, Any]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--code-root", type=Path, required=True)
-    parser.add_argument("--tool", choices=("GenomicElementTools", "ExogeneousSequenceTools", "MotifTools"), required=True)
+    parser.add_argument("--tool", choices=("GenomicElementTools", "ExogenousSequenceTools", "MotifTools"), required=True)
     args = parser.parse_args()
     print(json.dumps(extract(args.tool, args.code_root), sort_keys=True, separators=(",", ":")))
 

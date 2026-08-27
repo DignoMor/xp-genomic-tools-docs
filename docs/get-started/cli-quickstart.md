@@ -43,13 +43,13 @@ If this command fails, fix installation before debugging genomic inputs.
 
 ## Step 2 — export exogenous sequences from genomic regions
 
-[`GenomicElementTools export ExogeneousSequences`](../reference/cli/genomic-element-tools/export/exogeneous-sequences.md)
+[`GenomicElementTools export ExogenousSequences`](../reference/cli/genomic-element-tools/export/exogenous-sequences.md)
 extracts each region's sequence as FASTA using the
-[`ExogeneousSequences`](../reference/python/elements/exogeneous-sequences.md)
+[`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
 contract (narrative docs say “exogenous”):
 
 ```bash
-GenomicElementTools export ExogeneousSequences \
+GenomicElementTools export ExogenousSequences \
   --fasta_path assets/quickstart-synthetic-genome.fa \
   --region_file_path assets/quickstart-synthetic-regions.bed3 \
   --region_file_type bed3 \

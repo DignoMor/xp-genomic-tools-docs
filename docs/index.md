@@ -11,7 +11,7 @@ This site documents release **0.3.0a4**.
 | --- | --- | --- |
 | `RGTools` | Python library | Regions, FASTA, motifs, BigWig tracks, annotations |
 | `GenomicElementTools` | CLI | Region transforms, signal counting, motifs, import/export, masks, TSS-relative selection and mutagenesis |
-| `ExogeneousSequenceTools` | CLI | Assemble, mutate, and analyze exogenous (non-genome-anchored) sequences |
+| `ExogenousSequenceTools` | CLI | Assemble, mutate, and analyze exogenous (non-genome-anchored) sequences |
 | `MotifTools` | CLI | Generate random/PWM sequences, enumerate barcodes, and transform motifs |
 
 !!! warning "Alpha release"

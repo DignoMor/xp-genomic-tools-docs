@@ -63,13 +63,13 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
             "- [Element collections overview](reference/python/elements/index.md)\n"
             "- [`GeneralElements`](reference/python/general-elements/general-elements.md)\n"
             "- [`GenomicElements`](reference/python/elements/genomic-elements.md)\n"
-            "- [`ExogeneousSequences`](reference/python/elements/exogeneous-sequences.md)\n"
+            "- [`ExogenousSequences`](reference/python/elements/exogenous-sequences.md)\n"
         )
         with_method = (
             "- [Element collections overview](reference/python/elements/index.md)\n"
             "- [`GeneralElements`](reference/python/general-elements/general-elements.md)\n"
             "- [`GenomicElements`](reference/python/elements/genomic-elements.md)\n"
-            "- [`ExogeneousSequences`](reference/python/elements/exogeneous-sequences.md)\n"
+            "- [`ExogenousSequences`](reference/python/elements/exogenous-sequences.md)\n"
             "    - [`GeneralElements.load_mask_from_arr`]"
             "(reference/python/general-elements/load-mask-from-arr.md)\n"
         )
@@ -119,7 +119,7 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
           - Overview: reference/python/elements/index.md
           - GeneralElements: reference/python/general-elements/general-elements.md
           - GenomicElements: reference/python/elements/genomic-elements.md
-          - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
+          - ExogenousSequences: reference/python/elements/exogenous-sequences.md
       - Operations:
           - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
       - MemeMotif: reference/python/motifs/meme-motif.md
@@ -128,7 +128,7 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
           - Overview: reference/python/elements/index.md
           - GeneralElements: reference/python/general-elements/general-elements.md
           - GenomicElements: reference/python/elements/genomic-elements.md
-          - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
+          - ExogenousSequences: reference/python/elements/exogenous-sequences.md
           - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
       - MemeMotif: reference/python/motifs/meme-motif.md
 """

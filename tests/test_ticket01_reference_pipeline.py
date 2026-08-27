@@ -56,7 +56,7 @@ CURATED_GENOMIC_ELEMENTS_MEMBERS = (
     "BedTableBedGraph",
     "BedTableTREBed",
     "merge_genomic_elements",
-    "export_exogeneous_sequences",
+    "export_exogenous_sequences",
     "get_all_region_seqs",
     "get_region_bed_table",
     "apply_logical_filter",

@@ -37,7 +37,7 @@ source:
         - BedTableBedGraph
         - BedTableTREBed
         - merge_genomic_elements
-        - export_exogeneous_sequences
+        - export_exogenous_sequences
         - get_all_region_seqs
         - get_region_bed_table
         - apply_logical_filter
@@ -71,7 +71,7 @@ chromosomes, incompatible merge inputs, and annotation alignment failures raise
 ## Constraints
 
 Region rows and every loaded annotation share first-dimension alignment. Merge
-requires matching region type and FASTA path. `export_exogeneous_sequences`
+requires matching region type and FASTA path. `export_exogenous_sequences`
 refuses an existing output path.
 
 ## Ordering
@@ -83,7 +83,7 @@ is preserved.
 ## Side effects
 
 Construction reads the region table and caches the FASTA path. Methods may read
-or write files (`apply_logical_filter`, `export_exogeneous_sequences`, merge
+or write files (`apply_logical_filter`, `export_exogenous_sequences`, merge
 output). Inherited annotation loaders mutate in-memory arrays only until an
 explicit save.
 

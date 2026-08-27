@@ -4,12 +4,12 @@
     "Choices", "Constraints", "Outputs", "Ordering", "Side effects", "Failures"
   ],
   "entries": [
-    {"symbols": ["ExogeneousSequenceTools", "assemble", "add_adapter", "concat", "barcode", "mutagenesis", "gen_track", "single_loc", "track_dim_reduction", "max", "argmax", "min", "argmin", "print_stat", "motif_search", "onehot"], "path": "reference/cli/exogeneous-sequence-tools"},
-    {"symbols": ["Exogenous FASTA"], "path": "reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta"},
-    {"symbols": ["Assembly outputs"], "path": "reference/formats/cli/exogeneous-sequence-tools/assembly-outputs"},
-    {"symbols": ["Mutagenesis"], "path": "reference/formats/cli/exogeneous-sequence-tools/mutagenesis"},
-    {"symbols": ["Track and stat arrays"], "path": "reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays"},
-    {"symbols": ["Motif-search track outputs"], "path": "reference/formats/cli/exogeneous-sequence-tools/motif-outputs"},
-    {"symbols": ["One-hot output arrays"], "path": "reference/formats/cli/exogeneous-sequence-tools/onehot-outputs"}
+    {"symbols": ["ExogenousSequenceTools", "assemble", "add_adapter", "concat", "barcode", "mutagenesis", "gen_track", "single_loc", "track_dim_reduction", "max", "argmax", "min", "argmin", "print_stat", "motif_search", "onehot"], "path": "reference/cli/exogenous-sequence-tools"},
+    {"symbols": ["Exogenous FASTA"], "path": "reference/formats/cli/exogenous-sequence-tools/exogenous-fasta"},
+    {"symbols": ["Assembly outputs"], "path": "reference/formats/cli/exogenous-sequence-tools/assembly-outputs"},
+    {"symbols": ["Mutagenesis"], "path": "reference/formats/cli/exogenous-sequence-tools/mutagenesis"},
+    {"symbols": ["Track and stat arrays"], "path": "reference/formats/cli/exogenous-sequence-tools/track-stat-arrays"},
+    {"symbols": ["Motif-search track outputs"], "path": "reference/formats/cli/exogenous-sequence-tools/motif-outputs"},
+    {"symbols": ["One-hot output arrays"], "path": "reference/formats/cli/exogenous-sequence-tools/onehot-outputs"}
   ]
 }

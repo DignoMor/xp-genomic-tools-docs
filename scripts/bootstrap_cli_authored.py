@@ -183,10 +183,10 @@ def bootstrap_genomic_element_tools() -> None:
             )
 
 
-def bootstrap_exogeneous_sequence_tools() -> None:
-    source = DOCS_ROOT / "docs/reference/cli/exogeneous-sequence-tools/index.md"
+def bootstrap_exogenous_sequence_tools() -> None:
+    source = DOCS_ROOT / "docs/reference/cli/exogenous-sequence-tools/index.md"
     text = source.read_text()
-    tool_dir = AUTHORED_ROOT / "exogeneous-sequence-tools"
+    tool_dir = AUTHORED_ROOT / "exogenous-sequence-tools"
     tool_dir.mkdir(parents=True, exist_ok=True)
     intro = text.split("## `assemble`", 1)[0].strip()
     (tool_dir / "_landing.md").write_text(
@@ -210,7 +210,7 @@ def bootstrap_exogeneous_sequence_tools() -> None:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(
                     _wrap_command_page(
-                        "ExogeneousSequenceTools",
+                        "ExogenousSequenceTools",
                         f"assemble {subheading}",
                         match.group(1).strip(),
                         "0.3.0a4",
@@ -237,7 +237,7 @@ def bootstrap_exogeneous_sequence_tools() -> None:
                 (tool_dir / "gen-track/single-loc.md").parent.mkdir(parents=True, exist_ok=True)
                 (tool_dir / "gen-track/single-loc.md").write_text(
                     _wrap_command_page(
-                        "ExogeneousSequenceTools",
+                        "ExogenousSequenceTools",
                         "gen_track single_loc",
                         match.group(1).strip(),
                         "0.3.0a4",
@@ -267,7 +267,7 @@ def bootstrap_exogeneous_sequence_tools() -> None:
                 (tool_dir / f"{slug}.md").parent.mkdir(parents=True, exist_ok=True)
                 (tool_dir / f"{slug}.md").write_text(
                     _wrap_command_page(
-                        "ExogeneousSequenceTools",
+                        "ExogenousSequenceTools",
                         f"track_dim_reduction {operation}",
                         match.group(1).strip(),
                         "0.3.0a4",
@@ -288,7 +288,7 @@ def bootstrap_exogeneous_sequence_tools() -> None:
         target = tool_dir / f"{slug}.md"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(
-            _wrap_command_page("ExogeneousSequenceTools", heading, body, "0.3.0a4")
+            _wrap_command_page("ExogenousSequenceTools", heading, body, "0.3.0a4")
         )
 
 
@@ -316,7 +316,7 @@ def bootstrap_motif_tools() -> None:
 
 def main() -> None:
     bootstrap_genomic_element_tools()
-    bootstrap_exogeneous_sequence_tools()
+    bootstrap_exogenous_sequence_tools()
     bootstrap_motif_tools()
     print(f"Authored semantics written under {AUTHORED_ROOT}")
 

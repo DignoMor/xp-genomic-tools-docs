@@ -27,10 +27,10 @@
       "related_cli": [
         "reference/cli/motif-tools",
         "reference/cli/genomic-element-tools/motif-search",
-        "reference/cli/exogeneous-sequence-tools/motif-search"
+        "reference/cli/exogenous-sequence-tools/motif-search"
       ],
       "backlink_api": ["reference/python/motifs/meme-motif"],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/motif-search"]
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools/motif-search"]
     },
     {
       "path": "reference/formats/signal/bigwig",

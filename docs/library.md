@@ -10,7 +10,7 @@ is a light import overview for **0.3.0a4**.
 from RGTools import (
     BedTable3,
     GenomicElements,
-    ExogeneousSequences,
+    ExogenousSequences,
     MemeMotif,
     ListFile,
     SingleBwTrack,
@@ -32,7 +32,7 @@ import RGTools.SNP_utils
 | --- | --- |
 | Load / write BED-like regions | `BedTable3` / `BedTable6` / related classes |
 | Regions + genome FASTA + annotations | `GenomicElements` |
-| FASTA-only sequence sets | `ExogeneousSequences` |
+| FASTA-only sequence sets | `ExogenousSequences` |
 | MEME motif files | `MemeMotif` |
 | Anti-motif transforms | `RGTools.MotifGeneration.make_anti_motifs` |
 | TSS-relative coordinates | `RGTools.TSSRelativeCoordinates` |
@@ -45,7 +45,7 @@ The CLI classes are importable if you need programmatic entry:
 
 ```python
 from GenomicElementTools.cli import GenomicElementTools
-from ExogeneousSequenceTools.cli import ExogeneousSequenceTools
+from ExogenousSequenceTools.cli import ExogenousSequenceTools
 from MotifTools.cli import MotifTools
 ```
 
@@ -58,7 +58,7 @@ For most users, the console scripts are enough.
 - [Element collections overview](reference/python/elements/index.md)
 - [`GeneralElements`](reference/python/general-elements/general-elements.md)
 - [`GenomicElements`](reference/python/elements/genomic-elements.md)
-- [`ExogeneousSequences`](reference/python/elements/exogeneous-sequences.md)
+- [`ExogenousSequences`](reference/python/elements/exogenous-sequences.md)
 
 ### Foundation
 

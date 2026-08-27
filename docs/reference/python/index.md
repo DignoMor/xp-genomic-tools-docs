@@ -93,13 +93,13 @@ Region records, iterators, and BED3/BED6 table implementations.
 
 Abstract and concrete genomic and exogenous sequence collections.
 
-### `RGTools.ExogeneousSequences.ExogeneousSequences`
+### `RGTools.ExogenousSequences.ExogenousSequences`
 
-- Canonical page: [`ExogeneousSequences`](elements/exogeneous-sequences/)
-- Aliases: `ExogeneousSequences`
+- Canonical page: [`ExogenousSequences`](elements/exogenous-sequences/)
+- Aliases: `ExogenousSequences`
 - Status: Supported
-- Members: `ExogeneousSequences`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_sequence_ids`, `get_region_bed_table`, `get_all_region_seqs`, `get_all_region_lens`, `apply_logical_filter`, `write_sequences_to_fasta`
-- Search terms: `RGTools.ExogeneousSequences.ExogeneousSequences`, `ExogeneousSequences`
+- Members: `ExogenousSequences`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_sequence_ids`, `get_region_bed_table`, `get_all_region_seqs`, `get_all_region_lens`, `apply_logical_filter`, `write_sequences_to_fasta`
+- Search terms: `RGTools.ExogenousSequences.ExogenousSequences`, `ExogenousSequences`
 
 ### `RGTools.GeneralElements.GeneralElements`
 
@@ -114,7 +114,7 @@ Abstract and concrete genomic and exogenous sequence collections.
 - Canonical page: [`GenomicElements`](elements/genomic-elements/)
 - Aliases: `GenomicElements`
 - Status: Supported
-- Members: `GenomicElements`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_num_regions`, `get_region_file_suffix2class_dict`, `BedTable6Gene`, `BedTable3Gene`, `BedTableNarrowPeak`, `BedTableTREBed`, `BedTableBedGraph`, `merge_genomic_elements`, `export_exogeneous_sequences`, `get_all_region_seqs`, `get_region_bed_table`, `apply_logical_filter`
+- Members: `GenomicElements`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_num_regions`, `get_region_file_suffix2class_dict`, `BedTable6Gene`, `BedTable3Gene`, `BedTableNarrowPeak`, `BedTableTREBed`, `BedTableBedGraph`, `merge_genomic_elements`, `export_exogenous_sequences`, `get_all_region_seqs`, `get_region_bed_table`, `apply_logical_filter`
 - Search terms: `RGTools.GenomicElements.GenomicElements`, `GenomicElements`
 
 ## Operations

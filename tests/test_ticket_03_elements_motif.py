@@ -41,7 +41,7 @@ ELEMENT_MOTIF_PREFIXES = (
 INTERNAL_SYMBOLS = (
     "set_parser_genome",
     "set_parser_genomic_element_region",
-    "set_parser_exogeneous_sequences",
+    "set_parser_exogenous_sequences",
 )
 
 
