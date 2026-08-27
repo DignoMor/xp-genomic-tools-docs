@@ -2,59 +2,75 @@
 
 ## Purpose
 
-Define the supported read-only BigWig input used by `RGTools.BwTrack`.
+Define the read-only BigWig input consumed by `RGTools.BwTrack` and genomic
+signal-counting CLIs.
 
 ## Availability
 
-Supported in release `0.1.0a2` through `pyBigWig`; this is a binary input
-profile, not a writer or a general BigWig validator.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
-A BigWig path with chromosome names matching query `chrom` strings. Queries use
-BED zero-based half-open `[start, end)` coordinates.
+Binary BigWig files opened through `pyBigWig`. Chromosome names in queries must
+match BigWig chromosome keys. Interval queries use BED zero-based, half-open
+`[start, end)` coordinates.
 
 ## Types
 
-Signal values are numeric; missing chromosomes and missing values become zero.
+Signal values are numeric. Missing chromosomes and missing interval values are
+represented as zero in query results.
 
 ## Shapes
 
-An interval query yields one value per base in the requested interval.
+An interval query yields one value per base from `start` through `end - 1`.
 
 ## Dtypes
 
-Numeric BigWig values are exposed as NumPy vectors; NaNs are coerced to zero.
+Numeric BigWig values are exposed as NumPy vectors. NaNs are coerced to zero.
 
 ## Defaults
 
-Track-level defaults are defined by `SingleBwTrack` and `PairedBwTrack`; see
-the [BigWig Python reference](../../python/signal/bw-track.md).
+`SingleBwTrack` and `PairedBwTrack` define track-level quantification defaults;
+see the [BigWig Python reference](../../python/signal/bw-track.md).
 
 ## Choices
 
-No file-level choices. Quantification choices are `raw_count`, `RPK`, and
-`full_track`.
+Quantification modes are `raw_count`, `RPK`, and `full_track`. `PairedBwTrack`
+accepts strand `.`, `+`, or `-` and optional minus-track `negative_mn` and
+`flip_mn` transforms before quantification.
 
 ## Constraints
 
-The profile is read/query only. Paired tracks use separate plus/minus files;
-minus values are treated as absolute signal before optional orientation/sign
-transformations.
+This profile is read/query only; no BigWig writer contract exists. Paired tracks
+use separate plus and minus files. Minus values are made absolute, then
+optionally negated or reversed. Unstranded (`.`) paired quantification combines
+strands according to the selected mode.
 
 ## Outputs
 
-The profile supplies a numeric vector to track quantification; it does not
-write a derived BigWig.
+Numeric vectors or scalar quantifications passed to callers. No derived BigWig
+file is written.
 
 ## Ordering
 
-Values follow genomic base order from `start` through `end - 1`.
+Values follow genomic base order within the queried interval. `flip_mn=True`
+reverses only the minus vector before quantification.
 
 ## Side effects
 
-Reading opens a pyBigWig resource and performs no file writes.
+Construction opens read-only `pyBigWig` resources; object destruction closes
+them. Queries perform no file writes.
 
 ## Failures
 
-Invalid paths, malformed files, or read failures propagate from `pyBigWig`.
+Invalid paths, malformed BigWig files, unsupported quantification type, invalid
+padding policy, and invalid paired strand raise library exceptions. Open and
+read errors propagate from `pyBigWig`.
+
+## Related API and CLI
+
+- [`BaseBwTrack`, `SingleBwTrack`, `PairedBwTrack`](../../python/signal/bw-track.md)
+- [`GenomicElementTools count_single_bw`](../../cli/genomic-element-tools/count-single-bw.md)
+- [`GenomicElementTools count_paired_bw`](../../cli/genomic-element-tools/count-paired-bw.md)

@@ -1,0 +1,61 @@
+{
+  "release": "0.3.0a4",
+  "required_fields": [
+    "Purpose",
+    "Availability",
+    "Inputs",
+    "Types",
+    "Shapes",
+    "Dtypes",
+    "Defaults",
+    "Choices",
+    "Constraints",
+    "Outputs",
+    "Ordering",
+    "Side effects",
+    "Failures"
+  ],
+  "link_heading": "Related API and CLI",
+  "entries": [
+    {
+      "path": "reference/formats/motifs/meme",
+      "symbols": ["MEME", "PWM"],
+      "related_api": [
+        "reference/python/motifs/meme-motif",
+        "reference/python/motifs/motif-generation"
+      ],
+      "related_cli": [
+        "reference/cli/motif-tools",
+        "reference/cli/genomic-element-tools/motif-search",
+        "reference/cli/exogeneous-sequence-tools/motif-search"
+      ],
+      "backlink_api": ["reference/python/motifs/meme-motif"],
+      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/motif-search"]
+    },
+    {
+      "path": "reference/formats/signal/bigwig",
+      "symbols": ["BigWig"],
+      "related_api": ["reference/python/signal/bw-track"],
+      "related_cli": [
+        "reference/cli/genomic-element-tools/count-single-bw",
+        "reference/cli/genomic-element-tools/count-paired-bw"
+      ],
+      "backlink_api": ["reference/python/signal/bw-track"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/count-single-bw"]
+    },
+    {
+      "path": "reference/formats/gtf/gencode",
+      "symbols": ["GTF", "GENCODE"],
+      "related_api": ["reference/python/gtf/gtf-utils"],
+      "backlink_api": ["reference/python/gtf/gtf-utils"]
+    },
+    {
+      "path": "reference/formats/snp/ensembl-simple-info",
+      "symbols": ["Ensembl", "SNP"],
+      "related_api": ["reference/python/snp/ensembl-rest-search"],
+      "related_cli": ["reference/cli/genomic-element-tools/export/bed6poly"],
+      "backlink_api": ["reference/python/snp/ensembl-rest-search"],
+      "backlink_cli": ["reference/cli/genomic-element-tools/export/bed6poly"]
+    }
+  ]
+}
