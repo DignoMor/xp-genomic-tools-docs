@@ -72,22 +72,40 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 
 ## Example
 
-From the `code/` checkout with `code/.venv` activated:
+Create a tiny MEME collection inline, then sample two sequences with a fixed
+seed:
 
 ```bash
+cat > /tmp/doc-example.meme <<'EOF'
+MEME version 4
+
+ALPHABET=ACGT
+
+strands: + -
+
+Background letter frequencies
+A 0.25 C 0.25 G 0.25 T 0.25
+
+MOTIF DOC_EXAMPLE
+letter-probability matrix: alength= 4 w= 3 nsites= 8 E= 1e-4
+0.700000  0.100000  0.100000  0.100000
+0.100000  0.700000  0.100000  0.100000
+0.100000  0.100000  0.700000  0.100000
+EOF
+
 MotifTools pwm_seq \
-  --motif_file tests/fixtures/spec/tiny.meme \
-  --motif_name SPEC_TINY \
+  --motif_file /tmp/doc-example.meme \
+  --motif_name DOC_EXAMPLE \
   --num_sequences 2 \
   --seed 0 \
-  --output /tmp/pwm-spec-tiny.fasta
+  --output /tmp/pwm-doc-example.fasta
 ```
 
 Identical inputs reproduce these FASTA bytes in release `0.3.0a4`:
 
 ```text
->pwm_SPEC_TINY_0
+>pwm_DOC_EXAMPLE_0
 GCG
->pwm_SPEC_TINY_1
+>pwm_DOC_EXAMPLE_1
 ACG
 ```

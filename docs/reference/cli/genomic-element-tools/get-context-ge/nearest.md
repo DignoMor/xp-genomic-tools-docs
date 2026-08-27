@@ -9,8 +9,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-For each query region, select the closest same-chromosome
-context from required `--context_file_path` / `--context_file_type`.
+For each query [BED-like region row](../../../formats/foundation/bed-like.md),
+select the closest same-chromosome context from required `--context_file_path` /
+`--context_file_type`.
 
 ## Outputs
 

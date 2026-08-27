@@ -6,8 +6,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Pad or shrink each region by `--upstream_pad` and
-`--downstream_pad`; `--ignore_strand` controls strand-aware interpretation.
+Pad or shrink each [BED-like region row](../../../formats/foundation/bed-like.md)
+by `--upstream_pad` and `--downstream_pad`; `--ignore_strand` controls
+strand-aware interpretation.
 
 ## Defaults
 

@@ -6,8 +6,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Select the maximum-stat context inside each query window,
-using required `--context_stat_path` aligned to context rows.
+Select the maximum-stat context inside each query window on [BED-like region
+rows](../../../formats/foundation/bed-like.md), using required
+`--context_stat_path` aligned to context rows.
 
 ## Outputs
 

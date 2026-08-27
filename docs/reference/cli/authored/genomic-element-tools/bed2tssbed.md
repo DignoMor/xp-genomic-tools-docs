@@ -6,8 +6,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Convert each region to a one-base BED interval. `--output_site`
-is `TSS` (default) or `center`; `--opath` is required.
+Convert each [BED-like region row](../../../formats/foundation/bed-like.md) to
+a one-base BED interval. `--output_site` is `TSS` (default) or `center`;
+`--opath` is required.
 
 ## Constraints
 
@@ -59,4 +60,15 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 
 ## Example
 
-Run `GenomicElementTools bed2tssbed --help` after installation to inspect required flags, then supply tiny synthetic inputs aligned with the linked format pages.
+Collapse stranded promoters to one-base TSS intervals:
+
+```bash
+GenomicElementTools bed2tssbed \
+  --region_file_path promoters.bed6 \
+  --region_file_type bed6 \
+  --opath promoters.tss.bed3 \
+  --output_site TSS
+```
+
+Each output row keeps non-coordinate columns from the input schema and uses
+`[site, site+1)` coordinates at the transcription start site.

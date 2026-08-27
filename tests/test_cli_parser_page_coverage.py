@@ -1,4 +1,4 @@
-"""Parser-to-page coverage for CLI reference tickets 07-09, 11-12."""
+"""Parser-to-page coverage for CLI reference contracts SPEC010–SPEC015, SPEC016–SPEC020, and SPEC022–SPEC024."""
 
 from __future__ import annotations
 

@@ -9,8 +9,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Apply one or more sequential TSS-relative replacement
-rounds to sequences extracted from a TREbed collection. Requires shared region
+Apply one or more sequential [TSS-relative](../../python/general-elements/tss-relative-coordinates.md)
+replacement rounds to sequences extracted from a [TREbed
+collection](../../formats/foundation/trebed.md). Requires shared region
 flags with `--region_file_type TREbed`, `--fasta_path`, required
 `--round_manifest`, and required `--output_dir`. Optional
 `--write_replaced_windows` emits per-round audit FASTAs; optional `--force`
@@ -155,7 +156,23 @@ Argparse exits for missing required flags or invalid choices; runtime validation
 
 ## Example
 
-Run `GenomicElementTools tss_relative_mutagenesis --help` after installation to inspect required flags, then supply tiny synthetic inputs aligned with the linked format pages.
+Run one replacement round declared in a tab-separated manifest beside the
+output directory:
+
+```bash
+GenomicElementTools tss_relative_mutagenesis \
+  --region_file_path loci.trebed \
+  --region_file_type TREbed \
+  --fasta_path genome.fa \
+  --round_manifest rounds.tsv \
+  --output_dir mutagenesis-out
+```
+
+The manifest header must be `round_id`, `coordinate_stat`, `target_fasta`,
+`strand`; see the [TSS-relative mutagenesis
+workflow](../../../guides/tss-relative-mutagenesis.md) for a full bundle layout
+and upstream [`select_tss_relative_track`](select-tss-relative-track.md) /
+[`mask_op intersect`](mask-op/intersect.md) composition.
 
 ## Syntax
 

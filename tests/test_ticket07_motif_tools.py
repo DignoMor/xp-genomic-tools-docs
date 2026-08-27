@@ -73,7 +73,13 @@ class Ticket07MotifToolsReferenceTest(unittest.TestCase):
                 self.assertIn(symbol, api_html)
             generated = site / "reference/cli/generated/motif-tools/index.html"
             self.assertTrue(generated.is_file(), generated)
-            self.assertIn("anti_motif", generated.read_text())
+            redirect_content = generated.read_text()
+            self.assertRegex(
+                redirect_content,
+                r"(window\.location\.replace|http-equiv=.refresh|location\.href)",
+                msg="generated MotifTools URL must redirect to the canonical landing",
+            )
+            self.assertIn("motif-tools", redirect_content)
 
 
 if __name__ == "__main__":

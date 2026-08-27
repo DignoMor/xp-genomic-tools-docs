@@ -9,8 +9,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Use required `--track` annotation to locate a point per
-region; `--output_site` currently supports `MaxAbsSig` (default).
+Use required `--track` [annotation array](../../formats/elements/annotation-arrays.md)
+to locate a point per region; `--output_site` currently supports `MaxAbsSig`
+(default).
 
 **Types / shapes / outputs.** Track has first dimension `N`; for row `i`, site
 is `region.start + argmax(abs(track[i]))`. Writes one-base intervals to required

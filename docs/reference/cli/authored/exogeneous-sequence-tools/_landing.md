@@ -25,3 +25,18 @@ exit and their underlying exception when invoked through the console script.
 - [Track and stat arrays](../../formats/cli/exogeneous-sequence-tools/track-stat-arrays.md)
 - [Motif outputs](../../formats/cli/exogeneous-sequence-tools/motif-outputs.md)
 - [One-hot outputs](../../formats/cli/exogeneous-sequence-tools/onehot-outputs.md)
+
+## Purpose
+
+`ExogeneousSequenceTools` transforms exogenous sequence libraries represented as
+ordered FASTA records with synthetic BED3 coordinates (see [Exogenous
+FASTA](../../formats/cli/exogeneous-sequence-tools/exogenous-fasta.md)). Commands
+assemble barcoded or adapter-flanked constructs, generate per-base tracks and
+stats, run mutagenesis at indexed positions, search motifs across each sequence,
+and reduce track dimensionality — without requiring a genome reference BED.
+
+## Example
+
+Attach 5′ and 3′ adapters to an exogenous library — see
+[`assemble add_adapter`](assemble/add-adapter.md) for required FASTA inputs and
+the [assembly output contract](../../formats/cli/exogeneous-sequence-tools/assembly-outputs.md).

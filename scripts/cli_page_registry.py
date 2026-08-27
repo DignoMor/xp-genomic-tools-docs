@@ -139,6 +139,8 @@ ALL_TOOLS: tuple[ToolRegistry, ...] = (
 
 REDIRECTS = {
     "reference/cli/generated/genomic-element-tools.md": "reference/cli/genomic-element-tools/index.md",
+    "reference/cli/generated/exogeneous-sequence-tools.md": "reference/cli/exogeneous-sequence-tools/index.md",
+    "reference/cli/generated/motif-tools.md": "reference/cli/motif-tools/index.md",
     "reference/cli/mask-op-intersect.md": "reference/cli/genomic-element-tools/mask-op/intersect.md",
 }
 

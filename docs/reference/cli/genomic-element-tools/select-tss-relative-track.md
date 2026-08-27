@@ -9,9 +9,10 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Select a TSS-relative score from required `--track_npy`
-relative to a TREbed TSS. Requires `--strand` (`+` or `-`), nonzero
-`--target_coord`, finite `--min_score`, `--coordinate_opath`, and
+Select a [TSS-relative](../../python/general-elements/tss-relative-coordinates.md)
+score from required `--track_npy` relative to a [TREbed
+TSS](../../formats/foundation/trebed.md). Requires `--strand` (`+` or `-`),
+nonzero `--target_coord`, finite `--min_score`, `--coordinate_opath`, and
 `--mask_opath`. Shared region flags are required and `--region_file_type` must
 be `TREbed`. Track and output paths accept `.npy` or single-array `.npz`.
 

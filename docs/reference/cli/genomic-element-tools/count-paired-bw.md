@@ -9,9 +9,10 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Count paired plus/minus BigWigs `--bw_pl` and `--bw_mn`.
-Regions use the shared flags; `--override_strand` optionally supplies strand.
-`--negative_mn` and `--flip_mn` are required booleans.
+Count paired plus/minus [BigWigs](../../formats/signal/bigwig.md)
+`--bw_pl` and `--bw_mn`. Regions use the shared flags against a [BED-like region
+table](../../formats/foundation/bed-like.md); `--override_strand` optionally
+supplies strand. `--negative_mn` and `--flip_mn` are required booleans.
 
 ## Types
 

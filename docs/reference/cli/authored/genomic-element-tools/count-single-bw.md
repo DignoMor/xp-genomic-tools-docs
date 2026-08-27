@@ -6,8 +6,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Count `--bw_path` BigWig signal for the regions supplied by
-`--region_file_path` and `--region_file_type`.
+Count [`--bw_path` BigWig](../../../formats/signal/bigwig.md) signal for the
+regions supplied by `--region_file_path` and `--region_file_type` ([BED-like
+region table](../../../formats/foundation/bed-like.md)).
 
 ## Types
 
@@ -24,9 +25,10 @@ The BigWig must be readable and cover queried regions.
 
 ## Outputs
 
-Writes annotation named `count`, in
-input order. Missing/corrupt BigWig, unsupported quantification, region
-loading, or incompatible lengths raise library errors; parser errors exit 2.
+Writes [annotation](../../../formats/elements/annotation-arrays.md) named
+`count`, in input order. Missing/corrupt BigWig, unsupported quantification,
+region loading, or incompatible lengths raise library errors; parser errors
+exit 2.
 
 ## Inputs
 
@@ -62,4 +64,16 @@ Argparse exits for missing required flags or invalid choices; runtime validation
 
 ## Example
 
-Run `GenomicElementTools count_single_bw --help` after installation to inspect required flags, then supply tiny synthetic inputs aligned with the linked format pages.
+Count raw signal over three gene bodies from one BigWig:
+
+```bash
+GenomicElementTools count_single_bw \
+  --region_file_path genes.bed6 \
+  --region_file_type bed6 \
+  --bw_path signal.bw \
+  --quantification_type raw_count \
+  --opath counts.npz
+```
+
+The output is a `count` stat annotation with shape `(N,)` aligned to the input
+region order; `.npz` selects NPZ serialization and other suffixes select NPY.

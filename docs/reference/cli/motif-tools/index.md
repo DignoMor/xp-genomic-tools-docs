@@ -14,7 +14,7 @@ includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
 delivered in `0.2.0a1`.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
-Motif scoring whose primary subject is a genomic-element or exogeneous-sequence
+Motif scoring whose primary subject is a genomic-element or exogenous-sequence
 collection remains in `GenomicElementTools` and `ExogeneousSequenceTools`.
 
 **Inputs.** Supported-subset MEME files for `anti_motif` (see
@@ -53,7 +53,20 @@ has no command-specific defaults beyond optional `--force`.
 
 ## Purpose
 
-See Purpose.
+`MotifTools` generates and transforms [MEME motif
+collections](../../formats/motifs/meme.md) and synthetic sequence libraries
+derived from them. Use `pwm_seq` and `random_seq` to sample sequences from PWMs
+or uniform alphabets with optional motif exclusions; `barcodes` enumerates
+filtered barcode spaces in supplied-alphabet order; `anti_motif` derives
+inverse-weight motif collections for screening. Motif scoring whose primary
+subject is a genomic-element or exogenous-sequence collection remains in
+`GenomicElementTools` and `ExogeneousSequenceTools`.
+
+## Example
+
+Sample two deterministic 3-mers from an inline PWM — see
+[`pwm_seq`](pwm-seq.md) for the seeded FASTA bytes produced in release
+`0.3.0a4`.
 
 ## Availability
 
@@ -102,10 +115,6 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 ## Failures
 
 Argparse exits for missing required flags or invalid choices; runtime validation errors propagate from the implementation.
-
-## Example
-
-See linked format references and the tool landing page.
 
 ## Command index
 

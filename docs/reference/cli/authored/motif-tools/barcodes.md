@@ -80,7 +80,7 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 
 ## Example
 
-From the `code/` checkout with `code/.venv` activated:
+With `MotifTools` installed:
 
 ```bash
 MotifTools barcodes \

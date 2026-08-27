@@ -31,7 +31,18 @@ exit and their underlying exception when invoked through the console script.
 
 ## Purpose
 
-See Purpose.
+`ExogeneousSequenceTools` transforms exogenous sequence libraries represented as
+ordered FASTA records with synthetic BED3 coordinates (see [Exogenous
+FASTA](../../formats/cli/exogeneous-sequence-tools/exogenous-fasta.md)). Commands
+assemble barcoded or adapter-flanked constructs, generate per-base tracks and
+stats, run mutagenesis at indexed positions, search motifs across each sequence,
+and reduce track dimensionality — without requiring a genome reference BED.
+
+## Example
+
+Attach 5′ and 3′ adapters to an exogenous library — see
+[`assemble add_adapter`](assemble/add-adapter.md) for required FASTA inputs and
+the [assembly output contract](../../formats/cli/exogeneous-sequence-tools/assembly-outputs.md).
 
 ## Availability
 
@@ -80,10 +91,6 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 ## Failures
 
 Argparse exits for missing required flags or invalid choices; runtime validation errors propagate from the implementation.
-
-## Example
-
-See linked format references and the tool landing page.
 
 ## Command index
 

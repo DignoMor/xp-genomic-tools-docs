@@ -70,13 +70,30 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 
 ## Example
 
-From the `code/` checkout with `code/.venv` activated:
+Create a tiny MEME collection inline, then derive its anti-motif:
 
 ```bash
+cat > /tmp/doc-example.meme <<'EOF'
+MEME version 4
+
+ALPHABET=ACGT
+
+strands: + -
+
+Background letter frequencies
+A 0.25 C 0.25 G 0.25 T 0.25
+
+MOTIF DOC_EXAMPLE
+letter-probability matrix: alength= 4 w= 3 nsites= 8 E= 1e-4
+0.700000  0.100000  0.100000  0.100000
+0.100000  0.700000  0.100000  0.100000
+0.100000  0.100000  0.700000  0.100000
+EOF
+
 MotifTools anti_motif \
-  --motif_file tests/fixtures/spec/tiny.meme \
-  --output /tmp/anti-spec-tiny.meme
+  --motif_file /tmp/doc-example.meme \
+  --output /tmp/anti-doc-example.meme
 ```
 
-The output MEME collection contains one motif named `anti_SPEC_TINY` derived from
-the `SPEC_TINY` PWM in `tests/fixtures/spec/tiny.meme`.
+The output MEME collection contains one motif named `anti_DOC_EXAMPLE` derived
+from the `DOC_EXAMPLE` PWM above.
