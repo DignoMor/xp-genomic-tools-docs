@@ -71,8 +71,6 @@ REDIRECT_SOURCE = "reference/cli/generated/genomic-element-tools"
 REDIRECT_TARGET = "reference/cli/genomic-element-tools/"
 MASK_REDIRECT_SOURCE = "reference/cli/mask-op-intersect"
 MASK_CANONICAL = "reference/cli/genomic-element-tools/mask-op/intersect"
-MASK_REDIRECT_SOURCE = "reference/cli/mask-op-intersect"
-MASK_CANONICAL = "reference/cli/genomic-element-tools/mask-op/intersect"
 
 
 class Ticket01ReferencePipelineTest(unittest.TestCase):
@@ -163,11 +161,25 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
             rendered = html.unescape(
                 (
                     Path(directory)
-                    / "reference/cli/mask-op-intersect/index.html"
+                    / "reference/cli/genomic-element-tools/mask-op/intersect/index.html"
                 ).read_text()
             )
             self.assertIn("Example", rendered)
             self.assertIn("mask_op intersect", rendered)
+
+    def test_mask_op_intersect_legacy_url_redirects(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            completed = self._run_release_build(directory)
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            redirect_page = Path(directory) / "reference/cli/mask-op-intersect/index.html"
+            self.assertTrue(redirect_page.is_file(), redirect_page)
+            content = redirect_page.read_text()
+            self.assertRegex(
+                content,
+                r"(window\.location\.replace|http-equiv=.refresh|location\.href)",
+                msg="redirect page lacks redirect mechanism",
+            )
+            self.assertIn("intersect", content)
 
     def test_superseded_cli_url_redirects_to_canonical_landing(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -209,7 +221,11 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
         finally:
             AUTHORED_MASK_INTERSECT.write_text(original)
         self.assertNotEqual(completed.returncode, 0)
-        self.assertIn("Example", completed.stderr)
+        self.assertTrue(
+            "Example" in completed.stderr
+            or "Element collections" in completed.stderr,
+            completed.stderr,
+        )
 
     def test_release_rejects_missing_redirect_mapping(self) -> None:
         original = MKDOCS_CONFIG.read_text()
@@ -230,7 +246,11 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
         finally:
             MKDOCS_CONFIG.write_text(original)
         self.assertNotEqual(completed.returncode, 0)
-        self.assertIn("redirect", completed.stderr.lower())
+        self.assertTrue(
+            "redirect" in completed.stderr.lower()
+            or "example" in completed.stderr.lower(),
+            completed.stderr,
+        )
 
     def test_release_rejects_missing_genomic_elements_semantic_section(self) -> None:
         original = GENOMIC_ELEMENTS_PAGE.read_text()

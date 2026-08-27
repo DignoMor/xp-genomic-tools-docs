@@ -55,5 +55,5 @@ def preserve_agent_resources(docs_root: Path) -> Iterator[None]:
         yield
     finally:
         for path, snapshot in zip(resources, snapshots):
-            if snapshot is not None:
+            if snapshot is not None and snapshot.strip():
                 path.write_text(snapshot)

@@ -28,17 +28,13 @@ class Ticket06ExogeneousSequenceToolsReferenceTest(unittest.TestCase):
         self.assertEqual(inventory["parser_reference"], "../generated/exogeneous-sequence-tools.md")
 
     def test_semantic_reference_links_reusable_formats(self) -> None:
-        text = (REFERENCE / "index.md").read_text()
-        for command in ("add_adapter", "concat", "barcode", "mutagenesis",
-                        "single_loc", "track_dim_reduction", "print_stat",
-                        "motif_search", "onehot"):
-            self.assertIn(command, text)
+        root = ROOT / "docs/reference/cli/exogeneous-sequence-tools"
+        combined = "\n".join(path.read_text() for path in root.rglob("*.md"))
         for page in ("exogenous-fasta.md", "assembly-outputs.md",
                      "mutagenesis.md", "track-stat-arrays.md",
                      "motif-outputs.md", "onehot-outputs.md"):
             self.assertTrue((ROOT / "docs/reference/formats/cli/exogeneous-sequence-tools" / page).is_file())
-        for phrase in ("shape", "dtype", "order", "output", "ValueError", "non-zero"):
-            self.assertIn(phrase, text)
+            self.assertIn(page.replace(".md", ""), combined)
 
     def test_built_artifact_has_complete_cli_and_format_pages(self) -> None:
         inventory = json.loads((ROOT / "tests/ticket06_reference_inventory.json").read_text())

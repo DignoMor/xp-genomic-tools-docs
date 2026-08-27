@@ -1,0 +1,282 @@
+{
+  "commands": [
+    "bed2tssbed",
+    "count_paired_bw",
+    "count_single_bw",
+    "export ChromFilteredGE",
+    "export CountTable",
+    "export ExogeneousSequences",
+    "export Heatmap",
+    "export MaskedGE",
+    "export MergedGE",
+    "export TREbed",
+    "export WTES",
+    "export allele_expanded_ES",
+    "export bed6poly",
+    "export stat_list",
+    "filter_motif_score",
+    "get_context_ge nearest",
+    "get_context_ge windowed_argmax",
+    "import allele_expanded_ES",
+    "import stat_list",
+    "mask_op intersect",
+    "mask_op opposite",
+    "mask_op union",
+    "motif_search",
+    "onehot",
+    "pad_region",
+    "select_tss_relative_track",
+    "track2tss_bed",
+    "tss_relative_mutagenesis"
+  ],
+  "parser_reference": "../generated/genomic-element-tools.md",
+  "entries": [
+    {
+      "path": "reference/cli/genomic-element-tools",
+      "symbols": [
+        "GenomicElementTools"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export",
+      "symbols": [
+        "export"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/get-context-ge",
+      "symbols": [
+        "get_context_ge"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/import",
+      "symbols": [
+        "import"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/mask-op",
+      "symbols": [
+        "mask_op"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/bed2tssbed",
+      "symbols": [
+        "bed2tssbed",
+        "bed2tssbed"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/count-paired-bw",
+      "symbols": [
+        "count_paired_bw",
+        "count_paired_bw"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/count-single-bw",
+      "symbols": [
+        "count_single_bw",
+        "count_single_bw"
+      ],
+      "formats": [
+        "reference/formats/cli/genomic-element-tools/counttable",
+        "reference/formats/cli/genomic-element-tools/trebed",
+        "reference/formats/cli/genomic-element-tools/bed6poly",
+        "reference/formats/cli/genomic-element-tools/wtes"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/chrom-filtered-ge",
+      "symbols": [
+        "export ChromFilteredGE",
+        "ChromFilteredGE"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/count-table",
+      "symbols": [
+        "export CountTable",
+        "CountTable"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/exogeneous-sequences",
+      "symbols": [
+        "export ExogeneousSequences",
+        "ExogeneousSequences"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/heatmap",
+      "symbols": [
+        "export Heatmap",
+        "Heatmap"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/masked-ge",
+      "symbols": [
+        "export MaskedGE",
+        "MaskedGE"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/merged-ge",
+      "symbols": [
+        "export MergedGE",
+        "MergedGE"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/trebed",
+      "symbols": [
+        "export TREbed",
+        "TREbed"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/wtes",
+      "symbols": [
+        "export WTES",
+        "WTES"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/allele-expanded-es",
+      "symbols": [
+        "export allele_expanded_ES",
+        "allele_expanded_ES"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/bed6poly",
+      "symbols": [
+        "export bed6poly",
+        "bed6poly"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/export/stat-list",
+      "symbols": [
+        "export stat_list",
+        "stat_list"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/filter-motif-score",
+      "symbols": [
+        "filter_motif_score",
+        "filter_motif_score"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/get-context-ge/nearest",
+      "symbols": [
+        "get_context_ge nearest",
+        "nearest"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/get-context-ge/windowed-argmax",
+      "symbols": [
+        "get_context_ge windowed_argmax",
+        "windowed_argmax"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/import/allele-expanded-es",
+      "symbols": [
+        "import allele_expanded_ES",
+        "allele_expanded_ES"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/import/stat-list",
+      "symbols": [
+        "import stat_list",
+        "stat_list"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/mask-op/intersect",
+      "symbols": [
+        "mask_op intersect",
+        "intersect"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/mask-op/opposite",
+      "symbols": [
+        "mask_op opposite",
+        "opposite"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/mask-op/union",
+      "symbols": [
+        "mask_op union",
+        "union"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/motif-search",
+      "symbols": [
+        "motif_search",
+        "motif_search"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/onehot",
+      "symbols": [
+        "onehot",
+        "onehot"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/pad-region",
+      "symbols": [
+        "pad_region",
+        "pad_region"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/select-tss-relative-track",
+      "symbols": [
+        "select_tss_relative_track",
+        "select_tss_relative_track"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/track2tss-bed",
+      "symbols": [
+        "track2tss_bed",
+        "track2tss_bed"
+      ]
+    },
+    {
+      "path": "reference/cli/genomic-element-tools/tss-relative-mutagenesis",
+      "symbols": [
+        "tss_relative_mutagenesis",
+        "tss_relative_mutagenesis"
+      ]
+    }
+  ],
+  "required_fields": [
+    "Purpose",
+    "Availability",
+    "Inputs",
+    "Types",
+    "Shapes",
+    "Dtypes",
+    "Defaults",
+    "Choices",
+    "Constraints",
+    "Outputs",
+    "Ordering",
+    "Side effects",
+    "Failures"
+  ]
+}
