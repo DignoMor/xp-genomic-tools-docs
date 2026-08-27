@@ -6,7 +6,9 @@ Define the supported tab-separated, headerless region representations used by Be
 
 ## Availability
 
-Supported in release `0.1.0a2`; coordinates are BED 0-based, half-open `[start,end)`.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -51,3 +53,9 @@ Read/write operations perform file or standard-stream I/O.
 ## Failures
 
 Wrong column count or unsupported type key raises `BedTableLoadException` or the caller's unsupported-type error. I/O failures propagate.
+
+## Related API and CLI
+
+- [`BedTable3`](../../python/bedtable/bed-table3.md)
+- [`GenomicElements`](../../python/elements/genomic-elements.md)
+- [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)

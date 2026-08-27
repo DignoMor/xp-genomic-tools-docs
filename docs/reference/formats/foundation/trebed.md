@@ -7,11 +7,9 @@ PINTS-compatible six-column TSS-annotated BED serialization.
 
 ## Availability
 
-Supported in release `0.3.0a3` as a GenomicElements region type. TSS missingness
-and genomic-position rules below are format-level. Stricter indexing rules for
-`GenomicElementTools select_tss_relative_track` and
-`GenomicElementTools tss_relative_mutagenesis` are documented with those
-commands.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.3.0a3`.
 
 ## Inputs
 
@@ -64,3 +62,9 @@ Read/write operations perform file or standard-stream I/O.
 ## Failures
 
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
+
+## Related API and CLI
+
+- [`GenomicElements`](../../python/elements/genomic-elements.md)
+- [`GenomicElementTools select_tss_relative_track`](../../cli/genomic-element-tools/select-tss-relative-track.md)
+- [`GenomicElementTools tss_relative_mutagenesis`](../../cli/genomic-element-tools/tss-relative-mutagenesis.md)

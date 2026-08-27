@@ -11,7 +11,11 @@ change sequence length if target length differs.
 ## Purpose
 Location-driven sequence replacement.
 ## Availability
-Release `0.1.0a2`.
+
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
+
 ## Inputs
 FASTA targets and `(N,1)` location NPY.
 ## Types
@@ -34,3 +38,7 @@ Input order or target-major/input-minor.
 Creates output FASTA.
 ## Failures
 Invalid files, arrays, or offsets fail.
+
+## Related API and CLI
+
+- [`ExogeneousSequenceTools mutagenesis`](../../../cli/exogeneous-sequence-tools/mutagenesis.md)

@@ -14,7 +14,11 @@ same order. Too few barcodes or invalid choices fail with `ValueError`.
 ## Purpose
 Serialized outputs from FASTA assembly operations.
 ## Availability
-Release `0.1.0a2`.
+
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
+
 ## Inputs
 FASTA records, adapters, barcodes, and classes.
 ## Types
@@ -37,3 +41,7 @@ Input and barcode consumption order.
 Creates output files.
 ## Failures
 Invalid choices, cardinality, or I/O fail.
+
+## Related API and CLI
+
+- [`ExogeneousSequenceTools assemble`](../../../cli/exogeneous-sequence-tools/assemble.md)

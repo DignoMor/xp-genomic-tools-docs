@@ -7,7 +7,9 @@ transcription-regulatory-element/TSS annotations from plus/minus signal.
 
 ## Availability
 
-Supported in release `0.1.0a2`.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -61,3 +63,8 @@ Reads the regions and signal tracks and creates or replaces `--opath`.
 
 Missing files, invalid coordinates, shape mismatch, schema errors, and output
 I/O failures raise the applicable library or I/O exception.
+
+## Related API and CLI
+
+- [`GenomicElementTools export TREbed`](../../../cli/genomic-element-tools/export/trebed.md)
+- [Foundation `TREbed` schema](../../foundation/trebed.md)

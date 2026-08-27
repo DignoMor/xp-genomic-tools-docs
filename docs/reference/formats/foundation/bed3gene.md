@@ -6,7 +6,9 @@ Represent BED3 intervals with one caller-provided gene symbol column.
 
 ## Availability
 
-Supported in release `0.1.0a2` through the GenomicElements region-type registry.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -51,3 +53,8 @@ Read/write operations perform file or standard-stream I/O.
 ## Failures
 
 Schema mismatch raises `BedTableLoadException`; I/O failures propagate.
+
+## Related API and CLI
+
+- [`GenomicElements`](../../python/elements/genomic-elements.md)
+- [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)

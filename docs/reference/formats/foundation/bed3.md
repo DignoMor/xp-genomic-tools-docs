@@ -6,7 +6,9 @@ Represent one genomic interval with the BED3 schema.
 
 ## Availability
 
-Supported in release `0.1.0a2` as the canonical `BedTable3` region type.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -51,3 +53,9 @@ Read/write operations perform file or standard-stream I/O.
 ## Failures
 
 Wrong column count raises `BedTableLoadException`; I/O failures propagate.
+
+## Related API and CLI
+
+- [`BedTable3`](../../python/bedtable/bed-table3.md)
+- [`GenomicElements`](../../python/elements/genomic-elements.md)
+- [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)

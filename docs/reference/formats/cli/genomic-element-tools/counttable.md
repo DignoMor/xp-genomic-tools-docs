@@ -6,7 +6,9 @@ Reusable CSV output from `GenomicElementTools export CountTable`.
 
 ## Availability
 
-Supported in release `0.1.0a2`. A separate count-table CLI is not shipped.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -57,3 +59,7 @@ Reads region/stat files and creates or replaces the CSV at `--opath`.
 
 Parallel-list, identifier, alignment, numeric conversion, and file errors fail
 with parser, `ValueError`, or I/O errors as applicable.
+
+## Related API and CLI
+
+- [`GenomicElementTools export CountTable`](../../../cli/genomic-element-tools/export/count-table.md)

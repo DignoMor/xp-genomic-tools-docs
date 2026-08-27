@@ -6,8 +6,9 @@ Represent one boolean selection value per element or genomic region.
 
 ## Availability
 
-Supported as an `RGTools` annotation and by mask-consuming CLI commands in
-release `0.1.0a2`.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -68,3 +69,8 @@ write or replace their requested output file.
 Mask loading raises `ValueError` for non-boolean dtype, invalid shape,
 region-count mismatch, or a multi-array NPZ archive. File-system and NumPy load
 errors propagate from the underlying reader.
+
+## Related API and CLI
+
+- [`load_mask_from_arr`](../python/general-elements/load-mask-from-arr.md)
+- [`GenomicElementTools mask_op intersect`](../cli/genomic-element-tools/mask-op/intersect.md)

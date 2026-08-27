@@ -6,7 +6,9 @@ Wild-type element sequence library emitted by `GenomicElementTools export WTES`.
 
 ## Availability
 
-Supported in release `0.1.0a2`.
+Supported in the current reference release (`0.3.0a4`).
+
+Available since `0.1.0a2`.
 
 ## Inputs
 
@@ -63,3 +65,8 @@ Reads genome and region files and creates or replaces the FASTA at `--opath`.
 `num_replicates < 1` raises `ValueError`; missing chromosomes, invalid regions,
 unreadable inputs, and output I/O failures raise the applicable library/I/O
 exception.
+
+## Related API and CLI
+
+- [`GenomicElementTools export WTES`](../../../cli/genomic-element-tools/export/wtes.md)
+- [FASTA profiles](../../elements/fasta.md)

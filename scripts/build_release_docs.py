@@ -364,6 +364,7 @@ def _load_inventories() -> list[dict[str, Any]]:
         DOCS_ROOT / "tests/ticket05_reference_inventory.json",
         DOCS_ROOT / "tests/ticket06_reference_inventory.json",
         DOCS_ROOT / "tests/ticket07_motif_tools_reference_inventory.json",
+        DOCS_ROOT / "tests/ticket14_reference_inventory.json",
     ):
         payload = json.loads(inventory_path.read_text())
         entries.extend(payload.get("entries", []))
