@@ -80,6 +80,7 @@ class Ticket03ReferenceAcceptance(unittest.TestCase):
             page
             for page in inventory["pages"]
             if any(page["path"].startswith(prefix) for prefix in ELEMENT_MOTIF_PREFIXES)
+            and page.get("kind") != "method"
         ]
         self.assertTrue(pages)
         with tempfile.TemporaryDirectory() as directory:

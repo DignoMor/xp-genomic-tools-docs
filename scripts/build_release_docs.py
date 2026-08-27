@@ -20,6 +20,14 @@ if str(SCRIPTS_ROOT) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_ROOT))
 
 from cli_page_registry import ALL_TOOLS, REDIRECTS  # noqa: E402
+from python_api_inventory import (  # noqa: E402
+    inventory_entries,
+    load_inventory,
+    validate_built_python_api,
+    validate_inventory_schema,
+    validate_inventory_sources,
+    write_generated_indexes,
+)
 from regenerate_cli_reference import main as regenerate_cli_reference  # noqa: E402
 
 GENERATED_CLI_DIRECTORY = DOCS_ROOT / "docs/reference/cli/generated"
@@ -300,6 +308,11 @@ def _validate_raw_source_revision(
                 continue
             if len(target.parts) > 2 and target.parts[2] == "cli":
                 continue
+            if target.as_posix() in (
+                "docs/reference/python/index.md",
+                "docs/reference/python/alphabetical-index.md",
+            ):
+                continue
             local = DOCS_ROOT / target
             if committed != local.read_text():
                 raise RuntimeError(
@@ -327,29 +340,11 @@ def _site_path(path: str) -> str:
 
 
 def _load_python_inventory() -> dict[str, Any]:
-    return json.loads(PYTHON_INVENTORY.read_text())
+    return load_inventory(PYTHON_INVENTORY)
 
 
 def _load_inventories() -> list[dict[str, Any]]:
-    format_paths = {
-        "fasta": "reference/formats/elements/fasta",
-        "annotation-arrays": "reference/formats/elements/annotation-arrays",
-        "meme": "reference/formats/motifs/meme",
-    }
-    entries: list[dict[str, Any]] = []
-    python_payload = _load_python_inventory()
-    for page in python_payload.get("pages", []):
-        entry: dict[str, Any] = {
-            "path": page["path"],
-            "symbols": page.get("symbols", []),
-            "required_fields": API_SEMANTIC_FIELDS,
-        }
-        if "format" in page:
-            entry["format"] = page["format"]
-        entries.append(entry)
-    for format_name in python_payload.get("formats", []):
-        if format_name in format_paths:
-            entries.append({"path": format_paths[format_name], "symbols": [format_name]})
+    entries: list[dict[str, Any]] = list(inventory_entries(_load_python_inventory()))
     for inventory_path in (
         DOCS_ROOT / "tests/ticket05_reference_inventory.json",
         DOCS_ROOT / "tests/ticket06_reference_inventory.json",
@@ -365,7 +360,7 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
     canonical = PAGES_BASE
     links = [
         ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
-        ("Python reference", "reference/python/elements/", "reference/python/elements/index.md"),
+        ("Python reference", "reference/python/", "reference/python/index.md"),
         ("BedTable reference", "reference/python/bedtable/bed-table3/", "reference/python/bedtable/bed-table3.md"),
         ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
         ("ExogeneousSequenceTools CLI", "reference/cli/exogeneous-sequence-tools/", "reference/cli/exogeneous-sequence-tools/index.md"),
@@ -700,9 +695,9 @@ def _validate_built_artifact(
         for href in re.findall(r'href="([^"]+)"', library_article)
     }
     expected_python_links = {
-        _site_path(entry["path"]).removesuffix("index.html")
-        for entry in _load_inventories()
-        if entry["path"].startswith("reference/python/")
+        _site_path(page["path"]).removesuffix("index.html")
+        for page in _load_python_inventory()["pages"]
+        if page.get("kind") != "method"
     }
     missing_library_links = expected_python_links - library_links
     if missing_library_links:
@@ -887,6 +882,8 @@ def _validate_built_artifact(
                     f"Agent surface {agent_path} exposes internal symbol {internal!r}"
                 )
 
+    validate_built_python_api(site_dir, _load_python_inventory())
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -926,6 +923,10 @@ def main() -> None:
     if not re.fullmatch(r"[0-9a-f]{40}", args.docs_revision):
         raise RuntimeError("--docs-revision must be a full 40-character commit SHA")
     raw_source_root = (args.raw_source_root or DOCS_ROOT).resolve()
+    python_inventory = _load_python_inventory()
+    validate_inventory_schema(python_inventory)
+    validate_inventory_sources(python_inventory)
+    write_generated_indexes(python_inventory)
     _validate_source_contracts()
     _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)
     regenerate_cli_reference()

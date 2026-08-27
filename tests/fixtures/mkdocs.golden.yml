@@ -71,6 +71,8 @@ nav:
   - Reference:
       - Convention: reference/conventions.md
       - Python:
+          - Grouped index: reference/python/index.md
+          - Alphabetical index: reference/python/alphabetical-index.md
           - Element collections:
               - Overview: reference/python/elements/index.md
               - GeneralElements: reference/python/general-elements/general-elements.md
