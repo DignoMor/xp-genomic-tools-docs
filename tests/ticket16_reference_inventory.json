@@ -1,0 +1,66 @@
+{
+  "release": "0.3.0a4",
+  "landing_path": "get-started",
+  "python_quickstart_path": "get-started/python-quickstart",
+  "cli_quickstart_path": "get-started/cli-quickstart",
+  "assets": [
+    {
+      "site_path": "get-started/assets/quickstart-synthetic-regions.bed3",
+      "source_path": "docs/get-started/assets/quickstart-synthetic-regions.bed3"
+    },
+    {
+      "site_path": "get-started/assets/quickstart-synthetic-genome.fa",
+      "source_path": "docs/get-started/assets/quickstart-synthetic-genome.fa"
+    }
+  ],
+  "synthetic_markers": ["synthetic", "deliberate"],
+  "python_expectations": {
+    "num_regions": 2,
+    "sequences": ["GGGC", "ACGT"],
+    "one_hot_shape": [2, 4, 4],
+    "chrom_order": ["chrB", "chrA"]
+  },
+  "cli_smoke": {
+    "command": [
+      "MotifTools",
+      "random_seq",
+      "--sequence_length",
+      "8",
+      "--num_sequences",
+      "2",
+      "--seed",
+      "0",
+      "--output",
+      "{output}"
+    ],
+    "expected_fasta": ">random_seq_0\nTTAGTTGT\n>random_seq_1\nGCCGCAGC\n"
+  },
+  "cli_export": {
+    "command": [
+      "GenomicElementTools",
+      "export",
+      "ExogeneousSequences",
+      "--fasta_path",
+      "{genome}",
+      "--region_file_path",
+      "{regions}",
+      "--region_file_type",
+      "bed3",
+      "--opath",
+      "{output}"
+    ],
+    "expected_fasta": ">chrB:1-5\nGGGC\n>chrA:0-4\nACGT\n"
+  },
+  "reference_links": {
+    "python": [
+      "reference/python/elements/genomic-elements",
+      "reference/formats/foundation/bed3"
+    ],
+    "cli": [
+      "reference/cli/motif-tools/random-seq",
+      "reference/cli/genomic-element-tools/export/exogeneous-sequences",
+      "reference/formats/elements/fasta"
+    ]
+  },
+  "landing_links": ["python-quickstart", "cli-quickstart", "install"]
+}

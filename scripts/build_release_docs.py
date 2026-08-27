@@ -376,6 +376,9 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
     raw_base = f"{DOCS_RAW_BASE}/{docs_revision}/docs"
     canonical = PAGES_BASE
     links = [
+        ("Get started", "get-started/", "get-started/index.md"),
+        ("Python quickstart", "get-started/python-quickstart/", "get-started/python-quickstart.md"),
+        ("CLI quickstart", "get-started/cli-quickstart/", "get-started/cli-quickstart.md"),
         ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
         ("Python reference", "reference/python/", "reference/python/index.md"),
         ("BedTable reference", "reference/python/bedtable/bed-table3/", "reference/python/bedtable/bed-table3.md"),
