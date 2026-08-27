@@ -164,7 +164,9 @@ def _validate_source_contracts() -> None:
     operations_nav = _extract_nav_section(python_nav, "Operations")
     marked_entry = f"- {METHOD_NAV_LABEL}: {METHOD_PAGE}"
     unmarked_entry = f"- GeneralElements.load_mask_from_arr: {METHOD_PAGE}"
-    if unmarked_entry in python_nav and marked_entry not in python_nav:
+    marked_present = marked_entry in python_nav
+    unmarked_present = unmarked_entry in python_nav and not marked_present
+    if unmarked_present:
         raise RuntimeError(
             "GeneralElements.load_mask_from_arr must be presented as a method "
             "in built navigation"
@@ -174,16 +176,21 @@ def _validate_source_contracts() -> None:
             "GeneralElements.load_mask_from_arr must not occupy the "
             "class-only Element collections navigation group"
         )
-    if marked_entry not in operations_nav and unmarked_entry not in operations_nav:
-        if METHOD_PAGE in python_nav:
-            raise RuntimeError(
-                "GeneralElements.load_mask_from_arr must appear under the "
-                "explicit Operations grouping, not as a peer of classes, "
-                "modules, or reference areas"
-            )
+    if (
+        not marked_present
+        and unmarked_entry not in operations_nav
+        and METHOD_PAGE in python_nav
+    ):
         raise RuntimeError(
-            "GeneralElements.load_mask_from_arr must remain reachable in built "
-            "navigation"
+            "GeneralElements.load_mask_from_arr must appear under the "
+            "explicit Operations grouping, not as a peer of classes, "
+            "modules, or reference areas"
+        )
+    if marked_present and marked_entry not in operations_nav:
+        raise RuntimeError(
+            "GeneralElements.load_mask_from_arr must appear under the "
+            "explicit Operations grouping, not as a peer of classes, "
+            "modules, or reference areas"
         )
 
 
@@ -521,6 +528,25 @@ def _parser_inventory_in_page(path: Path) -> str | None:
     if marker not in text:
         return None
     return text.split(marker, 1)[1].split(" -->", 1)[0]
+
+
+def _reject_stale_parser_inventory(
+    generated_path: Path,
+    records: list[dict[str, Any]],
+    *,
+    update_generated: bool,
+) -> None:
+    if update_generated:
+        return
+    existing_inventory = _parser_inventory_in_page(generated_path)
+    if existing_inventory is None:
+        return
+    expected_inventory = json.dumps(records, sort_keys=True, separators=(",", ":"))
+    if existing_inventory != expected_inventory:
+        raise RuntimeError(
+            f"{generated_path.relative_to(DOCS_ROOT)} parser inventory is stale; "
+            "rerun with --update-generated after accepting parser drift"
+        )
 
 
 def _render_cli_reference(reference: dict[str, Any]) -> str:
@@ -911,24 +937,11 @@ def main() -> None:
     ):
         records = _extract_cli_tree(code_root, tool)
         generated_path = GENERATED_CLI_DIRECTORY / filename
-        expected_inventory = json.dumps(records, sort_keys=True, separators=(",", ":"))
-        existing_inventory = _parser_inventory_in_page(generated_path)
-        if (
-            existing_inventory is not None
-            and existing_inventory != expected_inventory
-            and not args.update_generated
-        ):
-            raise RuntimeError(
-                f"{filename} is stale; rerun with --update-generated, review, and rerun acceptance"
-            )
-        if (
-            existing_inventory is None
-            and generated_path.exists()
-            and not args.update_generated
-        ):
-            raise RuntimeError(
-                f"{filename} lacks a parser inventory; rerun with --update-generated"
-            )
+        _reject_stale_parser_inventory(
+            generated_path,
+            records,
+            update_generated=args.update_generated,
+        )
         generated_path.write_text(_render_cli_tree(tool, records))
 
     _render_agent_resources(args.code_revision, args.docs_revision)

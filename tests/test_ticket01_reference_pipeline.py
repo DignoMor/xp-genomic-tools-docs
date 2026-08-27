@@ -12,7 +12,7 @@ import unittest
 from importlib.metadata import version
 from pathlib import Path
 
-from release_test_helpers import preserve_agent_resources, stage_docs_revision
+from release_test_helpers import preserve_agent_resources, restore_golden_docs, stage_docs_revision
 
 
 DOCS_ROOT = Path(__file__).resolve().parents[1]
@@ -198,29 +198,16 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
             self.assertIn(REDIRECT_TARGET.rstrip("/").split("/")[-1], content)
 
     def test_release_rejects_missing_genomic_elements_page(self) -> None:
-        original = GENOMIC_ELEMENTS_PAGE.read_text()
         try:
             GENOMIC_ELEMENTS_PAGE.write_text("# placeholder\n")
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            GENOMIC_ELEMENTS_PAGE.write_text(original)
+            restore_golden_docs(DOCS_ROOT)
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("GenomicElements", completed.stderr)
 
     def test_release_rejects_missing_mask_example_section(self) -> None:
-        if "## Example\n" not in AUTHORED_MASK_INTERSECT.read_text():
-            subprocess.run(
-                [
-                    "git",
-                    "-C",
-                    str(DOCS_ROOT),
-                    "checkout",
-                    "--",
-                    str(AUTHORED_MASK_INTERSECT.relative_to(DOCS_ROOT)),
-                ],
-                check=True,
-            )
         original = AUTHORED_MASK_INTERSECT.read_text()
         patched = original.replace("## Example\n", "## Examples removed\n", 1)
         self.assertNotEqual(original, patched)
@@ -229,7 +216,7 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            AUTHORED_MASK_INTERSECT.write_text(original)
+            restore_golden_docs(DOCS_ROOT)
         self.assertNotEqual(completed.returncode, 0)
         self.assertTrue(
             "Example" in completed.stderr
@@ -254,7 +241,7 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            MKDOCS_CONFIG.write_text(original)
+            restore_golden_docs(DOCS_ROOT)
         self.assertNotEqual(completed.returncode, 0)
         self.assertTrue(
             "redirect" in completed.stderr.lower()
@@ -271,7 +258,7 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            GENOMIC_ELEMENTS_PAGE.write_text(original)
+            restore_golden_docs(DOCS_ROOT)
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("Example", completed.stderr)
 

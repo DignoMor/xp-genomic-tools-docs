@@ -10,6 +10,21 @@ from pathlib import Path
 from typing import Iterator
 
 
+def restore_golden_docs(docs_root: Path) -> None:
+    """Restore mutable docs sources from committed golden fixtures."""
+    fixtures = docs_root / "tests/fixtures"
+    (docs_root / "mkdocs.yml").write_text((fixtures / "mkdocs.golden.yml").read_text())
+    (docs_root / "docs/library.md").write_text((fixtures / "library.golden.md").read_text())
+    (docs_root / "docs/llms.txt").write_text((fixtures / "llms.golden.txt").read_text())
+    (
+        docs_root / "docs/reference/python/elements/genomic-elements.md"
+    ).write_text((fixtures / "genomic-elements.golden.md").read_text())
+    (
+        docs_root
+        / "docs/reference/cli/authored/genomic-element-tools/mask-op/intersect.md"
+    ).write_text((fixtures / "mask-op-intersect.golden.md").read_text())
+
+
 def stage_docs_revision(docs_root: Path, destination: Path) -> str:
     """Create a disposable docs checkout whose commit contains all raw targets."""
     shutil.copytree(docs_root / "docs", destination / "docs")

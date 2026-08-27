@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from release_test_helpers import preserve_agent_resources, stage_docs_revision
+from release_test_helpers import preserve_agent_resources, restore_golden_docs, stage_docs_revision
 
 
 DOCS_ROOT = Path(__file__).resolve().parents[1]
@@ -80,7 +80,7 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            library_path.write_text(original)
+            restore_golden_docs(DOCS_ROOT)
 
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("Element collections Library section", completed.stderr)
@@ -106,7 +106,7 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            config_path.write_text(original_config)
+            restore_golden_docs(DOCS_ROOT)
 
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("presented as a method", completed.stderr)
@@ -139,7 +139,7 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            config_path.write_text(original_config)
+            restore_golden_docs(DOCS_ROOT)
 
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("class-only Element collections navigation group", completed.stderr)
@@ -160,7 +160,7 @@ class ReleaseDocumentationAcceptanceTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            config_path.write_text(original_config)
+            restore_golden_docs(DOCS_ROOT)
 
         self.assertNotEqual(completed.returncode, 0)
         self.assertTrue(
