@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 REFERENCE_FIELDS = (
@@ -44,11 +44,19 @@ def parser_path_to_page(tool_slug: str, parser_path: str) -> str:
 
 
 @dataclass(frozen=True)
+class IntentGroup:
+    title: str
+    paths: tuple[str, ...]
+    group_path: str | None = None
+
+
+@dataclass(frozen=True)
 class ToolRegistry:
     console_name: str
     slug: str
     group_paths: frozenset[str]
     invocable_paths: frozenset[str]
+    intent_groups: tuple[IntentGroup, ...] = field(default_factory=tuple)
 
     @property
     def documented_paths(self) -> frozenset[str]:
@@ -63,6 +71,63 @@ class ToolRegistry:
             return f"docs/reference/cli/authored/{self.slug}/_landing.md"
         return f"docs/reference/cli/authored/{self.slug}/{slug}.md"
 
+
+GENOMIC_ELEMENT_INTENT_GROUPS: tuple[IntentGroup, ...] = (
+    IntentGroup(
+        title="Region and signal",
+        paths=(
+            "bed2tssbed",
+            "count_paired_bw",
+            "count_single_bw",
+            "pad_region",
+            "get_context_ge nearest",
+            "get_context_ge windowed_argmax",
+            "track2tss_bed",
+            "select_tss_relative_track",
+        ),
+    ),
+    IntentGroup(
+        title="Sequence and motif",
+        paths=(
+            "onehot",
+            "motif_search",
+            "filter_motif_score",
+            "tss_relative_mutagenesis",
+        ),
+    ),
+    IntentGroup(
+        title="import",
+        group_path="import",
+        paths=("import stat_list", "import allele_expanded_ES"),
+    ),
+    IntentGroup(
+        title="export",
+        group_path="export",
+        paths=(
+            "export ChromFilteredGE",
+            "export CountTable",
+            "export ExogeneousSequences",
+            "export Heatmap",
+            "export MaskedGE",
+            "export MergedGE",
+            "export TREbed",
+            "export WTES",
+            "export allele_expanded_ES",
+            "export bed6poly",
+            "export stat_list",
+        ),
+    ),
+    IntentGroup(
+        title="mask_op",
+        group_path="mask_op",
+        paths=("mask_op intersect", "mask_op opposite", "mask_op union"),
+    ),
+    IntentGroup(
+        title="get_context_ge",
+        group_path="get_context_ge",
+        paths=("get_context_ge nearest", "get_context_ge windowed_argmax"),
+    ),
+)
 
 GENOMIC_ELEMENT_TOOLS = ToolRegistry(
     console_name="GenomicElementTools",
@@ -100,6 +165,7 @@ GENOMIC_ELEMENT_TOOLS = ToolRegistry(
             "export bed6poly",
         }
     ),
+    intent_groups=GENOMIC_ELEMENT_INTENT_GROUPS,
 )
 
 EXOGENEOUS_SEQUENCE_TOOLS = ToolRegistry(

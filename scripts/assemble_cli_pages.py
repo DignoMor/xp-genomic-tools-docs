@@ -8,6 +8,11 @@ import re
 from pathlib import Path
 from typing import Any
 
+from cli_inventory import (
+    render_browse_by_task,
+    render_exact_path_index,
+    render_legacy_anchors,
+)
 from cli_page_registry import (
     ALL_TOOLS,
     REFERENCE_FIELDS,
@@ -209,10 +214,17 @@ def _assemble_landing_page(
     body = _ensure_required_sections(
         _load_authored(tool, "(root)"), tool.console_name, "(root)"
     )
-    top_level = sorted(
-        {path.split()[0] for path in tool.documented_paths if path != "(root)"}
-    )
-    if "## Command index" not in body:
+    if tool.intent_groups:
+        if "## Browse by task" not in body:
+            body = f"{body.rstrip()}\n\n{render_browse_by_task(tool)}"
+        if "## Exact command paths" not in body:
+            body = f"{body.rstrip()}\n\n{render_exact_path_index(tool)}"
+        if "## Legacy heading anchors" not in body:
+            body = f"{body.rstrip()}\n\n{render_legacy_anchors(tool)}"
+    elif "## Command index" not in body:
+        top_level = sorted(
+            {path.split()[0] for path in tool.documented_paths if path != "(root)"}
+        )
         lines = ["## Command index", ""]
         for command in top_level:
             if command in tool.group_paths:

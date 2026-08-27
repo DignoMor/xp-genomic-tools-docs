@@ -1,4 +1,6 @@
 {
+  "release": "0.3.0a4",
+  "qualified_name": "GenomicElementTools",
   "commands": [
     "bed2tssbed",
     "count_paired_bw",

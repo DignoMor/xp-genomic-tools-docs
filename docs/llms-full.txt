@@ -1,7 +1,7 @@
 # xp-genomic-tools exhaustive public reference (0.3.0a4)
 
 Code revision: `8d20c5d38b2e962cc7effa843c5e9048260d78f7`
-Documentation revision: `1e26569ee2667b3761e69a0cd4e0bf5a15d5d611`
+Documentation revision: `820b24869e69a8a57ae00638ddc263165c50b555`
 
 ## `reference/cli/exogeneous-sequence-tools/assemble/add-adapter.md`
 
@@ -90,7 +90,7 @@ ExogeneousSequenceTools assemble add_adapter [-h] --fasta FASTA --left_adapter_f
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/assemble/add-adapter/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/assemble/add-adapter.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/assemble/add-adapter.md
 
 ## `reference/cli/exogeneous-sequence-tools/assemble/barcode.md`
 
@@ -185,7 +185,7 @@ ExogeneousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --in
 | `--barcode_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to add barcode to the exogeneous sequences. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/assemble/barcode/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/assemble/barcode.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/assemble/barcode.md
 
 ## `reference/cli/exogeneous-sequence-tools/assemble/concat.md`
 
@@ -273,7 +273,7 @@ ExogeneousSequenceTools assemble concat [-h] --fasta5 FASTA5 --fasta3 FASTA3 --o
 | `--id_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to generate the id of the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/assemble/concat/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/assemble/concat.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/assemble/concat.md
 
 ## `reference/cli/exogeneous-sequence-tools/assemble.md`
 
@@ -359,7 +359,7 @@ ExogeneousSequenceTools assemble [-h] {add_adapter,concat,barcode} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/assemble/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/assemble.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/assemble.md
 
 ## `reference/cli/exogeneous-sequence-tools/gen-track/single-loc.md`
 
@@ -445,7 +445,7 @@ ExogeneousSequenceTools gen_track single_loc [-h] --fasta FASTA --loc LOC --outp
 | `--output_npy` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output stat npy file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/gen-track/single-loc/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/gen-track/single-loc.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/gen-track/single-loc.md
 
 ## `reference/cli/exogeneous-sequence-tools/gen-track.md`
 
@@ -529,7 +529,7 @@ ExogeneousSequenceTools gen_track [-h] {single_loc} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/gen-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/gen-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/gen-track.md
 
 ## `reference/cli/exogeneous-sequence-tools/index.md`
 
@@ -670,7 +670,7 @@ ExogeneousSequenceTools [-h] {assemble,track_dim_reduction,mutagenesis,gen_track
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/index.md
 
 ## `reference/cli/exogeneous-sequence-tools/motif-search.md`
 
@@ -764,7 +764,7 @@ ExogeneousSequenceTools motif_search [-h] --fasta FASTA --motif_file MOTIF_FILE 
 | `--reverse_complement` | no | `str2bool` | inapplicable | `False` | no | Reverse complement the sequence while matching for motifs. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/motif-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/motif-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/motif-search.md
 
 ## `reference/cli/exogeneous-sequence-tools/mutagenesis.md`
 
@@ -857,7 +857,7 @@ ExogeneousSequenceTools mutagenesis [-h] --fasta FASTA --loc_npy LOC_NPY --mut_f
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/mutagenesis.md
 
 ## `reference/cli/exogeneous-sequence-tools/onehot.md`
 
@@ -943,7 +943,7 @@ ExogeneousSequenceTools onehot [-h] --fasta FASTA --opath OPATH
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the one-hot encoded sequence. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/onehot/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/onehot.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/onehot.md
 
 ## `reference/cli/exogeneous-sequence-tools/print-stat.md`
 
@@ -1026,7 +1026,7 @@ ExogeneousSequenceTools print_stat [-h] --input_npy INPUT_NPY
 | `--input_npy` | yes | `inapplicable` | inapplicable | `none` | no | Path to the region stat npy file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/print-stat/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/print-stat.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/print-stat.md
 
 ## `reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax.md`
 
@@ -1123,7 +1123,7 @@ ExogeneousSequenceTools track_dim_reduction argmax [-h] --input_npy INPUT_NPY --
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax.md
 
 ## `reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin.md`
 
@@ -1220,7 +1220,7 @@ ExogeneousSequenceTools track_dim_reduction argmin [-h] --input_npy INPUT_NPY --
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin.md
 
 ## `reference/cli/exogeneous-sequence-tools/track-dim-reduction/max.md`
 
@@ -1317,7 +1317,7 @@ ExogeneousSequenceTools track_dim_reduction max [-h] --input_npy INPUT_NPY --out
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/max/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/max.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/max.md
 
 ## `reference/cli/exogeneous-sequence-tools/track-dim-reduction/min.md`
 
@@ -1414,7 +1414,7 @@ ExogeneousSequenceTools track_dim_reduction min [-h] --input_npy INPUT_NPY --out
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/min/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/min.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/min.md
 
 ## `reference/cli/exogeneous-sequence-tools/track-dim-reduction.md`
 
@@ -1501,7 +1501,7 @@ ExogeneousSequenceTools track_dim_reduction [-h] {max,argmax,min,argmin} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/exogeneous-sequence-tools/track-dim-reduction.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/assemble/add-adapter.syntax.md`
 
@@ -1523,7 +1523,7 @@ ExogeneousSequenceTools assemble add_adapter [-h] --fasta FASTA --left_adapter_f
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/add-adapter.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/add-adapter.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/add-adapter.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/assemble/barcode.syntax.md`
 
@@ -1548,7 +1548,7 @@ ExogeneousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --in
 | `--barcode_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to add barcode to the exogeneous sequences. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/barcode.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/barcode.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/barcode.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/assemble/concat.syntax.md`
 
@@ -1570,7 +1570,7 @@ ExogeneousSequenceTools assemble concat [-h] --fasta5 FASTA5 --fasta3 FASTA3 --o
 | `--id_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to generate the id of the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/concat.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/concat.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble/concat.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/assemble.syntax.md`
 
@@ -1588,7 +1588,7 @@ ExogeneousSequenceTools assemble [-h] {add_adapter,concat,barcode} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/assemble.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/assemble.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/gen-track/single-loc.syntax.md`
 
@@ -1609,7 +1609,7 @@ ExogeneousSequenceTools gen_track single_loc [-h] --fasta FASTA --loc LOC --outp
 | `--output_npy` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output stat npy file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/gen-track/single-loc.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/gen-track/single-loc.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/gen-track/single-loc.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/gen-track.syntax.md`
 
@@ -1627,7 +1627,7 @@ ExogeneousSequenceTools gen_track [-h] {single_loc} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/gen-track.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/gen-track.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/gen-track.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/motif-search.syntax.md`
 
@@ -1650,7 +1650,7 @@ ExogeneousSequenceTools motif_search [-h] --fasta FASTA --motif_file MOTIF_FILE 
 | `--reverse_complement` | no | `str2bool` | inapplicable | `False` | no | Reverse complement the sequence while matching for motifs. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/motif-search.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/motif-search.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/motif-search.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/mutagenesis.syntax.md`
 
@@ -1672,7 +1672,7 @@ ExogeneousSequenceTools mutagenesis [-h] --fasta FASTA --loc_npy LOC_NPY --mut_f
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/mutagenesis.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/mutagenesis.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/mutagenesis.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/onehot.syntax.md`
 
@@ -1692,7 +1692,7 @@ ExogeneousSequenceTools onehot [-h] --fasta FASTA --opath OPATH
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the one-hot encoded sequence. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/onehot.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/onehot.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/onehot.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/print-stat.syntax.md`
 
@@ -1711,7 +1711,7 @@ ExogeneousSequenceTools print_stat [-h] --input_npy INPUT_NPY
 | `--input_npy` | yes | `inapplicable` | inapplicable | `none` | no | Path to the region stat npy file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/print-stat.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/print-stat.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/print-stat.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmax.syntax.md`
 
@@ -1732,7 +1732,7 @@ ExogeneousSequenceTools track_dim_reduction argmax [-h] --input_npy INPUT_NPY --
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmax.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmax.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmax.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmin.syntax.md`
 
@@ -1753,7 +1753,7 @@ ExogeneousSequenceTools track_dim_reduction argmin [-h] --input_npy INPUT_NPY --
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmin.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmin.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/argmin.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/max.syntax.md`
 
@@ -1774,7 +1774,7 @@ ExogeneousSequenceTools track_dim_reduction max [-h] --input_npy INPUT_NPY --out
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/max.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/max.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/max.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/min.syntax.md`
 
@@ -1795,7 +1795,7 @@ ExogeneousSequenceTools track_dim_reduction min [-h] --input_npy INPUT_NPY --out
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/min.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/min.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction/min.syntax.md
 
 ## `reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction.syntax.md`
 
@@ -1813,7 +1813,7 @@ ExogeneousSequenceTools track_dim_reduction [-h] {max,argmax,min,argmin} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/exogeneous-sequence-tools/track-dim-reduction.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/bed2tssbed.syntax.md`
 
@@ -1835,7 +1835,7 @@ GenomicElementTools bed2tssbed [-h] --region_file_path REGION_FILE_PATH --region
 | `--output_site` | no | `str` | inapplicable | `TSS` | no | The site for output. [TSS] (TSS, center) |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/bed2tssbed.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/bed2tssbed.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/bed2tssbed.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/count-paired-bw.syntax.md`
 
@@ -1862,7 +1862,7 @@ GenomicElementTools count_paired_bw [-h] --region_file_path REGION_FILE_PATH --r
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for counting. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/count-paired-bw.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/count-paired-bw.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/count-paired-bw.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/count-single-bw.syntax.md`
 
@@ -1885,7 +1885,7 @@ GenomicElementTools count_single_bw [-h] --region_file_path REGION_FILE_PATH --r
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for counting. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/count-single-bw.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/count-single-bw.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/count-single-bw.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/allele-expanded-es.syntax.md`
 
@@ -1909,7 +1909,7 @@ GenomicElementTools export allele_expanded_ES [-h] --fasta_path FASTA_PATH --reg
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the allele-expanded fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/allele-expanded-es.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/allele-expanded-es.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/allele-expanded-es.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/bed6poly.syntax.md`
 
@@ -1932,7 +1932,7 @@ GenomicElementTools export bed6poly [-h] --region_file_path REGION_FILE_PATH --r
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path for the bed6poly file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/bed6poly.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/bed6poly.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/bed6poly.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/chrom-filtered-ge.syntax.md`
 
@@ -1954,7 +1954,7 @@ GenomicElementTools export ChromFilteredGE [-h] --region_file_path REGION_FILE_P
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the filtered GenomicElements. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/chrom-filtered-ge.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/chrom-filtered-ge.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/chrom-filtered-ge.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/count-table.syntax.md`
 
@@ -1978,7 +1978,7 @@ GenomicElementTools export CountTable [-h] --region_file_path REGION_FILE_PATH -
 | `--region_id_type` | no | `str` | `default`, `gene_symbol` | `default` | no | Type of the region id (default, gene_symbol). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/count-table.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/count-table.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/count-table.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/exogeneous-sequences.syntax.md`
 
@@ -2000,7 +2000,7 @@ GenomicElementTools export ExogeneousSequences [-h] --fasta_path FASTA_PATH --re
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Fasta output file path. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/exogeneous-sequences.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/exogeneous-sequences.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/exogeneous-sequences.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/heatmap.syntax.md`
 
@@ -2027,7 +2027,7 @@ GenomicElementTools export Heatmap [-h] --region_file_path REGION_FILE_PATH --re
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the heatmap. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/heatmap.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/heatmap.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/heatmap.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/masked-ge.syntax.md`
 
@@ -2053,7 +2053,7 @@ GenomicElementTools export MaskedGE [-h] --region_file_path REGION_FILE_PATH --r
 | `--anno_oheader` | no | `str` | inapplicable | `none` | no | Output header for masked annotation files. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/masked-ge.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/masked-ge.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/masked-ge.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/merged-ge.syntax.md`
 
@@ -2079,7 +2079,7 @@ GenomicElementTools export MergedGE [-h] --left_region_file_path LEFT_REGION_FIL
 | `--oheader` | yes | `str` | inapplicable | `none` | no | Output header for merged files. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/merged-ge.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/merged-ge.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/merged-ge.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/stat-list.syntax.md`
 
@@ -2102,7 +2102,7 @@ GenomicElementTools export stat_list [-h] --region_file_path REGION_FILE_PATH --
 | `--dtype` | no | `str` | `str`, `np.int32`, `np.int64`, `np.float32`, `np.float64` | `str` | no | Dtype used to cast values before writing. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/stat-list.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/stat-list.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/stat-list.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/trebed.syntax.md`
 
@@ -2125,7 +2125,7 @@ GenomicElementTools export TREbed [-h] --region_file_path REGION_FILE_PATH --reg
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path for the TREbed file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/trebed.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/trebed.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/trebed.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export/wtes.syntax.md`
 
@@ -2148,7 +2148,7 @@ GenomicElementTools export WTES [-h] --fasta_path FASTA_PATH --region_file_path 
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the WTES fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export/wtes.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export/wtes.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export/wtes.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/export.syntax.md`
 
@@ -2166,7 +2166,7 @@ GenomicElementTools export [-h] {stat_list,ExogeneousSequences,WTES,allele_expan
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/export.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/export.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/export.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/filter-motif-score.syntax.md`
 
@@ -2191,7 +2191,7 @@ GenomicElementTools filter_motif_score [-h] --region_file_path REGION_FILE_PATH 
 | `--max_score` | no | `float` | inapplicable | `inf` | no | Maximum score for filtering motif search scores. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/filter-motif-score.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/filter-motif-score.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/filter-motif-score.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/get-context-ge/nearest.syntax.md`
 
@@ -2214,7 +2214,7 @@ GenomicElementTools get_context_ge nearest [-h] --region_file_path REGION_FILE_P
 | `--opath` | yes | `str` | inapplicable | `none` | no | Path to the output region file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/get-context-ge/nearest.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/get-context-ge/nearest.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/get-context-ge/nearest.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/get-context-ge/windowed-argmax.syntax.md`
 
@@ -2238,7 +2238,7 @@ GenomicElementTools get_context_ge windowed_argmax [-h] --region_file_path REGIO
 | `--opath` | yes | `str` | inapplicable | `none` | no | Path to the output region file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/get-context-ge/windowed-argmax.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/get-context-ge/windowed-argmax.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/get-context-ge/windowed-argmax.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/get-context-ge.syntax.md`
 
@@ -2256,7 +2256,7 @@ GenomicElementTools get_context_ge [-h] {nearest,windowed_argmax} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/get-context-ge.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/get-context-ge.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/get-context-ge.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/import/allele-expanded-es.syntax.md`
 
@@ -2279,7 +2279,7 @@ GenomicElementTools import allele_expanded_ES [-h] --inpath INPATH --anno_oheade
 | `--stat_selection_method` | no | `inapplicable` | `max_abs_fc` | `[]` | yes | Method to pick a representative alternate stat per region. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/import/allele-expanded-es.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/import/allele-expanded-es.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/import/allele-expanded-es.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/import/stat-list.syntax.md`
 
@@ -2302,7 +2302,7 @@ GenomicElementTools import stat_list [-h] --region_file_path REGION_FILE_PATH --
 | `--dtype` | no | `str` | `str`, `np.int32`, `np.int64`, `np.float32`, `np.float64` | `str` | no | Dtype of the outputted array. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/import/stat-list.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/import/stat-list.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/import/stat-list.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/import.syntax.md`
 
@@ -2320,7 +2320,7 @@ GenomicElementTools import [-h] {stat_list,allele_expanded_ES} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/import.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/import.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/import.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/mask-op/intersect.syntax.md`
 
@@ -2342,7 +2342,7 @@ GenomicElementTools mask_op intersect [-h] --region_file_path REGION_FILE_PATH -
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the resulting mask array (.npy). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/mask-op/intersect.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/mask-op/intersect.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/mask-op/intersect.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/mask-op/opposite.syntax.md`
 
@@ -2364,7 +2364,7 @@ GenomicElementTools mask_op opposite [-h] --region_file_path REGION_FILE_PATH --
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the resulting mask array (.npy). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/mask-op/opposite.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/mask-op/opposite.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/mask-op/opposite.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/mask-op/union.syntax.md`
 
@@ -2386,7 +2386,7 @@ GenomicElementTools mask_op union [-h] --region_file_path REGION_FILE_PATH --reg
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the resulting mask array (.npy). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/mask-op/union.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/mask-op/union.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/mask-op/union.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/mask-op.syntax.md`
 
@@ -2404,7 +2404,7 @@ GenomicElementTools mask_op [-h] {intersect,union,opposite} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/mask-op.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/mask-op.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/mask-op.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/motif-search.syntax.md`
 
@@ -2429,7 +2429,7 @@ GenomicElementTools motif_search [-h] --fasta_path FASTA_PATH --region_file_path
 | `--strand` | no | `str` | `+`, `-`, `both` | `+` | no | Strand to search for motif matches. Choices: '+', '-', 'both'. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/motif-search.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/motif-search.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/motif-search.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/onehot.syntax.md`
 
@@ -2451,7 +2451,7 @@ GenomicElementTools onehot [-h] --fasta_path FASTA_PATH --region_file_path REGIO
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the one-hot encoded sequence. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/onehot.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/onehot.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/onehot.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/pad-region.syntax.md`
 
@@ -2476,7 +2476,7 @@ GenomicElementTools pad_region [-h] --region_file_path REGION_FILE_PATH --region
 | `--method_resolving_invalid_region` | no | `str` | `raise`, `fallback`, `drop` | `fallback` | no | Method to resolve invalid region after padding. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/pad-region.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/pad-region.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/pad-region.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/select-tss-relative-track.syntax.md`
 
@@ -2505,7 +2505,7 @@ GenomicElementTools select_tss_relative_track [-h] --region_file_path REGION_FIL
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace existing coordinate/mask destinations after successful computation. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/select-tss-relative-track.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/select-tss-relative-track.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/select-tss-relative-track.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/track2tss-bed.syntax.md`
 
@@ -2528,7 +2528,7 @@ GenomicElementTools track2tss_bed [-h] --region_file_path REGION_FILE_PATH --reg
 | `--output_site` | no | `str` | inapplicable | `MaxAbsSig` | no | The site for output. [TSS] (MaxAbsSig) |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/track2tss-bed.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/track2tss-bed.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/track2tss-bed.syntax.md
 
 ## `reference/cli/fragments/genomic-element-tools/tss-relative-mutagenesis.syntax.md`
 
@@ -2553,7 +2553,7 @@ GenomicElementTools tss_relative_mutagenesis [-h] --region_file_path REGION_FILE
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output directory after successful staging. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/genomic-element-tools/tss-relative-mutagenesis.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/genomic-element-tools/tss-relative-mutagenesis.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/genomic-element-tools/tss-relative-mutagenesis.syntax.md
 
 ## `reference/cli/fragments/motif-tools/anti-motif.syntax.md`
 
@@ -2574,7 +2574,7 @@ MotifTools anti_motif [-h] --motif_file MOTIF_FILE --output OUTPUT [--force]
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/motif-tools/anti-motif.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/motif-tools/anti-motif.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/motif-tools/anti-motif.syntax.md
 
 ## `reference/cli/fragments/motif-tools/barcodes.syntax.md`
 
@@ -2599,7 +2599,7 @@ MotifTools barcodes [-h] --barcode_length BARCODE_LENGTH [--alphabet ALPHABET] [
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/motif-tools/barcodes.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/motif-tools/barcodes.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/motif-tools/barcodes.syntax.md
 
 ## `reference/cli/fragments/motif-tools/pwm-seq.syntax.md`
 
@@ -2623,7 +2623,7 @@ MotifTools pwm_seq [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --num_se
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/motif-tools/pwm-seq.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/motif-tools/pwm-seq.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/motif-tools/pwm-seq.syntax.md
 
 ## `reference/cli/fragments/motif-tools/random-seq.syntax.md`
 
@@ -2650,7 +2650,7 @@ MotifTools random_seq [-h] --sequence_length SEQUENCE_LENGTH --num_sequences NUM
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/fragments/motif-tools/random-seq.syntax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/fragments/motif-tools/random-seq.syntax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/fragments/motif-tools/random-seq.syntax.md
 
 ## `reference/cli/generated/exogeneous-sequence-tools.md`
 
@@ -3051,7 +3051,7 @@ Argparse exits for missing required values and invalid choices; runtime
 validation errors propagate from the command implementation.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/generated/exogeneous-sequence-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/generated/exogeneous-sequence-tools.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/generated/exogeneous-sequence-tools.md
 
 ## `reference/cli/generated/genomic-element-tools.md`
 
@@ -3931,7 +3931,7 @@ Argparse exits for missing required values and invalid choices; runtime
 validation errors propagate from the command implementation.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/generated/genomic-element-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/generated/genomic-element-tools.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/generated/genomic-element-tools.md
 
 ## `reference/cli/generated/motif-tools.md`
 
@@ -4084,7 +4084,7 @@ Argparse exits for missing required values and invalid choices; runtime
 validation errors propagate from the command implementation.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/generated/motif-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/generated/motif-tools.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/generated/motif-tools.md
 
 ## `reference/cli/genomic-element-tools/bed2tssbed.md`
 
@@ -4186,7 +4186,7 @@ GenomicElementTools bed2tssbed [-h] --region_file_path REGION_FILE_PATH --region
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/bed2tssbed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/bed2tssbed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/bed2tssbed.md
 
 ## `reference/cli/genomic-element-tools/count-paired-bw.md`
 
@@ -4285,7 +4285,7 @@ GenomicElementTools count_paired_bw [-h] --region_file_path REGION_FILE_PATH --r
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/count-paired-bw/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/count-paired-bw.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/count-paired-bw.md
 
 ## `reference/cli/genomic-element-tools/count-single-bw.md`
 
@@ -4393,7 +4393,7 @@ GenomicElementTools count_single_bw [-h] --region_file_path REGION_FILE_PATH --r
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/count-single-bw/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/count-single-bw.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/count-single-bw.md
 
 ## `reference/cli/genomic-element-tools/export/allele-expanded-es.md`
 
@@ -4483,7 +4483,7 @@ GenomicElementTools export allele_expanded_ES [-h] --fasta_path FASTA_PATH --reg
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/allele-expanded-es/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/allele-expanded-es.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/allele-expanded-es.md
 
 ## `reference/cli/genomic-element-tools/export/bed6poly.md`
 
@@ -4574,7 +4574,7 @@ GenomicElementTools export bed6poly [-h] --region_file_path REGION_FILE_PATH --r
 Although argparse exposes `bed6` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/bed6poly/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/bed6poly.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/bed6poly.md
 
 ## `reference/cli/genomic-element-tools/export/chrom-filtered-ge.md`
 
@@ -4661,7 +4661,7 @@ GenomicElementTools export ChromFilteredGE [-h] --region_file_path REGION_FILE_P
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/chrom-filtered-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
 
 ## `reference/cli/genomic-element-tools/export/count-table.md`
 
@@ -4752,7 +4752,7 @@ GenomicElementTools export CountTable [-h] --region_file_path REGION_FILE_PATH -
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/count-table/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/count-table.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/count-table.md
 
 ## `reference/cli/genomic-element-tools/export/exogeneous-sequences.md`
 
@@ -4840,7 +4840,7 @@ GenomicElementTools export ExogeneousSequences [-h] --fasta_path FASTA_PATH --re
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/exogeneous-sequences/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/exogeneous-sequences.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/exogeneous-sequences.md
 
 ## `reference/cli/genomic-element-tools/export/heatmap.md`
 
@@ -4952,7 +4952,7 @@ GenomicElementTools export Heatmap [-h] --region_file_path REGION_FILE_PATH --re
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/heatmap/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/heatmap.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/heatmap.md
 
 ## `reference/cli/genomic-element-tools/export/masked-ge.md`
 
@@ -5045,7 +5045,7 @@ GenomicElementTools export MaskedGE [-h] --region_file_path REGION_FILE_PATH --r
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/masked-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/masked-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/masked-ge.md
 
 ## `reference/cli/genomic-element-tools/export/merged-ge.md`
 
@@ -5138,7 +5138,7 @@ GenomicElementTools export MergedGE [-h] --left_region_file_path LEFT_REGION_FIL
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/merged-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/merged-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/merged-ge.md
 
 ## `reference/cli/genomic-element-tools/export/stat-list.md`
 
@@ -5226,7 +5226,7 @@ GenomicElementTools export stat_list [-h] --region_file_path REGION_FILE_PATH --
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/stat-list/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/stat-list.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/stat-list.md
 
 ## `reference/cli/genomic-element-tools/export/trebed.md`
 
@@ -5316,7 +5316,7 @@ GenomicElementTools export TREbed [-h] --region_file_path REGION_FILE_PATH --reg
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/trebed.md
 
 ## `reference/cli/genomic-element-tools/export/wtes.md`
 
@@ -5404,7 +5404,7 @@ GenomicElementTools export WTES [-h] --fasta_path FASTA_PATH --region_file_path 
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/wtes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export/wtes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export/wtes.md
 
 ## `reference/cli/genomic-element-tools/export.md`
 
@@ -5498,7 +5498,7 @@ GenomicElementTools export [-h] {stat_list,ExogeneousSequences,WTES,allele_expan
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/export.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/export.md
 
 ## `reference/cli/genomic-element-tools/filter-motif-score.md`
 
@@ -5592,7 +5592,7 @@ GenomicElementTools filter_motif_score [-h] --region_file_path REGION_FILE_PATH 
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/filter-motif-score/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/filter-motif-score.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/filter-motif-score.md
 
 ## `reference/cli/genomic-element-tools/get-context-ge/nearest.md`
 
@@ -5683,7 +5683,7 @@ GenomicElementTools get_context_ge nearest [-h] --region_file_path REGION_FILE_P
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/get-context-ge/nearest/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/get-context-ge/nearest.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/get-context-ge/nearest.md
 
 ## `reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md`
 
@@ -5775,7 +5775,7 @@ GenomicElementTools get_context_ge windowed_argmax [-h] --region_file_path REGIO
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/get-context-ge/windowed-argmax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
 
 ## `reference/cli/genomic-element-tools/get-context-ge.md`
 
@@ -5860,7 +5860,7 @@ GenomicElementTools get_context_ge [-h] {nearest,windowed_argmax} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/get-context-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/get-context-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/get-context-ge.md
 
 ## `reference/cli/genomic-element-tools/import/allele-expanded-es.md`
 
@@ -5949,7 +5949,7 @@ GenomicElementTools import allele_expanded_ES [-h] --inpath INPATH --anno_oheade
 | `--stat_selection_method` | no | `inapplicable` | `max_abs_fc` | `[]` | yes | Method to pick a representative alternate stat per region. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/import/allele-expanded-es/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/import/allele-expanded-es.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/import/allele-expanded-es.md
 
 ## `reference/cli/genomic-element-tools/import/stat-list.md`
 
@@ -6041,7 +6041,7 @@ GenomicElementTools import stat_list [-h] --region_file_path REGION_FILE_PATH --
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/import/stat-list/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/import/stat-list.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/import/stat-list.md
 
 ## `reference/cli/genomic-element-tools/import.md`
 
@@ -6126,7 +6126,7 @@ GenomicElementTools import [-h] {stat_list,allele_expanded_ES} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/import/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/import.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/import.md
 
 ## `reference/cli/genomic-element-tools/index.md`
 
@@ -6139,7 +6139,8 @@ This is the semantic reference for release `0.3.0a4`. It covers every shipped
 top-level command and nested path. Exact usage, aliases, parser-required flags,
 choices, defaults, and parser help are maintained in the [generated argparse
 reference](../generated/genomic-element-tools.md); the sections below add the
-constraints that argparse cannot express.
+constraints that argparse cannot express. The inventory used for completeness
+checks is [`inventory.json`](inventory.json).
 
 ## Availability
 
@@ -6208,14 +6209,36 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 
 Argparse exits for missing required flags or invalid choices; runtime validation errors propagate from the implementation.
 
-## Command index
+## Browse by task
+
+### Region and signal
 
 - [`bed2tssbed`](bed2tssbed.md)
 - [`count_paired_bw`](count-paired-bw.md)
 - [`count_single_bw`](count-single-bw.md)
-### `export`
+- [`pad_region`](pad-region.md)
+- [`get_context_ge nearest`](get-context-ge/nearest.md)
+- [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md)
+- [`track2tss_bed`](track2tss-bed.md)
+- [`select_tss_relative_track`](select-tss-relative-track.md)
 
-Group landing: [export](export.md).
+### Sequence and motif
+
+- [`onehot`](onehot.md)
+- [`motif_search`](motif-search.md)
+- [`filter_motif_score`](filter-motif-score.md)
+- [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md)
+
+### import
+
+Group landing: [`import`](import.md).
+
+- [`import stat_list`](import/stat-list.md)
+- [`import allele_expanded_ES`](import/allele-expanded-es.md)
+
+### export
+
+Group landing: [`export`](export.md).
 
 - [`export ChromFilteredGE`](export/chrom-filtered-ge.md)
 - [`export CountTable`](export/count-table.md)
@@ -6229,35 +6252,231 @@ Group landing: [export](export.md).
 - [`export bed6poly`](export/bed6poly.md)
 - [`export stat_list`](export/stat-list.md)
 
-- [`filter_motif_score`](filter-motif-score.md)
-### `get_context_ge`
+### mask_op
 
-Group landing: [get_context_ge](get-context-ge.md).
-
-- [`get_context_ge nearest`](get-context-ge/nearest.md)
-- [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md)
-
-### `import`
-
-Group landing: [import](import.md).
-
-- [`import allele_expanded_ES`](import/allele-expanded-es.md)
-- [`import stat_list`](import/stat-list.md)
-
-### `mask_op`
-
-Group landing: [mask_op](mask-op.md).
+Group landing: [`mask_op`](mask-op.md).
 
 - [`mask_op intersect`](mask-op/intersect.md)
 - [`mask_op opposite`](mask-op/opposite.md)
 - [`mask_op union`](mask-op/union.md)
 
-- [`motif_search`](motif-search.md)
-- [`onehot`](onehot.md)
-- [`pad_region`](pad-region.md)
-- [`select_tss_relative_track`](select-tss-relative-track.md)
-- [`track2tss_bed`](track2tss-bed.md)
-- [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md)
+### get_context_ge
+
+Group landing: [`get_context_ge`](get-context-ge.md).
+
+- [`get_context_ge nearest`](get-context-ge/nearest.md)
+- [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md)
+
+## Exact command paths
+
+Every invocable command path and non-invocable command group appears exactly once for direct lookup.
+
+| Command path | Canonical page |
+| --- | --- |
+| `bed2tssbed` | [`bed2tssbed`](bed2tssbed.md) |
+| `count_paired_bw` | [`count_paired_bw`](count-paired-bw.md) |
+| `count_single_bw` | [`count_single_bw`](count-single-bw.md) |
+| `export` | [`export`](export.md) |
+| `export ChromFilteredGE` | [`export ChromFilteredGE`](export/chrom-filtered-ge.md) |
+| `export CountTable` | [`export CountTable`](export/count-table.md) |
+| `export ExogeneousSequences` | [`export ExogeneousSequences`](export/exogeneous-sequences.md) |
+| `export Heatmap` | [`export Heatmap`](export/heatmap.md) |
+| `export MaskedGE` | [`export MaskedGE`](export/masked-ge.md) |
+| `export MergedGE` | [`export MergedGE`](export/merged-ge.md) |
+| `export TREbed` | [`export TREbed`](export/trebed.md) |
+| `export WTES` | [`export WTES`](export/wtes.md) |
+| `export allele_expanded_ES` | [`export allele_expanded_ES`](export/allele-expanded-es.md) |
+| `export bed6poly` | [`export bed6poly`](export/bed6poly.md) |
+| `export stat_list` | [`export stat_list`](export/stat-list.md) |
+| `filter_motif_score` | [`filter_motif_score`](filter-motif-score.md) |
+| `get_context_ge` | [`get_context_ge`](get-context-ge.md) |
+| `get_context_ge nearest` | [`get_context_ge nearest`](get-context-ge/nearest.md) |
+| `get_context_ge windowed_argmax` | [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md) |
+| `import` | [`import`](import.md) |
+| `import allele_expanded_ES` | [`import allele_expanded_ES`](import/allele-expanded-es.md) |
+| `import stat_list` | [`import stat_list`](import/stat-list.md) |
+| `mask_op` | [`mask_op`](mask-op.md) |
+| `mask_op intersect` | [`mask_op intersect`](mask-op/intersect.md) |
+| `mask_op opposite` | [`mask_op opposite`](mask-op/opposite.md) |
+| `mask_op union` | [`mask_op union`](mask-op/union.md) |
+| `motif_search` | [`motif_search`](motif-search.md) |
+| `onehot` | [`onehot`](onehot.md) |
+| `pad_region` | [`pad_region`](pad-region.md) |
+| `select_tss_relative_track` | [`select_tss_relative_track`](select-tss-relative-track.md) |
+| `track2tss_bed` | [`track2tss_bed`](track2tss-bed.md) |
+| `tss_relative_mutagenesis` | [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md) |
+
+## Legacy heading anchors
+
+Former consolidated-page fragment links resolve to the canonical pages below.
+
+<span id="bed2tssbed"></span>
+
+### `bed2tssbed`
+
+Canonical reference: [`bed2tssbed`](bed2tssbed.md).
+
+<span id="count_paired_bw"></span>
+
+### `count_paired_bw`
+
+Canonical reference: [`count_paired_bw`](count-paired-bw.md).
+
+<span id="count_single_bw"></span>
+
+### `count_single_bw`
+
+Canonical reference: [`count_single_bw`](count-single-bw.md).
+
+<span id="export_ChromFilteredGE"></span>
+
+### `export ChromFilteredGE`
+
+Canonical reference: [`export ChromFilteredGE`](export/chrom-filtered-ge.md).
+
+<span id="export_CountTable"></span>
+
+### `export CountTable`
+
+Canonical reference: [`export CountTable`](export/count-table.md).
+
+<span id="export_ExogeneousSequences"></span>
+
+### `export ExogeneousSequences`
+
+Canonical reference: [`export ExogeneousSequences`](export/exogeneous-sequences.md).
+
+<span id="export_Heatmap"></span>
+
+### `export Heatmap`
+
+Canonical reference: [`export Heatmap`](export/heatmap.md).
+
+<span id="export_MaskedGE"></span>
+
+### `export MaskedGE`
+
+Canonical reference: [`export MaskedGE`](export/masked-ge.md).
+
+<span id="export_MergedGE"></span>
+
+### `export MergedGE`
+
+Canonical reference: [`export MergedGE`](export/merged-ge.md).
+
+<span id="export_TREbed"></span>
+
+### `export TREbed`
+
+Canonical reference: [`export TREbed`](export/trebed.md).
+
+<span id="export_WTES"></span>
+
+### `export WTES`
+
+Canonical reference: [`export WTES`](export/wtes.md).
+
+<span id="export_allele_expanded_ES"></span>
+
+### `export allele_expanded_ES`
+
+Canonical reference: [`export allele_expanded_ES`](export/allele-expanded-es.md).
+
+<span id="export_bed6poly"></span>
+
+### `export bed6poly`
+
+Canonical reference: [`export bed6poly`](export/bed6poly.md).
+
+<span id="export_stat_list"></span>
+
+### `export stat_list`
+
+Canonical reference: [`export stat_list`](export/stat-list.md).
+
+<span id="filter_motif_score"></span>
+
+### `filter_motif_score`
+
+Canonical reference: [`filter_motif_score`](filter-motif-score.md).
+
+<span id="get_context_ge_nearest"></span>
+
+### `get_context_ge nearest`
+
+Canonical reference: [`get_context_ge nearest`](get-context-ge/nearest.md).
+
+<span id="get_context_ge_windowed_argmax"></span>
+
+### `get_context_ge windowed_argmax`
+
+Canonical reference: [`get_context_ge windowed_argmax`](get-context-ge/windowed-argmax.md).
+
+<span id="import_allele_expanded_ES"></span>
+
+### `import allele_expanded_ES`
+
+Canonical reference: [`import allele_expanded_ES`](import/allele-expanded-es.md).
+
+<span id="import_stat_list"></span>
+
+### `import stat_list`
+
+Canonical reference: [`import stat_list`](import/stat-list.md).
+
+<span id="mask_op_intersect"></span>
+
+### `mask_op intersect`
+
+Canonical reference: [`mask_op intersect`](mask-op/intersect.md).
+
+<span id="mask_op_opposite"></span>
+
+### `mask_op opposite`
+
+Canonical reference: [`mask_op opposite`](mask-op/opposite.md).
+
+<span id="mask_op_union"></span>
+
+### `mask_op union`
+
+Canonical reference: [`mask_op union`](mask-op/union.md).
+
+<span id="motif_search"></span>
+
+### `motif_search`
+
+Canonical reference: [`motif_search`](motif-search.md).
+
+<span id="onehot"></span>
+
+### `onehot`
+
+Canonical reference: [`onehot`](onehot.md).
+
+<span id="pad_region"></span>
+
+### `pad_region`
+
+Canonical reference: [`pad_region`](pad-region.md).
+
+<span id="select_tss_relative_track"></span>
+
+### `select_tss_relative_track`
+
+Canonical reference: [`select_tss_relative_track`](select-tss-relative-track.md).
+
+<span id="track2tss_bed"></span>
+
+### `track2tss_bed`
+
+Canonical reference: [`track2tss_bed`](track2tss-bed.md).
+
+<span id="tss_relative_mutagenesis"></span>
+
+### `tss_relative_mutagenesis`
+
+Canonical reference: [`tss_relative_mutagenesis`](tss-relative-mutagenesis.md).
 
 ## Syntax
 
@@ -6273,7 +6492,7 @@ GenomicElementTools [-h] {count_single_bw,count_paired_bw,pad_region,bed2tssbed,
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/index.md
 
 ## `reference/cli/genomic-element-tools/mask-op/intersect.md`
 
@@ -6391,7 +6610,7 @@ GenomicElementTools mask_op intersect [-h] --region_file_path REGION_FILE_PATH -
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/intersect/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/mask-op/intersect.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/mask-op/intersect.md
 
 ## `reference/cli/genomic-element-tools/mask-op/opposite.md`
 
@@ -6478,7 +6697,7 @@ GenomicElementTools mask_op opposite [-h] --region_file_path REGION_FILE_PATH --
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/opposite/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/mask-op/opposite.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/mask-op/opposite.md
 
 ## `reference/cli/genomic-element-tools/mask-op/union.md`
 
@@ -6565,7 +6784,7 @@ GenomicElementTools mask_op union [-h] --region_file_path REGION_FILE_PATH --reg
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/union/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/mask-op/union.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/mask-op/union.md
 
 ## `reference/cli/genomic-element-tools/mask-op.md`
 
@@ -6651,7 +6870,7 @@ GenomicElementTools mask_op [-h] {intersect,union,opposite} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/mask-op.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/mask-op.md
 
 ## `reference/cli/genomic-element-tools/motif-search.md`
 
@@ -6747,7 +6966,7 @@ GenomicElementTools motif_search [-h] --fasta_path FASTA_PATH --region_file_path
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/motif-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/motif-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/motif-search.md
 
 ## `reference/cli/genomic-element-tools/onehot.md`
 
@@ -6837,7 +7056,7 @@ GenomicElementTools onehot [-h] --fasta_path FASTA_PATH --region_file_path REGIO
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/onehot/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/onehot.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/onehot.md
 
 ## `reference/cli/genomic-element-tools/pad-region.md`
 
@@ -6932,7 +7151,7 @@ GenomicElementTools pad_region [-h] --region_file_path REGION_FILE_PATH --region
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/pad-region/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/pad-region.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/pad-region.md
 
 ## `reference/cli/genomic-element-tools/select-tss-relative-track.md`
 
@@ -7059,7 +7278,7 @@ GenomicElementTools select_tss_relative_track [-h] --region_file_path REGION_FIL
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/select-tss-relative-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/select-tss-relative-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/select-tss-relative-track.md
 
 ## `reference/cli/genomic-element-tools/track2tss-bed.md`
 
@@ -7152,7 +7371,7 @@ GenomicElementTools track2tss_bed [-h] --region_file_path REGION_FILE_PATH --reg
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/track2tss-bed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/track2tss-bed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/track2tss-bed.md
 
 ## `reference/cli/genomic-element-tools/tss-relative-mutagenesis.md`
 
@@ -7355,7 +7574,7 @@ GenomicElementTools tss_relative_mutagenesis [-h] --region_file_path REGION_FILE
 Although argparse exposes `bed3` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/tss-relative-mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/genomic-element-tools/tss-relative-mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/genomic-element-tools/tss-relative-mutagenesis.md
 
 ## `reference/cli/motif-tools/anti-motif.md`
 
@@ -7479,7 +7698,7 @@ MotifTools anti_motif [-h] --motif_file MOTIF_FILE --output OUTPUT [--force]
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/anti-motif/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/motif-tools/anti-motif.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/motif-tools/anti-motif.md
 
 ## `reference/cli/motif-tools/barcodes.md`
 
@@ -7611,7 +7830,7 @@ MotifTools barcodes [-h] --barcode_length BARCODE_LENGTH [--alphabet ALPHABET] [
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/barcodes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/motif-tools/barcodes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/motif-tools/barcodes.md
 
 ## `reference/cli/motif-tools/index.md`
 
@@ -7754,7 +7973,7 @@ MotifTools [-h] {random_seq,pwm_seq,barcodes,anti_motif} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/motif-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/motif-tools/index.md
 
 ## `reference/cli/motif-tools/pwm-seq.md`
 
@@ -7893,7 +8112,7 @@ MotifTools pwm_seq [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --num_se
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/pwm-seq/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/motif-tools/pwm-seq.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/motif-tools/pwm-seq.md
 
 ## `reference/cli/motif-tools/random-seq.md`
 
@@ -8019,7 +8238,7 @@ MotifTools random_seq [-h] --sequence_length SEQUENCE_LENGTH --num_sequences NUM
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/random-seq/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/cli/motif-tools/random-seq.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/cli/motif-tools/random-seq.md
 
 ## `reference/conventions.md`
 
@@ -8050,7 +8269,7 @@ The documentation build refreshes generated syntax from the selected code
 checkout and fails if the built reference lacks a required field.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/conventions.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/conventions.md
 
 ## `reference/formats/boolean-mask.md`
 
@@ -8126,7 +8345,7 @@ region-count mismatch, or a multi-array NPZ archive. File-system and NumPy load
 errors propagate from the underlying reader.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/boolean-mask.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/boolean-mask.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md`
 
@@ -8171,7 +8390,7 @@ Creates output files.
 Invalid choices, cardinality, or I/O fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/assembly-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md`
 
@@ -8215,7 +8434,7 @@ Output files are created by writers.
 Malformed or unreadable files fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md`
 
@@ -8255,7 +8474,7 @@ Creates one output file per motif.
 Invalid MEME/FASTA or incompatible lengths fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/motif-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md`
 
@@ -8297,7 +8516,7 @@ Creates output FASTA.
 Invalid files, arrays, or offsets fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md`
 
@@ -8337,7 +8556,7 @@ Creates requested output path.
 Mixed lengths or invalid input fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/onehot-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md
 
 ## `reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md`
 
@@ -8378,7 +8597,7 @@ Creates output NPY files.
 Wrong dimensions and malformed ranges fail.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md
 
 ## `reference/formats/cli/genomic-element-tools/bed6poly.md`
 
@@ -8448,7 +8667,7 @@ Malformed BED6, unsupported genome version, network errors, and unresolved
 variants fail under `raise`; unresolved variants are omitted under `drop`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/bed6poly/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/genomic-element-tools/bed6poly.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/genomic-element-tools/bed6poly.md
 
 ## `reference/formats/cli/genomic-element-tools/counttable.md`
 
@@ -8513,7 +8732,7 @@ Parallel-list, identifier, alignment, numeric conversion, and file errors fail
 with parser, `ValueError`, or I/O errors as applicable.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/counttable/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/genomic-element-tools/counttable.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/genomic-element-tools/counttable.md
 
 ## `reference/formats/cli/genomic-element-tools/trebed.md`
 
@@ -8582,7 +8801,7 @@ Missing files, invalid coordinates, shape mismatch, schema errors, and output
 I/O failures raise the applicable library or I/O exception.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/genomic-element-tools/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/genomic-element-tools/trebed.md
 
 ## `reference/formats/cli/genomic-element-tools/wtes.md`
 
@@ -8653,7 +8872,7 @@ unreadable inputs, and output I/O failures raise the applicable library/I/O
 exception.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/wtes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/cli/genomic-element-tools/wtes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/cli/genomic-element-tools/wtes.md
 
 ## `reference/formats/elements/annotation-arrays.md`
 
@@ -8712,7 +8931,7 @@ save writes. **Failures:** invalid dtype/shape/count/type or multi-array NPZ
 raises `ValueError`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/elements/annotation-arrays/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/elements/annotation-arrays.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/elements/annotation-arrays.md
 
 ## `reference/formats/elements/fasta.md`
 
@@ -8752,7 +8971,7 @@ indexing reads; writers create files and export refuses overwrite. **Failures:**
 missing chromosomes, malformed FASTA, and existing paths fail as stated.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/elements/fasta/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/elements/fasta.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/elements/fasta.md
 
 ## `reference/formats/foundation/bed-like.md`
 
@@ -8811,7 +9030,7 @@ Read/write operations perform file or standard-stream I/O.
 Wrong column count or unsupported type key raises `BedTableLoadException` or the caller's unsupported-type error. I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed-like/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/bed-like.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/bed-like.md
 
 ## `reference/formats/foundation/bed3.md`
 
@@ -8870,7 +9089,7 @@ Read/write operations perform file or standard-stream I/O.
 Wrong column count raises `BedTableLoadException`; I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed3/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/bed3.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/bed3.md
 
 ## `reference/formats/foundation/bed3gene.md`
 
@@ -8929,7 +9148,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed3gene/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/bed3gene.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/bed3gene.md
 
 ## `reference/formats/foundation/bed6.md`
 
@@ -8988,7 +9207,7 @@ Read/write operations perform file or standard-stream I/O.
 Wrong column count raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed6/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/bed6.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/bed6.md
 
 ## `reference/formats/foundation/bed6gene.md`
 
@@ -9047,7 +9266,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed6gene/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/bed6gene.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/bed6gene.md
 
 ## `reference/formats/foundation/bedgraph.md`
 
@@ -9106,7 +9325,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bedgraph/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/bedgraph.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/bedgraph.md
 
 ## `reference/formats/foundation/list-file.md`
 
@@ -9165,7 +9384,7 @@ File or stream I/O.
 Standard OS/IO and conversion errors propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/list-file/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/list-file.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/list-file.md
 
 ## `reference/formats/foundation/narrowpeak.md`
 
@@ -9224,7 +9443,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/narrowpeak/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/narrowpeak.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/narrowpeak.md
 
 ## `reference/formats/foundation/pair-end.md`
 
@@ -9286,7 +9505,7 @@ Loads replace rows and rebuild the inverse index; writes perform file or standar
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/pair-end/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/pair-end.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/pair-end.md
 
 ## `reference/formats/foundation/trebed.md`
 
@@ -9358,7 +9577,7 @@ Read/write operations perform file or standard-stream I/O.
 Schema mismatch raises `BedTableLoadException`; conversion and I/O failures propagate.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/foundation/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/foundation/trebed.md
 
 ## `reference/formats/gtf/gencode.md`
 
@@ -9423,7 +9642,7 @@ Invalid strand raises `RGToolsInternalException`; malformed records or
 unsupported attribute syntax may raise parsing errors.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/gtf/gencode/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/gtf/gencode.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/gtf/gencode.md
 
 ## `reference/formats/motifs/meme.md`
 
@@ -9504,7 +9723,7 @@ writes text; no mutation of source arrays. **Failures:** contextual
 `ValueError` for validation; `KeyError` for unknown names.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/motifs/meme/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/motifs/meme.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/motifs/meme.md
 
 ## `reference/formats/signal/bigwig.md`
 
@@ -9570,7 +9789,7 @@ Reading opens a pyBigWig resource and performs no file writes.
 Invalid paths, malformed files, or read failures propagate from `pyBigWig`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/signal/bigwig/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/signal/bigwig.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/signal/bigwig.md
 
 ## `reference/formats/snp/ensembl-simple-info.md`
 
@@ -9632,7 +9851,52 @@ A variation without a chromosome mapping raises an exception; HTTP failures
 propagate from `requests`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/snp/ensembl-simple-info/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/formats/snp/ensembl-simple-info.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/formats/snp/ensembl-simple-info.md
+
+## `reference/python/alphabetical-index.md`
+
+# Python API alphabetical index
+
+Every supported class, function group, module, and standalone method page appears exactly once with its canonical page.
+
+| Qualified name | Page | Status |
+| --- | --- | --- |
+| `GeneralElements.load_mask_from_arr` | [GeneralElements.load_mask_from_arr](general-elements/load-mask-from-arr/) | Supported |
+| `RGTools.BedTable.BedRegion` | [BedRegion](bedtable/bed-region/) | Supported |
+| `RGTools.BedTable.BedTable3` | [BedTable3](bedtable/bed-table3/) | Supported |
+| `RGTools.BedTable.BedTable3Plus` | [BedTable3Plus](bedtable/bed-table-plus/) | Supported |
+| `RGTools.BedTable.BedTable6` | [BedTable6](bedtable/bed-table6/) | Supported |
+| `RGTools.BedTable.BedTable6Plus` | [BedTable6Plus](bedtable/bed-table-plus/) | Supported |
+| `RGTools.BedTable.BedTableIterator` | [BedTableIterator](bedtable/iterator/) | Supported |
+| `RGTools.BedTable.BedTablePairEnd` | [BedTablePairEnd](bedtable/bed-table-pair-end/) | Experimental |
+| `RGTools.BwTrack.BaseBwTrack` | [BaseBwTrack](signal/bw-track/) | Supported |
+| `RGTools.BwTrack.PairedBwTrack` | [PairedBwTrack](signal/bw-track/) | Supported |
+| `RGTools.BwTrack.SingleBwTrack` | [SingleBwTrack](signal/bw-track/) | Supported |
+| `RGTools.exceptions` | [RGTools.exceptions](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.BedTableException` | [BedTableException](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.BedTableLoadException` | [BedTableLoadException](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.GTFHandleFilterException` | [GTFHandleFilterException](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.GTFRecordNoFeatureException` | [GTFRecordNoFeatureException](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.InvalidBedRegionException` | [InvalidBedRegionException](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.InvalidStrandnessException` | [InvalidStrandnessException](foundation/exceptions/) | Supported |
+| `RGTools.exceptions.RGToolsInternalException` | [RGToolsInternalException](foundation/exceptions/) | Supported |
+| `RGTools.ExogeneousSequences.ExogeneousSequences` | [ExogeneousSequences](elements/exogeneous-sequences/) | Supported |
+| `RGTools.GeneralElements.GeneralElements` | [GeneralElements](general-elements/general-elements/) | Supported |
+| `RGTools.GenomicElements.GenomicElements` | [GenomicElements](elements/genomic-elements/) | Supported |
+| `RGTools.GTF_utils.GTFHandle` | [GTFHandle](gtf/gtf-utils/) | Supported |
+| `RGTools.GTF_utils.GTFRecord` | [GTFRecord](gtf/gtf-utils/) | Supported |
+| `RGTools.ListFile.ListFile` | [ListFile](foundation/list-file/) | Supported |
+| `RGTools.logging.Logger` | [Logger](foundation/logger/) | Supported |
+| `RGTools.MemeMotif.MemeMotif` | [MemeMotif](motifs/meme-motif/) | Supported |
+| `RGTools.MotifGeneration` | [RGTools.MotifGeneration](motifs/motif-generation/) | Supported |
+| `RGTools.MotifGeneration.MotifExclusion` | [MotifExclusion](motifs/motif-generation/) | Supported |
+| `RGTools.MotifGeneration.SequenceGenerationExhaustedError` | [SequenceGenerationExhaustedError](motifs/motif-generation/) | Supported |
+| `RGTools.SNP_utils.EnsemblRestSearch` | [EnsemblRestSearch](snp/ensembl-rest-search/) | Supported |
+| `RGTools.TSSRelativeCoordinates` | [TSS-relative coordinates](general-elements/tss-relative-coordinates/) | Supported |
+| `RGTools.utils` | [Foundation utilities](foundation/utils/) | Supported |
+
+Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/alphabetical-index/
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/alphabetical-index.md
 
 ## `reference/python/bedtable/bed-region.md`
 
@@ -9692,7 +9956,7 @@ padded = region.pad_region(50, 50)
 - [bed3 format](../../formats/foundation/bed3.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-region/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/bedtable/bed-region.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/bedtable/bed-region.md
 
 ## `reference/python/bedtable/bed-table-pair-end.md`
 
@@ -9760,7 +10024,7 @@ pairs.load_from_file("pairs.tsv")
 - [BedTablePairEnd format](../../formats/foundation/pair-end.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table-pair-end/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/bedtable/bed-table-pair-end.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/bedtable/bed-table-pair-end.md
 
 ## `reference/python/bedtable/bed-table-plus.md`
 
@@ -9833,7 +10097,7 @@ table.load_from_file("regions.bed3gene")
 - [bed6gene format](../../formats/foundation/bed6gene.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table-plus/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/bedtable/bed-table-plus.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/bedtable/bed-table-plus.md
 
 ## `reference/python/bedtable/bed-table3.md`
 
@@ -9907,7 +10171,7 @@ print(len(table))
 - [BED-like region tables](../../formats/foundation/bed-like.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table3/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/bedtable/bed-table3.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/bedtable/bed-table3.md
 
 ## `reference/python/bedtable/bed-table6.md`
 
@@ -9966,7 +10230,7 @@ names = table.get_region_names()
 - [bed6 format](../../formats/foundation/bed6.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table6/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/bedtable/bed-table6.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/bedtable/bed-table6.md
 
 ## `reference/python/bedtable/iterator.md`
 
@@ -10016,7 +10280,7 @@ for region in table.iter_regions():
 - [BedTable3](bed-table3.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/iterator/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/bedtable/iterator.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/bedtable/iterator.md
 
 ## `reference/python/elements/exogeneous-sequences.md`
 
@@ -10131,7 +10395,7 @@ es.close()
 - [`ExogeneousSequenceTools` CLI](../../cli/exogeneous-sequence-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/exogeneous-sequences/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/elements/exogeneous-sequences.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/elements/exogeneous-sequences.md
 
 ## `reference/python/elements/genomic-elements.md`
 
@@ -10257,7 +10521,7 @@ ge.close()
 - [`GenomicElementTools mask_op intersect`](../../cli/genomic-element-tools/mask-op/intersect.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/genomic-elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/elements/genomic-elements.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/elements/genomic-elements.md
 
 ## `reference/python/elements/index.md`
 
@@ -10298,7 +10562,7 @@ class identifier remains `ExogeneousSequences` for this release.
 - [BED-like region tables](../../formats/foundation/bed-like.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/elements/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/elements/index.md
 
 ## `reference/python/foundation/exceptions.md`
 
@@ -10365,7 +10629,7 @@ except BedTableLoadException as exc:
 - [BedTable3](../bedtable/bed-table3.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/exceptions/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/foundation/exceptions.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/foundation/exceptions.md
 
 ## `reference/python/foundation/list-file.md`
 
@@ -10421,7 +10685,7 @@ print(lf.get_num_lines())
 - [ListFile format](../../formats/foundation/list-file.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/list-file/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/foundation/list-file.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/foundation/list-file.md
 
 ## `reference/python/foundation/logger.md`
 
@@ -10477,7 +10741,7 @@ log.unindent()
 N/A.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/logger/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/foundation/logger.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/foundation/logger.md
 
 ## `reference/python/foundation/utils.md`
 
@@ -10530,7 +10794,7 @@ rc = reverse_complement("ACGT")
 N/A.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/utils/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/foundation/utils.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/foundation/utils.md
 
 ## `reference/python/general-elements/general-elements.md`
 
@@ -10664,7 +10928,7 @@ ge.close()
 - [`GeneralElements.load_mask_from_arr()`](load-mask-from-arr.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/general-elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/general-elements/general-elements.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/general-elements/general-elements.md
 
 ## `reference/python/general-elements/load-mask-from-arr.md`
 
@@ -10736,7 +11000,7 @@ Raises `ValueError` when dtype is not boolean, the first dimension differs from
 the region count, or the shape is neither `(N,)` nor `(N, 1)`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/load-mask-from-arr/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/general-elements/load-mask-from-arr.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/general-elements/load-mask-from-arr.md
 
 ## `reference/python/general-elements/tss-relative-coordinates.md`
 
@@ -10842,7 +11106,7 @@ index = tss.tss_relative_to_track_index(
 - [TSS-relative mutagenesis guide](../../../guides/tss-relative-mutagenesis.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/tss-relative-coordinates/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/general-elements/tss-relative-coordinates.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/general-elements/tss-relative-coordinates.md
 
 ## `reference/python/gtf/gtf-utils.md`
 
@@ -10961,7 +11225,207 @@ for record in handle:
 - [GENCODE GTF format](../../formats/gtf/gencode.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/gtf/gtf-utils/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/gtf/gtf-utils.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/gtf/gtf-utils.md
+
+## `reference/python/index.md`
+
+# Python API grouped index
+
+Supported `RGTools` release `0.3.0a4`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
+
+## Foundation
+
+Shared exceptions, logging, utilities, and list-file helpers.
+
+### `RGTools.exceptions`
+
+- Canonical page: [`RGTools exceptions`](foundation/exceptions/)
+- Status: Supported
+- Members: `RGToolsInternalException`, `GTFHandleFilterException`, `GTFRecordNoFeatureException`, `BedTableException`, `BedTableLoadException`, `InvalidBedRegionException`, `InvalidStrandnessException`
+- Search terms: `RGTools.exceptions`
+
+### `RGTools.ListFile.ListFile`
+
+- Canonical page: [`ListFile`](foundation/list-file/)
+- Aliases: `ListFile`
+- Status: Supported
+- Members: `ListFile`, `read_file`, `write_list_to_file`, `get_contents`, `get_num_lines`
+- Search terms: `RGTools.ListFile.ListFile`, `ListFile`
+
+### `RGTools.logging.Logger`
+
+- Canonical page: [`Logger`](foundation/logger/)
+- Aliases: `Logger`
+- Status: Supported
+- Members: `Logger`, `indent`, `unindent`, `take_log`
+- Search terms: `RGTools.logging.Logger`, `Logger`
+
+### `RGTools.utils`
+
+- Canonical page: [`Foundation utilities`](foundation/utils/)
+- Aliases: `str2bool`, `str2none`, `reverse_complement`, `NumpyEncoder`
+- Status: Supported
+- Members: `str2bool`, `str2none`, `reverse_complement`, `NumpyEncoder`
+- Search terms: `RGTools.utils`, `str2bool`, `str2none`, `reverse_complement`, `NumpyEncoder`
+
+## BedTable
+
+Region records, iterators, and BED3/BED6 table implementations.
+
+### `RGTools.BedTable.BedRegion`
+
+- Canonical page: [`BedRegion`](bedtable/bed-region/)
+- Aliases: `BedRegion`
+- Status: Supported
+- Members: `BedRegion`, `to_dict`, `get_fields`, `pad_region`, `__getitem__`, `__eq__`, `__lt__`, `__le__`, `__gt__`, `__ne__`
+- Search terms: `RGTools.BedTable.BedRegion`, `BedRegion`
+
+### `RGTools.BedTable.BedTable3`
+
+- Canonical page: [`BedTable3`](bedtable/bed-table3/)
+- Aliases: `BedTable3`
+- Status: Supported
+- Members: `BedTable3`, `column_names`, `column_types`, `extra_column_names`, `extra_column_dtype`, `load_from_file`, `load_from_dataframe`, `load_from_bed_regions`, `apply_logical_filter`, `region_subset`, `to_dataframe`, `write`, `get_chrom_names`, `get_start_locs`, `get_end_locs`, `get_region_by_index`, `iter_regions`, `search_region`, `concat`, `subset_by_index`, `copy`, `__len__`
+- Search terms: `RGTools.BedTable.BedTable3`, `BedTable3`
+
+### `RGTools.BedTable.BedTable3Plus`
+
+- Canonical page: [`BedTable Plus`](bedtable/bed-table-plus/)
+- Aliases: `BedTable3Plus`, `BedTable6Plus`
+- Status: Supported
+- Members: `BedTable3Plus`, `BedTable6Plus`, `column_names`, `column_types`, `extra_column_names`, `extra_column_dtype`, `get_region_extra_column`
+- Search terms: `RGTools.BedTable.BedTable3Plus`, `BedTable3Plus`, `BedTable6Plus`
+
+### `RGTools.BedTable.BedTable6`
+
+- Canonical page: [`BedTable6`](bedtable/bed-table6/)
+- Aliases: `BedTable6`
+- Status: Supported
+- Members: `BedTable6`, `column_names`, `column_types`, `get_region_names`, `get_region_scores`, `get_region_strands`, `region_subset`, `load_from_BedTable3`
+- Search terms: `RGTools.BedTable.BedTable6`, `BedTable6`
+
+### `RGTools.BedTable.BedTableIterator`
+
+- Canonical page: [`BedTableIterator`](bedtable/iterator/)
+- Aliases: `BedTableIterator`
+- Status: Supported
+- Members: `BedTableIterator`, `__iter__`, `__next__`
+- Search terms: `RGTools.BedTable.BedTableIterator`, `BedTableIterator`
+
+### `RGTools.BedTable.BedTablePairEnd` (experimental)
+
+- Canonical page: [`BedTablePairEnd`](bedtable/bed-table-pair-end/)
+- Aliases: `BedTablePairEnd`
+- Status: Experimental
+- Members: `BedTablePairEnd`, `column_names`, `column_types`, `extra_column_names`, `extra_column_dtype`, `get_other_region_chroms`, `get_other_region_starts`, `get_other_region_ends`, `get_pair_names`, `get_pair_scores`, `get_region_strands`, `get_other_region_strands`, `get_region_extra_column`, `search_pair_extra_column`, `search_second_region`
+- Search terms: `RGTools.BedTable.BedTablePairEnd`, `BedTablePairEnd`
+
+## Element collections
+
+Abstract and concrete genomic and exogenous sequence collections.
+
+### `RGTools.ExogeneousSequences.ExogeneousSequences`
+
+- Canonical page: [`ExogeneousSequences`](elements/exogeneous-sequences/)
+- Aliases: `ExogeneousSequences`
+- Status: Supported
+- Members: `ExogeneousSequences`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_sequence_ids`, `get_region_bed_table`, `get_all_region_seqs`, `get_all_region_lens`, `apply_logical_filter`, `write_sequences_to_fasta`
+- Search terms: `RGTools.ExogeneousSequences.ExogeneousSequences`, `ExogeneousSequences`
+
+### `RGTools.GeneralElements.GeneralElements`
+
+- Canonical page: [`GeneralElements`](general-elements/general-elements/)
+- Aliases: `GeneralElements`
+- Status: Supported
+- Members: `GeneralElements`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_region_bed_table`, `get_all_region_seqs`, `close`, `get_region_seq`, `get_region_lens`, `get_all_region_one_hot`, `apply_logical_filter`, `get_num_regions`, `load_region_anno_from_npy`, `load_region_track_from_list`, `load_region_stat_from_arr`, `load_mask_from_arr`, `load_region_array_from_arr`, `get_anno_dim`, `get_anno_type`, `get_track_list`, `get_stat_arr`, `get_mask_arr`, `get_arr_anno`, `get_region_track_by_index`, `get_region_stat_by_index`, `get_region_mask_by_index`, `get_region_array_by_index`, `save_anno_npy`, `save_anno_npz`, `one_hot_encoding`
+- Search terms: `RGTools.GeneralElements.GeneralElements`, `GeneralElements`
+
+### `RGTools.GenomicElements.GenomicElements`
+
+- Canonical page: [`GenomicElements`](elements/genomic-elements/)
+- Aliases: `GenomicElements`
+- Status: Supported
+- Members: `GenomicElements`, `__init__`, `fasta_path`, `region_file_type`, `region_file_path`, `get_num_regions`, `get_region_file_suffix2class_dict`, `BedTable6Gene`, `BedTable3Gene`, `BedTableNarrowPeak`, `BedTableTREBed`, `BedTableBedGraph`, `merge_genomic_elements`, `export_exogeneous_sequences`, `get_all_region_seqs`, `get_region_bed_table`, `apply_logical_filter`
+- Search terms: `RGTools.GenomicElements.GenomicElements`, `GenomicElements`
+
+## Operations
+
+Standalone supported operations with dedicated reference pages.
+
+### `GeneralElements.load_mask_from_arr`
+
+- Canonical page: [`GeneralElements.load_mask_from_arr`](general-elements/load-mask-from-arr/)
+- Aliases: `load_mask_from_arr`
+- Status: Supported
+- Members: `load_mask_from_arr`
+- Search terms: `GeneralElements.load_mask_from_arr`, `load_mask_from_arr`
+
+### `RGTools.TSSRelativeCoordinates`
+
+- Canonical page: [`TSS-relative coordinates`](general-elements/tss-relative-coordinates/)
+- Aliases: `offset_tss_relative_coordinate`, `iter_relaxed_window`, `tss_relative_to_track_index`
+- Status: Supported
+- Members: `offset_tss_relative_coordinate`, `iter_relaxed_window`, `tss_relative_to_track_index`
+- Search terms: `RGTools.TSSRelativeCoordinates`, `offset_tss_relative_coordinate`, `iter_relaxed_window`, `tss_relative_to_track_index`
+
+## Motifs
+
+MEME motif collections and synthetic sequence generation.
+
+### `RGTools.MemeMotif.MemeMotif`
+
+- Canonical page: [`MemeMotif`](motifs/meme-motif/)
+- Aliases: `MemeMotif`
+- Status: Supported
+- Members: `MemeMotif`, `__init__`, `write_meme_file`, `clone_empty`, `get_meme_version`, `set_meme_version`, `get_alphabet`, `set_alphabet`, `get_strands`, `set_strands`, `get_bg_freq`, `set_bg_freq`, `get_motif_list`, `get_motif_pwm`, `get_motif_alphabet_length`, `get_motif_length`, `get_motif_num_source_sites`, `get_motif_source_eval`, `add_motif`, `calculate_pwm_score`, `search_one_motif`
+- Search terms: `RGTools.MemeMotif.MemeMotif`, `MemeMotif`
+
+### `RGTools.MotifGeneration`
+
+- Canonical page: [`Motif generation`](motifs/motif-generation/)
+- Aliases: `MotifGeneration`
+- Status: Supported
+- Members: `MotifExclusion`, `SequenceGenerationExhaustedError`, `parse_motif_exclusion`, `parse_motif_exclusions`, `validate_motif_exclusions`, `candidate_violates_exclusions`, `make_anti_motifs`, `iter_pwm_sequences`, `iter_random_sequences`, `iter_barcodes`
+- Search terms: `RGTools.MotifGeneration`, `MotifGeneration`
+
+## BigWig signal
+
+BigWig signal quantification helpers.
+
+### `RGTools.BwTrack.BaseBwTrack`
+
+- Canonical page: [`BigWig signal tracks`](signal/bw-track/)
+- Aliases: `BaseBwTrack`, `SingleBwTrack`, `PairedBwTrack`
+- Status: Supported
+- Members: `BaseBwTrack`, `quantify_signal`, `get_supported_quantification_type`, `count_single_region`, `SingleBwTrack`, `PairedBwTrack`
+- Search terms: `RGTools.BwTrack.BaseBwTrack`, `BaseBwTrack`, `SingleBwTrack`, `PairedBwTrack`
+
+## GENCODE GTF
+
+Streaming GTF record and handle utilities.
+
+### `RGTools.GTF_utils`
+
+- Canonical page: [`GENCODE GTF streaming`](gtf/gtf-utils/)
+- Aliases: `GTFRecord`, `GTFHandle`
+- Status: Supported
+- Members: `GTFRecord`, `search_general_info`, `search_add_info`, `GTFHandle`, `__init__`, `__iter__`, `__next__`, `filter_by_general_record`, `filter_by_add_record`, `get_comments`, `count_total`, `filter_check`
+- Search terms: `RGTools.GTF_utils`, `GTFRecord`, `GTFHandle`
+
+## Ensembl SNP
+
+Ensembl REST rsID lookup helpers.
+
+### `RGTools.SNP_utils.EnsemblRestSearch`
+
+- Canonical page: [`EnsemblRestSearch`](snp/ensembl-rest-search/)
+- Aliases: `EnsemblRestSearch`
+- Status: Supported
+- Members: `EnsemblRestSearch`, `__init__`, `genome_version2url_dict`, `get_rsid_from_location`, `get_rsid_snp_simple_info`, `prioritize_rsids`
+- Search terms: `RGTools.SNP_utils.EnsemblRestSearch`, `EnsemblRestSearch`
+
+Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/index.md
 
 ## `reference/python/motifs/meme-motif.md`
 
@@ -11082,7 +11546,7 @@ score = MemeMotif.calculate_pwm_score("ACGT", meme.get_motif_pwm("M1"))
 - [`MotifTools` CLI](../../cli/motif-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/motifs/meme-motif/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/motifs/meme-motif.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/motifs/meme-motif.md
 
 ## `reference/python/motifs/motif-generation.md`
 
@@ -11211,7 +11675,7 @@ first = next(iter_pwm_sequences(meme, meme.get_motif_list()[0], 1, seed=0))
 - [`MotifTools` CLI](../../cli/motif-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/motifs/motif-generation/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/motifs/motif-generation.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/motifs/motif-generation.md
 
 ## `reference/python/signal/bw-track.md`
 
@@ -11339,7 +11803,7 @@ value = track.count_single_region("chr1", 1000, 2000)
 - [BigWig signal format](../../formats/signal/bigwig.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/signal/bw-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/signal/bw-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/signal/bw-track.md
 
 ## `reference/python/snp/ensembl-rest-search.md`
 
@@ -11444,4 +11908,4 @@ client = EnsemblRestSearch(genome_version="hg38")
 - [Ensembl SNP simple-info format](../../formats/snp/ensembl-simple-info.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/snp/ensembl-rest-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/1e26569ee2667b3761e69a0cd4e0bf5a15d5d611/docs/reference/python/snp/ensembl-rest-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/820b24869e69a8a57ae00638ddc263165c50b555/docs/reference/python/snp/ensembl-rest-search.md

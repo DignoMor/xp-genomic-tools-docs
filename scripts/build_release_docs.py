@@ -19,7 +19,13 @@ SCRIPTS_ROOT = DOCS_ROOT / "scripts"
 if str(SCRIPTS_ROOT) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_ROOT))
 
-from cli_page_registry import ALL_TOOLS, REDIRECTS  # noqa: E402
+from cli_inventory import (  # noqa: E402
+    load_tool_inventory,
+    validate_built_tool_landing,
+    validate_genomic_element_tools_inventory,
+    validate_tool_inventory,
+)
+from cli_page_registry import ALL_TOOLS, GENOMIC_ELEMENT_TOOLS, REDIRECTS  # noqa: E402
 from python_api_inventory import (  # noqa: E402
     inventory_entries,
     load_inventory,
@@ -883,6 +889,10 @@ def _validate_built_artifact(
                 )
 
     validate_built_python_api(site_dir, _load_python_inventory())
+    validate_genomic_element_tools_inventory()
+    validate_built_tool_landing(
+        site_dir, GENOMIC_ELEMENT_TOOLS, load_tool_inventory(GENOMIC_ELEMENT_TOOLS)
+    )
 
 
 def main() -> None:
@@ -927,6 +937,7 @@ def main() -> None:
     validate_inventory_schema(python_inventory)
     validate_inventory_sources(python_inventory)
     write_generated_indexes(python_inventory)
+    validate_genomic_element_tools_inventory()
     _validate_source_contracts()
     _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)
     regenerate_cli_reference()
