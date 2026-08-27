@@ -64,6 +64,7 @@ nav:
       - CLI quickstart: get-started/cli-quickstart.md
   - Concepts: concepts.md
   - How-to guides:
+      - Genomic elements workflow: guides/genomic-elements.md
       - TSS-relative mutagenesis: guides/tss-relative-mutagenesis.md
   - Formats: formats.md
   - CLI:

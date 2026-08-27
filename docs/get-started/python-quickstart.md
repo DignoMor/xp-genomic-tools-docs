@@ -76,3 +76,4 @@ described in the [CLI quickstart](cli-quickstart.md). Narrative docs use
 - [CLI quickstart](cli-quickstart.md) for the companion command-line path
 - [Concepts: genomic elements vs exogenous sequences](../concepts.md#genomic-elements-vs-exogenous-sequences)
 - [`GenomicElements` reference](../reference/python/elements/genomic-elements.md)
+- [Genomic elements how-to guide](../guides/genomic-elements.md)
