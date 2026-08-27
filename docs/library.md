@@ -55,11 +55,11 @@ For most users, the console scripts are enough.
 
 ### Element collections
 
-- [GeneralElements, GenomicElements, and ExogeneousSequences](reference/python/elements/index.md)
+- [Element collections overview](reference/python/elements/index.md)
+- [`GeneralElements`](reference/python/general-elements/general-elements.md)
 - [`GenomicElements`](reference/python/elements/genomic-elements.md)
-
-Operations such as `GeneralElements.load_mask_from_arr` are documented on the
-element-collection class page above.
+- [`ExogeneousSequences`](reference/python/elements/exogeneous-sequences.md)
+    - [`GeneralElements.load_mask_from_arr`](reference/python/general-elements/load-mask-from-arr.md)
 
 ### Foundation
 

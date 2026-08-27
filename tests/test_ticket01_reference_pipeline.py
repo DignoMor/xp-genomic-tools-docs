@@ -17,8 +17,11 @@ from release_test_helpers import preserve_agent_resources, stage_docs_revision
 
 DOCS_ROOT = Path(__file__).resolve().parents[1]
 CODE_ROOT = DOCS_ROOT.parent / "code"
-INVENTORY = DOCS_ROOT / "docs/reference/python/elements/inventory.json"
+INVENTORY = DOCS_ROOT / "docs/reference/python/inventory.json"
 GENOMIC_ELEMENTS_PAGE = DOCS_ROOT / "docs/reference/python/elements/genomic-elements.md"
+AUTHORED_MASK_INTERSECT = (
+    DOCS_ROOT / "docs/reference/cli/authored/genomic-element-tools/mask-op/intersect.md"
+)
 MKDOCS_CONFIG = DOCS_ROOT / "mkdocs.yml"
 BUILD_SCRIPT = DOCS_ROOT / "scripts/build_release_docs.py"
 TARGET_RELEASE = "0.3.0a4"
@@ -66,6 +69,10 @@ EXCLUDED_INTERNAL_MARKERS = (
 
 REDIRECT_SOURCE = "reference/cli/generated/genomic-element-tools"
 REDIRECT_TARGET = "reference/cli/genomic-element-tools/"
+MASK_REDIRECT_SOURCE = "reference/cli/mask-op-intersect"
+MASK_CANONICAL = "reference/cli/genomic-element-tools/mask-op/intersect"
+MASK_REDIRECT_SOURCE = "reference/cli/mask-op-intersect"
+MASK_CANONICAL = "reference/cli/genomic-element-tools/mask-op/intersect"
 
 
 class Ticket01ReferencePipelineTest(unittest.TestCase):
@@ -105,7 +112,15 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
 
     def test_genomic_elements_page_exists_with_curated_members(self) -> None:
         inventory = json.loads(INVENTORY.read_text())
-        genomic_members = inventory["classes"]["GenomicElements"]
+        genomic_members = [
+            symbol
+            for symbol in next(
+                page["symbols"]
+                for page in inventory["pages"]
+                if page["path"] == "reference/python/elements/genomic-elements"
+            )
+            if symbol != "GenomicElements"
+        ]
         self.assertEqual(set(genomic_members), set(CURATED_GENOMIC_ELEMENTS_MEMBERS))
         self.assertTrue(GENOMIC_ELEMENTS_PAGE.is_file())
 
@@ -146,7 +161,10 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
             completed = self._run_release_build(directory)
             self.assertEqual(completed.returncode, 0, completed.stderr)
             rendered = html.unescape(
-                (Path(directory) / "reference/cli/mask-op-intersect/index.html").read_text()
+                (
+                    Path(directory)
+                    / "reference/cli/mask-op-intersect/index.html"
+                ).read_text()
             )
             self.assertIn("Example", rendered)
             self.assertIn("mask_op intersect", rendered)
@@ -179,26 +197,34 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
         self.assertIn("GenomicElements", completed.stderr)
 
     def test_release_rejects_missing_mask_example_section(self) -> None:
-        original = BUILD_SCRIPT.read_text()
+        original = AUTHORED_MASK_INTERSECT.read_text()
+        if "## Example\n" not in original:
+            original = original.replace("## Examples removed\n", "## Example\n", 1)
         patched = original.replace("## Example\n", "## Examples removed\n", 1)
         self.assertNotEqual(original, patched)
         try:
-            BUILD_SCRIPT.write_text(patched)
+            AUTHORED_MASK_INTERSECT.write_text(patched)
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:
-            BUILD_SCRIPT.write_text(original)
+            AUTHORED_MASK_INTERSECT.write_text(original)
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("Example", completed.stderr)
 
     def test_release_rejects_missing_redirect_mapping(self) -> None:
         original = MKDOCS_CONFIG.read_text()
-        redirect_line = (
-            f"        {REDIRECT_SOURCE}.md: {REDIRECT_TARGET}index.md\n"
+        redirect_lines = (
+            f"        {REDIRECT_SOURCE}.md: {REDIRECT_TARGET}index.md\n",
+            "        reference/cli/mask-op-intersect.md: "
+            "reference/cli/genomic-element-tools/mask-op/intersect.md\n",
         )
-        self.assertIn(redirect_line, original)
+        for redirect_line in redirect_lines:
+            self.assertIn(redirect_line, original)
         try:
-            MKDOCS_CONFIG.write_text(original.replace(redirect_line, ""))
+            patched = original
+            for redirect_line in redirect_lines:
+                patched = patched.replace(redirect_line, "")
+            MKDOCS_CONFIG.write_text(patched)
             with tempfile.TemporaryDirectory() as directory:
                 completed = self._run_release_build(directory)
         finally:

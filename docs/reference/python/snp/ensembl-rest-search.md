@@ -1,49 +1,60 @@
 # `EnsemblRestSearch`
 
+## Status
+
+Supported for the current reference release. This client depends on the Ensembl
+REST service; documentation builds do not perform live network requests.
+
 ## Purpose
 
 Query Ensembl variation records and choose SNP-like variants at genomic
-locations.
+locations. Returned dictionaries follow the
+[Ensembl SNP simple-info profile](../../formats/snp/ensembl-simple-info.md).
 
-The returned dictionary follows the [Ensembl SNP simple-info profile](../../formats/snp/ensembl-simple-info.md).
+## Canonical import
 
-## Availability
+```python
+from RGTools.SNP_utils import EnsemblRestSearch
+```
 
-Supported in release `0.1.0a2` as `RGTools.SNP_utils.EnsemblRestSearch`; it is
-also available from the `RGTools.SNP_utils` module. This API depends on the
-Ensembl REST service.
+## Signature
 
-## Inputs
+Supported public members rendered from the aligned release source. Internal
+underscore-prefixed helpers are excluded from this page:
+
+::: RGTools.SNP_utils.EnsemblRestSearch
+    options:
+      members:
+        - __init__
+        - genome_version2url_dict
+        - get_rsid_from_location
+        - get_rsid_snp_simple_info
+        - prioritize_rsids
+      show_root_heading: true
+      show_source: false
+      heading_level: 4
+      inherited_members: false
+      filters:
+        - "!^_"
+
+## Parameters
 
 `EnsemblRestSearch(genome_version="hg38", species="human")` configures the
 service. `get_rsid_from_location(chrom, pos)` takes a chromosome and a
-zero-based position. `get_rsid_snp_simple_info(rsid)` and
-`prioritize_rsids(rsids)` take rsID strings or an iterable of them.
+zero-based position. `get_rsid_snp_simple_info(rsid)` and `prioritize_rsids(rsids)`
+take rsID strings or an iterable of them.
 
-## Types
+## Return or yield behavior
 
-Genome version, species, chromosome, and rsID are strings; `pos` is an int.
-Simple-info results are dictionaries with string `chrom`/`bases` and integer
-`start`/`end`. `prioritize_rsids` returns `(rsid, info)` or `(None, None)`.
+`get_rsid_from_location` returns a list of rsID strings.
+`get_rsid_snp_simple_info` returns a dictionary with `chrom`, `start`, `end`,
+and `bases`. `prioritize_rsids` returns `(rsid, info)` or `(None, None)`.
+`genome_version2url_dict` returns the supported alias-to-base-URL mapping.
 
-## Shapes
+## Raised exceptions
 
-Location lookup returns a list of rsID strings. A simple-info dictionary has
-exactly the fields `chrom`, `start`, `end`, and `bases`.
-
-## Dtypes
-
-Inapplicable: values are Python strings, integers, lists, and dictionaries.
-
-## Defaults
-
-`genome_version="hg38"` and `species="human"`. `hg38`/`GRCh38` use
-`https://rest.ensembl.org`; `hg19`/`GRCh37` use
-`https://grch37.rest.ensembl.org`.
-
-## Choices
-
-Supported genome aliases are `hg38`, `GRCh38`, `hg19`, and `GRCh37`.
+Unsupported genome versions and missing chromosome mappings raise an exception.
+HTTP failures propagate through `requests` `raise_for_status`.
 
 ## Constraints
 
@@ -54,13 +65,6 @@ simple info converts to UCSC `chr` plus BED 0-based half-open coordinates.
 single-base alleles and selects the greatest allele count (ties retain input
 order).
 
-## Outputs
-
-`get_rsid_from_location` returns only variants whose Ensembl `start` and `end`
-equal the queried one-based position. `get_rsid_snp_simple_info` returns
-`{"chrom": "chr...", "start": int, "end": int, "bases": "A/G"}`.
-`prioritize_rsids` returns the selected rsID and its simple-info dictionary.
-
 ## Ordering
 
 Location results retain Ensembl response order. Prioritization retains input
@@ -68,38 +72,28 @@ order for equal allele counts.
 
 ## Side effects
 
-Each operation issues an HTTP GET with an `application/json` content header;
-there is no cache or offline database. `EnsemblRestSearch.genome_version2url_dict`
-is a read-only property returning the supported alias-to-base-URL mapping.
+Each operation issues an HTTP GET with an `application/json` content header.
+There is no cache or offline database.
 
-## Failures
+## Lifecycle behavior
 
-Unsupported genome versions and missing chromosome mappings raise an exception.
-HTTP failures propagate through `requests` `raise_for_status`. Network access
-is therefore required; documentation and deterministic tests do not make live
-requests.
+Stateless beyond stored server URL and species string. Each call performs its
+own HTTP request.
 
-## EnsemblRestSearch constructor
+## Supported protocols and inheritance
 
-`EnsemblRestSearch(genome_version="hg38", species="human")` stores the
-selected REST server and species.
+Standard Python object. No supported inheritance hierarchy.
 
-## `EnsemblRestSearch.genome_version2url_dict`
+## Example
 
-Property returning the four supported genome-version aliases and their REST
-base URLs.
+```python
+from RGTools.SNP_utils import EnsemblRestSearch
 
-## `EnsemblRestSearch.get_rsid_from_location`
+client = EnsemblRestSearch(genome_version="hg38")
+# Live network required at runtime:
+# rsids = client.get_rsid_from_location("chr1", 100000)
+```
 
-Queries `/overlap/region/{species}/{chrom}:{pos+1}-{pos+1}?feature=variation`
-and filters the response to exact single-base spans.
+## Related formats or commands
 
-## `EnsemblRestSearch.get_rsid_snp_simple_info`
-
-Fetches a variation record, selects its chromosome mapping, and converts its
-coordinates into the library's simple-info BED schema.
-
-## `EnsemblRestSearch.prioritize_rsids`
-
-Fetches each candidate, excludes non-SNP-like variants, and returns the
-remaining candidate with the most alternate alleles.
+- [Ensembl SNP simple-info format](../../formats/snp/ensembl-simple-info.md)

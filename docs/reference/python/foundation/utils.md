@@ -1,53 +1,47 @@
 # `RGTools.utils`
-
+## Status
+Supported for the current reference release.
 ## Purpose
-
 Expose string conversion, reverse-complement, and JSON encoding helpers.
-
-## Availability
-
-Supported in release `0.1.0a2`; canonical imports are `RGTools.utils.str2bool`, `str2none`, `reverse_complement`, and `NumpyEncoder`.
-
-## Inputs
-
+## Canonical import
+```python
+from RGTools.utils import str2bool, str2none, reverse_complement, NumpyEncoder
+```
+## Signature
+::: RGTools.utils
+    options:
+      members:
+        - str2bool
+        - str2none
+        - reverse_complement
+        - NumpyEncoder
+      show_root_heading: true
+      show_source: false
+      heading_level: 4
+      inherited_members: false
+      filters:
+        - "!^_" 
+## Parameters
 `str2bool(value)`, `str2none(value)`, `reverse_complement(seq, mapping=...)`, and `NumpyEncoder` for `json.dumps(..., cls=NumpyEncoder)`.
-
-## Types
-
-`str2bool` returns bool; `str2none` returns `None` or the original string. Reverse complement accepts an iterable of mapped bases. `NumpyEncoder` handles arrays and NumPy scalar values.
-
-## Shapes
-
-Reverse-complement output has the same length as input. Arrays encode as JSON lists.
-
-## Dtypes
-
-NumPy scalars encode as Python floats; NumPy arrays encode elementwise as lists.
-
-## Defaults
-
-The reverse-complement map covers A/T/C/G/N in upper and lower case.
-
-## Choices
-
-`str2bool` treats empty, `FALSE`, and `None` tokens case-insensitively as false; all other tokens are true. `str2none` maps `NONE` case-insensitively to `None`.
-
+## Return or yield behavior
+`str2bool` returns bool; `str2none` returns `None` or the original string. Reverse complement returns a sequence of the same length. `NumpyEncoder` encodes arrays and NumPy scalars for JSON.
+## Raised exceptions
+Unknown reverse-complement symbols raise `KeyError`. JSON unsupported values retain standard encoder failures.
 ## Constraints
-
-Every reverse-complement symbol must occur in the supplied/default map.
-
-## Outputs
-
-Converted scalar, string/sequence, or JSON-compatible value.
-
+`str2bool` treats empty, `FALSE`, and `None` tokens case-insensitively as false. `str2none` maps `NONE` case-insensitively to `None`. Every reverse-complement symbol must occur in the supplied or default map.
 ## Ordering
-
 Reverse complement reverses sequence order before mapping.
-
 ## Side effects
-
 None.
+## Lifecycle behavior
+N/A.
+## Supported protocols and inheritance
+`NumpyEncoder` subclasses `json.JSONEncoder`.
+## Example
+```python
+from RGTools.utils import reverse_complement
 
-## Failures
-
-Unknown reverse-complement symbols raise `KeyError`; JSON unsupported values retain standard encoder failures.
+rc = reverse_complement("ACGT")
+```
+## Related formats or commands
+N/A.

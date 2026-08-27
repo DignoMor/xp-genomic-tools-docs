@@ -48,6 +48,7 @@ API_SEMANTIC_FIELDS = (
     "Related formats or commands",
 )
 GENOMIC_ELEMENTS_PATH = "reference/python/elements/genomic-elements"
+PYTHON_INVENTORY = DOCS_ROOT / "docs/reference/python/inventory.json"
 REDIRECTS = {
     "reference/cli/generated/genomic-element-tools.md": (
         "reference/cli/genomic-element-tools/index.md"
@@ -205,41 +206,41 @@ def _site_path(path: str) -> str:
     return clean + "/index.html"
 
 
+def _load_python_inventory() -> dict[str, Any]:
+    return json.loads(PYTHON_INVENTORY.read_text())
+
+
 def _load_inventories() -> list[dict[str, Any]]:
-    inventories = [
-        DOCS_ROOT / "docs/reference/python/elements/inventory.json",
-        DOCS_ROOT / "docs/reference/foundation-bedtable-inventory.json",
-        DOCS_ROOT / "tests/ticket04_reference_inventory.json",
+    format_paths = {
+        "fasta": "reference/formats/elements/fasta",
+        "annotation-arrays": "reference/formats/elements/annotation-arrays",
+        "meme": "reference/formats/motifs/meme",
+    }
+    entries: list[dict[str, Any]] = []
+    python_payload = _load_python_inventory()
+    for page in python_payload.get("pages", []):
+        entry: dict[str, Any] = {
+            "path": page["path"],
+            "symbols": page.get("symbols", []),
+            "required_fields": API_SEMANTIC_FIELDS,
+        }
+        if "format" in page:
+            entry["format"] = page["format"]
+        entries.append(entry)
+    for format_name in python_payload.get("formats", []):
+        if format_name in format_paths:
+            entries.append({"path": format_paths[format_name], "symbols": [format_name]})
+    for inventory_path in (
         DOCS_ROOT / "tests/ticket05_reference_inventory.json",
         DOCS_ROOT / "tests/ticket06_reference_inventory.json",
         DOCS_ROOT / "tests/ticket07_motif_tools_reference_inventory.json",
-    ]
-    entries: list[dict[str, Any]] = []
-    for inventory_path in inventories:
+    ):
         payload = json.loads(inventory_path.read_text())
-        entries.extend(payload.get("entries", []))
-        for format_name in payload.get("formats", []):
-            format_paths = {
-                "fasta": "reference/formats/elements/fasta",
-                "annotation-arrays": "reference/formats/elements/annotation-arrays",
-                "meme": "reference/formats/motifs/meme",
-            }
-            if format_name in format_paths:
-                entries.append({"path": format_paths[format_name], "symbols": [format_name]})
-        for qualified_name, members in payload.get("classes", {}).items():
-            if qualified_name == "MemeMotif":
-                class_path = "reference/python/motifs/meme-motif"
-            elif qualified_name == "GenomicElements":
-                class_path = GENOMIC_ELEMENTS_PATH
-            else:
-                class_path = "reference/python/elements/index"
-            entry: dict[str, Any] = {
-                "path": class_path,
-                "symbols": [qualified_name, *members],
-            }
-            if qualified_name == "GenomicElements":
-                entry["required_fields"] = API_SEMANTIC_FIELDS
-            entries.append(entry)
+        entries.extend(
+            entry
+            for entry in payload.get("entries", [])
+            if not str(entry.get("path", "")).startswith("reference/python/")
+        )
     return entries
 
 
@@ -631,10 +632,8 @@ def _validate_built_artifact(
         raise RuntimeError(
             f"Built GenomicElements page lacks semantic sections: {missing_api}"
         )
-    for internal in (
-        "set_parser_genome",
-        "set_parser_genomic_element_region",
-    ):
+    internal_symbols = _load_python_inventory().get("internal_symbols", [])
+    for internal in internal_symbols:
         if internal in genomic_text:
             raise RuntimeError(
                 f"GenomicElements page exposes internal member {internal!r}"
@@ -729,6 +728,18 @@ def _validate_built_artifact(
         content = path.read_text()
         if PRIVATE_MARKERS.search(content):
             raise RuntimeError(f"Private specification material leaked into {path}")
+        for internal in internal_symbols:
+            if internal in content:
+                raise RuntimeError(
+                    f"Built page {path} exposes internal symbol {internal!r}"
+                )
+    for agent_path in (llms_path, full_path):
+        agent_content = agent_path.read_text()
+        for internal in internal_symbols:
+            if internal in agent_content:
+                raise RuntimeError(
+                    f"Agent surface {agent_path} exposes internal symbol {internal!r}"
+                )
 
 
 def main() -> None:

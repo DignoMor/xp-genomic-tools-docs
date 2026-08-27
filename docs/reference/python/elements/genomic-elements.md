@@ -100,7 +100,7 @@ annotation load/save/getters, `apply_logical_filter`, `close`, and
 `one_hot_encoding`. Parser assembly helpers and underscore-prefixed internals
 are not part of the supported public surface.
 
-## Example
+## Example removed
 
 ```python
 from RGTools import GenomicElements
@@ -117,4 +117,4 @@ ge.close()
 - [FASTA region sequences](../../formats/elements/fasta.md)
 - [BED-like region tables](../../formats/foundation/bed-like.md)
 - [Annotation arrays](../../formats/elements/annotation-arrays.md)
-- [`GenomicElementTools mask_op intersect`](../../cli/mask-op-intersect.md)
+- [`GenomicElementTools mask_op intersect`](../../cli/genomic-element-tools/mask-op/intersect.md)

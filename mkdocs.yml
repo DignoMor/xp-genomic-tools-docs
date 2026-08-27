@@ -4,6 +4,10 @@ site_url: https://dignomor.github.io/xp-genomic-tools-docs/
 repo_url: https://github.com/DignoMor/xp-genomic-tools
 repo_name: DignoMor/xp-genomic-tools
 
+exclude_docs: |
+  reference/cli/authored/
+  reference/cli/fragments/
+
 theme:
   name: material
   palette:
@@ -47,6 +51,7 @@ plugins:
   - redirects:
       redirect_maps:
         reference/cli/generated/genomic-element-tools.md: reference/cli/genomic-element-tools/index.md
+        reference/cli/mask-op-intersect.md: reference/cli/genomic-element-tools/mask-op/intersect.md
 
 nav:
   - Home: index.md
@@ -66,7 +71,9 @@ nav:
       - Python:
           - Element collections:
               - Overview: reference/python/elements/index.md
+              - GeneralElements: reference/python/general-elements/general-elements.md
               - GenomicElements: reference/python/elements/genomic-elements.md
+              - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
           - Operations:
               - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
           - MemeMotif: reference/python/motifs/meme-motif.md

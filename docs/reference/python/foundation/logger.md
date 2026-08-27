@@ -1,53 +1,50 @@
-# `RGTools.logging.Logger`
-
+# `Logger`
+## Status
+Supported for the current reference release.
 ## Purpose
-
 Provide small indentation-aware logging to stderr, stdout, or an append-only path.
-
-## Availability
-
-Supported in release `0.1.0a2`; canonical import is `RGTools.logging.Logger`.
-
-## Inputs
-
-`Logger(opath="stderr", indent_level=0, indentation="\t")`; `opath` is `stderr`, `stdout`, or a filesystem path. `take_log(message)` accepts a string-like message.
-
-## Types
-
-`indent_level` is an integer and `indentation` is a string.
-
-## Shapes
-
-Not applicable.
-
-## Dtypes
-
-Not applicable.
-
-## Defaults
-
-Output is stderr, level is zero, and one tab is used per level.
-
-## Choices
-
-Output targets are `stderr`, `stdout`, or a path.
-
+## Canonical import
+```python
+from RGTools.logging import Logger
+```
+## Signature
+::: RGTools.logging.Logger
+    options:
+      members:
+        - __init__
+        - indent
+        - unindent
+        - take_log
+      show_root_heading: true
+      show_source: false
+      heading_level: 4
+      inherited_members: false
+      filters:
+        - "!^_" 
+## Parameters
+`Logger(opath="stderr", indent_level=0, indentation="\t")`; `take_log(message)` accepts a string-like message.
+## Return or yield behavior
+`indent` and `unindent` return `None`. `take_log` returns `None` after writing one newline-terminated record.
+## Raised exceptions
+`unindent` at level zero raises `ValueError`. Filesystem failures propagate.
 ## Constraints
-
-`unindent` may not reduce the level below zero.
-
-## Outputs
-
-`take_log` returns `None` and writes one newline-terminated record.
-
+`opath` must be `stderr`, `stdout`, or a filesystem path. `unindent` may not reduce the level below zero.
 ## Ordering
-
 Records are emitted in call order, prefixed with `indentation * indent_level`.
-
 ## Side effects
+Stream output is written immediately; path output opens in append mode per `take_log` call.
+## Lifecycle behavior
+No explicit close; path mode opens and closes the file on each write.
+## Supported protocols and inheritance
+Standard Python object; not iterable or context-managed by the library.
+## Example
+```python
+from RGTools.logging import Logger
 
-Stream output is written immediately; path output is opened in append mode per call.
-
-## Failures
-
-`unindent` at level zero raises `ValueError`; filesystem failures propagate.
+log = Logger(opath="stderr")
+log.indent()
+log.take_log("loading regions")
+log.unindent()
+```
+## Related formats or commands
+N/A.
