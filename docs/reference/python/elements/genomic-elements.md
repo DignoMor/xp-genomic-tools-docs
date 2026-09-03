@@ -74,8 +74,9 @@ propagate from underlying tables.
 
 Region rows and every loaded annotation share first-dimension alignment. Merge
 requires matching region type and FASTA path. `export_exogenous_sequences`
-refuses an existing output path and validates the complete region collection
-against the genome before publishing any FASTA.
+accepts optional `output_orientation` (`genomic`/`strand`) and `record_id`
+(`coordinate`/`name`), refuses an existing output path, and validates the
+complete region collection against the genome before publishing any FASTA.
 
 ## Ordering
 

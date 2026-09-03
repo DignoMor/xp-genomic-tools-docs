@@ -41,9 +41,12 @@ Genome FASTA, exogenous FASTA, or exported-region FASTA profiles.
 ## Constraints
 
 Genome record IDs must match `chrom` exactly. Annotation row `i` aligns with
-FASTA record `i`. Genomic export uses `chrom:start-end` headers and refuses
-overwrite of an existing path. Every exported genomic interval must satisfy
-BED half-open containment `0 <= start < end <= chromosome_length`.
+FASTA record `i`. Genomic export defaults to `chrom:start-end` headers and may
+optionally use row-level names; selected IDs must be unique. Sequences default
+to genomic-forward orientation and may optionally use region-strand orientation
+when the region schema exposes strand. Export refuses overwrite of an existing
+path. Every exported genomic interval must satisfy BED half-open containment
+`0 <= start < end <= chromosome_length`.
 
 ## Outputs
 
