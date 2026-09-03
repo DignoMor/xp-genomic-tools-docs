@@ -65,14 +65,17 @@ views as documented on each member below and on
 ## Raised exceptions
 
 Invalid `region_file_type` raises `ValueError` during construction. Missing
-chromosomes, incompatible merge inputs, and annotation alignment failures raise
-`ValueError`. Index errors propagate from underlying tables.
+chromosomes, intervals that are not fully contained in their chromosome
+(`start < 0`, `start >= end`, or `end` beyond chromosome length), incompatible
+merge inputs, and annotation alignment failures raise `ValueError`. Index errors
+propagate from underlying tables.
 
 ## Constraints
 
 Region rows and every loaded annotation share first-dimension alignment. Merge
 requires matching region type and FASTA path. `export_exogenous_sequences`
-refuses an existing output path.
+refuses an existing output path and validates the complete region collection
+against the genome before publishing any FASTA.
 
 ## Ordering
 

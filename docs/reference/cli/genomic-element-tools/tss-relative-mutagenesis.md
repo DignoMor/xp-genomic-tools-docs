@@ -181,6 +181,7 @@ GenomicElementTools tss_relative_mutagenesis \
   --region_file_type TREbed \
   --fasta_path genome.fa \
   --round_manifest rounds.tsv \
+  --output_orientation strand \
   --output_dir mutagenesis-out
 ```
 
@@ -188,7 +189,10 @@ The manifest header must be `round_id`, `coordinate_stat`, `target_fasta`,
 `strand`; see the [TSS-relative mutagenesis
 workflow](../../../guides/tss-relative-mutagenesis.md) for a full bundle layout
 and upstream [`select_tss_relative_track`](select-tss-relative-track.md) /
-[`mask_op intersect`](mask-op/intersect.md) composition.
+[`mask_op intersect`](mask-op/intersect.md) composition. Use
+`--output_orientation strand` when downstream reporter workflows need complete
+final sequences in transcriptional orientation; omit it or pass `genomic` to
+keep genomic-forward FASTA output.
 
 ## Syntax
 

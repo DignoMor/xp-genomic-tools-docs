@@ -42,7 +42,8 @@ Genome FASTA, exogenous FASTA, or exported-region FASTA profiles.
 
 Genome record IDs must match `chrom` exactly. Annotation row `i` aligns with
 FASTA record `i`. Genomic export uses `chrom:start-end` headers and refuses
-overwrite of an existing path.
+overwrite of an existing path. Every exported genomic interval must satisfy
+BED half-open containment `0 <= start < end <= chromosome_length`.
 
 ## Outputs
 
@@ -54,13 +55,15 @@ Source FASTA order; region-table order for genomic extraction.
 
 ## Side effects
 
-Indexing reads FASTA; writers create files; export refuses existing destinations.
+Indexing reads FASTA; writers create files; export refuses existing destinations
+and does not create or replace a destination when any interval fails validation.
 
 ## Failures
 
 Missing chromosomes return `None` for single-region getters and raise during bulk
-extraction or export. Malformed FASTA and existing export paths fail as stated
-in the governing APIs.
+extraction or export. Genomic export also raises when an interval has
+`start < 0`, `start >= end`, or `end` beyond the chromosome length. Malformed
+FASTA and existing export paths fail as stated in the governing APIs.
 
 ## Genome FASTA profile
 

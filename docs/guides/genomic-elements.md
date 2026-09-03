@@ -61,7 +61,9 @@ and inherited annotation getters documented on
 Call [`export_exogenous_sequences()`](../reference/python/elements/genomic-elements.md)
 to write region sequences as FASTA using the
 [`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
-contract:
+contract. Export validates that every interval is fully contained in its
+chromosome before writing; out-of-bounds or missing-chromosome rows raise
+`ValueError` and leave the destination untouched:
 
 ```python
 ge = GenomicElements(

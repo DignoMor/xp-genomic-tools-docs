@@ -11,8 +11,9 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 Requires genome FASTA plus GE regions and `--opath`; writes region sequences as
 FASTA using the [FASTA profile](../../../formats/elements/fasta.md). IDs and order
-follow the ExogenousSequences contract; missing records or invalid intervals
-fail.
+follow the ExogenousSequences contract. Every interval must be fully contained
+in its chromosome (`0 <= start < end <= chromosome_length`); missing chromosomes
+or invalid intervals fail before any destination FASTA is created or replaced.
 
 ## Inputs
 
@@ -56,7 +57,9 @@ Reads declared inputs and writes declared outputs; inputs are not mutated.
 
 ## Failures
 
-Argparse exits for missing required flags or invalid choices; runtime validation errors propagate from the implementation.
+Argparse exits for missing required flags or invalid choices. Missing chromosomes
+and intervals that violate BED containment raise `ValueError` without creating
+or replacing `--opath`.
 
 ## Example
 
