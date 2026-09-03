@@ -3,7 +3,7 @@
 Parser-derived invocation for `GenomicElementTools tss_relative_mutagenesis`:
 
 ```text
-GenomicElementTools tss_relative_mutagenesis [-h] --region_file_path REGION_FILE_PATH --region_file_type {bed3,bed6,bed6gene,bed3gene,narrowPeak,TREbed,bedGraph} --fasta_path FASTA_PATH --round_manifest ROUND_MANIFEST --output_dir OUTPUT_DIR [--write_replaced_windows] [--force]
+GenomicElementTools tss_relative_mutagenesis [-h] --region_file_path REGION_FILE_PATH --region_file_type {bed3,bed6,bed6gene,bed3gene,narrowPeak,TREbed,bedGraph} --fasta_path FASTA_PATH --round_manifest ROUND_MANIFEST --output_dir OUTPUT_DIR [--write_replaced_windows] [--force] [--output_orientation {genomic,strand}]
 ```
 
 ### Options
@@ -17,3 +17,4 @@ GenomicElementTools tss_relative_mutagenesis [-h] --region_file_path REGION_FILE
 | `--output_dir` | yes | `str` | inapplicable | `none` | no | Output directory bundle for sequences.fasta and manifest.tsv. |
 | `--write_replaced_windows` | no | `inapplicable` | inapplicable | `False` | no | Also write replaced/<round_id>.fasta audit FASTAs. |
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output directory after successful staging. |
+| `--output_orientation` | no | `inapplicable` | `genomic`, `strand` | `genomic` | no | Orientation of final sequences.fasta records: 'genomic' (default, genomic-forward) or 'strand' (transcriptional orientation from the unique round strand). |
