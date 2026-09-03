@@ -46,7 +46,7 @@ If this command fails, fix installation before debugging genomic inputs.
 [`GenomicElementTools export ExogenousSequences`](../reference/cli/genomic-element-tools/export/exogenous-sequences.md)
 extracts each region's sequence as FASTA using the
 [`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
-contract (narrative docs say “exogenous”):
+contract:
 
 ```bash
 GenomicElementTools export ExogenousSequences \

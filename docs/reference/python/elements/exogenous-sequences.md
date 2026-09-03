@@ -8,8 +8,8 @@ Supported for the current reference release.
 
 Load exogenous FASTA records into memory and expose the shared
 `GeneralElements` annotation, filtering, and sequence operations against
-synthetic BED3 regions. Narrative prose uses “exogenous”; the public class
-identifier remains `ExogenousSequences` for this release.
+synthetic BED3 regions. Membership is coordinate-independent representation,
+not biological foreignness.
 
 ## Canonical import
 

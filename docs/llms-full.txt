@@ -261,7 +261,7 @@ If this command fails, fix installation before debugging genomic inputs.
 [`GenomicElementTools export ExogenousSequences`](../reference/cli/genomic-element-tools/export/exogenous-sequences.md)
 extracts each region's sequence as FASTA using the
 [`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
-contract (narrative docs say “exogenous”):
+contract:
 
 ```bash
 GenomicElementTools export ExogenousSequences \
@@ -466,7 +466,7 @@ and inherited annotation getters documented on
 Call [`export_exogenous_sequences()`](../reference/python/elements/genomic-elements.md)
 to write region sequences as FASTA using the
 [`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
-contract (narrative docs say “exogenous”):
+contract:
 
 ```python
 ge = GenomicElements(
@@ -9057,8 +9057,8 @@ Supported for the current reference release.
 
 Load exogenous FASTA records into memory and expose the shared
 `GeneralElements` annotation, filtering, and sequence operations against
-synthetic BED3 regions. Narrative prose uses “exogenous”; the public class
-identifier remains `ExogenousSequences` for this release.
+synthetic BED3 regions. Membership is coordinate-independent representation,
+not biological foreignness.
 
 ## Canonical import
 
@@ -9310,8 +9310,7 @@ and complete semantic contract.
 
 See the dedicated [`ExogenousSequences`](exogenous-sequences.md) reference
 page for exogenous FASTA loading, synthetic BED3 regions, filtering, and
-supported inherited operations. Narrative prose uses “exogenous”; the public
-class identifier remains `ExogenousSequences` for this release.
+supported inherited operations.
 
 ## Related operations
 

@@ -20,8 +20,7 @@ and complete semantic contract.
 
 See the dedicated [`ExogenousSequences`](exogenous-sequences.md) reference
 page for exogenous FASTA loading, synthetic BED3 regions, filtering, and
-supported inherited operations. Narrative prose uses “exogenous”; the public
-class identifier remains `ExogenousSequences` for this release.
+supported inherited operations.
 
 ## Related operations
 
