@@ -7,19 +7,25 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 ## Purpose
 
 Select the maximum-stat context inside each query window on [BED-like region
-rows](../../../formats/foundation/bed-like.md), using required
+rows](../../../formats/foundation/bed-like.md). Query and context each require
+their own schema selector (`--region_file_type` /
+`--region_file_schema` and `--context_file_type` /
+`--context_file_schema`), plus `--context_file_path` and required
 `--context_stat_path` aligned to context rows.
 
 ## Outputs
 
 A context is eligible only when fully
 contained (`start >= window.start`, `end <= window.end`). Ties choose earliest
-context index; one context is written per query in query order.
+context index; one context is written per query in query order using the
+context schema (ordered custom extras preserved when applicable). No schema
+sidecar is published.
 
 ## Failures
 
 Empty eligible windows, stat/context mismatch, and malformed data
-raise `ValueError` or a library error.
+raise `ValueError` or a library error. Schema and region validation completes
+before `--opath` is created or replaced.
 
 ## Inputs
 

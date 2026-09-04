@@ -86,6 +86,14 @@ Region-preserving outputs do not automatically publish a schema sidecar; reuse
 the original schema file. Schema and region validation complete before command
 outputs are created or replaced.
 
+Context selection (`get_context_ge`) gives the query and context collections
+independent mutually exclusive selectors. Selected context rows keep the
+context schema. Collection and CLI merges accept the same named format or the
+same canonical custom schema file when snapshotted schemas are structurally
+compatible; distinct schema files are not merge-compatible even when they
+declare the same columns. Custom merge outputs use `.bed3plus` or `.bed6plus`
+according to the resolved base.
+
 ## Outputs
 
 Named and custom selectors construct `BedTable3Plus` or `BedTable6Plus`

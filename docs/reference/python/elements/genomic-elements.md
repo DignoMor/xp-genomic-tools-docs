@@ -75,19 +75,22 @@ supported named format nor a readable schema file. Malformed schema JSON and
 schema contract violations raise contextual `ValueError` before rows load.
 Wrong column counts raise `BedTableLoadException`. Missing chromosomes,
 intervals that are not fully contained in their chromosome (`start < 0`,
-`start >= end`, or `end` beyond chromosome length), incompatible merge inputs,
-and annotation alignment failures raise `ValueError`. Index errors propagate
-from underlying tables.
+`start >= end`, or `end` beyond chromosome length), incompatible merge inputs
+(including distinct custom schema files or structurally incompatible
+snapshots), and annotation alignment failures raise `ValueError`. Index errors
+propagate from underlying tables.
 
 ## Constraints
 
 Region rows and every loaded annotation share first-dimension alignment. Merge
-requires matching region type and FASTA path. `export_exogenous_sequences`
-accepts optional `output_orientation` (`genomic`/`strand`) and `record_id`
-(`coordinate`/`name`), refuses an existing output path, and validates the
-complete region collection against the genome before publishing any FASTA.
-Resolved schemas are snapshotted for the collection lifetime so filtering and
-derived construction reuse extras without rereading the schema file.
+requires the same named format or the same canonical custom schema file with
+structurally compatible snapshots, plus a matching FASTA path.
+`export_exogenous_sequences` accepts optional `output_orientation`
+(`genomic`/`strand`) and `record_id` (`coordinate`/`name`), refuses an existing
+output path, and validates the complete region collection against the genome
+before publishing any FASTA. Resolved schemas are snapshotted for the
+collection lifetime so filtering, merge results, and derived construction reuse
+extras without rereading the schema file.
 
 ## Ordering
 

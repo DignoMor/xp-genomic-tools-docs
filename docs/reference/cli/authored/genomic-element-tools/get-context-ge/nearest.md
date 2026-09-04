@@ -7,19 +7,25 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 ## Purpose
 
 For each query [BED-like region row](../../../formats/foundation/bed-like.md),
-select the closest same-chromosome context from required `--context_file_path` /
-`--context_file_type`.
+select the closest same-chromosome context. Query and context each require
+their own schema selector: exactly one of `--region_file_type` /
+`--region_file_schema` for the query and exactly one of
+`--context_file_type` / `--context_file_schema` for the context, plus
+`--context_file_path`.
 
 ## Outputs
 
-Output uses the context schema and one
-selected context per query, in query order; distance is the minimum absolute
-distance among endpoint pairs. `--opath` is required and no FASTA is needed.
+Output uses the context schema (including ordered custom extras when a custom
+context schema is selected) and one selected context per query, in query
+order; distance is the minimum absolute distance among endpoint pairs.
+`--opath` is required and no FASTA is needed. No schema sidecar is published;
+reuse the original context schema file when consuming the output.
 
 ## Failures
 
-No context on a query chromosome raises `ValueError`; malformed
-files and parser failures fail normally.
+No context on a query chromosome raises `ValueError`. Schema and region
+validation for both inputs fails before `--opath` is created or replaced;
+malformed files and parser failures fail normally.
 
 ## Inputs
 

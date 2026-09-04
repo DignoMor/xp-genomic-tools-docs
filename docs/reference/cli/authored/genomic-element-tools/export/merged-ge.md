@@ -6,11 +6,17 @@ Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the ins
 
 ## Purpose
 
-Merges left/right region files with required region paths/type, parallel
-annotation names/paths/types, and `--oheader`. Annotation types are only
-`track`, `stat`, `mask`, or `array`; first dimensions align within each input.
-Merged output follows library merge ordering and writes under the output header.
-Mismatched parallel arguments, incompatible regions, or annotation errors fail.
+Merges left/right region files that share one schema selector — exactly one of
+`--region_file_type` or `--region_file_schema` — with parallel annotation
+names/paths/types and `--oheader`. Annotation types are only `track`, `stat`,
+`mask`, or `array`; first dimensions align within each input. Merge requires
+the same named format or the same canonical custom schema file with
+structurally compatible snapshots (relative, absolute, and symlink spellings
+of one file are accepted when snapshots match; distinct files are rejected
+even when structurally identical). Named outputs keep `.<named-format>`
+suffixes; custom merges write `.bed3plus` or `.bed6plus` by base type and do
+not publish schema sidecars. Mismatched parallel arguments, incompatible
+schemas, or annotation errors fail before outputs are replaced.
 
 ## Inputs
 
