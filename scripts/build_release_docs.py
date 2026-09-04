@@ -348,12 +348,68 @@ def _git_file(raw_source_root: Path, revision: str, target: Path) -> str | None:
     return completed.stdout if completed.returncode == 0 else None
 
 
+def _agent_destination_inventory() -> list[tuple[str, str, str]]:
+    """Named destinations shared by llms.txt and the HTML agent reference."""
+    return [
+        ("Exhaustive plain-text reference", "llms-full.txt", "llms-full.txt"),
+        ("Home", "", "index.md"),
+        ("Get started", "get-started/", "get-started/index.md"),
+        ("Python quickstart", "get-started/python-quickstart/", "get-started/python-quickstart.md"),
+        ("CLI quickstart", "get-started/cli-quickstart/", "get-started/cli-quickstart.md"),
+        ("Concepts", "concepts/", "concepts.md"),
+        ("How-to guides", "guides/", "guides/index.md"),
+        ("Genomic elements guide", "guides/genomic-elements/", "guides/genomic-elements.md"),
+        ("Motif generation guide", "guides/motif-generation-and-search/", "guides/motif-generation-and-search.md"),
+        ("Python API overview", "library/", "library.md"),
+        ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
+        ("Python grouped index", "reference/python/", "reference/python/index.md"),
+        ("Python alphabetical index", "reference/python/alphabetical-index/", "reference/python/alphabetical-index.md"),
+        ("CLI grouped index", "reference/cli/", "reference/cli/index.md"),
+        ("CLI exact-path index", "reference/cli/exact-path-index/", "reference/cli/exact-path-index.md"),
+        ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
+        ("ExogenousSequenceTools CLI", "reference/cli/exogenous-sequence-tools/", "reference/cli/exogenous-sequence-tools/index.md"),
+        ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
+        ("Data formats overview", "formats/", "formats.md"),
+        ("Boolean-mask dtype rule", "reference/formats/boolean-mask/#dtype", "reference/formats/boolean-mask.md#dtype"),
+        ("FAQ", "faq/", "faq.md"),
+    ]
+
+
+def _destination_labels_from_llms(compact: str) -> list[str]:
+    labels: list[str] = []
+    for line in compact.splitlines():
+        match = re.match(r"^- ([^:]+): https://", line)
+        if match is None:
+            continue
+        label = match.group(1)
+        if label == "HTML agent reference":
+            continue
+        labels.append(label)
+    return labels
+
+
+def _destination_labels_from_agent_html(article: str) -> list[str]:
+    labels: list[str] = []
+    peer_labels = {"Compact plaintext index", "Exhaustive plaintext reference"}
+    for match in re.finditer(r"<li>(.*?)</li>", article, flags=re.DOTALL):
+        item = re.sub(r"<[^>]+>", " ", match.group(1))
+        item = " ".join(item.split())
+        if ":" not in item:
+            continue
+        label = item.split(":", 1)[0].strip()
+        if label in peer_labels:
+            continue
+        labels.append(label)
+    return labels
+
+
 def _validate_raw_source_revision(
     raw_source_root: Path, revision: str, code_revision: str
 ) -> None:
     targets = [
         Path("docs/llms.txt"),
         Path("docs/llms-full.txt"),
+        Path("docs/agent-reference.md"),
         *(
             path.relative_to(DOCS_ROOT)
             for path in (DOCS_ROOT / "docs/reference").rglob("*.md")
@@ -386,7 +442,11 @@ def _validate_raw_source_revision(
         raise RuntimeError(
             f"Immutable docs revision {revision} lacks raw fallback targets: {', '.join(missing)}"
         )
-    for target in (Path("docs/llms.txt"), Path("docs/llms-full.txt")):
+    for target in (
+        Path("docs/llms.txt"),
+        Path("docs/llms-full.txt"),
+        Path("docs/agent-reference.md"),
+    ):
         committed = _git_file(raw_source_root, revision, target)
         assert committed is not None
         for marker in (RELEASE, code_revision):
@@ -424,27 +484,10 @@ def _load_inventories() -> list[dict[str, Any]]:
 def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
     raw_base = f"{DOCS_RAW_BASE}/{docs_revision}/docs"
     canonical = PAGES_BASE
-    links = [
-        ("Home", "", "index.md"),
-        ("Get started", "get-started/", "get-started/index.md"),
-        ("Python quickstart", "get-started/python-quickstart/", "get-started/python-quickstart.md"),
-        ("CLI quickstart", "get-started/cli-quickstart/", "get-started/cli-quickstart.md"),
-        ("Concepts", "concepts/", "concepts.md"),
-        ("How-to guides", "guides/", "guides/index.md"),
-        ("Genomic elements guide", "guides/genomic-elements/", "guides/genomic-elements.md"),
-        ("Motif generation guide", "guides/motif-generation-and-search/", "guides/motif-generation-and-search.md"),
-        ("Python API overview", "library/", "library.md"),
-        ("Reference conventions", "reference/conventions/", "reference/conventions.md"),
-        ("Python grouped index", "reference/python/", "reference/python/index.md"),
-        ("Python alphabetical index", "reference/python/alphabetical-index/", "reference/python/alphabetical-index.md"),
-        ("CLI grouped index", "reference/cli/", "reference/cli/index.md"),
-        ("CLI exact-path index", "reference/cli/exact-path-index/", "reference/cli/exact-path-index.md"),
-        ("GenomicElementTools CLI", "reference/cli/genomic-element-tools/", "reference/cli/genomic-element-tools/index.md"),
-        ("ExogenousSequenceTools CLI", "reference/cli/exogenous-sequence-tools/", "reference/cli/exogenous-sequence-tools/index.md"),
-        ("MotifTools CLI", "reference/cli/motif-tools/", "reference/cli/motif-tools/index.md"),
-        ("Data formats overview", "formats/", "formats.md"),
-        ("Boolean-mask dtype rule", "reference/formats/boolean-mask/#dtype", "reference/formats/boolean-mask.md#dtype"),
-        ("FAQ", "faq/", "faq.md"),
+    destinations = _agent_destination_inventory()
+    destination_lines = [
+        f"- {label}: {canonical}{link_path} (raw: {raw_base}/{raw_path})"
+        for label, link_path, raw_path in destinations
     ]
     compact = [
         f"# xp-genomic-tools public reference ({RELEASE})",
@@ -453,14 +496,36 @@ def _render_agent_resources(code_revision: str, docs_revision: str) -> None:
         "",
         "Canonical Pages and immutable raw-source fallbacks:",
         "",
-        f"- Exhaustive plain-text reference: {canonical}llms-full.txt (raw: {raw_base}/llms-full.txt)",
+        f"- HTML agent reference: {canonical}agent-reference/ "
+        f"(raw: {raw_base}/agent-reference.md)",
+        *destination_lines,
     ]
-    for label, link_path, raw_path in links:
-        compact.append(
-            f"- {label}: {canonical}{link_path} "
-            f"(raw: {raw_base}/{raw_path})"
-        )
     (DOCS_ROOT / "docs/llms.txt").write_text("\n".join(compact) + "\n")
+
+    html_lines = [
+        "# Agent reference",
+        "",
+        "This HTML page is the browser- and connector-readable peer of the compact",
+        "plaintext agent index. Prefer it when a documentation connector returns",
+        "empty content for `llms.txt`.",
+        "",
+        f"**Documentation release:** `{RELEASE}`",
+        "",
+        f"**Code revision:** `{code_revision}`",
+        "",
+        "Plaintext peers:",
+        "",
+        f"- Compact plaintext index: {canonical}llms.txt",
+        f"- Exhaustive plaintext reference: {canonical}llms-full.txt",
+        "",
+        "## Indexed destinations",
+        "",
+        "Canonical Pages URLs and immutable raw-source fallbacks:",
+        "",
+        *destination_lines,
+        "",
+    ]
+    (DOCS_ROOT / "docs/agent-reference.md").write_text("\n".join(html_lines))
 
     full = [
         f"# xp-genomic-tools exhaustive public reference ({RELEASE})",
@@ -880,17 +945,30 @@ def _validate_built_artifact(
 
     llms_path = site_dir / "llms.txt"
     full_path = site_dir / "llms-full.txt"
+    agent_path = site_dir / "agent-reference" / "index.html"
     if not llms_path.is_file() or not full_path.is_file():
         raise RuntimeError("Built artifact lacks llms.txt or llms-full.txt")
+    if not agent_path.is_file():
+        raise RuntimeError("Built artifact lacks agent-reference HTML page")
     dtype_url = (
         "https://dignomor.github.io/xp-genomic-tools-docs/"
         "reference/formats/boolean-mask/#dtype"
     )
     compact = llms_path.read_text()
     exhaustive = full_path.read_text()
+    agent_html = html.unescape(agent_path.read_text())
+    if "Agent reference" not in agent_html.split("<title>", 1)[1].split("</title>", 1)[0]:
+        raise RuntimeError("agent-reference page lacks title Agent reference")
+    if not re.search(r"<h1[^>]*>\s*Agent reference\b", agent_html):
+        raise RuntimeError("agent-reference page lacks Agent reference heading")
+    if "<article" not in agent_html:
+        raise RuntimeError("agent-reference page lacks article body")
+    agent_article = agent_html.split("<article", 1)[1].split("</article>", 1)[0]
     for marker in (RELEASE, code_revision, "raw.githubusercontent.com"):
         if marker not in compact or marker not in exhaustive:
             raise RuntimeError(f"agent resource lacks release marker {marker!r}")
+    if RELEASE not in agent_article or code_revision not in agent_article:
+        raise RuntimeError("agent-reference page lacks matching release metadata")
     for required in ("llms-full.txt", "reference/python", "reference/cli", "reference/formats"):
         if required not in compact:
             raise RuntimeError(f"llms.txt lacks {required!r}")
@@ -899,6 +977,34 @@ def _validate_built_artifact(
             raise RuntimeError(f"llms-full.txt lacks public segment {required!r}")
     if dtype_url not in compact:
         raise RuntimeError("llms.txt does not link directly to the mask dtype rule")
+    if f"{PAGES_BASE}agent-reference/" not in compact:
+        raise RuntimeError("llms.txt lacks HTML agent-reference link")
+    if f"{PAGES_BASE}llms.txt" not in agent_article:
+        raise RuntimeError("agent-reference page lacks llms.txt peer link")
+    if f"{PAGES_BASE}llms-full.txt" not in agent_article:
+        raise RuntimeError("agent-reference page lacks llms-full.txt peer link")
+    compact_labels = _destination_labels_from_llms(compact)
+    html_labels = _destination_labels_from_agent_html(agent_article)
+    if compact_labels != html_labels:
+        raise RuntimeError(
+            "agent-reference destination inventory drifted from llms.txt: "
+            f"{compact_labels!r} vs {html_labels!r}"
+        )
+    expected_labels = [label for label, _, _ in _agent_destination_inventory()]
+    if compact_labels != expected_labels:
+        raise RuntimeError(
+            "llms.txt destination inventory drifted from shared inventory: "
+            f"{compact_labels!r} vs {expected_labels!r}"
+        )
+    homepage = html.unescape((site_dir / "index.html").read_text())
+    if "agent-reference" not in homepage:
+        raise RuntimeError("Homepage lacks agent-reference discovery link")
+    overview_source = (DOCS_ROOT / "docs/index.md").read_text()
+    if "agent-reference" not in overview_source:
+        raise RuntimeError("Site overview lacks agent-reference discovery link")
+    sitemap = (site_dir / "sitemap.xml").read_text()
+    if f"{PAGES_BASE}agent-reference/" not in sitemap:
+        raise RuntimeError("sitemap lacks canonical agent-reference URL")
 
     # Every declared inventory entry must resolve to a complete built page.
     for entry in _load_inventories():

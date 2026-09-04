@@ -17,6 +17,9 @@ def restore_golden_docs(docs_root: Path) -> None:
     (docs_root / "docs/library.md").write_text((fixtures / "library.golden.md").read_text())
     (docs_root / "docs/llms.txt").write_text((fixtures / "llms.golden.txt").read_text())
     (
+        docs_root / "docs/agent-reference.md"
+    ).write_text((fixtures / "agent-reference.golden.md").read_text())
+    (
         docs_root / "docs/reference/python/elements/genomic-elements.md"
     ).write_text((fixtures / "genomic-elements.golden.md").read_text())
     (
@@ -32,9 +35,18 @@ def stage_docs_revision(docs_root: Path, destination: Path) -> str:
     code_revision = subprocess.check_output(
         ["git", "-C", str(code_root), "rev-parse", "HEAD"], text=True
     ).strip()
-    for resource in (destination / "docs/llms.txt", destination / "docs/llms-full.txt"):
+    for resource in (
+        destination / "docs/llms.txt",
+        destination / "docs/llms-full.txt",
+        destination / "docs/agent-reference.md",
+    ):
         content = resource.read_text()
         content = re.sub(r"(?m)^Code revision: `[0-9a-f]{40}`$", f"Code revision: `{code_revision}`", content)
+        content = re.sub(
+            r"(?m)^\*\*Code revision:\*\* `[0-9a-f]{40}`$",
+            f"**Code revision:** `{code_revision}`",
+            content,
+        )
         resource.write_text(content)
     subprocess.run(["git", "init", "-q"], cwd=destination, check=True)
     subprocess.run(["git", "add", "docs"], cwd=destination, check=True)
@@ -44,7 +56,11 @@ def stage_docs_revision(docs_root: Path, destination: Path) -> str:
         check=True,
     )
     first_revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=destination, text=True).strip()
-    for resource in (destination / "docs/llms.txt", destination / "docs/llms-full.txt"):
+    for resource in (
+        destination / "docs/llms.txt",
+        destination / "docs/llms-full.txt",
+        destination / "docs/agent-reference.md",
+    ):
         content = resource.read_text()
         content = re.sub(
             r"(raw\.githubusercontent\.com/[^/]+/[^/]+/)[0-9a-f]{40}(/docs/)",

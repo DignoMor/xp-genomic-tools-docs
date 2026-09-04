@@ -1,10 +1,22 @@
-# xp-genomic-tools public reference (0.3.0a4)
+# Agent reference
 
-Code revision: `111c3a4323f42589740fe3083c6b8412453a7023`
+This HTML page is the browser- and connector-readable peer of the compact
+plaintext agent index. Prefer it when a documentation connector returns
+empty content for `llms.txt`.
 
-Canonical Pages and immutable raw-source fallbacks:
+**Documentation release:** `0.3.0a4`
 
-- HTML agent reference: https://dignomor.github.io/xp-genomic-tools-docs/agent-reference/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/3d15aa6ac6f9753166943fb126f2f377157ca3de/docs/agent-reference.md)
+**Code revision:** `111c3a4323f42589740fe3083c6b8412453a7023`
+
+Plaintext peers:
+
+- Compact plaintext index: https://dignomor.github.io/xp-genomic-tools-docs/llms.txt
+- Exhaustive plaintext reference: https://dignomor.github.io/xp-genomic-tools-docs/llms-full.txt
+
+## Indexed destinations
+
+Canonical Pages URLs and immutable raw-source fallbacks:
+
 - Exhaustive plain-text reference: https://dignomor.github.io/xp-genomic-tools-docs/llms-full.txt (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/3d15aa6ac6f9753166943fb126f2f377157ca3de/docs/llms-full.txt)
 - Home: https://dignomor.github.io/xp-genomic-tools-docs/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/3d15aa6ac6f9753166943fb126f2f377157ca3de/docs/index.md)
 - Get started: https://dignomor.github.io/xp-genomic-tools-docs/get-started/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/3d15aa6ac6f9753166943fb126f2f377157ca3de/docs/get-started/index.md)

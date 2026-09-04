@@ -26,5 +26,6 @@ This site documents release **0.3.0a4**.
 2. [Install](install.md) from the `0.3.0a4` code tag when you need setup detail
 3. Skim [Concepts](concepts.md) and [Data formats](formats.md)
 4. Use [Python API](library.md) or [CLI commands](reference/cli/index.md) for exact lookup; browse [How-to guides](guides/index.md) for workflows
+5. Agents: start from the [Agent reference](agent-reference.md) HTML index or the compact [`llms.txt`](llms.txt) peer
 
 Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.3.0a4`).
