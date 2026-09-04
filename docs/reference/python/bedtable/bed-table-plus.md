@@ -44,9 +44,11 @@ Construct with `extra_column_names`, `extra_column_dtype` (default all `str`), a
 ## Return or yield behavior
 `get_region_extra_column` returns a NumPy array; inherited selection methods return the matching Plus class.
 ## Raised exceptions
-Schema mismatch raises `BedTableLoadException`; unknown extra columns fail through validation.
+Wrong column count (too few or too many) raises `BedTableLoadException`;
+unknown extra columns fail through validation.
 ## Constraints
 Extra names and dtypes must be declared together and match the loaded schema.
+Every row must supply exactly the declared column count. Missing values use `.`.
 ## Ordering
 Inherited lexicographic sorting applies when enabled.
 ## Side effects
@@ -63,5 +65,6 @@ table = BedTable3Plus(extra_column_names=["gene_symbol"], extra_column_dtype=[st
 table.load_from_file("regions.bed3gene")
 ```
 ## Related formats or commands
+- [Region schema (version 1)](../../formats/foundation/region-schema.md)
 - [bed3gene format](../../formats/foundation/bed3gene.md)
 - [bed6gene format](../../formats/foundation/bed6gene.md)

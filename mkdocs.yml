@@ -180,6 +180,7 @@ nav:
       - GENCODE GTF: reference/formats/gtf/gencode.md
       - Ensembl SNP simple info: reference/formats/snp/ensembl-simple-info.md
       - BED-like region tables: reference/formats/foundation/bed-like.md
+      - Region schema (version 1): reference/formats/foundation/region-schema.md
       - bed3: reference/formats/foundation/bed3.md
       - bed6: reference/formats/foundation/bed6.md
       - bed3gene: reference/formats/foundation/bed3gene.md

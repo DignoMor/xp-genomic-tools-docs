@@ -51,24 +51,33 @@ source:
 ## Parameters
 
 Constructor arguments are `region_file_path`, `region_file_type`, and
-`fasta_path`. Paths are strings or path-like values. `region_file_type` must
-be one of the keys returned by `get_region_file_suffix2class_dict()`. Region
-order from the file is preserved because sorting is disabled at load time.
+`fasta_path`. Paths are strings or path-like values. `region_file_type` is a
+schema selector: a predefined named format from
+`get_region_file_suffix2class_dict()`, or a path to a version-1 region-schema
+JSON file. Predefined names take precedence over same-named files; use an
+explicit relative or absolute path to select a shadowed schema file. Relative
+schema paths resolve from the current working directory. Region order from the
+file is preserved because sorting is disabled at load time.
 
 ## Return or yield behavior
 
 The constructor returns a live collection object. Methods return region tables,
 sequence lists, filtered collections, exported files, or inherited annotation
 views as documented on each member below and on
-[GeneralElements operations](../general-elements/load-mask-from-arr.md).
+[GeneralElements operations](../general-elements/load-mask-from-arr.md). Named
+and custom selectors construct `BedTable3Plus` or `BedTable6Plus` tables,
+including schemas with no extras.
 
 ## Raised exceptions
 
-Invalid `region_file_type` raises `ValueError` during construction. Missing
-chromosomes, intervals that are not fully contained in their chromosome
-(`start < 0`, `start >= end`, or `end` beyond chromosome length), incompatible
-merge inputs, and annotation alignment failures raise `ValueError`. Index errors
-propagate from underlying tables.
+Unknown selectors raise `ValueError` stating that the value is neither a
+supported named format nor a readable schema file. Malformed schema JSON and
+schema contract violations raise contextual `ValueError` before rows load.
+Wrong column counts raise `BedTableLoadException`. Missing chromosomes,
+intervals that are not fully contained in their chromosome (`start < 0`,
+`start >= end`, or `end` beyond chromosome length), incompatible merge inputs,
+and annotation alignment failures raise `ValueError`. Index errors propagate
+from underlying tables.
 
 ## Constraints
 
@@ -77,19 +86,22 @@ requires matching region type and FASTA path. `export_exogenous_sequences`
 accepts optional `output_orientation` (`genomic`/`strand`) and `record_id`
 (`coordinate`/`name`), refuses an existing output path, and validates the
 complete region collection against the genome before publishing any FASTA.
+Resolved schemas are snapshotted for the collection lifetime so filtering and
+derived construction reuse extras without rereading the schema file.
 
 ## Ordering
 
 Region row `i`, extracted sequence `i`, and annotation row `i` refer to the
 same locus. Merge optionally sorts the combined table; otherwise loaded order
-is preserved.
+is preserved. Region-preserving filters keep declared extra columns, dtypes,
+values, and annotation alignment.
 
 ## Side effects
 
-Construction reads the region table and caches the FASTA path. Methods may read
-or write files (`apply_logical_filter`, `export_exogenous_sequences`, merge
-output). Inherited annotation loaders mutate in-memory arrays only until an
-explicit save.
+Construction reads the region table and caches the FASTA path. Custom schema
+files are read once at construction. Methods may read or write files
+(`apply_logical_filter`, `export_exogenous_sequences`, merge output). Inherited
+annotation loaders mutate in-memory arrays only until an explicit save.
 
 ## Lifecycle behavior
 
@@ -116,8 +128,21 @@ table = ge.get_region_bed_table()
 ge.close()
 ```
 
+Custom schema example:
+
+```python
+from RGTools import GenomicElements
+
+# schema.json declares base_type bed6 and ordered str/int/float extras.
+ge = GenomicElements("regions.bed", "schema.json", "genome.fa")
+table = ge.get_region_bed_table()
+print(table.extra_column_names)
+ge.close()
+```
+
 ## Related formats or commands
 
+- [Region schema (version 1)](../../formats/foundation/region-schema.md)
 - [FASTA region sequences](../../formats/elements/fasta.md)
 - [BED-like region tables](../../formats/foundation/bed-like.md)
 - [Annotation arrays](../../formats/elements/annotation-arrays.md)
