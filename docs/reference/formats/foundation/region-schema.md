@@ -52,10 +52,20 @@ marker remains `.` for all three dtypes and round-trips through table write.
 ## Choices
 
 Pass a predefined named format (`bed3`, `bed6`, `bed3gene`, `bed6gene`,
-`narrowPeak`, `TREbed`, `bedGraph`) or a schema-file path as
-`region_file_type`. Predefined names win over same-named files; select a
-shadowed file with an explicit relative path such as `./bed3` or an absolute
-path. Relative schema paths resolve from the current working directory.
+`narrowPeak`, `TREbed`, `bedGraph`) or a schema-file path as the Python
+`region_file_type` constructor argument. Predefined names win over same-named
+files; select a shadowed file with an explicit relative path such as `./bed3`
+or an absolute path. Relative schema paths resolve from the current working
+directory.
+
+On generic `GenomicElementTools` primary region inputs, choose exactly one of:
+
+- `--region_file_type` with a named format choice, or
+- `--region_file_schema` with a path to this JSON file.
+
+The flags are mutually exclusive. Named choices remain the argparse choice
+list; schema paths are ordinary filesystem paths and are not listed as named
+choices. Both selectors feed the same `GenomicElements` constructor boundary.
 
 ## Constraints
 
@@ -64,6 +74,17 @@ base columns, and must not contain tab, newline, carriage-return, or NUL.
 Spaces and ordinary punctuation are allowed. Unknown root or extra-column
 fields, unsupported versions, and unsupported bases are rejected. Matching
 column names alone do not confer named-format semantics such as TREbed.
+TREbed-only commands therefore continue to require `--region_file_type TREbed`
+and reject `--region_file_schema` even when the JSON declares the same fields.
+
+Generic commands use schema capabilities (BED3 geometry; BED6 name, score, and
+strand when present). Region-preserving operations keep ordered extras,
+dtypes, values, and row-order guarantees. Fixed-schema exporters such as
+FASTA, TREbed, polymorphism BED6+, and NumPy annotation outputs emit only the
+fields their own contracts declare and do not acquire arbitrary custom extras.
+Region-preserving outputs do not automatically publish a schema sidecar; reuse
+the original schema file. Schema and region validation complete before command
+outputs are created or replaced.
 
 ## Outputs
 
@@ -81,8 +102,7 @@ alignment.
 
 Construction reads the schema file once and snapshots the resolved table
 constructor. Later changes or deletion of that schema file do not alter
-operations on the live collection. Region-preserving outputs do not
-automatically publish a schema sidecar; reuse the original schema file.
+operations on the live collection.
 
 ## Failures
 
@@ -96,3 +116,4 @@ selector.
 - [`GenomicElements`](../../python/elements/genomic-elements.md)
 - [BED-like region tables](bed-like.md)
 - [`BedTable Plus`](../../python/bedtable/bed-table-plus.md)
+- [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)

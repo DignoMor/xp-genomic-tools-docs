@@ -3,7 +3,7 @@
 Parser-derived invocation for `GenomicElementTools export WTES`:
 
 ```text
-GenomicElementTools export WTES [-h] --fasta_path FASTA_PATH --region_file_path REGION_FILE_PATH --region_file_type {bed3,bed6,bed6gene,bed3gene,narrowPeak,TREbed,bedGraph} --num_replicates NUM_REPLICATES --opath OPATH
+GenomicElementTools export WTES [-h] --fasta_path FASTA_PATH --region_file_path REGION_FILE_PATH (--region_file_type {bed3,bed6,bed6gene,bed3gene,narrowPeak,TREbed,bedGraph} | --region_file_schema SCHEMA_PATH) --num_replicates NUM_REPLICATES --opath OPATH
 ```
 
 ### Options
@@ -12,6 +12,7 @@ GenomicElementTools export WTES [-h] --fasta_path FASTA_PATH --region_file_path 
 | --- | --- | --- | --- | --- | --- | --- |
 | `--fasta_path` | yes | `str` | inapplicable | `none` | no | Path to the genome file. |
 | `--region_file_path` | yes | `str` | inapplicable | `none` | no | Path to the region file. |
-| `--region_file_type` | yes | `str` | `bed3`, `bed6`, `bed6gene`, `bed3gene`, `narrowPeak`, `TREbed`, `bedGraph` | `bed3` | no | Type of the region file. Valid types: ['bed3', 'bed6', 'bed6gene', 'bed3gene', 'narrowPeak', 'TREbed', 'bedGraph'] |
+| `--region_file_type` | no | `str` | `bed3`, `bed6`, `bed6gene`, `bed3gene`, `narrowPeak`, `TREbed`, `bedGraph` | `none` | no | Named region format (predefined schema). Valid named formats: ['bed3', 'bed6', 'bed6gene', 'bed3gene', 'narrowPeak', 'TREbed', 'bedGraph']. |
+| `--region_file_schema` | no | `str` | inapplicable | `none` | no | Path to a version-1 region-schema JSON file describing a custom BED3+ or BED6+ table. Relative paths resolve from the current working directory. Mutually exclusive with --region_file_type. |
 | `--num_replicates` | yes | `int` | inapplicable | `none` | no | Number of replicates for each region sequence. |
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the WTES fasta file. |

@@ -19,9 +19,10 @@ stat-versus-track shapes as `count_single_bw`; output annotation is `count`.
 ## Defaults
 
 Quantification defaults to `raw_count`; strand is
-resolved from override, then region strand, with bed3/falsy strand becoming
+resolved from override, then from BED6 strand capability on the loaded table
+(named or custom), with missing strand capability or falsy strand becoming
 `.`. `.npz` alone selects NPZ; other suffixes select NPY. Both tracks must be
-readable.
+readable. Provide exactly one of `--region_file_type` or `--region_file_schema`.
 
 ## Outputs
 

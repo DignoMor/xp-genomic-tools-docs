@@ -47,7 +47,9 @@ preserves input order by disabling sorting.
 
 Region type keys are names, not filename extensions. `GenomicElements` also
 accepts a path to a version-1 region-schema JSON file; predefined names take
-precedence over same-named files. Standard BEDPE, BED12, and track-header
+precedence over same-named files. On generic `GenomicElementTools` primary
+inputs, use mutually exclusive `--region_file_type` (named) or
+`--region_file_schema` (JSON path). Standard BEDPE, BED12, and track-header
 variants are not supported by this contract.
 
 ## Constraints
