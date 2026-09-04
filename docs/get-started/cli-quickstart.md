@@ -30,7 +30,7 @@ MotifTools random_seq \
   --output random-smoke.fasta
 ```
 
-Release **0.3.0a4** reproduces these bytes exactly:
+Release **0.4.0a1** reproduces these bytes exactly:
 
 ```text
 >random_seq_0

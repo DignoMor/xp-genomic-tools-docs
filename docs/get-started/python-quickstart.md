@@ -39,7 +39,7 @@ finally:
     ge.close()
 ```
 
-Expected behavior for release **0.3.0a4**:
+Expected behavior for release **0.4.0a1**:
 
 - Region row `0` is `chrB:1-5` → sequence `GGGC` (four bases from the `chrB` FASTA record)
 - Region row `1` is `chrA:0-4` → sequence `ACGT`

@@ -24,7 +24,7 @@ AUTHORED_MASK_INTERSECT = (
 )
 MKDOCS_CONFIG = DOCS_ROOT / "mkdocs.yml"
 BUILD_SCRIPT = DOCS_ROOT / "scripts/build_release_docs.py"
-TARGET_RELEASE = "0.3.0a4"
+TARGET_RELEASE = "0.4.0a1"
 
 API_SEMANTIC_FIELDS = (
     "Status",
@@ -102,7 +102,7 @@ class Ticket01ReferencePipelineTest(unittest.TestCase):
                 text=True,
             )
 
-    def test_canonical_release_version_is_0_3_0a4(self) -> None:
+    def test_canonical_release_version_is_0_4_0a1(self) -> None:
         self.assertEqual(version("RGTools"), TARGET_RELEASE)
         build_source = BUILD_SCRIPT.read_text()
         self.assertNotIn('RELEASE = "0.3.0a3"', build_source)

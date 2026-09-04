@@ -1,6 +1,6 @@
 # CLI command grouped index
 
-Supported release `0.3.0a4`. Three installed console scripts own distinct genomic workflows. Browse by ownership, then open a tool landing for task-oriented groupings and per-command semantics.
+Supported release `0.4.0a1`. Three installed console scripts own distinct genomic workflows. Browse by ownership, then open a tool landing for task-oriented groupings and per-command semantics.
 
 ## Genomic-element-centric: `GenomicElementTools`
 

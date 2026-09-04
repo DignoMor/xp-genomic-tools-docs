@@ -1,10 +1,10 @@
 # xp-genomic-tools docs
 
-Public user documentation for **xp-genomic-tools** release **0.3.0a4**.
+Public user documentation for **xp-genomic-tools** release **0.4.0a1**.
 
 Covers the pip-installable `RGTools` library and the `GenomicElementTools`,
 `ExogenousSequenceTools`, and `MotifTools` CLIs from the
-[code repository](https://github.com/DignoMor/xp-genomic-tools) tag `0.3.0a4`.
+[code repository](https://github.com/DignoMor/xp-genomic-tools) tag `0.4.0a1`.
 
 ## Local preview
 

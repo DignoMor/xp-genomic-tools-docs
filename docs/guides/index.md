@@ -1,6 +1,6 @@
 # How-to guides
 
-Task-oriented workflows for release **0.3.0a4**. Each guide links to the
+Task-oriented workflows for release **0.4.0a1**. Each guide links to the
 [Python API](../reference/python/index.md) and [CLI commands](../reference/cli/index.md)
 references for exact lookup.
 

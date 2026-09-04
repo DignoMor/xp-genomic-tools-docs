@@ -6,7 +6,7 @@ Import external tables and allele-expanded FASTA into genomic-element form.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed
 `GenomicElementTools` console script.
 
 ## Inputs

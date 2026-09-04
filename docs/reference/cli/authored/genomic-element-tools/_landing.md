@@ -1,6 +1,6 @@
 # GenomicElementTools command reference
 
-This is the semantic reference for release `0.3.0a4`. It covers every shipped
+This is the semantic reference for release `0.4.0a1`. It covers every shipped
 top-level command and nested path. Parser-derived usage, aliases, required
 flags, choices, defaults, and help appear on each canonical command page and in
 the [site-wide exact-path index](../exact-path-index.md); the sections below
@@ -9,7 +9,7 @@ completeness checks is [`inventory.json`](inventory.json).
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`.
+Supported in `GenomicElementTools` for release `0.4.0a1`.
 
 ## Purpose
 

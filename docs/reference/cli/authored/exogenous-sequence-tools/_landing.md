@@ -1,7 +1,7 @@
 # ExogenousSequenceTools reference
 
 This is the semantic reference for the `ExogenousSequenceTools` console
-script in release `0.3.0a4`. It covers all seven top-level commands and every
+script in release `0.4.0a1`. It covers all seven top-level commands and every
 nested path. Parser-derived spelling, required status, choices, defaults, and
 help appear on each canonical command page and in the
 [site-wide exact-path index](../exact-path-index.md). The inventory used

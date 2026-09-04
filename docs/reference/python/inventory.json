@@ -1,5 +1,5 @@
 {
-  "release": "0.3.0a4",
+  "release": "0.4.0a1",
   "internal_symbols": [
     "set_parser_genome",
     "set_parser_genomic_element_region",

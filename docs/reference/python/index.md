@@ -1,6 +1,6 @@
 # Python API grouped index
 
-Supported `RGTools` release `0.3.0a4`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
+Supported `RGTools` release `0.4.0a1`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
 
 ## Foundation
 

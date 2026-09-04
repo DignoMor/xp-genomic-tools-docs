@@ -17,7 +17,7 @@ DOCS_ROOT = Path(__file__).resolve().parents[1]
 CODE_ROOT = DOCS_ROOT.parent / "code"
 INVENTORY = DOCS_ROOT / "tests/ticket14_reference_inventory.json"
 BUILD_SCRIPT = DOCS_ROOT / "scripts/build_release_docs.py"
-RELEASE = "0.3.0a4"
+RELEASE = "0.4.0a1"
 
 
 class Ticket14CoreFormatsTest(unittest.TestCase):

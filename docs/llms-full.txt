@@ -1,4 +1,4 @@
-# xp-genomic-tools exhaustive public reference (0.3.0a4)
+# xp-genomic-tools exhaustive public reference (0.4.0a1)
 
 Code revision: `111c3a4323f42589740fe3083c6b8412453a7023`
 Documentation revision: `676083b089b7ff5fc2a6d5e32f91566327e96724`
@@ -11,7 +11,7 @@ This HTML page is the browser- and connector-readable peer of the compact
 plaintext agent index. Prefer it when a documentation connector returns
 empty content for `llms.txt`.
 
-**Documentation release:** `0.3.0a4`
+**Documentation release:** `0.4.0a1`
 
 **Code revision:** `111c3a4323f42589740fe3083c6b8412453a7023`
 
@@ -55,7 +55,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 This page redirects to the canonical [CLI commands grouped index](../reference/cli/index.md).
 
-Three console scripts ship with **0.3.0a4**:
+Three console scripts ship with **0.4.0a1**:
 
 | Command | Canonical landing |
 | --- | --- |
@@ -155,7 +155,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Is this a stable release?
 
-No. **0.3.0a4** is an alpha. Pin the git tag and expect CLI/API changes in later
+No. **0.4.0a1** is an alpha. Pin the git tag and expect CLI/API changes in later
 cuts.
 
 ## Why is it spelled “Exogenous”?
@@ -166,7 +166,7 @@ docs. Search and import with that spelling (`ExogenousSequenceTools`,
 
 ## Is CountTableTools available?
 
-Not in **0.3.0a4**. `RGTools`, `GenomicElementTools`,
+Not in **0.4.0a1**. `RGTools`, `GenomicElementTools`,
 `ExogenousSequenceTools`, and `MotifTools` ship.
 
 ## Where do I find every CLI flag?
@@ -291,7 +291,7 @@ MotifTools random_seq \
   --output random-smoke.fasta
 ```
 
-Release **0.3.0a4** reproduces these bytes exactly:
+Release **0.4.0a1** reproduces these bytes exactly:
 
 ```text
 >random_seq_0
@@ -341,7 +341,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 # Get started
 
-Release **0.3.0a4** ships a Python library (`RGTools`) and three companion CLIs.
+Release **0.4.0a1** ships a Python library (`RGTools`) and three companion CLIs.
 Choose the onboarding path that matches how you plan to work.
 
 ## Pick your first success
@@ -406,7 +406,7 @@ finally:
     ge.close()
 ```
 
-Expected behavior for release **0.3.0a4**:
+Expected behavior for release **0.4.0a1**:
 
 - Region row `0` is `chrB:1-5` → sequence `GGGC` (four bases from the `chrB` FASTA record)
 - Region row `1` is `chrA:0-4` → sequence `ACGT`
@@ -549,7 +549,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 # How-to guides
 
-Task-oriented workflows for release **0.3.0a4**. Each guide links to the
+Task-oriented workflows for release **0.4.0a1**. Each guide links to the
 [Python API](../reference/python/index.md) and [CLI commands](../reference/cli/index.md)
 references for exact lookup.
 
@@ -613,7 +613,7 @@ MotifTools pwm_seq \
   --output pwm-sequences.fasta
 ```
 
-Release **0.3.0a4** reproduces:
+Release **0.4.0a1** reproduces:
 
 ```text
 >pwm_QUICKSTART_MOTIF_0
@@ -865,9 +865,9 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 Regulatory genomic utilities for BED-like regions, sequences, motifs, and BigWig
 tracks.
 
-This site documents release **0.3.0a4**.
+This site documents release **0.4.0a1**.
 
-## What ships in 0.3.0a4
+## What ships in 0.4.0a1
 
 | Component | Kind | Role |
 | --- | --- | --- |
@@ -877,7 +877,7 @@ This site documents release **0.3.0a4**.
 | `MotifTools` | CLI | Generate random/PWM sequences, enumerate barcodes, and transform motifs |
 
 !!! warning "Alpha release"
-    **0.3.0a4** is a pre-release. APIs and CLI flags may change. Pin the tag if
+    **0.4.0a1** is a pre-release. APIs and CLI flags may change. Pin the tag if
     you need a fixed cut.
 
 `CountTableTools` is **not** included in this release.
@@ -885,12 +885,12 @@ This site documents release **0.3.0a4**.
 ## Where to start
 
 1. Open [Get started](get-started/index.md) and pick the [Python](get-started/python-quickstart.md) or [CLI](get-started/cli-quickstart.md) quickstart
-2. [Install](install.md) from the `0.3.0a4` code tag when you need setup detail
+2. [Install](install.md) from the `0.4.0a1` code tag when you need setup detail
 3. Skim [Concepts](concepts.md) and [Data formats](formats.md)
 4. Use [Python API](library.md) or [CLI commands](reference/cli/index.md) for exact lookup; browse [How-to guides](guides/index.md) for workflows
 5. Agents: start from the [Agent reference](agent-reference.md) HTML index or the compact [`llms.txt`](llms.txt) peer
 
-Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.3.0a4`).
+Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.4.0a1`).
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/index/
 Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089b7ff5fc2a6d5e32f91566327e96724/docs/index.md
@@ -910,12 +910,12 @@ Notes:
 - NumPy is constrained to **`>=1.24,<2`**
 - `matplotlib` is required for `GenomicElementTools export Heatmap`
 
-## Install from the 0.3.0a4 tag
+## Install from the 0.4.0a1 tag
 
 There is no PyPI publish for this alpha. Install from the tagged code repository:
 
 ```bash
-pip install "git+https://github.com/DignoMor/xp-genomic-tools.git@0.3.0a4"
+pip install "git+https://github.com/DignoMor/xp-genomic-tools.git@0.4.0a1"
 ```
 
 Editable install from a local clone of the code repo:
@@ -923,7 +923,7 @@ Editable install from a local clone of the code repo:
 ```bash
 git clone https://github.com/DignoMor/xp-genomic-tools.git
 cd xp-genomic-tools
-git checkout 0.3.0a4
+git checkout 0.4.0a1
 pip install -e ".[dev]"
 ```
 
@@ -961,7 +961,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 `RGTools` is the importable Python library behind the CLIs. For end-to-end
 workflows, prefer the [CLI commands reference](reference/cli/index.md). This page
-is a light import overview for **0.3.0a4**.
+is a light import overview for **0.4.0a1**.
 
 ## Common imports
 
@@ -1056,7 +1056,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -1145,7 +1145,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -1240,7 +1240,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -1332,7 +1332,7 @@ Assemble exogenous sequences with adapters, concatenation, or barcodes.
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed
 `ExogenousSequenceTools` console script.
 
 ## Inputs
@@ -1414,7 +1414,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -1504,7 +1504,7 @@ Generate track or stat annotations from exogenous FASTA records.
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed
 `ExogenousSequenceTools` console script.
 
 ## Inputs
@@ -1583,7 +1583,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 # ExogenousSequenceTools reference
 
 This is the semantic reference for the `ExogenousSequenceTools` console
-script in release `0.3.0a4`. It covers all seven top-level commands and every
+script in release `0.4.0a1`. It covers all seven top-level commands and every
 nested path. Parser-derived spelling, required status, choices, defaults, and
 help appear on each canonical command page and in the
 [site-wide exact-path index](../exact-path-index.md). The inventory used
@@ -1625,7 +1625,7 @@ the [assembly output contract](../../formats/cli/exogenous-sequence-tools/assemb
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Inputs
 
@@ -1747,7 +1747,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -1841,7 +1841,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -1934,7 +1934,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -2020,7 +2020,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -2103,7 +2103,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -2200,7 +2200,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -2297,7 +2297,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -2394,7 +2394,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -2495,7 +2495,7 @@ Reduce track annotations along sequence positions.
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed
 `ExogenousSequenceTools` console script.
 
 ## Inputs
@@ -2578,7 +2578,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -2679,7 +2679,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -2778,7 +2778,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -2885,7 +2885,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -2974,7 +2974,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3065,7 +3065,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3151,7 +3151,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3241,7 +3241,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3341,7 +3341,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3452,7 +3452,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3544,7 +3544,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3642,7 +3642,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3729,7 +3729,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3818,7 +3818,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -3909,7 +3909,7 @@ Export genomic-element regions, annotations, and derived artifacts.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed
 `GenomicElementTools` console script.
 
 ## Inputs
@@ -3999,7 +3999,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -4092,7 +4092,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -4189,7 +4189,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -4291,7 +4291,7 @@ Select contextual genomic-element rows for each query region.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed
 `GenomicElementTools` console script.
 
 ## Inputs
@@ -4372,7 +4372,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -4461,7 +4461,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -4556,7 +4556,7 @@ Import external tables and allele-expanded FASTA into genomic-element form.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed
 `GenomicElementTools` console script.
 
 ## Inputs
@@ -4635,7 +4635,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 # GenomicElementTools command reference
 
-This is the semantic reference for release `0.3.0a4`. It covers every shipped
+This is the semantic reference for release `0.4.0a1`. It covers every shipped
 top-level command and nested path. Parser-derived usage, aliases, required
 flags, choices, defaults, and help appear on each canonical command page and in
 the [site-wide exact-path index](../exact-path-index.md); the sections below
@@ -4644,7 +4644,7 @@ completeness checks is [`inventory.json`](inventory.json).
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`.
+Supported in `GenomicElementTools` for release `0.4.0a1`.
 
 ## Purpose
 
@@ -5010,7 +5010,7 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke it through the
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Inputs
@@ -5123,7 +5123,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5209,7 +5209,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5299,7 +5299,7 @@ Boolean mask algebra across aligned region annotations.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed
 `GenomicElementTools` console script.
 
 ## Inputs
@@ -5381,7 +5381,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5476,7 +5476,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5565,7 +5565,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5690,7 +5690,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5818,7 +5818,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -5910,7 +5910,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -6128,7 +6128,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 # CLI command grouped index
 
-Supported release `0.3.0a4`. Three installed console scripts own distinct genomic workflows. Browse by ownership, then open a tool landing for task-oriented groupings and per-command semantics.
+Supported release `0.4.0a1`. Three installed console scripts own distinct genomic workflows. Browse by ownership, then open a tool landing for task-oriented groupings and per-command semantics.
 
 ## Genomic-element-centric: `GenomicElementTools`
 
@@ -6172,7 +6172,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -6296,7 +6296,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -6383,7 +6383,7 @@ MotifTools barcodes \
   --output /tmp/barcodes-spec.fasta
 ```
 
-Identical inputs reproduce these FASTA bytes in release `0.3.0a4`:
+Identical inputs reproduce these FASTA bytes in release `0.4.0a1`:
 
 ```text
 >barcode_0
@@ -6432,7 +6432,7 @@ page and in the [site-wide exact-path index](../exact-path-index.md).
 
 ## Shared contract
 
-**Purpose.** Motif-centric generation and transformation. Release `0.3.0a4`
+**Purpose.** Motif-centric generation and transformation. Release `0.4.0a1`
 includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
 delivered in `0.2.0a1`.
 
@@ -6489,11 +6489,11 @@ subject is a genomic-element or exogenous-sequence collection remains in
 
 Sample two deterministic 3-mers from an inline PWM — see
 [`pwm_seq`](pwm-seq.md) for the seeded FASTA bytes produced in release
-`0.3.0a4`.
+`0.4.0a1`.
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Inputs
 
@@ -6582,7 +6582,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -6681,7 +6681,7 @@ MotifTools pwm_seq \
   --output /tmp/pwm-doc-example.fasta
 ```
 
-Identical inputs reproduce these FASTA bytes in release `0.3.0a4`:
+Identical inputs reproduce these FASTA bytes in release `0.4.0a1`:
 
 ```text
 >pwm_DOC_EXAMPLE_0
@@ -6721,7 +6721,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -6804,7 +6804,7 @@ MotifTools random_seq \
   --output /tmp/random-spec.fasta
 ```
 
-Identical inputs reproduce these FASTA bytes in release `0.3.0a4`:
+Identical inputs reproduce these FASTA bytes in release `0.4.0a1`:
 
 ```text
 >random_seq_0
@@ -6879,7 +6879,7 @@ Represent one boolean selection value per element or genomic region.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -6970,7 +6970,7 @@ same order. Too few barcodes or invalid choices fail with `ValueError`.
 Serialized outputs from FASTA assembly operations.
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7022,7 +7022,7 @@ malformed FASTA fail with a library/file error and a non-zero CLI exit.
 Exogenous sequence interchange.
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7071,7 +7071,7 @@ and `+` or `both` strand search according to `--reverse_complement`.
 Reusable motif score tracks.
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7122,7 +7122,7 @@ change sequence length if target length differs.
 Location-driven sequence replacement.
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7170,7 +7170,7 @@ raise `ValueError`.
 Channel-first one-hot sequence arrays.
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7219,7 +7219,7 @@ half-open; out-of-range columns are set to `-inf` before reduction.
 NumPy track and stat interchange.
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7265,7 +7265,7 @@ BED6-plus polymorphism output from `GenomicElementTools export bed6poly`.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7342,7 +7342,7 @@ Reusable CSV output from `GenomicElementTools export CountTable`.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7414,7 +7414,7 @@ transcription-regulatory-element/TSS annotations from plus/minus signal.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7489,7 +7489,7 @@ Wild-type element sequence library emitted by `GenomicElementTools export WTES`.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7567,7 +7567,7 @@ Sidecar NumPy annotations aligned to the current element order.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7652,7 +7652,7 @@ Sequence interchange for genome-anchored (`GenomicElements`) and exogenous
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7744,7 +7744,7 @@ Define the supported tab-separated, headerless region representations used by Be
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7839,7 +7839,7 @@ Represent one genomic interval with the BED3 schema.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7906,7 +7906,7 @@ Represent BED3 intervals with one caller-provided gene symbol column.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -7972,7 +7972,7 @@ Represent intervals with BED3 coordinates plus name, score, and strand.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8039,7 +8039,7 @@ Represent BED6 intervals with one caller-provided gene symbol column.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8105,7 +8105,7 @@ Represent a BED3 interval with one numeric `dataValue` signal column.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8171,7 +8171,7 @@ Represent a plain text list with one item per line.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8237,7 +8237,7 @@ Represent a BED6 interval with four peak annotation columns.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8307,7 +8307,7 @@ Represent two linked intervals and pair metadata in one headerless TSV row.
 ## Availability
 
 Experimental.
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8374,7 +8374,7 @@ the existing three-argument constructor.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 ## Inputs
 
@@ -8506,7 +8506,7 @@ PINTS-compatible six-column TSS-annotated BED serialization.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.3.0a3`.
 
@@ -8581,7 +8581,7 @@ Describe the supported annotation input consumed by `RGTools.GTF_utils`.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8660,7 +8660,7 @@ commands on the genomic-element and exogenous-sequence CLIs.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8760,7 +8760,7 @@ signal-counting CLIs.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -8842,7 +8842,7 @@ Define the in-memory dictionary returned by Ensembl SNP coordinate bridging in
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -10320,7 +10320,7 @@ Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/676083b089
 
 # Python API grouped index
 
-Supported `RGTools` release `0.3.0a4`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
+Supported `RGTools` release `0.4.0a1`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
 
 ## Foundation
 

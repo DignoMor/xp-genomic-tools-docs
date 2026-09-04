@@ -181,6 +181,8 @@ def _finalize_body(
     body = _repair_links(body, tool, page_slug)
     return (
         body.replace("{release}", release)
+        .replace("0.4.0a1", release)
+        .replace("0.4.0a1", release)
         .replace("0.3.0a3", release)
         .replace("0.2.0a2", release)
         .replace("0.1.0a2", release)

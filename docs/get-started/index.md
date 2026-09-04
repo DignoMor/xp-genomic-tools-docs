@@ -1,6 +1,6 @@
 # Get started
 
-Release **0.3.0a4** ships a Python library (`RGTools`) and three companion CLIs.
+Release **0.4.0a1** ships a Python library (`RGTools`) and three companion CLIs.
 Choose the onboarding path that matches how you plan to work.
 
 ## Pick your first success

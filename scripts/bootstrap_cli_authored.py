@@ -127,8 +127,8 @@ def bootstrap_genomic_element_tools() -> None:
     tool_dir = AUTHORED_ROOT / "genomic-element-tools"
     tool_dir.mkdir(parents=True, exist_ok=True)
     (tool_dir / "_landing.md").write_text(
-        intro.replace("0.3.0a3", "0.3.0a4")
-        + "\n\n## Availability\n\nSupported in release `0.3.0a4`.\n"
+        intro.replace("0.3.0a3", "0.4.0a1")
+        + "\n\n## Availability\n\nSupported in release `0.4.0a1`.\n"
     )
     for parser_path, body in sections.items():
         slug = parser_path_to_slug(parser_path)
@@ -158,7 +158,7 @@ def bootstrap_genomic_element_tools() -> None:
             target.write_text(authored)
             continue
         target.write_text(
-            _wrap_command_page("GenomicElementTools", parser_path, body, "0.3.0a4")
+            _wrap_command_page("GenomicElementTools", parser_path, body, "0.4.0a1")
         )
     for group in ("export", "import", "mask_op", "get_context_ge"):
         slug = parser_path_to_slug(group)
@@ -168,7 +168,7 @@ def bootstrap_genomic_element_tools() -> None:
                 f"# `{group}`\n\n"
                 f"## Purpose\n\n"
                 f"Group landing for `{group}` nested commands in `GenomicElementTools`.\n\n"
-                f"## Availability\n\nSupported in release `0.3.0a4`.\n\n"
+                f"## Availability\n\nSupported in release `0.4.0a1`.\n\n"
                 f"## Inputs\n\nSee nested command pages.\n\n"
                 f"## Types\n\nSee nested command pages.\n\n"
                 f"## Shapes\n\nSee nested command pages.\n\n"
@@ -190,7 +190,7 @@ def bootstrap_exogenous_sequence_tools() -> None:
     tool_dir.mkdir(parents=True, exist_ok=True)
     intro = text.split("## `assemble`", 1)[0].strip()
     (tool_dir / "_landing.md").write_text(
-        intro.replace("0.1.0a2", "0.3.0a4")
+        intro.replace("0.1.0a2", "0.4.0a1")
     )
     command_blocks = re.split(r"^## `([^`]+)`\s*$", text, flags=re.MULTILINE)[1:]
     for index in range(0, len(command_blocks), 2):
@@ -213,12 +213,12 @@ def bootstrap_exogenous_sequence_tools() -> None:
                         "ExogenousSequenceTools",
                         f"assemble {subheading}",
                         match.group(1).strip(),
-                        "0.3.0a4",
+                        "0.4.0a1",
                     )
                 )
             (tool_dir / "assemble.md").write_text(
                 "# `assemble`\n\n## Purpose\n\nAssemble exogenous sequences.\n\n"
-                "## Availability\n\nSupported in release `0.3.0a4`.\n\n"
+                "## Availability\n\nSupported in release `0.4.0a1`.\n\n"
                 "## Inputs\n\nSee nested commands.\n\n## Types\n\nSee nested commands.\n\n"
                 "## Shapes\n\nSee nested commands.\n\n## Dtypes\n\nSee nested commands.\n\n"
                 "## Defaults\n\nSee nested commands.\n\n## Choices\n\nSee nested commands.\n\n"
@@ -240,12 +240,12 @@ def bootstrap_exogenous_sequence_tools() -> None:
                         "ExogenousSequenceTools",
                         "gen_track single_loc",
                         match.group(1).strip(),
-                        "0.3.0a4",
+                        "0.4.0a1",
                     )
                 )
             (tool_dir / "gen-track.md").write_text(
                 "# `gen_track`\n\n## Purpose\n\nGenerate track annotations from exogenous FASTA.\n\n"
-                "## Availability\n\nSupported in release `0.3.0a4`.\n\n"
+                "## Availability\n\nSupported in release `0.4.0a1`.\n\n"
                 "## Inputs\n\nSee nested commands.\n\n## Types\n\nSee nested commands.\n\n"
                 "## Shapes\n\nSee nested commands.\n\n## Dtypes\n\nSee nested commands.\n\n"
                 "## Defaults\n\nSee nested commands.\n\n## Choices\n\nSee nested commands.\n\n"
@@ -270,12 +270,12 @@ def bootstrap_exogenous_sequence_tools() -> None:
                         "ExogenousSequenceTools",
                         f"track_dim_reduction {operation}",
                         match.group(1).strip(),
-                        "0.3.0a4",
+                        "0.4.0a1",
                     )
                 )
             (tool_dir / "track-dim-reduction.md").write_text(
                 "# `track_dim_reduction`\n\n## Purpose\n\nReduce track annotations along sequence positions.\n\n"
-                "## Availability\n\nSupported in release `0.3.0a4`.\n\n"
+                "## Availability\n\nSupported in release `0.4.0a1`.\n\n"
                 "## Inputs\n\nSee nested commands.\n\n## Types\n\nSee nested commands.\n\n"
                 "## Shapes\n\nSee nested commands.\n\n## Dtypes\n\nSee nested commands.\n\n"
                 "## Defaults\n\nSee nested commands.\n\n## Choices\n\nSee nested commands.\n\n"
@@ -288,7 +288,7 @@ def bootstrap_exogenous_sequence_tools() -> None:
         target = tool_dir / f"{slug}.md"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(
-            _wrap_command_page("ExogenousSequenceTools", heading, body, "0.3.0a4")
+            _wrap_command_page("ExogenousSequenceTools", heading, body, "0.4.0a1")
         )
 
 
@@ -299,7 +299,7 @@ def bootstrap_motif_tools() -> None:
     tool_dir.mkdir(parents=True, exist_ok=True)
     intro = text.split("## `anti_motif`", 1)[0].strip()
     (tool_dir / "_landing.md").write_text(
-        intro.replace("0.2.0a2", "0.3.0a4")
+        intro.replace("0.2.0a2", "0.4.0a1")
     )
     for command in ("anti_motif", "pwm_seq", "random_seq", "barcodes"):
         match = re.search(
@@ -310,7 +310,7 @@ def bootstrap_motif_tools() -> None:
         if not match:
             continue
         body = match.group(1).strip()
-        page = _wrap_command_page("MotifTools", command, body, "0.3.0a4")
+        page = _wrap_command_page("MotifTools", command, body, "0.4.0a1")
         (tool_dir / f"{command.replace('_', '-')}.md").write_text(page)
 
 

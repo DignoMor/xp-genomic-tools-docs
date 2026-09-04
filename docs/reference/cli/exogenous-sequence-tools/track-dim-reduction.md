@@ -9,7 +9,7 @@ Reduce track annotations along sequence positions.
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.3.0a4`. Invoke through the installed
+Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed
 `ExogenousSequenceTools` console script.
 
 ## Inputs
