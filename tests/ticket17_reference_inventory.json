@@ -1,5 +1,5 @@
 {
-  "release": "0.3.0a4",
+  "release": "0.4.0a1",
   "guides": [
     {
       "path": "guides/genomic-elements",
@@ -7,14 +7,14 @@
       "required_terms": [
         "GenomicElements",
         "Region row order",
-        "export_exogeneous_sequences",
-        "ExogeneousSequences"
+        "export_exogenous_sequences",
+        "ExogenousSequences"
       ],
       "reference_links": [
         "reference/python/elements/genomic-elements",
         "reference/formats/foundation/bed3",
         "reference/formats/elements/fasta",
-        "reference/cli/genomic-element-tools/export/exogeneous-sequences"
+        "reference/cli/genomic-element-tools/export/exogenous-sequences"
       ],
       "executes_python": true
     },

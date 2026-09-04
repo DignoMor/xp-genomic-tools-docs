@@ -9,13 +9,13 @@ page and in the [site-wide exact-path index](../exact-path-index.md).
 
 ## Shared contract
 
-**Purpose.** Motif-centric generation and transformation. Release `0.3.0a4`
+**Purpose.** Motif-centric generation and transformation. Release `0.4.0a1`
 includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
 delivered in `0.2.0a1`.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogenous-sequence
-collection remains in `GenomicElementTools` and `ExogeneousSequenceTools`.
+collection remains in `GenomicElementTools` and `ExogenousSequenceTools`.
 
 **Inputs.** Supported-subset MEME files for `anti_motif` (see
 [MEME format](../../formats/motifs/meme.md)).
@@ -60,17 +60,17 @@ or uniform alphabets with optional motif exclusions; `barcodes` enumerates
 filtered barcode spaces in supplied-alphabet order; `anti_motif` derives
 inverse-weight motif collections for screening. Motif scoring whose primary
 subject is a genomic-element or exogenous-sequence collection remains in
-`GenomicElementTools` and `ExogeneousSequenceTools`.
+`GenomicElementTools` and `ExogenousSequenceTools`.
 
 ## Example
 
 Sample two deterministic 3-mers from an inline PWM — see
 [`pwm_seq`](pwm-seq.md) for the seeded FASTA bytes produced in release
-`0.3.0a4`.
+`0.4.0a1`.
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Inputs
 

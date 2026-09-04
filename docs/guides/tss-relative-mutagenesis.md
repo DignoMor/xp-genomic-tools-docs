@@ -127,6 +127,12 @@ GenomicElementTools tss_relative_mutagenesis \
   --write_replaced_windows
 ```
 
+Add `--output_orientation strand` when you need complete final sequences in
+transcriptional orientation. That mode requires every round to share one
+strand; mutation placement and `manifest.tsv` genomic coordinates stay
+genomic-forward, and optional `replaced/` audit FASTAs remain genomic-forward.
+Omit the flag (or pass `genomic`) for genomic-forward `sequences.fasta`.
+
 The command publishes a complete bundle under `mutagenesis_bundle/`:
 
 ```text
@@ -141,13 +147,17 @@ mutagenesis_bundle/
 Sequence IDs look like `r000001|chr1:1000-2000|target=ref`. Use `--force` to
 replace an existing bundle after a successful staging pass.
 
+**Same-strand reporter tip.** For strand-oriented final FASTAs, keep all
+manifest rounds on one strand (or split mixed designs into separate
+invocations). Mixed `+`/`-` rounds are valid only with genomic orientation.
+
 ## 5. Use results downstream
 
 - Import `sequences.fasta` into exogenous-sequence workflows if needed
 - Join `manifest.tsv` on `sequence_id` for per-round provenance
 - Compare `replaced/<round_id>.fasta` to final records when auditing overlaps
 
-[`ExogeneousSequenceTools mutagenesis`](../reference/cli/exogeneous-sequence-tools/mutagenesis.md)
+[`ExogenousSequenceTools mutagenesis`](../reference/cli/exogenous-sequence-tools/mutagenesis.md)
 remains a separate one-round, ordinary-offset tool for FASTA-only inputs; it is
 not a substitute for this genomic TSS-relative workflow.
 

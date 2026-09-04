@@ -1,5 +1,5 @@
 site_name: xp-genomic-tools
-site_description: User docs for RGTools and companion CLIs (GenomicElementTools, ExogeneousSequenceTools, and MotifTools 0.3.0a4)
+site_description: User docs for RGTools and companion CLIs (GenomicElementTools, ExogenousSequenceTools, and MotifTools 0.4.0a1)
 site_url: https://dignomor.github.io/xp-genomic-tools-docs/
 repo_url: https://github.com/DignoMor/xp-genomic-tools
 repo_name: DignoMor/xp-genomic-tools
@@ -51,12 +51,12 @@ plugins:
   - redirects:
       redirect_maps:
         reference/cli/generated/genomic-element-tools.md: reference/cli/genomic-element-tools/index.md
-        reference/cli/generated/exogeneous-sequence-tools.md: reference/cli/exogeneous-sequence-tools/index.md
+        reference/cli/generated/exogenous-sequence-tools.md: reference/cli/exogenous-sequence-tools/index.md
         reference/cli/generated/motif-tools.md: reference/cli/motif-tools/index.md
         reference/cli/mask-op-intersect.md: reference/cli/genomic-element-tools/mask-op/intersect.md
         cli/index.md: reference/cli/index.md
         cli/GenomicElementTools.md: reference/cli/genomic-element-tools/index.md
-        cli/ExogeneousSequenceTools.md: reference/cli/exogeneous-sequence-tools/index.md
+        cli/ExogenousSequenceTools.md: reference/cli/exogenous-sequence-tools/index.md
         cli/MotifTools.md: reference/cli/motif-tools/index.md
 
 nav:
@@ -80,7 +80,7 @@ nav:
           - Overview: reference/python/elements/index.md
           - GeneralElements: reference/python/general-elements/general-elements.md
           - GenomicElements: reference/python/elements/genomic-elements.md
-          - ExogeneousSequences: reference/python/elements/exogeneous-sequences.md
+          - ExogenousSequences: reference/python/elements/exogenous-sequences.md
       - Operations:
           - GeneralElements.load_mask_from_arr(): reference/python/general-elements/load-mask-from-arr.md
       - MemeMotif: reference/python/motifs/meme-motif.md
@@ -126,7 +126,7 @@ nav:
               - Overview: reference/cli/genomic-element-tools/export.md
               - export ChromFilteredGE: reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
               - export CountTable: reference/cli/genomic-element-tools/export/count-table.md
-              - export ExogeneousSequences: reference/cli/genomic-element-tools/export/exogeneous-sequences.md
+              - export ExogenousSequences: reference/cli/genomic-element-tools/export/exogenous-sequences.md
               - export Heatmap: reference/cli/genomic-element-tools/export/heatmap.md
               - export MaskedGE: reference/cli/genomic-element-tools/export/masked-ge.md
               - export MergedGE: reference/cli/genomic-element-tools/export/merged-ge.md
@@ -144,26 +144,26 @@ nav:
               - Overview: reference/cli/genomic-element-tools/get-context-ge.md
               - get_context_ge nearest: reference/cli/genomic-element-tools/get-context-ge/nearest.md
               - get_context_ge windowed_argmax: reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
-      - ExogeneousSequenceTools:
-          - Overview: reference/cli/exogeneous-sequence-tools/index.md
+      - ExogenousSequenceTools:
+          - Overview: reference/cli/exogenous-sequence-tools/index.md
           - assemble:
-              - Overview: reference/cli/exogeneous-sequence-tools/assemble.md
-              - assemble add_adapter: reference/cli/exogeneous-sequence-tools/assemble/add-adapter.md
-              - assemble barcode: reference/cli/exogeneous-sequence-tools/assemble/barcode.md
-              - assemble concat: reference/cli/exogeneous-sequence-tools/assemble/concat.md
+              - Overview: reference/cli/exogenous-sequence-tools/assemble.md
+              - assemble add_adapter: reference/cli/exogenous-sequence-tools/assemble/add-adapter.md
+              - assemble barcode: reference/cli/exogenous-sequence-tools/assemble/barcode.md
+              - assemble concat: reference/cli/exogenous-sequence-tools/assemble/concat.md
           - gen_track:
-              - Overview: reference/cli/exogeneous-sequence-tools/gen-track.md
-              - gen_track single_loc: reference/cli/exogeneous-sequence-tools/gen-track/single-loc.md
+              - Overview: reference/cli/exogenous-sequence-tools/gen-track.md
+              - gen_track single_loc: reference/cli/exogenous-sequence-tools/gen-track/single-loc.md
           - track_dim_reduction:
-              - Overview: reference/cli/exogeneous-sequence-tools/track-dim-reduction.md
-              - track_dim_reduction argmax: reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmax.md
-              - track_dim_reduction argmin: reference/cli/exogeneous-sequence-tools/track-dim-reduction/argmin.md
-              - track_dim_reduction max: reference/cli/exogeneous-sequence-tools/track-dim-reduction/max.md
-              - track_dim_reduction min: reference/cli/exogeneous-sequence-tools/track-dim-reduction/min.md
-          - mutagenesis: reference/cli/exogeneous-sequence-tools/mutagenesis.md
-          - print_stat: reference/cli/exogeneous-sequence-tools/print-stat.md
-          - motif_search: reference/cli/exogeneous-sequence-tools/motif-search.md
-          - onehot: reference/cli/exogeneous-sequence-tools/onehot.md
+              - Overview: reference/cli/exogenous-sequence-tools/track-dim-reduction.md
+              - track_dim_reduction argmax: reference/cli/exogenous-sequence-tools/track-dim-reduction/argmax.md
+              - track_dim_reduction argmin: reference/cli/exogenous-sequence-tools/track-dim-reduction/argmin.md
+              - track_dim_reduction max: reference/cli/exogenous-sequence-tools/track-dim-reduction/max.md
+              - track_dim_reduction min: reference/cli/exogenous-sequence-tools/track-dim-reduction/min.md
+          - mutagenesis: reference/cli/exogenous-sequence-tools/mutagenesis.md
+          - print_stat: reference/cli/exogenous-sequence-tools/print-stat.md
+          - motif_search: reference/cli/exogenous-sequence-tools/motif-search.md
+          - onehot: reference/cli/exogenous-sequence-tools/onehot.md
       - MotifTools:
           - Overview: reference/cli/motif-tools/index.md
           - anti_motif: reference/cli/motif-tools/anti-motif.md
@@ -180,6 +180,7 @@ nav:
       - GENCODE GTF: reference/formats/gtf/gencode.md
       - Ensembl SNP simple info: reference/formats/snp/ensembl-simple-info.md
       - BED-like region tables: reference/formats/foundation/bed-like.md
+      - Region schema (version 1): reference/formats/foundation/region-schema.md
       - bed3: reference/formats/foundation/bed3.md
       - bed6: reference/formats/foundation/bed6.md
       - bed3gene: reference/formats/foundation/bed3gene.md
@@ -194,11 +195,11 @@ nav:
           - TREbed: reference/formats/cli/genomic-element-tools/trebed.md
           - bed6poly: reference/formats/cli/genomic-element-tools/bed6poly.md
           - WTES: reference/formats/cli/genomic-element-tools/wtes.md
-      - ExogeneousSequenceTools formats:
-          - Exogenous FASTA: reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta.md
-          - Assembly outputs: reference/formats/cli/exogeneous-sequence-tools/assembly-outputs.md
-          - Mutagenesis: reference/formats/cli/exogeneous-sequence-tools/mutagenesis.md
-          - Track and stat arrays: reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays.md
-          - Motif outputs: reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md
-          - One-hot outputs: reference/formats/cli/exogeneous-sequence-tools/onehot-outputs.md
+      - ExogenousSequenceTools formats:
+          - Exogenous FASTA: reference/formats/cli/exogenous-sequence-tools/exogenous-fasta.md
+          - Assembly outputs: reference/formats/cli/exogenous-sequence-tools/assembly-outputs.md
+          - Mutagenesis: reference/formats/cli/exogenous-sequence-tools/mutagenesis.md
+          - Track and stat arrays: reference/formats/cli/exogenous-sequence-tools/track-stat-arrays.md
+          - Motif outputs: reference/formats/cli/exogenous-sequence-tools/motif-outputs.md
+          - One-hot outputs: reference/formats/cli/exogenous-sequence-tools/onehot-outputs.md
   - FAQ: faq.md

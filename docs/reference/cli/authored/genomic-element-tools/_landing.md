@@ -1,6 +1,6 @@
 # GenomicElementTools command reference
 
-This is the semantic reference for release `0.3.0a4`. It covers every shipped
+This is the semantic reference for release `0.4.0a1`. It covers every shipped
 top-level command and nested path. Parser-derived usage, aliases, required
 flags, choices, defaults, and help appear on each canonical command page and in
 the [site-wide exact-path index](../exact-path-index.md); the sections below
@@ -9,15 +9,18 @@ completeness checks is [`inventory.json`](inventory.json).
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`.
+Supported in `GenomicElementTools` for release `0.4.0a1`.
 
 ## Purpose
 
 `GenomicElementTools` operates on genomic-element collections: [BED-like region
 tables](../../../formats/foundation/bed-like.md) with aligned
-[annotation arrays](../../../formats/elements/annotation-arrays.md). Commands
-group into region and signal work (BigWig quantification, padding, TSS point
-BED, context lookup, [TSS-relative](../../python/general-elements/tss-relative-coordinates.md)
+[annotation arrays](../../../formats/elements/annotation-arrays.md). Generic
+primary region inputs take exactly one of `--region_file_type` (named format)
+or `--region_file_schema` (version-1 [region schema](../../../formats/foundation/region-schema.md)
+JSON path). Commands group into region and signal work (BigWig quantification,
+padding, TSS point BED, context lookup,
+[TSS-relative](../../python/general-elements/tss-relative-coordinates.md)
 selection and mutagenesis), sequence and motif scoring on extracted windows,
 boolean mask algebra, and nested import/export of regions plus attached
 annotations. Parser-derived syntax for every path appears on the canonical

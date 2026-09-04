@@ -28,7 +28,7 @@ needed).
 
 - **Genome FASTA**: chromosome (or contig) records; IDs must match region `chrom`
 - **Exogenous FASTA**: one record per sequence; used by
-  `ExogeneousSequenceTools` and some export/import paths
+  `ExogenousSequenceTools` and some export/import paths
 
 ## Annotations (`.npy` / `.npz`)
 

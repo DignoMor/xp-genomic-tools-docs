@@ -1,5 +1,5 @@
 {
-  "release": "0.3.0a4",
+  "release": "0.4.0a1",
   "required_fields": [
     "Purpose",
     "Availability",
@@ -105,11 +105,11 @@
       "symbols": ["FASTA"],
       "related_api": [
         "reference/python/elements/genomic-elements",
-        "reference/python/elements/exogeneous-sequences"
+        "reference/python/elements/exogenous-sequences"
       ],
       "related_cli": [
         "reference/cli/genomic-element-tools",
-        "reference/cli/exogeneous-sequence-tools"
+        "reference/cli/exogenous-sequence-tools"
       ],
       "backlink_api": ["reference/python/elements/genomic-elements"]
     },
@@ -155,47 +155,47 @@
       "backlink_cli": ["reference/cli/genomic-element-tools/export/wtes"]
     },
     {
-      "path": "reference/formats/cli/exogeneous-sequence-tools/exogenous-fasta",
+      "path": "reference/formats/cli/exogenous-sequence-tools/exogenous-fasta",
       "symbols": ["Exogenous FASTA"],
-      "related_api": ["reference/python/elements/exogeneous-sequences"],
-      "related_cli": ["reference/cli/exogeneous-sequence-tools"],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools"]
+      "related_api": ["reference/python/elements/exogenous-sequences"],
+      "related_cli": ["reference/cli/exogenous-sequence-tools"],
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools"]
     },
     {
-      "path": "reference/formats/cli/exogeneous-sequence-tools/assembly-outputs",
+      "path": "reference/formats/cli/exogenous-sequence-tools/assembly-outputs",
       "symbols": ["Assembly"],
       "related_cli": [
-        "reference/cli/exogeneous-sequence-tools/assemble/add-adapter",
-        "reference/cli/exogeneous-sequence-tools/assemble/barcode"
+        "reference/cli/exogenous-sequence-tools/assemble/add-adapter",
+        "reference/cli/exogenous-sequence-tools/assemble/barcode"
       ],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/assemble/add-adapter"]
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools/assemble/add-adapter"]
     },
     {
-      "path": "reference/formats/cli/exogeneous-sequence-tools/mutagenesis",
+      "path": "reference/formats/cli/exogenous-sequence-tools/mutagenesis",
       "symbols": ["Mutagenesis"],
-      "related_cli": ["reference/cli/exogeneous-sequence-tools/mutagenesis"],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/mutagenesis"]
+      "related_cli": ["reference/cli/exogenous-sequence-tools/mutagenesis"],
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools/mutagenesis"]
     },
     {
-      "path": "reference/formats/cli/exogeneous-sequence-tools/track-stat-arrays",
+      "path": "reference/formats/cli/exogenous-sequence-tools/track-stat-arrays",
       "symbols": ["track", "stat"],
       "related_cli": [
-        "reference/cli/exogeneous-sequence-tools/track-dim-reduction/max",
-        "reference/cli/exogeneous-sequence-tools/gen-track/single-loc"
+        "reference/cli/exogenous-sequence-tools/track-dim-reduction/max",
+        "reference/cli/exogenous-sequence-tools/gen-track/single-loc"
       ],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/track-dim-reduction/max"]
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools/track-dim-reduction/max"]
     },
     {
-      "path": "reference/formats/cli/exogeneous-sequence-tools/motif-outputs",
+      "path": "reference/formats/cli/exogenous-sequence-tools/motif-outputs",
       "symbols": ["motif"],
-      "related_cli": ["reference/cli/exogeneous-sequence-tools/motif-search"],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/motif-search"]
+      "related_cli": ["reference/cli/exogenous-sequence-tools/motif-search"],
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools/motif-search"]
     },
     {
-      "path": "reference/formats/cli/exogeneous-sequence-tools/onehot-outputs",
+      "path": "reference/formats/cli/exogenous-sequence-tools/onehot-outputs",
       "symbols": ["one-hot", "onehot"],
-      "related_cli": ["reference/cli/exogeneous-sequence-tools/onehot"],
-      "backlink_cli": ["reference/cli/exogeneous-sequence-tools/onehot"]
+      "related_cli": ["reference/cli/exogenous-sequence-tools/onehot"],
+      "backlink_cli": ["reference/cli/exogenous-sequence-tools/onehot"]
     }
   ]
 }

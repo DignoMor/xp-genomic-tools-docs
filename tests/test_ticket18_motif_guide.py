@@ -60,7 +60,7 @@ class Ticket18MotifGuideTest(unittest.TestCase):
 
     def test_pwm_generation_and_searches_execute_deterministically(self) -> None:
         motif_tools = CODE_ROOT / ".venv/bin/MotifTools"
-        exo_tools = CODE_ROOT / ".venv/bin/ExogeneousSequenceTools"
+        exo_tools = CODE_ROOT / ".venv/bin/ExogenousSequenceTools"
         genomic_tools = CODE_ROOT / ".venv/bin/GenomicElementTools"
         meme = DOCS_ROOT / self.inventory["synthetic_asset"]
 
@@ -131,7 +131,7 @@ class Ticket18MotifGuideTest(unittest.TestCase):
             for marker in self.inventory["task_markers"]:
                 self.assertIn(marker, text, marker)
             self.assertIn("exogenous", text.lower())
-            self.assertIn("ExogeneousSequenceTools", text)
+            self.assertIn("ExogenousSequenceTools", text)
             self.assertNotRegex(
                 text.lower(),
                 r"/specs/|delivery-spec|spec00[245]",

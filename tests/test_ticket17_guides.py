@@ -68,7 +68,7 @@ class Ticket17GuidesTest(unittest.TestCase):
             self.assertEqual(ge.get_all_region_seqs(), ["GGGC", "ACGT"])
             with tempfile.TemporaryDirectory() as directory:
                 export_path = Path(directory) / "exported.fa"
-                ge.export_exogeneous_sequences(str(export_path))
+                ge.export_exogenous_sequences(str(export_path))
                 self.assertIn(">chrB:1-5", export_path.read_text())
         finally:
             ge.close()

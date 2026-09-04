@@ -1,5 +1,5 @@
 {
-  "release": "0.3.0a4",
+  "release": "0.4.0a1",
   "top_level_nav": [
     "Get started",
     "Concepts",
@@ -19,8 +19,8 @@
       "target_slug": "genomic-element-tools"
     },
     {
-      "source": "cli/ExogeneousSequenceTools",
-      "target_slug": "exogeneous-sequence-tools"
+      "source": "cli/ExogenousSequenceTools",
+      "target_slug": "exogenous-sequence-tools"
     },
     {
       "source": "cli/MotifTools",

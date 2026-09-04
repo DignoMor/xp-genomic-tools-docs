@@ -173,9 +173,9 @@ class Ticket16QuickstartsTest(unittest.TestCase):
                 self.assertIn(Path(path).name, cli_page, path)
 
             self.assertIn("exogenous", python_page.lower())
-            self.assertIn("ExogeneousSequences", python_page)
+            self.assertIn("ExogenousSequences", python_page)
             self.assertIn("exogenous", cli_page.lower())
-            self.assertIn("export ExogeneousSequences", cli_page)
+            self.assertIn("export ExogenousSequences", cli_page)
 
             compact = (site / "llms.txt").read_text()
             self.assertIn("get-started", compact)

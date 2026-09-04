@@ -39,7 +39,7 @@ finally:
     ge.close()
 ```
 
-Expected behavior for release **0.3.0a4**:
+Expected behavior for release **0.4.0a1**:
 
 - Region row `0` is `chrB:1-5` → sequence `GGGC` (four bases from the `chrB` FASTA record)
 - Region row `1` is `chrA:0-4` → sequence `ACGT`
@@ -66,10 +66,9 @@ for ordering and ambiguity rules.
 ## Export exogenous sequences (optional)
 
 To produce a FASTA file of region sequences for exogenous-sequence workflows,
-call [`export_exogeneous_sequences()`](../reference/python/elements/genomic-elements.md)
-or use the CLI [`export ExogeneousSequences`](../reference/cli/genomic-element-tools/export/exogeneous-sequences.md)
-described in the [CLI quickstart](cli-quickstart.md). Narrative docs use
-“exogenous”; the released Python and CLI identifiers remain `Exogeneous…`.
+call [`export_exogenous_sequences()`](../reference/python/elements/genomic-elements.md)
+or use the CLI [`export ExogenousSequences`](../reference/cli/genomic-element-tools/export/exogenous-sequences.md)
+described in the [CLI quickstart](cli-quickstart.md).
 
 ## Next steps
 

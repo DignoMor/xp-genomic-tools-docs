@@ -40,7 +40,7 @@ def _parser_records() -> dict[str, list[dict]]:
 LEGACY_SOURCE_COMMIT = "5d90c9c"
 LEGACY_INDEX_PATHS = (
     "docs/reference/cli/genomic-element-tools/index.md",
-    "docs/reference/cli/exogeneous-sequence-tools/index.md",
+    "docs/reference/cli/exogenous-sequence-tools/index.md",
     "docs/reference/cli/motif-tools/index.md",
 )
 

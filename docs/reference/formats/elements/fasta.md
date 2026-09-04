@@ -3,11 +3,11 @@
 ## Purpose
 
 Sequence interchange for genome-anchored (`GenomicElements`) and exogenous
-(`ExogeneousSequences`) collections, plus exported region FASTA.
+(`ExogenousSequences`) collections, plus exported region FASTA.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -41,8 +41,12 @@ Genome FASTA, exogenous FASTA, or exported-region FASTA profiles.
 ## Constraints
 
 Genome record IDs must match `chrom` exactly. Annotation row `i` aligns with
-FASTA record `i`. Genomic export uses `chrom:start-end` headers and refuses
-overwrite of an existing path.
+FASTA record `i`. Genomic export defaults to `chrom:start-end` headers and may
+optionally use row-level names; selected IDs must be unique. Sequences default
+to genomic-forward orientation and may optionally use region-strand orientation
+when the region schema exposes strand. Export refuses overwrite of an existing
+path. Every exported genomic interval must satisfy BED half-open containment
+`0 <= start < end <= chromosome_length`.
 
 ## Outputs
 
@@ -54,13 +58,15 @@ Source FASTA order; region-table order for genomic extraction.
 
 ## Side effects
 
-Indexing reads FASTA; writers create files; export refuses existing destinations.
+Indexing reads FASTA; writers create files; export refuses existing destinations
+and does not create or replace a destination when any interval fails validation.
 
 ## Failures
 
 Missing chromosomes return `None` for single-region getters and raise during bulk
-extraction or export. Malformed FASTA and existing export paths fail as stated
-in the governing APIs.
+extraction or export. Genomic export also raises when an interval has
+`start < 0`, `start >= end`, or `end` beyond the chromosome length. Malformed
+FASTA and existing export paths fail as stated in the governing APIs.
 
 ## Genome FASTA profile
 
@@ -69,13 +75,13 @@ by this API.
 
 ## Exogenous and exported FASTA profile
 
-`ExogeneousSequences` reads all records in file order and exposes synthetic
+`ExogenousSequences` reads all records in file order and exposes synthetic
 BED3 `(id,0,len)` regions. `write_sequences_to_fasta` and genomic export write
 standard `>id` records.
 
 ## Related API and CLI
 
 - [`GenomicElements`](../../python/elements/genomic-elements.md)
-- [`ExogeneousSequences`](../../python/elements/exogeneous-sequences.md)
+- [`ExogenousSequences`](../../python/elements/exogenous-sequences.md)
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
-- [`ExogeneousSequenceTools`](../../cli/exogeneous-sequence-tools/index.md)
+- [`ExogenousSequenceTools`](../../cli/exogenous-sequence-tools/index.md)

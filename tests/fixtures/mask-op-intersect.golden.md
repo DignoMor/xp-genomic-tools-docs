@@ -7,7 +7,7 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke it through the
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Inputs

@@ -106,7 +106,7 @@ GENOMIC_ELEMENT_INTENT_GROUPS: tuple[IntentGroup, ...] = (
         paths=(
             "export ChromFilteredGE",
             "export CountTable",
-            "export ExogeneousSequences",
+            "export ExogenousSequences",
             "export Heatmap",
             "export MaskedGE",
             "export MergedGE",
@@ -153,7 +153,7 @@ GENOMIC_ELEMENT_TOOLS = ToolRegistry(
             "import stat_list",
             "import allele_expanded_ES",
             "export stat_list",
-            "export ExogeneousSequences",
+            "export ExogenousSequences",
             "export WTES",
             "export allele_expanded_ES",
             "export CountTable",
@@ -168,9 +168,9 @@ GENOMIC_ELEMENT_TOOLS = ToolRegistry(
     intent_groups=GENOMIC_ELEMENT_INTENT_GROUPS,
 )
 
-EXOGENEOUS_SEQUENCE_TOOLS = ToolRegistry(
-    console_name="ExogeneousSequenceTools",
-    slug="exogeneous-sequence-tools",
+EXOGENOUS_SEQUENCE_TOOLS = ToolRegistry(
+    console_name="ExogenousSequenceTools",
+    slug="exogenous-sequence-tools",
     group_paths=frozenset({"assemble", "track_dim_reduction", "gen_track"}),
     invocable_paths=frozenset(
         {
@@ -199,18 +199,18 @@ MOTIF_TOOLS = ToolRegistry(
 
 ALL_TOOLS: tuple[ToolRegistry, ...] = (
     GENOMIC_ELEMENT_TOOLS,
-    EXOGENEOUS_SEQUENCE_TOOLS,
+    EXOGENOUS_SEQUENCE_TOOLS,
     MOTIF_TOOLS,
 )
 
 REDIRECTS = {
     "reference/cli/generated/genomic-element-tools.md": "reference/cli/genomic-element-tools/index.md",
-    "reference/cli/generated/exogeneous-sequence-tools.md": "reference/cli/exogeneous-sequence-tools/index.md",
+    "reference/cli/generated/exogenous-sequence-tools.md": "reference/cli/exogenous-sequence-tools/index.md",
     "reference/cli/generated/motif-tools.md": "reference/cli/motif-tools/index.md",
     "reference/cli/mask-op-intersect.md": "reference/cli/genomic-element-tools/mask-op/intersect.md",
     "cli/index.md": "reference/cli/index.md",
     "cli/GenomicElementTools.md": "reference/cli/genomic-element-tools/index.md",
-    "cli/ExogeneousSequenceTools.md": "reference/cli/exogeneous-sequence-tools/index.md",
+    "cli/ExogenousSequenceTools.md": "reference/cli/exogenous-sequence-tools/index.md",
     "cli/MotifTools.md": "reference/cli/motif-tools/index.md",
 }
 

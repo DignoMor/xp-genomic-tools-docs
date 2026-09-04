@@ -2,7 +2,7 @@
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -10,8 +10,10 @@ Select a [TSS-relative](../../python/general-elements/tss-relative-coordinates.m
 score from required `--track_npy` relative to a [TREbed
 TSS](../../../formats/foundation/trebed.md). Requires `--strand` (`+` or `-`),
 nonzero `--target_coord`, finite `--min_score`, `--coordinate_opath`, and
-`--mask_opath`. Shared region flags are required and `--region_file_type` must
-be `TREbed`. Track and output paths accept `.npy` or single-array `.npz`.
+`--mask_opath`. Shared region flags are required and the named selector
+`--region_file_type` must be `TREbed`. A custom `--region_file_schema` is
+rejected even when it declares the same columns. Track and output paths accept
+`.npy` or single-array `.npz`.
 
 ## Defaults
 

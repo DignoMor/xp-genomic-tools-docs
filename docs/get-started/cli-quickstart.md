@@ -30,7 +30,7 @@ MotifTools random_seq \
   --output random-smoke.fasta
 ```
 
-Release **0.3.0a4** reproduces these bytes exactly:
+Release **0.4.0a1** reproduces these bytes exactly:
 
 ```text
 >random_seq_0
@@ -43,13 +43,13 @@ If this command fails, fix installation before debugging genomic inputs.
 
 ## Step 2 — export exogenous sequences from genomic regions
 
-[`GenomicElementTools export ExogeneousSequences`](../reference/cli/genomic-element-tools/export/exogeneous-sequences.md)
+[`GenomicElementTools export ExogenousSequences`](../reference/cli/genomic-element-tools/export/exogenous-sequences.md)
 extracts each region's sequence as FASTA using the
-[`ExogeneousSequences`](../reference/python/elements/exogeneous-sequences.md)
-contract (narrative docs say “exogenous”):
+[`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
+contract:
 
 ```bash
-GenomicElementTools export ExogeneousSequences \
+GenomicElementTools export ExogenousSequences \
   --fasta_path assets/quickstart-synthetic-genome.fa \
   --region_file_path assets/quickstart-synthetic-regions.bed3 \
   --region_file_type bed3 \

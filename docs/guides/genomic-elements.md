@@ -58,10 +58,12 @@ and inherited annotation getters documented on
 
 ## 3. Export exogenous sequences
 
-Call [`export_exogeneous_sequences()`](../reference/python/elements/genomic-elements.md)
+Call [`export_exogenous_sequences()`](../reference/python/elements/genomic-elements.md)
 to write region sequences as FASTA using the
-[`ExogeneousSequences`](../reference/python/elements/exogeneous-sequences.md)
-contract (narrative docs say “exogenous”):
+[`ExogenousSequences`](../reference/python/elements/exogenous-sequences.md)
+contract. Export validates that every interval is fully contained in its
+chromosome before writing; out-of-bounds or missing-chromosome rows raise
+`ValueError` and leave the destination untouched:
 
 ```python
 ge = GenomicElements(
@@ -70,13 +72,13 @@ ge = GenomicElements(
     "quickstart-synthetic-genome.fa",
 )
 try:
-    ge.export_exogeneous_sequences("region-sequences.fasta")
+    ge.export_exogenous_sequences("region-sequences.fasta")
 finally:
     ge.close()
 ```
 
 The CLI equivalent is
-[`GenomicElementTools export ExogeneousSequences`](../reference/cli/genomic-element-tools/export/exogeneous-sequences.md),
+[`GenomicElementTools export ExogenousSequences`](../reference/cli/genomic-element-tools/export/exogenous-sequences.md),
 shown step-by-step in the [CLI quickstart](../get-started/cli-quickstart.md).
 
 Other [`export`](../reference/cli/genomic-element-tools/export.md) subcommands

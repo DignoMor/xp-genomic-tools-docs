@@ -66,7 +66,7 @@ Nested under `import` / `export`:
 **`export` formats (`oformat`)**
 
 - `stat_list`
-- `ExogeneousSequences`
+- `ExogenousSequences`
 - `WTES`
 - `allele_expanded_ES`
 - `CountTable`
@@ -116,5 +116,5 @@ GenomicElementTools count_single_bw --help
 Export region sequences to FASTA:
 
 ```bash
-GenomicElementTools export ExogeneousSequences --help
+GenomicElementTools export ExogenousSequences --help
 ```

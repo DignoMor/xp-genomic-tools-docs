@@ -2,7 +2,7 @@
 
 ## Availability
 
-Supported in `MotifTools` for release `0.3.0a4`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -101,7 +101,7 @@ MotifTools pwm_seq \
   --output /tmp/pwm-doc-example.fasta
 ```
 
-Identical inputs reproduce these FASTA bytes in release `0.3.0a4`:
+Identical inputs reproduce these FASTA bytes in release `0.4.0a1`:
 
 ```text
 >pwm_DOC_EXAMPLE_0

@@ -2,7 +2,7 @@
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
@@ -13,6 +13,9 @@ flags with `--region_file_type TREbed`, `--fasta_path`, required
 `--round_manifest`, and required `--output_dir`. Optional
 `--write_replaced_windows` emits per-round audit FASTAs; optional `--force`
 authorizes replacing an existing output directory after successful staging.
+Optional `--output_orientation {genomic,strand}` (default `genomic`) controls
+whether final `sequences.fasta` records are written genomic-forward or in the
+unique round strand's transcriptional orientation.
 
 **Round manifest.** Tab-separated manifest with an exact header:
 `round_id`, `coordinate_stat`, `target_fasta`, `strand`. One data row defines
@@ -69,7 +72,19 @@ With `--write_replaced_windows`, the bundle also contains
 the exact sequence removed immediately before that round inserts its target
 (same IDs and record order as `sequences.fasta`; sequence length equals that
 round's target length). For overlapping rounds, a later replaced window
-includes changes from earlier rounds.
+includes changes from earlier rounds. Replaced-window FASTAs remain
+genomic-forward audit artifacts even when `--output_orientation strand` is set.
+
+**Final-sequence orientation.** `--output_orientation` defaults to `genomic`
+and keeps `sequences.fasta` genomic-forward (compatible with prior releases).
+When set to `strand`, every round in the invocation must declare the same
+strand; that unique strand is the output strand. Mutation placement, coordinate
+arithmetic, and `manifest.tsv` genomic interval fields stay genomic-forward.
+After all rounds finish, plus-strand final sequences are written unchanged and
+minus-strand final sequences are reverse-complemented once (IUPAC, case
+preserved), so a supplied strand-oriented mutation target appears literally in
+the strand-oriented FASTA. Mixed `+` and `-` rounds are rejected before staging
+when `strand` orientation is requested.
 
 **Sequence IDs.** Stable FASTA IDs have the form
 `rNNNNNN|chrom:start-end|target=TARGET_ID`, where the row number is one-based
@@ -98,8 +113,9 @@ TREbed-only region type; genome coverage; reserved `|` in chromosome names;
 manifest header and round IDs; coordinate shape, dtype, and alignment; target
 files, alphabets, lengths, and cross-round ID sets; selected TSS availability
 and interval membership; coordinate zero; replacement-window bounds for every
-derived sequence and round. Errors identify the round, region row, target
-group, and coordinate where possible.
+derived sequence and round; and, when `--output_orientation strand` is set, a
+single shared round strand across the manifest. Errors identify the round,
+region row, target group, and coordinate where possible.
 
 **Composition.** Typical upstream steps are
 [`select_tss_relative_track`](#select_tss_relative_track) (coordinate stat and
@@ -162,6 +178,7 @@ GenomicElementTools tss_relative_mutagenesis \
   --region_file_type TREbed \
   --fasta_path genome.fa \
   --round_manifest rounds.tsv \
+  --output_orientation strand \
   --output_dir mutagenesis-out
 ```
 
@@ -169,4 +186,7 @@ The manifest header must be `round_id`, `coordinate_stat`, `target_fasta`,
 `strand`; see the [TSS-relative mutagenesis
 workflow](../../../guides/tss-relative-mutagenesis.md) for a full bundle layout
 and upstream [`select_tss_relative_track`](select-tss-relative-track.md) /
-[`mask_op intersect`](mask-op/intersect.md) composition.
+[`mask_op intersect`](mask-op/intersect.md) composition. Use
+`--output_orientation strand` when downstream reporter workflows need complete
+final sequences in transcriptional orientation; omit it or pass `genomic` to
+keep genomic-forward FASTA output.

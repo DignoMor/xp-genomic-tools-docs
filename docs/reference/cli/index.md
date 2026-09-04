@@ -1,6 +1,6 @@
 # CLI command grouped index
 
-Supported release `0.3.0a4`. Three installed console scripts own distinct genomic workflows. Browse by ownership, then open a tool landing for task-oriented groupings and per-command semantics.
+Supported release `0.4.0a1`. Three installed console scripts own distinct genomic workflows. Browse by ownership, then open a tool landing for task-oriented groupings and per-command semantics.
 
 ## Genomic-element-centric: `GenomicElementTools`
 
@@ -16,12 +16,12 @@ Genome-anchored BED-like regions with aligned annotation arrays: quantify BigWig
   - mask_op
   - get_context_ge
 
-## Exogenous-sequence-centric: `ExogeneousSequenceTools`
+## Exogenous-sequence-centric: `ExogenousSequenceTools`
 
 Ordered exogenous FASTA libraries with synthetic BED3 coordinates: assemble adapters and barcodes, generate tracks and stats, run indexed mutagenesis, search motifs across sequences, and reduce track dimensionality without a genome reference BED.
 
-- Canonical landing: [`ExogeneousSequenceTools`](exogeneous-sequence-tools/index.md)
-- Search terms: `ExogeneousSequenceTools`, `exogeneous-sequence-tools`
+- Canonical landing: [`ExogenousSequenceTools`](exogenous-sequence-tools/index.md)
+- Search terms: `ExogenousSequenceTools`, `exogenous-sequence-tools`
 - Top-level command groups: `assemble`, `gen_track`, `motif_search`, `mutagenesis`, `onehot`, `print_stat`, `track_dim_reduction`
 
 ## Motif-centric: `MotifTools`

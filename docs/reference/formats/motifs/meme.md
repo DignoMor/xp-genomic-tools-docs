@@ -7,7 +7,7 @@ commands on the genomic-element and exogenous-sequence CLIs.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
@@ -90,5 +90,5 @@ contextual `ValueError`. Unknown motif names raise `KeyError`.
 - [`MotifGeneration`](../../python/motifs/motif-generation.md)
 - [`MotifTools`](../../cli/motif-tools/index.md)
 - [`GenomicElementTools motif_search`](../../cli/genomic-element-tools/motif-search.md)
-- [`ExogeneousSequenceTools motif_search`](../../cli/exogeneous-sequence-tools/motif-search.md)
-- [Motif-search track outputs (CLI)](../cli/exogeneous-sequence-tools/motif-outputs.md)
+- [`ExogenousSequenceTools motif_search`](../../cli/exogenous-sequence-tools/motif-search.md)
+- [Motif-search track outputs (CLI)](../cli/exogenous-sequence-tools/motif-outputs.md)

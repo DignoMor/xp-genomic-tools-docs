@@ -2,11 +2,11 @@
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.3.0a4`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 
-Same FASTA inputs as `ExogeneousSequences`, plus required integer
+Same FASTA inputs as `ExogenousSequences`, plus required integer
 `--num_replicates`. Writes replicate copies in library-defined WTES ID/order;
 invalid replicate counts and FASTA/region errors fail.
 

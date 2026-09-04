@@ -17,7 +17,7 @@
     {"path": "reference/cli/genomic-element-tools", "qualified_name": "import stat_list", "symbols": ["import stat_list"]},
     {"path": "reference/cli/genomic-element-tools", "qualified_name": "import allele_expanded_ES", "symbols": ["import allele_expanded_ES"]},
     {"path": "reference/cli/genomic-element-tools", "qualified_name": "export stat_list", "symbols": ["export stat_list"]},
-    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export ExogeneousSequences", "symbols": ["export ExogeneousSequences"]},
+    {"path": "reference/cli/genomic-element-tools", "qualified_name": "export ExogenousSequences", "symbols": ["export ExogenousSequences"]},
     {"path": "reference/cli/genomic-element-tools", "qualified_name": "export WTES", "symbols": ["export WTES"]},
     {"path": "reference/cli/genomic-element-tools", "qualified_name": "export allele_expanded_ES", "symbols": ["export allele_expanded_ES"]},
     {"path": "reference/cli/genomic-element-tools", "qualified_name": "export CountTable", "symbols": ["export CountTable"]},

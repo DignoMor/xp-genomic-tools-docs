@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from cli_page_registry import EXOGENEOUS_SEQUENCE_TOOLS, GENOMIC_ELEMENT_TOOLS, MOTIF_TOOLS, ToolRegistry
+from cli_page_registry import EXOGENOUS_SEQUENCE_TOOLS, GENOMIC_ELEMENT_TOOLS, MOTIF_TOOLS, ToolRegistry
 
 
 def _page_ref(tool: ToolRegistry, parser_path: str) -> str:
@@ -38,11 +38,11 @@ def genomic_nav() -> str:
     return "\n".join(lines)
 
 
-def exogeneous_nav() -> str:
-    tool = EXOGENEOUS_SEQUENCE_TOOLS
+def exogenous_nav() -> str:
+    tool = EXOGENOUS_SEQUENCE_TOOLS
     lines = [
-        "          - ExogeneousSequenceTools:",
-        "              - Overview: reference/cli/exogeneous-sequence-tools/index.md",
+        "          - ExogenousSequenceTools:",
+        "              - Overview: reference/cli/exogenous-sequence-tools/index.md",
     ]
     for group in ("assemble", "gen_track", "track_dim_reduction"):
         lines.append(f"              - {group}:")
@@ -67,5 +67,5 @@ def motif_nav() -> str:
 
 if __name__ == "__main__":
     print(genomic_nav())
-    print(exogeneous_nav())
+    print(exogenous_nav())
     print(motif_nav())

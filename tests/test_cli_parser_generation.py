@@ -93,7 +93,7 @@ class CliParserGenerationAcceptanceTest(unittest.TestCase):
             0,
             f"stdout:\n{completed.stdout}\nstderr:\n{completed.stderr}",
         )
-        for tool in ("genomic-element-tools", "exogeneous-sequence-tools", "motif-tools"):
+        for tool in ("genomic-element-tools", "exogenous-sequence-tools", "motif-tools"):
             page = GENERATED / f"{tool}.md"
             self.assertTrue(page.is_file(), page)
             text = page.read_text()
@@ -103,7 +103,7 @@ class CliParserGenerationAcceptanceTest(unittest.TestCase):
             self.assertTrue(records)
             parser_tool = {
                 "genomic-element-tools": "GenomicElementTools",
-                "exogeneous-sequence-tools": "ExogeneousSequenceTools",
+                "exogenous-sequence-tools": "ExogenousSequenceTools",
                 "motif-tools": "MotifTools",
             }[tool]
             extracted = json.loads(

@@ -11,12 +11,12 @@ Notes:
 - NumPy is constrained to **`>=1.24,<2`**
 - `matplotlib` is required for `GenomicElementTools export Heatmap`
 
-## Install from the 0.3.0a4 tag
+## Install from the 0.4.0a1 tag
 
 There is no PyPI publish for this alpha. Install from the tagged code repository:
 
 ```bash
-pip install "git+https://github.com/DignoMor/xp-genomic-tools.git@0.3.0a4"
+pip install "git+https://github.com/DignoMor/xp-genomic-tools.git@0.4.0a1"
 ```
 
 Editable install from a local clone of the code repo:
@@ -24,7 +24,7 @@ Editable install from a local clone of the code repo:
 ```bash
 git clone https://github.com/DignoMor/xp-genomic-tools.git
 cd xp-genomic-tools
-git checkout 0.3.0a4
+git checkout 0.4.0a1
 pip install -e ".[dev]"
 ```
 
@@ -32,7 +32,7 @@ pip install -e ".[dev]"
 
 ```bash
 GenomicElementTools --help
-ExogeneousSequenceTools --help
+ExogenousSequenceTools --help
 MotifTools --help
 ```
 
@@ -40,7 +40,7 @@ You can also run:
 
 ```bash
 python -m GenomicElementTools --help
-python -m ExogeneousSequenceTools --help
+python -m ExogenousSequenceTools --help
 python -m MotifTools --help
 ```
 

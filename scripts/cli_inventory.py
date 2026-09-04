@@ -356,7 +356,7 @@ def validate_retired_generated_references() -> None:
     for relative in (
         "docs/cli/MotifTools.md",
         "docs/cli/GenomicElementTools.md",
-        "docs/cli/ExogeneousSequenceTools.md",
+        "docs/cli/ExogenousSequenceTools.md",
     ):
         path = DOCS_ROOT / relative
         if path.is_file() and "reference/cli/generated/" in path.read_text():

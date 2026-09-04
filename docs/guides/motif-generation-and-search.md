@@ -12,7 +12,7 @@ task-oriented.
 | --- | --- | --- |
 | Generate or transform motifs and synthetic sequences | **MotifTools** (motif-centric) | [`pwm_seq`](../reference/cli/motif-tools/pwm-seq.md), [`random_seq`](../reference/cli/motif-tools/random-seq.md) |
 | Score genomic regions with motifs | **GenomicElementTools** (element-centric) | [`motif_search`](../reference/cli/genomic-element-tools/motif-search.md) |
-| Score exogenous FASTA collections with motifs | **ExogeneousSequenceTools** (exogenous-sequence-centric) | [`motif_search`](../reference/cli/exogeneous-sequence-tools/motif-search.md) |
+| Score exogenous FASTA collections with motifs | **ExogenousSequenceTools** (exogenous-sequence-centric) | [`motif_search`](../reference/cli/exogenous-sequence-tools/motif-search.md) |
 
 Python equivalents for motif objects and generation live under
 [`MemeMotif`](../reference/python/motifs/meme-motif.md) and
@@ -42,7 +42,7 @@ MotifTools pwm_seq \
   --output pwm-sequences.fasta
 ```
 
-Release **0.3.0a4** reproduces:
+Release **0.4.0a1** reproduces:
 
 ```text
 >pwm_QUICKSTART_MOTIF_0
@@ -68,7 +68,7 @@ with active motif exclusions can exhaust its attempt budget and raise
 After generation, score the collection with the exogenous-sequence tool:
 
 ```bash
-ExogeneousSequenceTools motif_search \
+ExogenousSequenceTools motif_search \
   --fasta pwm-sequences.fasta \
   --motif_file assets/quickstart-synthetic-motif.meme \
   --output_header es_scores
@@ -77,7 +77,7 @@ ExogeneousSequenceTools motif_search \
 This writes `es_scores.QUICKSTART_MOTIF.npy`, a `(N, L)` track aligned to input
 sequence order (`N=2`, `L=3` for the example above). Interpretation details and
 dtype rules are on the
-[motif track output format](../reference/formats/cli/exogeneous-sequence-tools/motif-outputs.md).
+[motif track output format](../reference/formats/cli/exogenous-sequence-tools/motif-outputs.md).
 
 ## 3. Search genomic regions instead
 

@@ -23,7 +23,7 @@ Every supported class, function group, module, and standalone method page appear
 | `RGTools.exceptions.InvalidBedRegionException` | [InvalidBedRegionException](foundation/exceptions/) | Supported |
 | `RGTools.exceptions.InvalidStrandnessException` | [InvalidStrandnessException](foundation/exceptions/) | Supported |
 | `RGTools.exceptions.RGToolsInternalException` | [RGToolsInternalException](foundation/exceptions/) | Supported |
-| `RGTools.ExogeneousSequences.ExogeneousSequences` | [ExogeneousSequences](elements/exogeneous-sequences/) | Supported |
+| `RGTools.ExogenousSequences.ExogenousSequences` | [ExogenousSequences](elements/exogenous-sequences/) | Supported |
 | `RGTools.GeneralElements.GeneralElements` | [GeneralElements](general-elements/general-elements/) | Supported |
 | `RGTools.GenomicElements.GenomicElements` | [GenomicElements](elements/genomic-elements/) | Supported |
 | `RGTools.GTF_utils.GTFHandle` | [GTFHandle](gtf/gtf-utils/) | Supported |

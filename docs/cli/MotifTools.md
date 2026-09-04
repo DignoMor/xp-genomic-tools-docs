@@ -7,9 +7,9 @@ MotifTools --help
 MotifTools <subcommand> --help
 ```
 
-Motif **scoring** against genomic-element or exogeneous-sequence collections remains in
+Motif **scoring** against genomic-element or exogenous-sequence collections remains in
 [`GenomicElementTools`](GenomicElementTools.md) and
-[`ExogeneousSequenceTools`](ExogeneousSequenceTools.md). MotifTools owns motif
+[`ExogenousSequenceTools`](ExogenousSequenceTools.md). MotifTools owns motif
 generation and collection transforms such as anti-motifs.
 
 ## Shared output flags

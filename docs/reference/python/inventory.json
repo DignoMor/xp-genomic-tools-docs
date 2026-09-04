@@ -1,9 +1,9 @@
 {
-  "release": "0.3.0a4",
+  "release": "0.4.0a1",
   "internal_symbols": [
     "set_parser_genome",
     "set_parser_genomic_element_region",
-    "set_parser_exogeneous_sequences",
+    "set_parser_exogenous_sequences",
     "_get_rsid_info",
     "_is_SNP"
   ],
@@ -220,19 +220,19 @@
         "GenomicElements", "__init__", "fasta_path", "region_file_type", "region_file_path",
         "get_num_regions", "get_region_file_suffix2class_dict", "BedTable6Gene", "BedTable3Gene",
         "BedTableNarrowPeak", "BedTableTREBed", "BedTableBedGraph", "merge_genomic_elements",
-        "export_exogeneous_sequences", "get_all_region_seqs", "get_region_bed_table", "apply_logical_filter"
+        "export_exogenous_sequences", "get_all_region_seqs", "get_region_bed_table", "apply_logical_filter"
       ]
     },
     {
-      "path": "reference/python/elements/exogeneous-sequences",
+      "path": "reference/python/elements/exogenous-sequences",
       "group": "element-collections",
       "kind": "class",
       "status": "Supported",
-      "title": "ExogeneousSequences",
-      "qualified_name": "RGTools.ExogeneousSequences.ExogeneousSequences",
-      "aliases": ["ExogeneousSequences"],
+      "title": "ExogenousSequences",
+      "qualified_name": "RGTools.ExogenousSequences.ExogenousSequences",
+      "aliases": ["ExogenousSequences"],
       "symbols": [
-        "ExogeneousSequences", "__init__", "fasta_path", "region_file_type", "region_file_path",
+        "ExogenousSequences", "__init__", "fasta_path", "region_file_type", "region_file_path",
         "get_sequence_ids", "get_region_bed_table", "get_all_region_seqs", "get_all_region_lens",
         "apply_logical_filter", "write_sequences_to_fasta"
       ]

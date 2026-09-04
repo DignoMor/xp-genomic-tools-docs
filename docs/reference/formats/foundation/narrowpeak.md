@@ -6,7 +6,7 @@ Represent a BED6 interval with four peak annotation columns.
 
 ## Availability
 
-Supported in the current reference release (`0.3.0a4`).
+Supported in the current reference release (`0.4.0a1`).
 
 Available since `0.1.0a2`.
 
