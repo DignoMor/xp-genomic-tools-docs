@@ -133,6 +133,12 @@ strand; mutation placement and `manifest.tsv` genomic coordinates stay
 genomic-forward, and optional `replaced/` audit FASTAs remain genomic-forward.
 Omit the flag (or pass `genomic`) for genomic-forward `sequences.fasta`.
 
+An empty filtered TREbed collection is valid when every round still supplies
+valid inputs and an integer coordinate array with shape `(0, 1)`. The command
+then writes an empty `sequences.fasta`, a header-only `manifest.tsv`, and an
+empty replaced-window FASTA for each round when `--write_replaced_windows` is
+set. Round and target validation still applies.
+
 The command publishes a complete bundle under `mutagenesis_bundle/`:
 
 ```text
