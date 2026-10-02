@@ -2,6 +2,7 @@
   "commands": [
     "assemble add_adapter",
     "assemble barcode",
+    "assemble combine",
     "assemble concat",
     "assemble reverse_complement",
     "gen_track single_loc",
@@ -51,6 +52,13 @@
       "symbols": [
         "assemble barcode",
         "barcode"
+      ]
+    },
+    {
+      "path": "reference/cli/exogenous-sequence-tools/assemble/combine",
+      "symbols": [
+        "assemble combine",
+        "combine"
       ]
     },
     {

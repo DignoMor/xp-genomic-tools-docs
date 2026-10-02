@@ -31,13 +31,14 @@ exit and their underlying exception when invoked through the console script.
 `ExogenousSequenceTools` transforms exogenous sequence libraries represented as
 ordered FASTA records with synthetic BED3 coordinates (see [Exogenous
 FASTA](../../formats/cli/exogenous-sequence-tools/exogenous-fasta.md)). Commands
-assemble barcoded or adapter-flanked constructs, reverse-complement libraries, generate per-base tracks and
+assemble barcoded or adapter-flanked constructs, reverse-complement libraries, stack FASTA collections, generate per-base tracks and
 stats, run mutagenesis at indexed positions, search motifs across each sequence,
 and reduce track dimensionality — without requiring a genome reference BED.
 
 ## Example
 
 Attach 5′ and 3′ adapters to an exogenous library — see
-[`assemble add_adapter`](assemble/add-adapter.md) — or reverse-complement every
-record with [`assemble reverse_complement`](assemble/reverse-complement.md).
+[`assemble add_adapter`](assemble/add-adapter.md) — reverse-complement every
+record with [`assemble reverse_complement`](assemble/reverse-complement.md),
+or stack collections with [`assemble combine`](assemble/combine.md).
 See the [assembly output contract](../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).

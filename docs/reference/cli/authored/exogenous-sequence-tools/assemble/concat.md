@@ -13,6 +13,11 @@ paired by positional `zip` order (extra records are ignored). Output sequence
 `id5_i_id3_i`. Invalid methods raise `ValueError`. The output is ordered by
 the paired inputs.
 
+This is **paired sequence joining**, not collection stacking. Use
+[`assemble combine`](combine.md) to append whole collections without changing
+sequences. See the
+[assembly output format](../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
+
 ## Inputs
 
 See Purpose and the parser-derived options table.

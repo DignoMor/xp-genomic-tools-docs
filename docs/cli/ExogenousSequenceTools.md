@@ -28,7 +28,8 @@ Some assemble / track commands take additional FASTA or `.npy` paths instead of
 | Command | Nested | Role |
 | --- | --- | --- |
 | `assemble` | `add_adapter` | Prepend/append adapter FASTAs |
-| `assemble` | `concat` | Concatenate two FASTAs (`--fasta5` / `--fasta3`) |
+| `assemble` | `concat` | Paired sequence joining of two FASTAs (`--fasta5` / `--fasta3`) |
+| `assemble` | `combine` | Collection stacking of one or more FASTAs with per-input ID suffixes |
 | `assemble` | `barcode` | Attach barcodes and write metadata |
 | `assemble` | `reverse_complement` | Reverse-complement every record (IUPAC, case-preserving) |
 
@@ -72,6 +73,17 @@ ExogenousSequenceTools assemble reverse_complement \
   --fasta library.fa \
   --output_fasta library_rc.fa \
   --id_suffix _rc
+```
+
+Stack collections:
+
+```bash
+ExogenousSequenceTools assemble combine \
+  --input_fasta sublib_a.fa \
+  --id_suffix "" \
+  --input_fasta sublib_b.fa \
+  --id_suffix _b \
+  --output_fasta pooled.fa
 ```
 
 Motif search:
