@@ -151,6 +151,7 @@ nav:
               - assemble add_adapter: reference/cli/exogenous-sequence-tools/assemble/add-adapter.md
               - assemble barcode: reference/cli/exogenous-sequence-tools/assemble/barcode.md
               - assemble concat: reference/cli/exogenous-sequence-tools/assemble/concat.md
+              - assemble reverse_complement: reference/cli/exogenous-sequence-tools/assemble/reverse-complement.md
           - gen_track:
               - Overview: reference/cli/exogenous-sequence-tools/gen-track.md
               - gen_track single_loc: reference/cli/exogenous-sequence-tools/gen-track/single-loc.md

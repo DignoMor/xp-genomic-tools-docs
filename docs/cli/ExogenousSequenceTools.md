@@ -30,6 +30,7 @@ Some assemble / track commands take additional FASTA or `.npy` paths instead of
 | `assemble` | `add_adapter` | Prepend/append adapter FASTAs |
 | `assemble` | `concat` | Concatenate two FASTAs (`--fasta5` / `--fasta3`) |
 | `assemble` | `barcode` | Attach barcodes and write metadata |
+| `assemble` | `reverse_complement` | Reverse-complement every record (IUPAC, case-preserving) |
 
 ### Mutagenesis
 
@@ -62,6 +63,15 @@ ExogenousSequenceTools assemble add_adapter \
   --left_adapter_fasta left.fa \
   --right_adapter_fasta right.fa \
   --output_fasta assembled.fa
+```
+
+Reverse-complement a library:
+
+```bash
+ExogenousSequenceTools assemble reverse_complement \
+  --fasta library.fa \
+  --output_fasta library_rc.fa \
+  --id_suffix _rc
 ```
 
 Motif search:

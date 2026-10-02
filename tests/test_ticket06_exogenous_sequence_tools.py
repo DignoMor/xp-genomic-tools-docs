@@ -19,6 +19,7 @@ class Ticket06ExogenousSequenceToolsReferenceTest(unittest.TestCase):
         inventory = json.loads((REFERENCE / "inventory.json").read_text())
         expected = {
             "assemble add_adapter", "assemble concat", "assemble barcode",
+            "assemble reverse_complement",
             "mutagenesis", "gen_track single_loc",
             "track_dim_reduction max", "track_dim_reduction argmax",
             "track_dim_reduction min", "track_dim_reduction argmin",

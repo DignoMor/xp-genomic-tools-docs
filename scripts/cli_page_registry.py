@@ -177,6 +177,7 @@ EXOGENOUS_SEQUENCE_TOOLS = ToolRegistry(
             "assemble add_adapter",
             "assemble concat",
             "assemble barcode",
+            "assemble reverse_complement",
             "mutagenesis",
             "gen_track single_loc",
             "track_dim_reduction max",

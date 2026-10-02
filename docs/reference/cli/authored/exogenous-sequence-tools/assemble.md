@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Assemble exogenous sequences with adapters, concatenation, or barcodes.
+Assemble exogenous sequences with adapters, paired sequence joining (`concat`), barcodes, or reverse complement.
 
 ## Availability
 

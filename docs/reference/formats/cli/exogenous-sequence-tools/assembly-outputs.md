@@ -1,9 +1,17 @@
-# Adapter, concatenation, and barcode outputs
+# Adapter, concatenation, barcode, and reverse-complement outputs
 
 Assembly commands write ordinary FASTA records (no additional metadata).
 `add_adapter` emits `left + input + right` and preserves input IDs; each
-adapter file must contain exactly one record. `concat` emits positional
-`seq5 + seq3` pairs and IDs selected by `5`, `3`, or `5_3`.
+adapter file must contain exactly one record. `concat` performs paired
+sequence joining: positional `seq5 + seq3` pairs and IDs selected by `5`, `3`,
+or `5_3`.
+
+`reverse_complement` rewrites one exogenous FASTA: every record is
+reverse-complemented under IUPAC DNA rules with letter case preserved.
+Optional `--id_suffix` is appended to each ID with no extra separator.
+Output IDs must be unique; a non-IUPAC symbol, a duplicate ID, or an existing
+output path fails with `ValueError` and does not replace the output file.
+An empty input writes an empty FASTA.
 
 `barcode` consumes barcodes and input records in order. Its output is
 `barcode + element`, `element + barcode`, or both sides. IDs are original
