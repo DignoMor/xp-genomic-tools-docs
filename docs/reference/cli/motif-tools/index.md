@@ -44,7 +44,11 @@ has no command-specific defaults beyond optional `--force`.
 - Path outputs require an existing parent directory and refuse overwrite unless
   `--force` is supplied.
 - Completed path outputs are written atomically via temporary file + rename.
-- Successful path commands produce no stdout or stderr.
+- Successful path commands produce no stdout. `dinucleotide_transversion` may
+  emit a `--warn_score_cutoff` heuristic source-motif warning on stderr (not a
+  p-value, and not a knockout guarantee) after successful publication; other
+  successful path commands remain silent on stderr. Compose the FASTA with
+  ordinary-offset mutagenesis; callers reverse-complement minus-strand inserts.
 
 **Failures.**
 

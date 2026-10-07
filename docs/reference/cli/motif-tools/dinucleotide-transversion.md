@@ -198,9 +198,17 @@ That tied-column example writes:
 TT
 ```
 
-Default cutoff `0` emits no warning for those informative examples. A
-width-one fixture whose forward score equals the cutoff warns on stderr and
-still writes FASTA:
+and this warning on stderr, because the reverse-complement score is above the
+default heuristic cutoff `0`. That warning is not a p-value and does not prove
+or disprove motif knockout:
+
+```text
+Warning: motif TIED scores -0.7958800168 (forward) and 0.4082399652 (reverse complement) against the source PWM; cutoff 0.
+```
+
+The even-width and odd-width examples above emit no source-motif warning at
+default cutoff `0`. A width-one fixture whose forward score equals the cutoff
+warns on stderr and still writes FASTA:
 
 ```bash
 cat > /tmp/dtv-warn.meme <<'EOF'
