@@ -35,6 +35,7 @@ import RGTools.SNP_utils
 | FASTA-only sequence sets | `ExogenousSequences` |
 | MEME motif files | `MemeMotif` |
 | Anti-motif transforms | `RGTools.MotifGeneration.make_anti_motifs` |
+| PWM-derived transversion targets | `RGTools.MotifGeneration.generate_dinucleotide_transversion` |
 | TSS-relative coordinates | `RGTools.TSSRelativeCoordinates` |
 | BigWig signal | `SingleBwTrack` / paired track helpers |
 | One-item-per-line lists | `ListFile` |
