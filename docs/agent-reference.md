@@ -6,7 +6,7 @@ empty content for `llms.txt`.
 
 **Documentation release:** `0.4.0a2`
 
-**Code revision:** `34d0125061d41039d0d03b6cf2a5c5e0654ec5e8`
+**Code revision:** `d33fec1d3da8fe97aa8048a663d6e747e45bec5e`
 
 Plaintext peers:
 
