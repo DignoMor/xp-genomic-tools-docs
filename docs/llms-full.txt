@@ -1,7 +1,7 @@
 # xp-genomic-tools exhaustive public reference (0.4.0a2)
 
 Code revision: `d33fec1d3da8fe97aa8048a663d6e747e45bec5e`
-Documentation revision: `48078a8f9d132b892160d6e7f53046a71a0ae133`
+Documentation revision: `cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1`
 
 ## `agent-reference.md`
 
@@ -24,30 +24,30 @@ Plaintext peers:
 
 Canonical Pages URLs and immutable raw-source fallbacks:
 
-- Exhaustive plain-text reference: https://dignomor.github.io/xp-genomic-tools-docs/llms-full.txt (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/llms-full.txt)
-- Home: https://dignomor.github.io/xp-genomic-tools-docs/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/index.md)
-- Get started: https://dignomor.github.io/xp-genomic-tools-docs/get-started/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/get-started/index.md)
-- Python quickstart: https://dignomor.github.io/xp-genomic-tools-docs/get-started/python-quickstart/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/get-started/python-quickstart.md)
-- CLI quickstart: https://dignomor.github.io/xp-genomic-tools-docs/get-started/cli-quickstart/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/get-started/cli-quickstart.md)
-- Concepts: https://dignomor.github.io/xp-genomic-tools-docs/concepts/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/concepts.md)
-- How-to guides: https://dignomor.github.io/xp-genomic-tools-docs/guides/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/index.md)
-- Genomic elements guide: https://dignomor.github.io/xp-genomic-tools-docs/guides/genomic-elements/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/genomic-elements.md)
-- Motif generation guide: https://dignomor.github.io/xp-genomic-tools-docs/guides/motif-generation-and-search/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/motif-generation-and-search.md)
-- Python API overview: https://dignomor.github.io/xp-genomic-tools-docs/library/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/library.md)
-- Reference conventions: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/conventions.md)
-- Python grouped index: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/index.md)
-- Python alphabetical index: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/alphabetical-index/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/alphabetical-index.md)
-- CLI grouped index: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/index.md)
-- CLI exact-path index: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exact-path-index/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exact-path-index.md)
-- GenomicElementTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/index.md)
-- ExogenousSequenceTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/index.md)
-- MotifTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/motif-tools/index.md)
-- Data formats overview: https://dignomor.github.io/xp-genomic-tools-docs/formats/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/formats.md)
-- Boolean-mask dtype rule: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/#dtype (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/boolean-mask.md#dtype)
-- FAQ: https://dignomor.github.io/xp-genomic-tools-docs/faq/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/faq.md)
+- Exhaustive plain-text reference: https://dignomor.github.io/xp-genomic-tools-docs/llms-full.txt (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/llms-full.txt)
+- Home: https://dignomor.github.io/xp-genomic-tools-docs/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/index.md)
+- Get started: https://dignomor.github.io/xp-genomic-tools-docs/get-started/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/get-started/index.md)
+- Python quickstart: https://dignomor.github.io/xp-genomic-tools-docs/get-started/python-quickstart/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/get-started/python-quickstart.md)
+- CLI quickstart: https://dignomor.github.io/xp-genomic-tools-docs/get-started/cli-quickstart/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/get-started/cli-quickstart.md)
+- Concepts: https://dignomor.github.io/xp-genomic-tools-docs/concepts/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/concepts.md)
+- How-to guides: https://dignomor.github.io/xp-genomic-tools-docs/guides/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/index.md)
+- Genomic elements guide: https://dignomor.github.io/xp-genomic-tools-docs/guides/genomic-elements/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/genomic-elements.md)
+- Motif generation guide: https://dignomor.github.io/xp-genomic-tools-docs/guides/motif-generation-and-search/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/motif-generation-and-search.md)
+- Python API overview: https://dignomor.github.io/xp-genomic-tools-docs/library/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/library.md)
+- Reference conventions: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/conventions.md)
+- Python grouped index: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/index.md)
+- Python alphabetical index: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/alphabetical-index/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/alphabetical-index.md)
+- CLI grouped index: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/index.md)
+- CLI exact-path index: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exact-path-index/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exact-path-index.md)
+- GenomicElementTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/index.md)
+- ExogenousSequenceTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/index.md)
+- MotifTools CLI: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/index.md)
+- Data formats overview: https://dignomor.github.io/xp-genomic-tools-docs/formats/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/formats.md)
+- Boolean-mask dtype rule: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/#dtype (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/boolean-mask.md#dtype)
+- FAQ: https://dignomor.github.io/xp-genomic-tools-docs/faq/ (raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/faq.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/agent-reference/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/agent-reference.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/agent-reference.md
 
 ## `cli/index.md`
 
@@ -75,7 +75,7 @@ MotifTools --help
 ```
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/cli/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/cli/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/cli/index.md
 
 ## `concepts.md`
 
@@ -147,7 +147,7 @@ See the [TSS-relative mutagenesis workflow](guides/tss-relative-mutagenesis.md) 
 a composed CLI example.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/concepts/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/concepts.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/concepts.md
 
 ## `faq.md`
 
@@ -197,7 +197,7 @@ Large-file sequence / BigWig unit tests need fixtures under
 developers running the test suite, not for normal CLI use.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/faq/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/faq.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/faq.md
 
 ## `formats.md`
 
@@ -255,7 +255,7 @@ One item per line. Used for simple lists (for example importing a stat list into
 a region-aligned annotation).
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/formats/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/formats.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/formats.md
 
 ## `get-started/cli-quickstart.md`
 
@@ -335,7 +335,7 @@ IDs and row order follow the BED table, not chromosome sorting.
 - [Motif generation and search guide](../guides/motif-generation-and-search.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/get-started/cli-quickstart/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/get-started/cli-quickstart.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/get-started/cli-quickstart.md
 
 ## `get-started/index.md`
 
@@ -361,7 +361,7 @@ open [Python API](../library.md) or [CLI commands](../reference/cli/index.md) fo
 exact lookup.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/get-started/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/get-started/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/get-started/index.md
 
 ## `get-started/python-quickstart.md`
 
@@ -445,7 +445,7 @@ described in the [CLI quickstart](cli-quickstart.md).
 - [Genomic elements how-to guide](../guides/genomic-elements.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/get-started/python-quickstart/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/get-started/python-quickstart.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/get-started/python-quickstart.md
 
 ## `guides/genomic-elements.md`
 
@@ -543,7 +543,7 @@ to each command page instead of duplicating their contracts here.
 - [`GenomicElements` API reference](../reference/python/elements/genomic-elements.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/guides/genomic-elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/genomic-elements.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/genomic-elements.md
 
 ## `guides/index.md`
 
@@ -565,7 +565,7 @@ After a guide, skim [Concepts](../concepts.md) for shared terminology and open
 [Data formats](../formats.md) when you need representation contracts.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/guides/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/index.md
 
 ## `guides/motif-generation-and-search.md`
 
@@ -581,7 +581,7 @@ task-oriented.
 
 | Task | Owner | Typical entrypoint |
 | --- | --- | --- |
-| Generate or transform motifs and synthetic sequences | **MotifTools** (motif-centric) | [`pwm_seq`](../reference/cli/motif-tools/pwm-seq.md), [`random_seq`](../reference/cli/motif-tools/random-seq.md) |
+| Generate or transform motifs and synthetic sequences | **MotifTools** (motif-centric) | [`pwm_seq`](../reference/cli/motif-tools/pwm-seq.md), [`random_seq`](../reference/cli/motif-tools/random-seq.md), [`dinucleotide_transversion`](../reference/cli/motif-tools/dinucleotide-transversion.md) |
 | Score genomic regions with motifs | **GenomicElementTools** (element-centric) | [`motif_search`](../reference/cli/genomic-element-tools/motif-search.md) |
 | Score exogenous FASTA collections with motifs | **ExogenousSequenceTools** (exogenous-sequence-centric) | [`motif_search`](../reference/cli/exogenous-sequence-tools/motif-search.md) |
 
@@ -621,6 +621,21 @@ GCG
 >pwm_QUICKSTART_MOTIF_1
 ACG
 ```
+
+For a deterministic full-width transversion target from the same PWM, use
+[`MotifTools dinucleotide_transversion`](../reference/cli/motif-tools/dinucleotide-transversion.md).
+Worked even-width, odd-width, tied-column, warning, and mutagenesis-composition
+examples live on that command page. The target transverts every consensus
+position relative to the source PWM, not necessarily relative to an observed
+allele. Required matrix-header `nsites` and `E` stay in force.
+
+The CLI `--warn_score_cutoff` (default `0`) is a heuristic score threshold, not
+a p-value. A warning on stderr does not change FASTA bytes or exit status and
+does not prove motif knockout. The check scores only the source motif on the
+isolated target; evaluate other motifs or insertion boundaries separately if
+required. Callers reverse-complement the generated FASTA for minus-strand hits
+before ordinary-offset mutagenesis. The generation library function does not
+take a cutoff.
 
 For uniform random sequences (optionally with motif exclusions), use
 [`MotifTools random_seq`](../reference/cli/motif-tools/random-seq.md) as shown in
@@ -681,7 +696,7 @@ sequence readability, and compatible track lengths before writing `.npy` outputs
 - [MEME format contract](../reference/formats/motifs/meme.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/guides/motif-generation-and-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/motif-generation-and-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/motif-generation-and-search.md
 
 ## `guides/tss-relative-mutagenesis.md`
 
@@ -820,6 +835,12 @@ strand; mutation placement and `manifest.tsv` genomic coordinates stay
 genomic-forward, and optional `replaced/` audit FASTAs remain genomic-forward.
 Omit the flag (or pass `genomic`) for genomic-forward `sequences.fasta`.
 
+An empty filtered TREbed collection is valid when every round still supplies
+valid inputs and an integer coordinate array with shape `(0, 1)`. The command
+then writes an empty `sequences.fasta`, a header-only `manifest.tsv`, and an
+empty replaced-window FASTA for each round when `--write_replaced_windows` is
+set. Round and target validation still applies.
+
 The command publishes a complete bundle under `mutagenesis_bundle/`:
 
 ```text
@@ -856,7 +877,7 @@ not a substitute for this genomic TSS-relative workflow.
 - [TREbed format](../reference/formats/foundation/trebed.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/guides/tss-relative-mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/guides/tss-relative-mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/guides/tss-relative-mutagenesis.md
 
 ## `index.md`
 
@@ -893,7 +914,7 @@ This site documents release **0.4.0a2**.
 Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.4.0a2`).
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/index/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/index.md
 
 ## `install.md`
 
@@ -953,7 +974,7 @@ from RGTools import BedTable3, GenomicElements, MemeMotif, ListFile, SingleBwTra
 ```
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/install/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/install.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/install.md
 
 ## `library.md`
 
@@ -994,6 +1015,7 @@ import RGTools.SNP_utils
 | FASTA-only sequence sets | `ExogenousSequences` |
 | MEME motif files | `MemeMotif` |
 | Anti-motif transforms | `RGTools.MotifGeneration.make_anti_motifs` |
+| PWM-derived transversion targets | `RGTools.MotifGeneration.generate_dinucleotide_transversion` |
 | TSS-relative coordinates | `RGTools.TSSRelativeCoordinates` |
 | BigWig signal | `SingleBwTrack` / paired track helpers |
 | One-item-per-line lists | `ListFile` |
@@ -1045,7 +1067,7 @@ For most users, the console scripts are enough.
 - [EnsemblRestSearch](reference/python/snp/ensembl-rest-search.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/library/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/library.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/library.md
 
 ## `reference/cli/exogenous-sequence-tools/assemble/add-adapter.md`
 
@@ -1134,7 +1156,7 @@ ExogenousSequenceTools assemble add_adapter [-h] --fasta FASTA --left_adapter_fa
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/assemble/add-adapter/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/assemble/add-adapter.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/assemble/add-adapter.md
 
 ## `reference/cli/exogenous-sequence-tools/assemble/barcode.md`
 
@@ -1229,7 +1251,119 @@ ExogenousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --inp
 | `--barcode_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to add barcode to the exogenous sequences. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/assemble/barcode/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/assemble/barcode.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/assemble/barcode.md
+
+## `reference/cli/exogenous-sequence-tools/assemble/combine.md`
+
+<!-- Generated by scripts/assemble_cli_pages.py; do not edit directly. -->
+<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"input_fasta","flags":"--input_fasta","help":"Path to an input FASTA. Repeat once per collection, in output order.","nargs":"none","repeatable":true,"required":true,"spellings":["--input_fasta"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"id_suffix","flags":"--id_suffix","help":"Literal suffix for IDs from the corresponding --input_fasta (same count).","nargs":"none","repeatable":true,"required":true,"spellings":["--id_suffix"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"}],"help":"","path":"assemble combine","usage":"ExogenousSequenceTools assemble combine [-h] --input_fasta INPUT_FASTA --id_suffix ID_SUFFIX --output_fasta OUTPUT_FASTA"}] -->
+
+# `ExogenousSequenceTools assemble combine`
+
+## Availability
+
+Supported in `ExogenousSequenceTools` for release `0.4.0a2`. Invoke through the installed `ExogenousSequenceTools` console script.
+
+## Purpose
+
+Flags `--input_fasta`, `--id_suffix`, and `--output_fasta` are required.
+`--input_fasta` and `--id_suffix` are repeatable and pair one-to-one by
+position. Omitting `--id_suffix` entirely is an argparse error; an unequal
+count raises `ValueError`. An empty suffix is valid.
+
+This command performs **collection stacking**: it writes the records of each
+input FASTA, in command-line order and in file order within each input, into
+one FASTA. Sequences are unchanged. Each output ID is the input ID followed
+by that input's suffix concatenated literally (no extra separator). A single
+input with its suffix succeeds. Empty inputs contribute no records; stacking
+only empty inputs writes an empty FASTA. Output IDs must be unique after
+suffixing (`ValueError` names the duplicated ID and the contributing source
+FASTA files). Distinct suffixes can disambiguate shared input IDs. An
+existing `--output_fasta` is refused and left unchanged. Failed runs leave
+no output FASTA.
+
+This is not paired sequence joining. Use
+[`assemble concat`](concat.md) when corresponding records of two FASTAs
+should be concatenated so each sequence grows. See the
+[assembly output format](../../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
+
+## Inputs
+
+See Purpose and the parser-derived options table.
+
+## Types
+
+Paths and schema keys are strings unless noted in Purpose.
+
+## Shapes
+
+Annotation arrays align by first dimension with region or sequence order.
+
+## Dtypes
+
+See linked format references and Purpose.
+
+## Defaults
+
+Parser defaults appear in the generated options table.
+
+## Choices
+
+Parser choices appear in the generated options table.
+
+## Constraints
+
+See Purpose and linked format references.
+
+## Outputs
+
+See Purpose for the serialized output contract.
+
+## Ordering
+
+Inputs appear in command-line order; records within each input keep file order.
+
+## Side effects
+
+Reads declared inputs and writes declared outputs; inputs are not mutated.
+
+## Failures
+
+Argparse exits for missing required flags or invalid choices; runtime validation errors propagate from the implementation.
+
+## Example
+
+```bash
+ExogenousSequenceTools assemble combine \
+  --input_fasta sublib_a.fa \
+  --id_suffix "" \
+  --input_fasta sublib_b.fa \
+  --id_suffix _b \
+  --output_fasta pooled.fa
+```
+
+With `sublib_a.fa` containing `>x` / `AAA` then `>y` / `CCC`, and
+`sublib_b.fa` containing `>x` / `GGG` then `>z` / `TTT`, the output is
+`>x` / `AAA`, `>y` / `CCC`, `>x_b` / `GGG`, `>z_b` / `TTT`.
+
+## Syntax
+
+Parser-derived invocation for `ExogenousSequenceTools assemble combine`:
+
+```text
+ExogenousSequenceTools assemble combine [-h] --input_fasta INPUT_FASTA --id_suffix ID_SUFFIX --output_fasta OUTPUT_FASTA
+```
+
+### Options
+
+| Flags | Required | Type | Choices | Default | Repeatable | Parser help |
+| --- | --- | --- | --- | --- | --- | --- |
+| `--input_fasta` | yes | `inapplicable` | inapplicable | `none` | yes | Path to an input FASTA. Repeat once per collection, in output order. |
+| `--id_suffix` | yes | `inapplicable` | inapplicable | `none` | yes | Literal suffix for IDs from the corresponding --input_fasta (same count). |
+| `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
+
+Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/assemble/combine/
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/assemble/combine.md
 
 ## `reference/cli/exogenous-sequence-tools/assemble/concat.md`
 
@@ -1250,6 +1384,11 @@ paired by positional `zip` order (extra records are ignored). Output sequence
 `i` is `seq5_i + seq3_i`; its ID is respectively `id5_i`, `id3_i`, or
 `id5_i_id3_i`. Invalid methods raise `ValueError`. The output is ordered by
 the paired inputs.
+
+This is **paired sequence joining**, not collection stacking. Use
+[`assemble combine`](combine.md) to append whole collections without changing
+sequences. See the
+[assembly output format](../../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
 
 ## Inputs
 
@@ -1317,18 +1456,124 @@ ExogenousSequenceTools assemble concat [-h] --fasta5 FASTA5 --fasta3 FASTA3 --ou
 | `--id_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to generate the id of the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/assemble/concat/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/assemble/concat.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/assemble/concat.md
+
+## `reference/cli/exogenous-sequence-tools/assemble/reverse-complement.md`
+
+<!-- Generated by scripts/assemble_cli_pages.py; do not edit directly. -->
+<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"","dest":"id_suffix","flags":"--id_suffix","help":"Literal suffix appended to every output sequence ID.","nargs":"none","repeatable":false,"required":false,"spellings":["--id_suffix"],"type":"inapplicable"}],"help":"","path":"assemble reverse_complement","usage":"ExogenousSequenceTools assemble reverse_complement [-h] --fasta FASTA --output_fasta OUTPUT_FASTA [--id_suffix ID_SUFFIX]"}] -->
+
+# `ExogenousSequenceTools assemble reverse_complement`
+
+## Availability
+
+Supported in `ExogenousSequenceTools` for release `0.4.0a2`. Invoke through the installed `ExogenousSequenceTools` console script.
+
+## Purpose
+
+Flags `--fasta` and `--output_fasta` are required. Optional `--id_suffix`
+defaults to the empty string. Every input record is reverse-complemented with
+the same IUPAC, case-preserving DNA rule used by
+`GenomicElementTools export ExogenousSequences --output_orientation strand`.
+Record order is preserved. Each output ID is the input ID followed by the
+suffix concatenated literally (no extra separator). Output IDs must be unique
+after suffixing (`ValueError` names the duplicated ID and the source FASTA).
+A non-IUPAC symbol raises `ValueError`. An empty input FASTA writes an empty
+output FASTA. An existing `--output_fasta` is refused and left unchanged.
+Failed runs leave no output FASTA. See the
+[assembly output format](../../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
+
+## Inputs
+
+See Purpose and the parser-derived options table.
+
+## Types
+
+Paths and schema keys are strings unless noted in Purpose.
+
+## Shapes
+
+Annotation arrays align by first dimension with region or sequence order.
+
+## Dtypes
+
+See linked format references and Purpose.
+
+## Defaults
+
+Parser defaults appear in the generated options table.
+
+## Choices
+
+Parser choices appear in the generated options table.
+
+## Constraints
+
+See Purpose and linked format references.
+
+## Outputs
+
+See Purpose for the serialized output contract.
+
+## Ordering
+
+Output rows retain input order unless stated otherwise in Purpose.
+
+## Side effects
+
+Reads declared inputs and writes declared outputs; inputs are not mutated.
+
+## Failures
+
+Argparse exits for missing required flags or invalid choices; runtime validation errors propagate from the implementation.
+
+## Example
+
+```bash
+ExogenousSequenceTools assemble reverse_complement \
+  --fasta library.fa \
+  --output_fasta library_rc.fa \
+  --id_suffix _rc
+```
+
+With `library.fa` containing `>a` / `ACGTn` then `>b` / `RYk`, the output is
+`>a_rc` / `nACGT` then `>b_rc` / `mRY`.
+
+## Syntax
+
+Parser-derived invocation for `ExogenousSequenceTools assemble reverse_complement`:
+
+```text
+ExogenousSequenceTools assemble reverse_complement [-h] --fasta FASTA --output_fasta OUTPUT_FASTA [--id_suffix ID_SUFFIX]
+```
+
+### Options
+
+| Flags | Required | Type | Choices | Default | Repeatable | Parser help |
+| --- | --- | --- | --- | --- | --- | --- |
+| `--fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the sequence fasta file. |
+| `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
+| `--id_suffix` | no | `inapplicable` | inapplicable | `` | no | Literal suffix appended to every output sequence ID. |
+
+Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/assemble/reverse-complement/
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/assemble/reverse-complement.md
 
 ## `reference/cli/exogenous-sequence-tools/assemble.md`
 
 <!-- Generated by scripts/assemble_cli_pages.py; do not edit directly. -->
-<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"assemble","usage":"ExogenousSequenceTools assemble [-h] {add_adapter,concat,barcode} ..."}] -->
+<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"assemble","usage":"ExogenousSequenceTools assemble [-h] {add_adapter,concat,combine,barcode,reverse_complement} ..."}] -->
 
 # `assemble`
 
 ## Purpose
 
-Assemble exogenous sequences with adapters, concatenation, or barcodes.
+Assemble exogenous sequences with adapters, collection stacking (`combine`),
+paired sequence joining (`concat`), barcodes, or reverse complement.
+
+`combine` stacks FASTA collections: records are written unchanged, in
+command-line order, with a required per-input ID suffix. `concat` joins
+paired records from two FASTAs so each sequence grows and the element count
+is preserved.
 
 ## Availability
 
@@ -1387,14 +1632,16 @@ See linked format references and the tool landing page.
 
 - [`assemble add_adapter`](assemble/add-adapter.md)
 - [`assemble barcode`](assemble/barcode.md)
+- [`assemble combine`](assemble/combine.md)
 - [`assemble concat`](assemble/concat.md)
+- [`assemble reverse_complement`](assemble/reverse-complement.md)
 
 ## Syntax
 
 Parser-derived invocation for `ExogenousSequenceTools assemble`:
 
 ```text
-ExogenousSequenceTools assemble [-h] {add_adapter,concat,barcode} ...
+ExogenousSequenceTools assemble [-h] {add_adapter,concat,combine,barcode,reverse_complement} ...
 ```
 
 ### Options
@@ -1403,7 +1650,7 @@ ExogenousSequenceTools assemble [-h] {add_adapter,concat,barcode} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/assemble/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/assemble.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/assemble.md
 
 ## `reference/cli/exogenous-sequence-tools/gen-track/single-loc.md`
 
@@ -1489,7 +1736,7 @@ ExogenousSequenceTools gen_track single_loc [-h] --fasta FASTA --loc LOC --outpu
 | `--output_npy` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output stat npy file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/gen-track/single-loc/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/gen-track/single-loc.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/gen-track/single-loc.md
 
 ## `reference/cli/exogenous-sequence-tools/gen-track.md`
 
@@ -1573,12 +1820,12 @@ ExogenousSequenceTools gen_track [-h] {single_loc} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/gen-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/gen-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/gen-track.md
 
 ## `reference/cli/exogenous-sequence-tools/index.md`
 
 <!-- Generated by scripts/assemble_cli_pages.py; do not edit directly. -->
-<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"(root)","usage":"ExogenousSequenceTools [-h] {assemble,track_dim_reduction,mutagenesis,gen_track,print_stat,motif_search,onehot} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"assemble","usage":"ExogenousSequenceTools assemble [-h] {add_adapter,concat,barcode} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"left_adapter_fasta","flags":"--left_adapter_fasta","help":"Path to the 5' adapter fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--left_adapter_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"right_adapter_fasta","flags":"--right_adapter_fasta","help":"Path to the 3' adapter fasta file.","nargs":"none","repeatable":false,"required":false,"spellings":["--right_adapter_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"}],"help":"","path":"assemble add_adapter","usage":"ExogenousSequenceTools assemble add_adapter [-h] --fasta FASTA --left_adapter_fasta LEFT_ADAPTER_FASTA [--right_adapter_fasta RIGHT_ADAPTER_FASTA] --output_fasta OUTPUT_FASTA"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"barcode_fasta","flags":"--barcode_fasta","help":"Path to the barcode fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--barcode_fasta"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"input_fasta","flags":"--input_fasta","help":"Path to the input fasta file. ","nargs":"none","repeatable":true,"required":true,"spellings":["--input_fasta"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"input_class","flags":"--input_class","help":"Class of the input fasta file.","nargs":"none","repeatable":true,"required":true,"spellings":["--input_class"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":["original","barcode"],"default":"original","dest":"fasta_id_type","flags":"--fasta_id_type","help":"Type of the fasta id.","nargs":"none","repeatable":false,"required":false,"spellings":["--fasta_id_type"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"metadata_path","flags":"--metadata_path","help":"Path to the output metadata file.","nargs":"none","repeatable":false,"required":true,"spellings":["--metadata_path"],"type":"inapplicable"},{"action":"_StoreAction","choices":["5","3","5_3"],"default":"5_3","dest":"barcode_method","flags":"--barcode_method","help":"Method to use to add barcode to the exogenous sequences.","nargs":"none","repeatable":false,"required":false,"spellings":["--barcode_method"],"type":"inapplicable"}],"help":"","path":"assemble barcode","usage":"ExogenousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --input_fasta INPUT_FASTA --input_class INPUT_CLASS --output_fasta OUTPUT_FASTA [--fasta_id_type {original,barcode}] --metadata_path METADATA_PATH [--barcode_method {5,3,5_3}]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta5","flags":"--fasta5","help":"Path to the 5' fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta5"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta3","flags":"--fasta3","help":"Path to the 3' fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta3"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":["5","3","5_3"],"default":"5_3","dest":"id_method","flags":"--id_method","help":"Method to use to generate the id of the output fasta file.","nargs":"none","repeatable":false,"required":false,"spellings":["--id_method"],"type":"inapplicable"}],"help":"","path":"assemble concat","usage":"ExogenousSequenceTools assemble concat [-h] --fasta5 FASTA5 --fasta3 FASTA3 --output_fasta OUTPUT_FASTA [--id_method {5,3,5_3}]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"gen_track","usage":"ExogenousSequenceTools gen_track [-h] {single_loc} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"loc","flags":"--loc","help":"Location to generate the track for.","nargs":"none","repeatable":false,"required":true,"spellings":["--loc"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"}],"help":"","path":"gen_track single_loc","usage":"ExogenousSequenceTools gen_track single_loc [-h] --fasta FASTA --loc LOC --output_npy OUTPUT_NPY"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"The file containing the motifs to search for.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"str"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_header","flags":"--output_header","help":"The header of the output file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_header"],"type":"str"},{"action":"_StoreAction","choices":[],"default":true,"dest":"estimate_background_freq","flags":"--estimate_background_freq","help":"Estimate background frequency from the sequence.","nargs":"none","repeatable":false,"required":false,"spellings":["--estimate_background_freq"],"type":"str2bool"},{"action":"_StoreAction","choices":[],"default":false,"dest":"reverse_complement","flags":"--reverse_complement","help":"Reverse complement the sequence while matching for motifs.","nargs":"none","repeatable":false,"required":false,"spellings":["--reverse_complement"],"type":"str2bool"}],"help":"","path":"motif_search","usage":"ExogenousSequenceTools motif_search [-h] --fasta FASTA --motif_file MOTIF_FILE --output_header OUTPUT_HEADER [--estimate_background_freq ESTIMATE_BACKGROUND_FREQ] [--reverse_complement REVERSE_COMPLEMENT]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"loc_npy","flags":"--loc_npy","help":"Path to the location npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--loc_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"mut_fasta","flags":"--mut_fasta","help":"Path to the mutation target fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--mut_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"}],"help":"","path":"mutagenesis","usage":"ExogenousSequenceTools mutagenesis [-h] --fasta FASTA --loc_npy LOC_NPY --mut_fasta MUT_FASTA --output_fasta OUTPUT_FASTA"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"opath","flags":"--opath","help":"Output path for the one-hot encoded sequence.","nargs":"none","repeatable":false,"required":true,"spellings":["--opath"],"type":"str"}],"help":"","path":"onehot","usage":"ExogenousSequenceTools onehot [-h] --fasta FASTA --opath OPATH"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the region stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"}],"help":"","path":"print_stat","usage":"ExogenousSequenceTools print_stat [-h] --input_npy INPUT_NPY"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"track_dim_reduction","usage":"ExogenousSequenceTools track_dim_reduction [-h] {max,argmax,min,argmin} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction argmax","usage":"ExogenousSequenceTools track_dim_reduction argmax [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction argmin","usage":"ExogenousSequenceTools track_dim_reduction argmin [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction max","usage":"ExogenousSequenceTools track_dim_reduction max [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction min","usage":"ExogenousSequenceTools track_dim_reduction min [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"}] -->
+<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"(root)","usage":"ExogenousSequenceTools [-h] {assemble,track_dim_reduction,mutagenesis,gen_track,print_stat,motif_search,onehot} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"assemble","usage":"ExogenousSequenceTools assemble [-h] {add_adapter,concat,combine,barcode,reverse_complement} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"left_adapter_fasta","flags":"--left_adapter_fasta","help":"Path to the 5' adapter fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--left_adapter_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"right_adapter_fasta","flags":"--right_adapter_fasta","help":"Path to the 3' adapter fasta file.","nargs":"none","repeatable":false,"required":false,"spellings":["--right_adapter_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"}],"help":"","path":"assemble add_adapter","usage":"ExogenousSequenceTools assemble add_adapter [-h] --fasta FASTA --left_adapter_fasta LEFT_ADAPTER_FASTA [--right_adapter_fasta RIGHT_ADAPTER_FASTA] --output_fasta OUTPUT_FASTA"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"barcode_fasta","flags":"--barcode_fasta","help":"Path to the barcode fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--barcode_fasta"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"input_fasta","flags":"--input_fasta","help":"Path to the input fasta file. ","nargs":"none","repeatable":true,"required":true,"spellings":["--input_fasta"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"input_class","flags":"--input_class","help":"Class of the input fasta file.","nargs":"none","repeatable":true,"required":true,"spellings":["--input_class"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":["original","barcode"],"default":"original","dest":"fasta_id_type","flags":"--fasta_id_type","help":"Type of the fasta id.","nargs":"none","repeatable":false,"required":false,"spellings":["--fasta_id_type"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"metadata_path","flags":"--metadata_path","help":"Path to the output metadata file.","nargs":"none","repeatable":false,"required":true,"spellings":["--metadata_path"],"type":"inapplicable"},{"action":"_StoreAction","choices":["5","3","5_3"],"default":"5_3","dest":"barcode_method","flags":"--barcode_method","help":"Method to use to add barcode to the exogenous sequences.","nargs":"none","repeatable":false,"required":false,"spellings":["--barcode_method"],"type":"inapplicable"}],"help":"","path":"assemble barcode","usage":"ExogenousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --input_fasta INPUT_FASTA --input_class INPUT_CLASS --output_fasta OUTPUT_FASTA [--fasta_id_type {original,barcode}] --metadata_path METADATA_PATH [--barcode_method {5,3,5_3}]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"input_fasta","flags":"--input_fasta","help":"Path to an input FASTA. Repeat once per collection, in output order.","nargs":"none","repeatable":true,"required":true,"spellings":["--input_fasta"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"id_suffix","flags":"--id_suffix","help":"Literal suffix for IDs from the corresponding --input_fasta (same count).","nargs":"none","repeatable":true,"required":true,"spellings":["--id_suffix"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"}],"help":"","path":"assemble combine","usage":"ExogenousSequenceTools assemble combine [-h] --input_fasta INPUT_FASTA --id_suffix ID_SUFFIX --output_fasta OUTPUT_FASTA"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta5","flags":"--fasta5","help":"Path to the 5' fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta5"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta3","flags":"--fasta3","help":"Path to the 3' fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta3"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":["5","3","5_3"],"default":"5_3","dest":"id_method","flags":"--id_method","help":"Method to use to generate the id of the output fasta file.","nargs":"none","repeatable":false,"required":false,"spellings":["--id_method"],"type":"inapplicable"}],"help":"","path":"assemble concat","usage":"ExogenousSequenceTools assemble concat [-h] --fasta5 FASTA5 --fasta3 FASTA3 --output_fasta OUTPUT_FASTA [--id_method {5,3,5_3}]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"","dest":"id_suffix","flags":"--id_suffix","help":"Literal suffix appended to every output sequence ID.","nargs":"none","repeatable":false,"required":false,"spellings":["--id_suffix"],"type":"inapplicable"}],"help":"","path":"assemble reverse_complement","usage":"ExogenousSequenceTools assemble reverse_complement [-h] --fasta FASTA --output_fasta OUTPUT_FASTA [--id_suffix ID_SUFFIX]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"gen_track","usage":"ExogenousSequenceTools gen_track [-h] {single_loc} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"loc","flags":"--loc","help":"Location to generate the track for.","nargs":"none","repeatable":false,"required":true,"spellings":["--loc"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"}],"help":"","path":"gen_track single_loc","usage":"ExogenousSequenceTools gen_track single_loc [-h] --fasta FASTA --loc LOC --output_npy OUTPUT_NPY"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"The file containing the motifs to search for.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"str"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_header","flags":"--output_header","help":"The header of the output file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_header"],"type":"str"},{"action":"_StoreAction","choices":[],"default":true,"dest":"estimate_background_freq","flags":"--estimate_background_freq","help":"Estimate background frequency from the sequence.","nargs":"none","repeatable":false,"required":false,"spellings":["--estimate_background_freq"],"type":"str2bool"},{"action":"_StoreAction","choices":[],"default":false,"dest":"reverse_complement","flags":"--reverse_complement","help":"Reverse complement the sequence while matching for motifs.","nargs":"none","repeatable":false,"required":false,"spellings":["--reverse_complement"],"type":"str2bool"}],"help":"","path":"motif_search","usage":"ExogenousSequenceTools motif_search [-h] --fasta FASTA --motif_file MOTIF_FILE --output_header OUTPUT_HEADER [--estimate_background_freq ESTIMATE_BACKGROUND_FREQ] [--reverse_complement REVERSE_COMPLEMENT]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"loc_npy","flags":"--loc_npy","help":"Path to the location npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--loc_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"mut_fasta","flags":"--mut_fasta","help":"Path to the mutation target fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--mut_fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_fasta","flags":"--output_fasta","help":"Path to the output fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_fasta"],"type":"inapplicable"}],"help":"","path":"mutagenesis","usage":"ExogenousSequenceTools mutagenesis [-h] --fasta FASTA --loc_npy LOC_NPY --mut_fasta MUT_FASTA --output_fasta OUTPUT_FASTA"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"fasta","flags":"--fasta","help":"Path to the sequence fasta file.","nargs":"none","repeatable":false,"required":true,"spellings":["--fasta"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"opath","flags":"--opath","help":"Output path for the one-hot encoded sequence.","nargs":"none","repeatable":false,"required":true,"spellings":["--opath"],"type":"str"}],"help":"","path":"onehot","usage":"ExogenousSequenceTools onehot [-h] --fasta FASTA --opath OPATH"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the region stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"}],"help":"","path":"print_stat","usage":"ExogenousSequenceTools print_stat [-h] --input_npy INPUT_NPY"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"track_dim_reduction","usage":"ExogenousSequenceTools track_dim_reduction [-h] {max,argmax,min,argmin} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction argmax","usage":"ExogenousSequenceTools track_dim_reduction argmax [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction argmin","usage":"ExogenousSequenceTools track_dim_reduction argmin [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction max","usage":"ExogenousSequenceTools track_dim_reduction max [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"input_npy","flags":"--input_npy","help":"Path to the signal track npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--input_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output_npy","flags":"--output_npy","help":"Path to the output stat npy file.","nargs":"none","repeatable":false,"required":true,"spellings":["--output_npy"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"search_range","flags":"--search_range","help":"Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention.","nargs":"none","repeatable":false,"required":false,"spellings":["--search_range"],"type":"str"}],"help":"","path":"track_dim_reduction min","usage":"ExogenousSequenceTools track_dim_reduction min [-h] --input_npy INPUT_NPY --output_npy OUTPUT_NPY [--search_range SEARCH_RANGE]"}] -->
 
 # ExogenousSequenceTools reference
 
@@ -1613,15 +1860,17 @@ exit and their underlying exception when invoked through the console script.
 `ExogenousSequenceTools` transforms exogenous sequence libraries represented as
 ordered FASTA records with synthetic BED3 coordinates (see [Exogenous
 FASTA](../../formats/cli/exogenous-sequence-tools/exogenous-fasta.md)). Commands
-assemble barcoded or adapter-flanked constructs, generate per-base tracks and
+assemble barcoded or adapter-flanked constructs, reverse-complement libraries, stack FASTA collections, generate per-base tracks and
 stats, run mutagenesis at indexed positions, search motifs across each sequence,
 and reduce track dimensionality — without requiring a genome reference BED.
 
 ## Example
 
 Attach 5′ and 3′ adapters to an exogenous library — see
-[`assemble add_adapter`](assemble/add-adapter.md) for required FASTA inputs and
-the [assembly output contract](../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
+[`assemble add_adapter`](assemble/add-adapter.md) — reverse-complement every
+record with [`assemble reverse_complement`](assemble/reverse-complement.md),
+or stack collections with [`assemble combine`](assemble/combine.md).
+See the [assembly output contract](../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
 
 ## Availability
 
@@ -1679,7 +1928,9 @@ Group landing: [assemble](assemble.md).
 
 - [`assemble add_adapter`](assemble/add-adapter.md)
 - [`assemble barcode`](assemble/barcode.md)
+- [`assemble combine`](assemble/combine.md)
 - [`assemble concat`](assemble/concat.md)
+- [`assemble reverse_complement`](assemble/reverse-complement.md)
 
 ### `gen_track`
 
@@ -1709,7 +1960,9 @@ Every invocable command path and non-invocable command group appears exactly onc
 | `assemble` | [`assemble`](assemble.md) |
 | `assemble add_adapter` | [`assemble add_adapter`](assemble/add-adapter.md) |
 | `assemble barcode` | [`assemble barcode`](assemble/barcode.md) |
+| `assemble combine` | [`assemble combine`](assemble/combine.md) |
 | `assemble concat` | [`assemble concat`](assemble/concat.md) |
+| `assemble reverse_complement` | [`assemble reverse_complement`](assemble/reverse-complement.md) |
 | `gen_track` | [`gen_track`](gen-track.md) |
 | `gen_track single_loc` | [`gen_track single_loc`](gen-track/single-loc.md) |
 | `motif_search` | [`motif_search`](motif-search.md) |
@@ -1736,7 +1989,7 @@ ExogenousSequenceTools [-h] {assemble,track_dim_reduction,mutagenesis,gen_track,
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/index.md
 
 ## `reference/cli/exogenous-sequence-tools/motif-search.md`
 
@@ -1830,7 +2083,7 @@ ExogenousSequenceTools motif_search [-h] --fasta FASTA --motif_file MOTIF_FILE -
 | `--reverse_complement` | no | `str2bool` | inapplicable | `False` | no | Reverse complement the sequence while matching for motifs. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/motif-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/motif-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/motif-search.md
 
 ## `reference/cli/exogenous-sequence-tools/mutagenesis.md`
 
@@ -1923,7 +2176,7 @@ ExogenousSequenceTools mutagenesis [-h] --fasta FASTA --loc_npy LOC_NPY --mut_fa
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/mutagenesis.md
 
 ## `reference/cli/exogenous-sequence-tools/onehot.md`
 
@@ -2009,7 +2262,7 @@ ExogenousSequenceTools onehot [-h] --fasta FASTA --opath OPATH
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the one-hot encoded sequence. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/onehot/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/onehot.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/onehot.md
 
 ## `reference/cli/exogenous-sequence-tools/print-stat.md`
 
@@ -2092,7 +2345,7 @@ ExogenousSequenceTools print_stat [-h] --input_npy INPUT_NPY
 | `--input_npy` | yes | `inapplicable` | inapplicable | `none` | no | Path to the region stat npy file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/print-stat/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/print-stat.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/print-stat.md
 
 ## `reference/cli/exogenous-sequence-tools/track-dim-reduction/argmax.md`
 
@@ -2189,7 +2442,7 @@ ExogenousSequenceTools track_dim_reduction argmax [-h] --input_npy INPUT_NPY --o
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/argmax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/argmax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/argmax.md
 
 ## `reference/cli/exogenous-sequence-tools/track-dim-reduction/argmin.md`
 
@@ -2286,7 +2539,7 @@ ExogenousSequenceTools track_dim_reduction argmin [-h] --input_npy INPUT_NPY --o
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/argmin/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/argmin.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/argmin.md
 
 ## `reference/cli/exogenous-sequence-tools/track-dim-reduction/max.md`
 
@@ -2383,7 +2636,7 @@ ExogenousSequenceTools track_dim_reduction max [-h] --input_npy INPUT_NPY --outp
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/max/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/max.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/max.md
 
 ## `reference/cli/exogenous-sequence-tools/track-dim-reduction/min.md`
 
@@ -2480,7 +2733,7 @@ ExogenousSequenceTools track_dim_reduction min [-h] --input_npy INPUT_NPY --outp
 | `--search_range` | no | `str` | inapplicable | `none` | no | Search range for the signal track. Format: 'start,end'. If not provided, the whole signal track will be used. Range follows half-open and 0-index convention. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/min/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/min.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/min.md
 
 ## `reference/cli/exogenous-sequence-tools/track-dim-reduction.md`
 
@@ -2567,7 +2820,7 @@ ExogenousSequenceTools track_dim_reduction [-h] {max,argmax,min,argmin} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/exogenous-sequence-tools/track-dim-reduction/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/exogenous-sequence-tools/track-dim-reduction.md
 
 ## `reference/cli/genomic-element-tools/bed2tssbed.md`
 
@@ -2668,7 +2921,7 @@ GenomicElementTools bed2tssbed [-h] --region_file_path REGION_FILE_PATH (--regio
 | `--output_site` | no | `str` | inapplicable | `TSS` | no | The site for output. [TSS] (TSS, center) |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/bed2tssbed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/bed2tssbed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/bed2tssbed.md
 
 ## `reference/cli/genomic-element-tools/count-paired-bw.md`
 
@@ -2767,7 +3020,7 @@ GenomicElementTools count_paired_bw [-h] --region_file_path REGION_FILE_PATH (--
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for counting. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/count-paired-bw/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/count-paired-bw.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/count-paired-bw.md
 
 ## `reference/cli/genomic-element-tools/count-single-bw.md`
 
@@ -2874,7 +3127,7 @@ GenomicElementTools count_single_bw [-h] --region_file_path REGION_FILE_PATH (--
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for counting. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/count-single-bw/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/count-single-bw.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/count-single-bw.md
 
 ## `reference/cli/genomic-element-tools/export/allele-expanded-es.md`
 
@@ -2963,7 +3216,7 @@ GenomicElementTools export allele_expanded_ES [-h] --fasta_path FASTA_PATH --reg
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the allele-expanded fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/allele-expanded-es/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/allele-expanded-es.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/allele-expanded-es.md
 
 ## `reference/cli/genomic-element-tools/export/bed6poly.md`
 
@@ -3054,7 +3307,7 @@ GenomicElementTools export bed6poly [-h] --region_file_path REGION_FILE_PATH --r
 Although argparse exposes `bed6` as the `--region_file_type` default, the flag is required, so omission is an argparse error rather than use of that default.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/bed6poly/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/bed6poly.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/bed6poly.md
 
 ## `reference/cli/genomic-element-tools/export/chrom-filtered-ge.md`
 
@@ -3140,7 +3393,7 @@ GenomicElementTools export ChromFilteredGE [-h] --region_file_path REGION_FILE_P
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the filtered GenomicElements. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/chrom-filtered-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/chrom-filtered-ge.md
 
 ## `reference/cli/genomic-element-tools/export/count-table.md`
 
@@ -3230,7 +3483,7 @@ GenomicElementTools export CountTable [-h] --region_file_path REGION_FILE_PATH (
 | `--region_id_type` | no | `str` | `default`, `gene_symbol` | `default` | no | Type of the region id (default, gene_symbol). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/count-table/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/count-table.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/count-table.md
 
 ## `reference/cli/genomic-element-tools/export/exogenous-sequences.md`
 
@@ -3330,7 +3583,7 @@ GenomicElementTools export ExogenousSequences [-h] --fasta_path FASTA_PATH --reg
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Fasta output file path. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/exogenous-sequences/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/exogenous-sequences.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/exogenous-sequences.md
 
 ## `reference/cli/genomic-element-tools/export/heatmap.md`
 
@@ -3441,7 +3694,7 @@ GenomicElementTools export Heatmap [-h] --region_file_path REGION_FILE_PATH (--r
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the heatmap. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/heatmap/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/heatmap.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/heatmap.md
 
 ## `reference/cli/genomic-element-tools/export/masked-ge.md`
 
@@ -3533,7 +3786,7 @@ GenomicElementTools export MaskedGE [-h] --region_file_path REGION_FILE_PATH (--
 | `--anno_oheader` | no | `str` | inapplicable | `none` | no | Output header for masked annotation files. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/masked-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/masked-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/masked-ge.md
 
 ## `reference/cli/genomic-element-tools/export/merged-ge.md`
 
@@ -3631,7 +3884,7 @@ GenomicElementTools export MergedGE [-h] --left_region_file_path LEFT_REGION_FIL
 | `--oheader` | yes | `str` | inapplicable | `none` | no | Output header for merged files. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/merged-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/merged-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/merged-ge.md
 
 ## `reference/cli/genomic-element-tools/export/stat-list.md`
 
@@ -3718,7 +3971,7 @@ GenomicElementTools export stat_list [-h] --region_file_path REGION_FILE_PATH (-
 | `--dtype` | no | `str` | `str`, `np.int32`, `np.int64`, `np.float32`, `np.float64` | `str` | no | Dtype used to cast values before writing. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/stat-list/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/stat-list.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/stat-list.md
 
 ## `reference/cli/genomic-element-tools/export/trebed.md`
 
@@ -3807,7 +4060,7 @@ GenomicElementTools export TREbed [-h] --region_file_path REGION_FILE_PATH (--re
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path for the TREbed file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/trebed.md
 
 ## `reference/cli/genomic-element-tools/export/wtes.md`
 
@@ -3894,7 +4147,7 @@ GenomicElementTools export WTES [-h] --fasta_path FASTA_PATH --region_file_path 
 | `--opath` | yes | `inapplicable` | inapplicable | `none` | no | Output path of the WTES fasta file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/wtes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export/wtes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export/wtes.md
 
 ## `reference/cli/genomic-element-tools/export.md`
 
@@ -3988,7 +4241,7 @@ GenomicElementTools export [-h] {stat_list,ExogenousSequences,WTES,allele_expand
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/export/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/export.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/export.md
 
 ## `reference/cli/genomic-element-tools/filter-motif-score.md`
 
@@ -4081,7 +4334,7 @@ GenomicElementTools filter_motif_score [-h] --region_file_path REGION_FILE_PATH 
 | `--max_score` | no | `float` | inapplicable | `inf` | no | Maximum score for filtering motif search scores. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/filter-motif-score/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/filter-motif-score.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/filter-motif-score.md
 
 ## `reference/cli/genomic-element-tools/get-context-ge/nearest.md`
 
@@ -4178,7 +4431,7 @@ GenomicElementTools get_context_ge nearest [-h] --region_file_path REGION_FILE_P
 | `--opath` | yes | `str` | inapplicable | `none` | no | Path to the output region file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/get-context-ge/nearest/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/get-context-ge/nearest.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/get-context-ge/nearest.md
 
 ## `reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md`
 
@@ -4276,7 +4529,7 @@ GenomicElementTools get_context_ge windowed_argmax [-h] --region_file_path REGIO
 | `--opath` | yes | `str` | inapplicable | `none` | no | Path to the output region file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/get-context-ge/windowed-argmax/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/get-context-ge/windowed-argmax.md
 
 ## `reference/cli/genomic-element-tools/get-context-ge.md`
 
@@ -4361,7 +4614,7 @@ GenomicElementTools get_context_ge [-h] {nearest,windowed_argmax} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/get-context-ge/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/get-context-ge.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/get-context-ge.md
 
 ## `reference/cli/genomic-element-tools/import/allele-expanded-es.md`
 
@@ -4450,7 +4703,7 @@ GenomicElementTools import allele_expanded_ES [-h] --inpath INPATH --anno_oheade
 | `--stat_selection_method` | no | `inapplicable` | `max_abs_fc` | `[]` | yes | Method to pick a representative alternate stat per region. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/import/allele-expanded-es/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/import/allele-expanded-es.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/import/allele-expanded-es.md
 
 ## `reference/cli/genomic-element-tools/import/stat-list.md`
 
@@ -4541,7 +4794,7 @@ GenomicElementTools import stat_list [-h] --region_file_path REGION_FILE_PATH (-
 | `--dtype` | no | `str` | `str`, `np.int32`, `np.int64`, `np.float32`, `np.float64` | `str` | no | Dtype of the outputted array. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/import/stat-list/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/import/stat-list.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/import/stat-list.md
 
 ## `reference/cli/genomic-element-tools/import.md`
 
@@ -4626,7 +4879,7 @@ GenomicElementTools import [-h] {stat_list,allele_expanded_ES} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/import/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/import.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/import.md
 
 ## `reference/cli/genomic-element-tools/index.md`
 
@@ -4994,7 +5247,7 @@ GenomicElementTools [-h] {count_single_bw,count_paired_bw,pad_region,bed2tssbed,
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/index.md
 
 ## `reference/cli/genomic-element-tools/mask-op/intersect.md`
 
@@ -5112,7 +5365,7 @@ GenomicElementTools mask_op intersect [-h] --region_file_path REGION_FILE_PATH (
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the resulting mask array (.npy). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/intersect/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/mask-op/intersect.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/mask-op/intersect.md
 
 ## `reference/cli/genomic-element-tools/mask-op/opposite.md`
 
@@ -5198,7 +5451,7 @@ GenomicElementTools mask_op opposite [-h] --region_file_path REGION_FILE_PATH (-
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the resulting mask array (.npy). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/opposite/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/mask-op/opposite.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/mask-op/opposite.md
 
 ## `reference/cli/genomic-element-tools/mask-op/union.md`
 
@@ -5284,7 +5537,7 @@ GenomicElementTools mask_op union [-h] --region_file_path REGION_FILE_PATH (--re
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the resulting mask array (.npy). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/union/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/mask-op/union.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/mask-op/union.md
 
 ## `reference/cli/genomic-element-tools/mask-op.md`
 
@@ -5370,7 +5623,7 @@ GenomicElementTools mask_op [-h] {intersect,union,opposite} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/mask-op/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/mask-op.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/mask-op.md
 
 ## `reference/cli/genomic-element-tools/motif-search.md`
 
@@ -5465,7 +5718,7 @@ GenomicElementTools motif_search [-h] --fasta_path FASTA_PATH --region_file_path
 | `--strand` | no | `str` | `+`, `-`, `both` | `+` | no | Strand to search for motif matches. Choices: '+', '-', 'both'. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/motif-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/motif-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/motif-search.md
 
 ## `reference/cli/genomic-element-tools/onehot.md`
 
@@ -5554,7 +5807,7 @@ GenomicElementTools onehot [-h] --fasta_path FASTA_PATH --region_file_path REGIO
 | `--opath` | yes | `str` | inapplicable | `none` | no | Output path for the one-hot encoded sequence. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/onehot/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/onehot.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/onehot.md
 
 ## `reference/cli/genomic-element-tools/pad-region.md`
 
@@ -5679,7 +5932,7 @@ GenomicElementTools pad_region [-h] --region_file_path REGION_FILE_PATH (--regio
 | `--method_resolving_invalid_region` | no | `str` | `raise`, `fallback`, `drop` | `fallback` | no | Method to resolve invalid region after padding. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/pad-region/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/pad-region.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/pad-region.md
 
 ## `reference/cli/genomic-element-tools/select-tss-relative-track.md`
 
@@ -5807,7 +6060,7 @@ GenomicElementTools select_tss_relative_track [-h] --region_file_path REGION_FIL
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace existing coordinate/mask destinations after successful computation. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/select-tss-relative-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/select-tss-relative-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/select-tss-relative-track.md
 
 ## `reference/cli/genomic-element-tools/track2tss-bed.md`
 
@@ -5899,7 +6152,7 @@ GenomicElementTools track2tss_bed [-h] --region_file_path REGION_FILE_PATH (--re
 | `--output_site` | no | `str` | inapplicable | `MaxAbsSig` | no | The site for output. [TSS] (MaxAbsSig) |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/track2tss-bed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/track2tss-bed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/track2tss-bed.md
 
 ## `reference/cli/genomic-element-tools/tss-relative-mutagenesis.md`
 
@@ -6122,7 +6375,7 @@ GenomicElementTools tss_relative_mutagenesis [-h] --region_file_path REGION_FILE
 | `--output_orientation` | no | `inapplicable` | `genomic`, `strand` | `genomic` | no | Orientation of final sequences.fasta records: 'genomic' (default, genomic-forward) or 'strand' (transcriptional orientation from the unique round strand). |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/genomic-element-tools/tss-relative-mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/genomic-element-tools/tss-relative-mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/genomic-element-tools/tss-relative-mutagenesis.md
 
 ## `reference/cli/index.md`
 
@@ -6158,10 +6411,10 @@ MEME motif generation and transformation: sample PWM or uniform sequences, enume
 
 - Canonical landing: [`MotifTools`](motif-tools/index.md)
 - Search terms: `MotifTools`, `motif-tools`
-- Top-level command groups: `anti_motif`, `barcodes`, `pwm_seq`, `random_seq`
+- Top-level command groups: `anti_motif`, `barcodes`, `dinucleotide_transversion`, `pwm_seq`, `random_seq`
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/index.md
 
 ## `reference/cli/motif-tools/anti-motif.md`
 
@@ -6285,7 +6538,7 @@ MotifTools anti_motif [-h] --motif_file MOTIF_FILE --output OUTPUT [--force]
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/anti-motif/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/motif-tools/anti-motif.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/anti-motif.md
 
 ## `reference/cli/motif-tools/barcodes.md`
 
@@ -6417,12 +6670,312 @@ MotifTools barcodes [-h] --barcode_length BARCODE_LENGTH [--alphabet ALPHABET] [
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/barcodes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/motif-tools/barcodes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/barcodes.md
+
+## `reference/cli/motif-tools/dinucleotide-transversion.md`
+
+<!-- Generated by scripts/assemble_cli_pages.py; do not edit directly. -->
+<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"Input MEME motif collection file.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_name","flags":"--motif_name","help":"Name of the motif used to derive the transversion target.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_name"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":0,"dest":"warn_score_cutoff","flags":"--warn_score_cutoff","help":"Heuristic source-motif score cutoff (finite real; default 0). Warn on stderr if the full-width target scores at or above this value on either strand. Diagnostics only; does not change FASTA.","nargs":"none","repeatable":false,"required":false,"spellings":["--warn_score_cutoff"],"type":"float"}],"help":"Select one named motif and emit one deterministic full-width transversion FASTA. Consensus uses maximum-probability bases with A, C, G, T letter ties. Pairs from position zero choose the allowed transversion dinucleotide with the minimum source-PWM probability product, breaking equal products lexicographically A, C, G, T. An unmatched terminal chooses its minimum-probability allowed transversion with the same letter order. Original PWM orientation is retained. Before publication, the full-width target is scored against the source motif on both strands with MemeMotif.calculate_pwm_score. If either score is at or above --warn_score_cutoff (default 0), a warning is emitted on stderr; FASTA bytes and exit status are unchanged. There is no motif-knockout guarantee and no seed or method selector. The FASTA identifier is dinucleotide_transversion_<motif_name>.","path":"dinucleotide_transversion","usage":"MotifTools dinucleotide_transversion [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --output OUTPUT [--force] [--warn_score_cutoff WARN_SCORE_CUTOFF]"}] -->
+
+# `MotifTools dinucleotide_transversion`
+
+## Availability
+
+Supported on the MotifTools console script. This command is unscheduled and is
+not bound to a completed release tag.
+
+## Purpose
+
+**Purpose.** Generate one deterministic full-width PWM-derived transversion
+target from a named motif. Every position transverts relative to the
+source-PWM consensus. The command does not prove motif knockout.
+
+## Inputs
+
+| Flag | Required | Meaning |
+| --- | --- | --- |
+| `--motif_file` | yes | Supported-subset MEME input path |
+| `--motif_name` | yes | Exact motif name in the collection |
+| `--output` | yes | Output FASTA path or `-` |
+| `--force` | no | Replace an existing destination file |
+| `--warn_score_cutoff` | no | Finite real diagnostic cutoff (default `0`). Inclusive comparison on either strand; stderr only |
+
+## Constraints
+
+The collection is loaded through the existing `MemeMotif` parser. Required
+`nsites` and `E` remain in force; collections that omit those matrix-header
+statistics stay rejected. Deferred statistics-free MEME compatibility is not
+provided. Matrix dimensions and current validation remain in force.
+The selected alphabet must contain exactly A, C, G, and T. PWM columns follow
+declared alphabet order; ties use letter order A, C, G, T.
+
+Consensus is the maximum-probability base in each column. Pairs are taken from
+position zero in original PWM orientation. For consensus A or G the allowed
+replacements are C and T; for consensus C or T they are A and G. Each pair
+selects the allowed dinucleotide with the minimum product of the two
+source-PWM probabilities. Equal products, including zeros, resolve
+lexicographically A, C, G, T. An unmatched terminal chooses its
+minimum-probability allowed transversion with the same letter order. Width one
+and uninformative columns are retained. Every position transverts relative to
+the derived consensus, not necessarily relative to an observed genomic allele.
+There is no seed, method selector, sampling, or genomic-allele input.
+
+Identical inputs reproduce FASTA bytes within a given MotifTools install.
+
+## Outputs
+
+UTF-8 FASTA with LF line endings, exactly one unwrapped uppercase A/C/G/T
+sequence of full PWM width, identifier
+`dinucleotide_transversion_<motif_name>`, and a final newline. Path and stdout
+bytes are identical. Stdout is FASTA-only; source-motif warnings use stderr.
+
+## Failures
+
+Empty collections, unknown motif names, unsupported alphabets, invalid PWM
+rows or dimensions, missing required source statistics, non-finite
+`--warn_score_cutoff` values, and shared output-contract violations fail
+before any target is published.
+
+## Types
+
+Paths and schema keys are strings unless noted in Purpose.
+
+## Shapes
+
+The output sequence length equals the selected motif width.
+
+## Dtypes
+
+See linked format references and Purpose.
+
+## Defaults
+
+Parser defaults appear in the generated options table.
+
+## Choices
+
+Parser choices appear in the generated options table.
+
+## Ordering
+
+The target retains original PWM orientation. Pairing starts at the left edge.
+Callers reverse-complement the FASTA when inserting at minus-strand hits in
+genomic-forward parents; this command does not orient by genomic strand.
+
+## Side effects
+
+Reads declared inputs and writes declared outputs; source motif arrays are not
+mutated. After generation, the CLI scores the isolated full-width target
+against the selected source motif on both strands with
+`MemeMotif.calculate_pwm_score` (declared alphabet, MEME background
+frequencies, log10 scoring, existing numerical epsilon). If either score is
+at or above `--warn_score_cutoff`, it prints a warning on stderr naming the
+motif, both strand scores, and the cutoff, then still publishes the same
+FASTA with exit status 0. Changing the cutoff or MEME background changes
+diagnostics only.
+
+Default cutoff `0` is a heuristic score threshold, not a p-value. Reduced
+motif score and motif knockout are not guaranteed. The check covers only the
+source motif inside the isolated target; evaluate other motifs or insertion
+boundaries separately if required.
+
+## Example
+
+Even width, odd width, and tied consensus columns from inline MEME files:
+
+```bash
+cat > /tmp/dtv-even.meme <<'EOF'
+MEME version 4
+
+ALPHABET=ACGT
+
+strands: + -
+
+Background letter frequencies
+A 0.25 C 0.25 G 0.25 T 0.25
+
+MOTIF EVEN2
+letter-probability matrix: alength= 4 w= 2 nsites= 8 E= 1e-4
+0.700000  0.100000  0.100000  0.100000
+0.100000  0.700000  0.100000  0.100000
+EOF
+
+MotifTools dinucleotide_transversion \
+  --motif_file /tmp/dtv-even.meme \
+  --motif_name EVEN2 \
+  --output /tmp/dtv-even.fasta
+```
+
+That even-width example writes:
+
+```text
+>dinucleotide_transversion_EVEN2
+CA
+```
+
+```bash
+cat > /tmp/dtv-odd.meme <<'EOF'
+MEME version 4
+
+ALPHABET=ACGT
+
+strands: + -
+
+Background letter frequencies
+A 0.25 C 0.25 G 0.25 T 0.25
+
+MOTIF ODD3
+letter-probability matrix: alength= 4 w= 3 nsites= 8 E= 1e-4
+0.700000  0.100000  0.100000  0.100000
+0.100000  0.700000  0.100000  0.100000
+0.100000  0.100000  0.700000  0.100000
+EOF
+
+MotifTools dinucleotide_transversion \
+  --motif_file /tmp/dtv-odd.meme \
+  --motif_name ODD3 \
+  --output /tmp/dtv-odd.fasta
+```
+
+That odd-width example writes:
+
+```text
+>dinucleotide_transversion_ODD3
+CAC
+```
+
+```bash
+cat > /tmp/dtv-tied.meme <<'EOF'
+MEME version 4
+
+ALPHABET=ACGT
+
+strands: + -
+
+Background letter frequencies
+A 0.25 C 0.25 G 0.25 T 0.25
+
+MOTIF TIED
+letter-probability matrix: alength= 4 w= 2 nsites= 8 E= 1e-4
+0.400000  0.400000  0.100000  0.100000
+0.400000  0.400000  0.100000  0.100000
+EOF
+
+MotifTools dinucleotide_transversion \
+  --motif_file /tmp/dtv-tied.meme \
+  --motif_name TIED \
+  --output /tmp/dtv-tied.fasta
+```
+
+That tied-column example writes:
+
+```text
+>dinucleotide_transversion_TIED
+TT
+```
+
+and this warning on stderr, because the reverse-complement score is above the
+default heuristic cutoff `0`. That warning is not a p-value and does not prove
+or disprove motif knockout:
+
+```text
+Warning: motif TIED scores -0.7958800168 (forward) and 0.4082399652 (reverse complement) against the source PWM; cutoff 0.
+```
+
+The even-width and odd-width examples above emit no source-motif warning at
+default cutoff `0`. A width-one fixture whose forward score equals the cutoff
+warns on stderr and still writes FASTA:
+
+```bash
+cat > /tmp/dtv-warn.meme <<'EOF'
+MEME version 4
+
+ALPHABET=ACGT
+
+strands: + -
+
+Background letter frequencies
+A 0.25 C 0.25 G 0.25 T 0.25
+
+MOTIF FWD0
+letter-probability matrix: alength= 4 w= 1 nsites= 8 E= 1e-4
+0.400000  0.250000  0.100000  0.250000
+EOF
+
+MotifTools dinucleotide_transversion \
+  --motif_file /tmp/dtv-warn.meme \
+  --motif_name FWD0 \
+  --output -
+```
+
+That command writes the following FASTA on stdout:
+
+```text
+>dinucleotide_transversion_FWD0
+C
+```
+
+and this warning on stderr:
+
+```text
+Warning: motif FWD0 scores 0 (forward) and -0.3979400084 (reverse complement) against the source PWM; cutoff 0.
+```
+
+Compose the generated FASTA with ordinary-offset mutagenesis. The mutagenesis
+command is unchanged: aligned integer offsets have shape `(N, 1)`, and
+callers reverse-complement the target for minus-strand hits.
+
+```bash
+python - <<'PY'
+from pathlib import Path
+import numpy as np
+Path("/tmp/parent302.fa").write_text(">parent302\n" + "A" * 302 + "\n")
+np.save("/tmp/parent302.loc.npy", np.array([[10]], dtype=np.int64))
+PY
+
+MotifTools dinucleotide_transversion \
+  --motif_file /tmp/dtv-odd.meme \
+  --motif_name ODD3 \
+  --output /tmp/dtv-odd.fasta
+
+ExogenousSequenceTools mutagenesis \
+  --fasta /tmp/parent302.fa \
+  --loc_npy /tmp/parent302.loc.npy \
+  --mut_fasta /tmp/dtv-odd.fasta \
+  --output_fasta /tmp/parent302.mut.fa
+```
+
+That plus-strand replacement keeps parent length 302, inserts `CAC` at offset
+10, and names the record `parent302_mut_dinucleotide_transversion_ODD3`. For a
+minus-strand hit, reverse-complement the generated sequence (`GTG` for this
+odd-width example) before passing `--mut_fasta`; neither command orients
+automatically.
+
+## Syntax
+
+Parser-derived invocation for `MotifTools dinucleotide_transversion`:
+
+```text
+MotifTools dinucleotide_transversion [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --output OUTPUT [--force] [--warn_score_cutoff WARN_SCORE_CUTOFF]
+```
+
+### Options
+
+| Flags | Required | Type | Choices | Default | Repeatable | Parser help |
+| --- | --- | --- | --- | --- | --- | --- |
+| `--motif_file` | yes | `inapplicable` | inapplicable | `none` | no | Input MEME motif collection file. |
+| `--motif_name` | yes | `inapplicable` | inapplicable | `none` | no | Name of the motif used to derive the transversion target. |
+| `--output` | yes | `inapplicable` | inapplicable | `none` | no | Output FASTA path, or '-' for stdout. |
+| `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
+| `--warn_score_cutoff` | no | `float` | inapplicable | `0` | no | Heuristic source-motif score cutoff (finite real; default 0). Warn on stderr if the full-width target scores at or above this value on either strand. Diagnostics only; does not change FASTA. |
+
+Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/dinucleotide-transversion/
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/dinucleotide-transversion.md
 
 ## `reference/cli/motif-tools/index.md`
 
 <!-- Generated by scripts/assemble_cli_pages.py; do not edit directly. -->
-<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"(root)","usage":"MotifTools [-h] {random_seq,pwm_seq,barcodes,anti_motif} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"Input MEME motif collection file.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output MEME path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"anti_motif","usage":"MotifTools anti_motif [-h] --motif_file MOTIF_FILE --output OUTPUT [--force]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"barcode_length","flags":"--barcode_length","help":"Length of each enumerated barcode.","nargs":"none","repeatable":false,"required":true,"spellings":["--barcode_length"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"ACGT","dest":"alphabet","flags":"--alphabet","help":"Ordered alphabet for Cartesian enumeration (default ACGT).","nargs":"none","repeatable":false,"required":false,"spellings":["--alphabet"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"MEME motif collection for exclusions.","nargs":"none","repeatable":false,"required":false,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"exclude","flags":"--exclude","help":"Motif exclusion MOTIF=CUTOFF (repeatable).","nargs":"none","repeatable":true,"required":false,"spellings":["--exclude"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":1000000,"dest":"max_candidates","flags":"--max_candidates","help":"Maximum pre-exclusion candidate count before enumeration.","nargs":"none","repeatable":false,"required":false,"spellings":["--max_candidates"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"barcodes","usage":"MotifTools barcodes [-h] --barcode_length BARCODE_LENGTH [--alphabet ALPHABET] [--motif_file MOTIF_FILE] [--exclude EXCLUDE] [--max_candidates MAX_CANDIDATES] --output OUTPUT [--force]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"Input MEME motif collection file.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_name","flags":"--motif_name","help":"Name of the motif to sample.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_name"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"num_sequences","flags":"--num_sequences","help":"Number of sequences to generate.","nargs":"none","repeatable":false,"required":true,"spellings":["--num_sequences"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"seed","flags":"--seed","help":"Deterministic random seed (0 is valid).","nargs":"none","repeatable":false,"required":false,"spellings":["--seed"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"pwm_seq","usage":"MotifTools pwm_seq [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --num_sequences NUM_SEQUENCES [--seed SEED] --output OUTPUT [--force]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"sequence_length","flags":"--sequence_length","help":"Length of each generated sequence.","nargs":"none","repeatable":false,"required":true,"spellings":["--sequence_length"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"num_sequences","flags":"--num_sequences","help":"Number of sequences to generate.","nargs":"none","repeatable":false,"required":true,"spellings":["--num_sequences"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"ACGT","dest":"alphabet","flags":"--alphabet","help":"Ordered alphabet for uniform sampling (default ACGT).","nargs":"none","repeatable":false,"required":false,"spellings":["--alphabet"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"MEME motif collection for exclusions.","nargs":"none","repeatable":false,"required":false,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"exclude","flags":"--exclude","help":"Motif exclusion MOTIF=CUTOFF (repeatable).","nargs":"none","repeatable":true,"required":false,"spellings":["--exclude"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"seed","flags":"--seed","help":"Deterministic random seed (0 is valid).","nargs":"none","repeatable":false,"required":false,"spellings":["--seed"],"type":"int"},{"action":"_StoreAction","choices":[],"default":10000,"dest":"max_attempts","flags":"--max_attempts","help":"Maximum candidate attempts per output when exclusions are used.","nargs":"none","repeatable":false,"required":false,"spellings":["--max_attempts"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"random_seq","usage":"MotifTools random_seq [-h] --sequence_length SEQUENCE_LENGTH --num_sequences NUM_SEQUENCES [--alphabet ALPHABET] [--motif_file MOTIF_FILE] [--exclude EXCLUDE] [--seed SEED] [--max_attempts MAX_ATTEMPTS] --output OUTPUT [--force]"}] -->
+<!-- Parser inventory: [{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"}],"help":"","path":"(root)","usage":"MotifTools [-h] {random_seq,pwm_seq,barcodes,anti_motif,dinucleotide_transversion} ..."},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"Input MEME motif collection file.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output MEME path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"anti_motif","usage":"MotifTools anti_motif [-h] --motif_file MOTIF_FILE --output OUTPUT [--force]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"barcode_length","flags":"--barcode_length","help":"Length of each enumerated barcode.","nargs":"none","repeatable":false,"required":true,"spellings":["--barcode_length"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"ACGT","dest":"alphabet","flags":"--alphabet","help":"Ordered alphabet for Cartesian enumeration (default ACGT).","nargs":"none","repeatable":false,"required":false,"spellings":["--alphabet"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"MEME motif collection for exclusions.","nargs":"none","repeatable":false,"required":false,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"exclude","flags":"--exclude","help":"Motif exclusion MOTIF=CUTOFF (repeatable).","nargs":"none","repeatable":true,"required":false,"spellings":["--exclude"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":1000000,"dest":"max_candidates","flags":"--max_candidates","help":"Maximum pre-exclusion candidate count before enumeration.","nargs":"none","repeatable":false,"required":false,"spellings":["--max_candidates"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"barcodes","usage":"MotifTools barcodes [-h] --barcode_length BARCODE_LENGTH [--alphabet ALPHABET] [--motif_file MOTIF_FILE] [--exclude EXCLUDE] [--max_candidates MAX_CANDIDATES] --output OUTPUT [--force]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"Input MEME motif collection file.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_name","flags":"--motif_name","help":"Name of the motif used to derive the transversion target.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_name"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":0,"dest":"warn_score_cutoff","flags":"--warn_score_cutoff","help":"Heuristic source-motif score cutoff (finite real; default 0). Warn on stderr if the full-width target scores at or above this value on either strand. Diagnostics only; does not change FASTA.","nargs":"none","repeatable":false,"required":false,"spellings":["--warn_score_cutoff"],"type":"float"}],"help":"Select one named motif and emit one deterministic full-width transversion FASTA. Consensus uses maximum-probability bases with A, C, G, T letter ties. Pairs from position zero choose the allowed transversion dinucleotide with the minimum source-PWM probability product, breaking equal products lexicographically A, C, G, T. An unmatched terminal chooses its minimum-probability allowed transversion with the same letter order. Original PWM orientation is retained. Before publication, the full-width target is scored against the source motif on both strands with MemeMotif.calculate_pwm_score. If either score is at or above --warn_score_cutoff (default 0), a warning is emitted on stderr; FASTA bytes and exit status are unchanged. There is no motif-knockout guarantee and no seed or method selector. The FASTA identifier is dinucleotide_transversion_<motif_name>.","path":"dinucleotide_transversion","usage":"MotifTools dinucleotide_transversion [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --output OUTPUT [--force] [--warn_score_cutoff WARN_SCORE_CUTOFF]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"Input MEME motif collection file.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_name","flags":"--motif_name","help":"Name of the motif to sample.","nargs":"none","repeatable":false,"required":true,"spellings":["--motif_name"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"num_sequences","flags":"--num_sequences","help":"Number of sequences to generate.","nargs":"none","repeatable":false,"required":true,"spellings":["--num_sequences"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"seed","flags":"--seed","help":"Deterministic random seed (0 is valid).","nargs":"none","repeatable":false,"required":false,"spellings":["--seed"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"pwm_seq","usage":"MotifTools pwm_seq [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --num_sequences NUM_SEQUENCES [--seed SEED] --output OUTPUT [--force]"},{"arguments":[{"action":"_HelpAction","choices":[],"default":"inapplicable","dest":"help","flags":"-h, --help","help":"show this help message and exit","nargs":0,"repeatable":false,"required":false,"spellings":["-h","--help"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"sequence_length","flags":"--sequence_length","help":"Length of each generated sequence.","nargs":"none","repeatable":false,"required":true,"spellings":["--sequence_length"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"num_sequences","flags":"--num_sequences","help":"Number of sequences to generate.","nargs":"none","repeatable":false,"required":true,"spellings":["--num_sequences"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"ACGT","dest":"alphabet","flags":"--alphabet","help":"Ordered alphabet for uniform sampling (default ACGT).","nargs":"none","repeatable":false,"required":false,"spellings":["--alphabet"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"motif_file","flags":"--motif_file","help":"MEME motif collection for exclusions.","nargs":"none","repeatable":false,"required":false,"spellings":["--motif_file"],"type":"inapplicable"},{"action":"_AppendAction","choices":[],"default":"none","dest":"exclude","flags":"--exclude","help":"Motif exclusion MOTIF=CUTOFF (repeatable).","nargs":"none","repeatable":true,"required":false,"spellings":["--exclude"],"type":"inapplicable"},{"action":"_StoreAction","choices":[],"default":"none","dest":"seed","flags":"--seed","help":"Deterministic random seed (0 is valid).","nargs":"none","repeatable":false,"required":false,"spellings":["--seed"],"type":"int"},{"action":"_StoreAction","choices":[],"default":10000,"dest":"max_attempts","flags":"--max_attempts","help":"Maximum candidate attempts per output when exclusions are used.","nargs":"none","repeatable":false,"required":false,"spellings":["--max_attempts"],"type":"int"},{"action":"_StoreAction","choices":[],"default":"none","dest":"output","flags":"--output","help":"Output FASTA path, or '-' for stdout.","nargs":"none","repeatable":false,"required":true,"spellings":["--output"],"type":"inapplicable"},{"action":"_StoreTrueAction","choices":[],"default":false,"dest":"force","flags":"--force","help":"Replace an existing output file.","nargs":0,"repeatable":false,"required":false,"spellings":["--force"],"type":"inapplicable"}],"help":"","path":"random_seq","usage":"MotifTools random_seq [-h] --sequence_length SEQUENCE_LENGTH --num_sequences NUM_SEQUENCES [--alphabet ALPHABET] [--motif_file MOTIF_FILE] [--exclude EXCLUDE] [--seed SEED] [--max_attempts MAX_ATTEMPTS] --output OUTPUT [--force]"}] -->
 
 # MotifTools command reference
 
@@ -6434,7 +6987,8 @@ page and in the [site-wide exact-path index](../exact-path-index.md).
 
 **Purpose.** Motif-centric generation and transformation. Release `0.4.0a2`
 includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
-delivered in `0.2.0a1`.
+delivered in `0.2.0a1`. `dinucleotide_transversion` is supported on the
+MotifTools console script and is not bound to a completed release tag.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogenous-sequence
@@ -6457,7 +7011,7 @@ on stdout when `--output -`.
 has no command-specific defaults beyond optional `--force`.
 
 **Choices.** Top-level subcommands: `anti_motif`, `random_seq`, `pwm_seq`,
-`barcodes`.
+`barcodes`, `dinucleotide_transversion`.
 
 **Constraints.**
 
@@ -6466,7 +7020,11 @@ has no command-specific defaults beyond optional `--force`.
 - Path outputs require an existing parent directory and refuse overwrite unless
   `--force` is supplied.
 - Completed path outputs are written atomically via temporary file + rename.
-- Successful path commands produce no stdout or stderr.
+- Successful path commands produce no stdout. `dinucleotide_transversion` may
+  emit a `--warn_score_cutoff` heuristic source-motif warning on stderr (not a
+  p-value, and not a knockout guarantee) after successful publication; other
+  successful path commands remain silent on stderr. Compose the FASTA with
+  ordinary-offset mutagenesis; callers reverse-complement minus-strand inserts.
 
 **Failures.**
 
@@ -6480,7 +7038,8 @@ has no command-specific defaults beyond optional `--force`.
 collections](../../formats/motifs/meme.md) and synthetic sequence libraries
 derived from them. Use `pwm_seq` and `random_seq` to sample sequences from PWMs
 or uniform alphabets with optional motif exclusions; `barcodes` enumerates
-filtered barcode spaces in supplied-alphabet order; `anti_motif` derives
+filtered barcode spaces in supplied-alphabet order; `dinucleotide_transversion`
+emits one deterministic PWM-derived replacement sequence; `anti_motif` derives
 inverse-weight motif collections for screening. Motif scoring whose primary
 subject is a genomic-element or exogenous-sequence collection remains in
 `GenomicElementTools` and `ExogenousSequenceTools`.
@@ -6543,6 +7102,7 @@ Argparse exits for missing required flags or invalid choices; runtime validation
 
 - [`anti_motif`](anti-motif.md)
 - [`barcodes`](barcodes.md)
+- [`dinucleotide_transversion`](dinucleotide-transversion.md)
 - [`pwm_seq`](pwm-seq.md)
 - [`random_seq`](random-seq.md)
 
@@ -6554,6 +7114,7 @@ Every invocable command path and non-invocable command group appears exactly onc
 | --- | --- |
 | `anti_motif` | [`anti_motif`](anti-motif.md) |
 | `barcodes` | [`barcodes`](barcodes.md) |
+| `dinucleotide_transversion` | [`dinucleotide_transversion`](dinucleotide-transversion.md) |
 | `pwm_seq` | [`pwm_seq`](pwm-seq.md) |
 | `random_seq` | [`random_seq`](random-seq.md) |
 
@@ -6562,7 +7123,7 @@ Every invocable command path and non-invocable command group appears exactly onc
 Parser-derived invocation for `MotifTools`:
 
 ```text
-MotifTools [-h] {random_seq,pwm_seq,barcodes,anti_motif} ...
+MotifTools [-h] {random_seq,pwm_seq,barcodes,anti_motif,dinucleotide_transversion} ...
 ```
 
 ### Options
@@ -6571,7 +7132,7 @@ MotifTools [-h] {random_seq,pwm_seq,barcodes,anti_motif} ...
 | --- | --- | --- | --- | --- | --- | --- |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/motif-tools/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/index.md
 
 ## `reference/cli/motif-tools/pwm-seq.md`
 
@@ -6710,7 +7271,7 @@ MotifTools pwm_seq [-h] --motif_file MOTIF_FILE --motif_name MOTIF_NAME --num_se
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/pwm-seq/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/motif-tools/pwm-seq.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/pwm-seq.md
 
 ## `reference/cli/motif-tools/random-seq.md`
 
@@ -6836,7 +7397,7 @@ MotifTools random_seq [-h] --sequence_length SEQUENCE_LENGTH --num_sequences NUM
 | `--force` | no | `inapplicable` | inapplicable | `False` | no | Replace an existing output file. |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/cli/motif-tools/random-seq/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/cli/motif-tools/random-seq.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/cli/motif-tools/random-seq.md
 
 ## `reference/conventions.md`
 
@@ -6867,7 +7428,7 @@ The documentation build refreshes generated syntax from the selected code
 checkout and fails if the built reference lacks a required field.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/conventions/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/conventions.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/conventions.md
 
 ## `reference/formats/boolean-mask.md`
 
@@ -6949,16 +7510,31 @@ errors propagate from the underlying reader.
 - [`GenomicElementTools mask_op intersect`](../cli/genomic-element-tools/mask-op/intersect.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/boolean-mask/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/boolean-mask.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/boolean-mask.md
 
 ## `reference/formats/cli/exogenous-sequence-tools/assembly-outputs.md`
 
-# Adapter, concatenation, and barcode outputs
+# Adapter, concatenation, barcode, reverse-complement, and collection-stacking outputs
 
 Assembly commands write ordinary FASTA records (no additional metadata).
 `add_adapter` emits `left + input + right` and preserves input IDs; each
-adapter file must contain exactly one record. `concat` emits positional
-`seq5 + seq3` pairs and IDs selected by `5`, `3`, or `5_3`.
+adapter file must contain exactly one record. `concat` performs paired
+sequence joining: positional `seq5 + seq3` pairs and IDs selected by `5`, `3`,
+or `5_3`.
+
+`combine` performs collection stacking: records from each `--input_fasta` are
+written unchanged, in command-line order and file order within each input.
+Each `--input_fasta` requires a paired `--id_suffix` (empty string allowed)
+appended to IDs with no extra separator. Output IDs must be unique; a count
+mismatch, a duplicate ID, or an existing output path fails with `ValueError`
+and does not replace the output file. An empty input contributes no records.
+
+`reverse_complement` rewrites one exogenous FASTA: every record is
+reverse-complemented under IUPAC DNA rules with letter case preserved.
+Optional `--id_suffix` is appended to each ID with no extra separator.
+Output IDs must be unique; a non-IUPAC symbol, a duplicate ID, or an existing
+output path fails with `ValueError` and does not replace the output file.
+An empty input writes an empty FASTA.
 
 `barcode` consumes barcodes and input records in order. Its output is
 `barcode + element`, `element + barcode`, or both sides. IDs are original
@@ -7002,7 +7578,7 @@ Invalid choices, cardinality, or I/O fail.
 - [`ExogenousSequenceTools assemble`](../../../cli/exogenous-sequence-tools/assemble.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogenous-sequence-tools/assembly-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/exogenous-sequence-tools/assembly-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/exogenous-sequence-tools/assembly-outputs.md
 
 ## `reference/formats/cli/exogenous-sequence-tools/exogenous-fasta.md`
 
@@ -7055,7 +7631,7 @@ Malformed or unreadable files fail.
 - [`ExogenousSequenceTools`](../../../cli/exogenous-sequence-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogenous-sequence-tools/exogenous-fasta/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/exogenous-sequence-tools/exogenous-fasta.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/exogenous-sequence-tools/exogenous-fasta.md
 
 ## `reference/formats/cli/exogenous-sequence-tools/motif-outputs.md`
 
@@ -7104,7 +7680,7 @@ Invalid MEME/FASTA or incompatible lengths fail.
 - [MEME motif format](../../motifs/meme.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogenous-sequence-tools/motif-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/exogenous-sequence-tools/motif-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/exogenous-sequence-tools/motif-outputs.md
 
 ## `reference/formats/cli/exogenous-sequence-tools/mutagenesis.md`
 
@@ -7154,7 +7730,7 @@ Invalid files, arrays, or offsets fail.
 - [`ExogenousSequenceTools mutagenesis`](../../../cli/exogenous-sequence-tools/mutagenesis.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogenous-sequence-tools/mutagenesis/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/exogenous-sequence-tools/mutagenesis.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/exogenous-sequence-tools/mutagenesis.md
 
 ## `reference/formats/cli/exogenous-sequence-tools/onehot-outputs.md`
 
@@ -7202,7 +7778,7 @@ Mixed lengths or invalid input fail.
 - [`ExogenousSequenceTools onehot`](../../../cli/exogenous-sequence-tools/onehot.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogenous-sequence-tools/onehot-outputs/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/exogenous-sequence-tools/onehot-outputs.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/exogenous-sequence-tools/onehot-outputs.md
 
 ## `reference/formats/cli/exogenous-sequence-tools/track-stat-arrays.md`
 
@@ -7253,7 +7829,7 @@ Wrong dimensions and malformed ranges fail.
 - [Annotation arrays](../../elements/annotation-arrays.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/exogenous-sequence-tools/track-stat-arrays/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/exogenous-sequence-tools/track-stat-arrays.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/exogenous-sequence-tools/track-stat-arrays.md
 
 ## `reference/formats/cli/genomic-element-tools/bed6poly.md`
 
@@ -7330,7 +7906,7 @@ variants fail under `raise`; unresolved variants are omitted under `drop`.
 - [Ensembl SNP simple-info profile](../../snp/ensembl-simple-info.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/bed6poly/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/genomic-element-tools/bed6poly.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/genomic-element-tools/bed6poly.md
 
 ## `reference/formats/cli/genomic-element-tools/counttable.md`
 
@@ -7401,7 +7977,7 @@ with parser, `ValueError`, or I/O errors as applicable.
 - [`GenomicElementTools export CountTable`](../../../cli/genomic-element-tools/export/count-table.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/counttable/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/genomic-element-tools/counttable.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/genomic-element-tools/counttable.md
 
 ## `reference/formats/cli/genomic-element-tools/trebed.md`
 
@@ -7477,7 +8053,7 @@ I/O failures raise the applicable library or I/O exception.
 - [Foundation `TREbed` schema](../../foundation/trebed.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/genomic-element-tools/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/genomic-element-tools/trebed.md
 
 ## `reference/formats/cli/genomic-element-tools/wtes.md`
 
@@ -7555,7 +8131,7 @@ exception.
 - [FASTA profiles](../../elements/fasta.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/cli/genomic-element-tools/wtes/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/cli/genomic-element-tools/wtes.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/cli/genomic-element-tools/wtes.md
 
 ## `reference/formats/elements/annotation-arrays.md`
 
@@ -7639,7 +8215,7 @@ NPZ raise `ValueError`.
 - [`GenomicElementTools track2tss_bed`](../../cli/genomic-element-tools/track2tss-bed.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/elements/annotation-arrays/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/elements/annotation-arrays.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/elements/annotation-arrays.md
 
 ## `reference/formats/elements/fasta.md`
 
@@ -7732,7 +8308,7 @@ standard `>id` records.
 - [`ExogenousSequenceTools`](../../cli/exogenous-sequence-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/elements/fasta/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/elements/fasta.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/elements/fasta.md
 
 ## `reference/formats/foundation/bed-like.md`
 
@@ -7827,7 +8403,7 @@ failures propagate.
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed-like/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/bed-like.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/bed-like.md
 
 ## `reference/formats/foundation/bed3.md`
 
@@ -7894,7 +8470,7 @@ Wrong column count raises `BedTableLoadException`; I/O failures propagate.
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed3/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/bed3.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/bed3.md
 
 ## `reference/formats/foundation/bed3gene.md`
 
@@ -7960,7 +8536,7 @@ Schema mismatch raises `BedTableLoadException`; I/O failures propagate.
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed3gene/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/bed3gene.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/bed3gene.md
 
 ## `reference/formats/foundation/bed6.md`
 
@@ -8027,7 +8603,7 @@ Wrong column count raises `BedTableLoadException`; conversion and I/O failures p
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed6/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/bed6.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/bed6.md
 
 ## `reference/formats/foundation/bed6gene.md`
 
@@ -8093,7 +8669,7 @@ Schema mismatch raises `BedTableLoadException`; conversion and I/O failures prop
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bed6gene/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/bed6gene.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/bed6gene.md
 
 ## `reference/formats/foundation/bedgraph.md`
 
@@ -8159,7 +8735,7 @@ Schema mismatch raises `BedTableLoadException`; conversion and I/O failures prop
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/bedgraph/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/bedgraph.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/bedgraph.md
 
 ## `reference/formats/foundation/list-file.md`
 
@@ -8225,7 +8801,7 @@ Standard OS/IO and conversion errors propagate.
 - [`GenomicElementTools import stat_list`](../../cli/genomic-element-tools/import/stat-list.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/list-file/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/list-file.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/list-file.md
 
 ## `reference/formats/foundation/narrowpeak.md`
 
@@ -8291,7 +8867,7 @@ Schema mismatch raises `BedTableLoadException`; conversion and I/O failures prop
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/narrowpeak/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/narrowpeak.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/narrowpeak.md
 
 ## `reference/formats/foundation/pair-end.md`
 
@@ -8360,7 +8936,7 @@ Schema mismatch raises `BedTableLoadException`; conversion and I/O failures prop
 - [`BedTablePairEnd`](../../python/bedtable/bed-table-pair-end.md) (experimental)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/pair-end/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/pair-end.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/pair-end.md
 
 ## `reference/formats/foundation/region-schema.md`
 
@@ -8493,7 +9069,7 @@ selector.
 - [`GenomicElementTools`](../../cli/genomic-element-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/region-schema/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/region-schema.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/region-schema.md
 
 ## `reference/formats/foundation/trebed.md`
 
@@ -8569,7 +9145,7 @@ Schema mismatch raises `BedTableLoadException`; conversion and I/O failures prop
 - [`GenomicElementTools tss_relative_mutagenesis`](../../cli/genomic-element-tools/tss-relative-mutagenesis.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/foundation/trebed/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/foundation/trebed.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/foundation/trebed.md
 
 ## `reference/formats/gtf/gencode.md`
 
@@ -8647,7 +9223,7 @@ match no records raise filter-specific exceptions at operation level.
 - [`GTFHandle` and `GTFRecord`](../../python/gtf/gtf-utils.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/gtf/gencode/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/gtf/gencode.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/gtf/gencode.md
 
 ## `reference/formats/motifs/meme.md`
 
@@ -8747,7 +9323,7 @@ contextual `ValueError`. Unknown motif names raise `KeyError`.
 - [Motif-search track outputs (CLI)](../cli/exogenous-sequence-tools/motif-outputs.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/motifs/meme/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/motifs/meme.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/motifs/meme.md
 
 ## `reference/formats/signal/bigwig.md`
 
@@ -8829,7 +9405,7 @@ read errors propagate from `pyBigWig`.
 - [`GenomicElementTools count_paired_bw`](../../cli/genomic-element-tools/count-paired-bw.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/signal/bigwig/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/signal/bigwig.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/signal/bigwig.md
 
 ## `reference/formats/snp/ensembl-simple-info.md`
 
@@ -8906,7 +9482,7 @@ from callers such as `GenomicElementTools export bed6poly` when
 - [`GenomicElementTools export bed6poly`](../../cli/genomic-element-tools/export/bed6poly.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/formats/snp/ensembl-simple-info/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/formats/snp/ensembl-simple-info.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/formats/snp/ensembl-simple-info.md
 
 ## `reference/python/alphabetical-index.md`
 
@@ -8944,6 +9520,7 @@ Every supported class, function group, module, and standalone method page appear
 | `RGTools.logging.Logger` | [Logger](foundation/logger/) | Supported |
 | `RGTools.MemeMotif.MemeMotif` | [MemeMotif](motifs/meme-motif/) | Supported |
 | `RGTools.MotifGeneration` | [RGTools.MotifGeneration](motifs/motif-generation/) | Supported |
+| `RGTools.MotifGeneration.generate_dinucleotide_transversion` | [generate_dinucleotide_transversion](motifs/motif-generation/) | Supported |
 | `RGTools.MotifGeneration.MotifExclusion` | [MotifExclusion](motifs/motif-generation/) | Supported |
 | `RGTools.MotifGeneration.SequenceGenerationExhaustedError` | [SequenceGenerationExhaustedError](motifs/motif-generation/) | Supported |
 | `RGTools.SNP_utils.EnsemblRestSearch` | [EnsemblRestSearch](snp/ensembl-rest-search/) | Supported |
@@ -8951,7 +9528,7 @@ Every supported class, function group, module, and standalone method page appear
 | `RGTools.utils` | [Foundation utilities](foundation/utils/) | Supported |
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/alphabetical-index/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/alphabetical-index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/alphabetical-index.md
 
 ## `reference/python/bedtable/bed-region.md`
 
@@ -9011,7 +9588,7 @@ padded = region.pad_region(50, 50)
 - [bed3 format](../../formats/foundation/bed3.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-region/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/bedtable/bed-region.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/bedtable/bed-region.md
 
 ## `reference/python/bedtable/bed-table-pair-end.md`
 
@@ -9079,7 +9656,7 @@ pairs.load_from_file("pairs.tsv")
 - [BedTablePairEnd format](../../formats/foundation/pair-end.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table-pair-end/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/bedtable/bed-table-pair-end.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/bedtable/bed-table-pair-end.md
 
 ## `reference/python/bedtable/bed-table-plus.md`
 
@@ -9155,7 +9732,7 @@ table.load_from_file("regions.bed3gene")
 - [bed6gene format](../../formats/foundation/bed6gene.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table-plus/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/bedtable/bed-table-plus.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/bedtable/bed-table-plus.md
 
 ## `reference/python/bedtable/bed-table3.md`
 
@@ -9229,7 +9806,7 @@ print(len(table))
 - [BED-like region tables](../../formats/foundation/bed-like.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table3/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/bedtable/bed-table3.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/bedtable/bed-table3.md
 
 ## `reference/python/bedtable/bed-table6.md`
 
@@ -9288,7 +9865,7 @@ names = table.get_region_names()
 - [bed6 format](../../formats/foundation/bed6.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/bed-table6/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/bedtable/bed-table6.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/bedtable/bed-table6.md
 
 ## `reference/python/bedtable/iterator.md`
 
@@ -9338,7 +9915,7 @@ for region in table.iter_regions():
 - [BedTable3](bed-table3.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/bedtable/iterator/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/bedtable/iterator.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/bedtable/iterator.md
 
 ## `reference/python/elements/exogenous-sequences.md`
 
@@ -9453,7 +10030,7 @@ es.close()
 - [`ExogenousSequenceTools` CLI](../../cli/exogenous-sequence-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/exogenous-sequences/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/elements/exogenous-sequences.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/elements/exogenous-sequences.md
 
 ## `reference/python/elements/genomic-elements.md`
 
@@ -9611,7 +10188,7 @@ ge.close()
 - [`GenomicElementTools mask_op intersect`](../../cli/genomic-element-tools/mask-op/intersect.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/genomic-elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/elements/genomic-elements.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/elements/genomic-elements.md
 
 ## `reference/python/elements/index.md`
 
@@ -9651,7 +10228,7 @@ supported inherited operations.
 - [BED-like region tables](../../formats/foundation/bed-like.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/elements/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/elements/index.md
 
 ## `reference/python/foundation/exceptions.md`
 
@@ -9718,7 +10295,7 @@ except BedTableLoadException as exc:
 - [BedTable3](../bedtable/bed-table3.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/exceptions/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/foundation/exceptions.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/foundation/exceptions.md
 
 ## `reference/python/foundation/list-file.md`
 
@@ -9774,7 +10351,7 @@ print(lf.get_num_lines())
 - [ListFile format](../../formats/foundation/list-file.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/list-file/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/foundation/list-file.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/foundation/list-file.md
 
 ## `reference/python/foundation/logger.md`
 
@@ -9830,7 +10407,7 @@ log.unindent()
 N/A.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/logger/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/foundation/logger.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/foundation/logger.md
 
 ## `reference/python/foundation/utils.md`
 
@@ -9883,7 +10460,7 @@ rc = reverse_complement("ACGT")
 N/A.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/foundation/utils/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/foundation/utils.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/foundation/utils.md
 
 ## `reference/python/general-elements/general-elements.md`
 
@@ -10017,7 +10594,7 @@ ge.close()
 - [`GeneralElements.load_mask_from_arr()`](load-mask-from-arr.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/general-elements/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/general-elements/general-elements.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/general-elements/general-elements.md
 
 ## `reference/python/general-elements/load-mask-from-arr.md`
 
@@ -10089,7 +10666,7 @@ Raises `ValueError` when dtype is not boolean, the first dimension differs from
 the region count, or the shape is neither `(N,)` nor `(N, 1)`.
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/load-mask-from-arr/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/general-elements/load-mask-from-arr.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/general-elements/load-mask-from-arr.md
 
 ## `reference/python/general-elements/tss-relative-coordinates.md`
 
@@ -10195,7 +10772,7 @@ index = tss.tss_relative_to_track_index(
 - [TSS-relative mutagenesis guide](../../../guides/tss-relative-mutagenesis.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/general-elements/tss-relative-coordinates/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/general-elements/tss-relative-coordinates.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/general-elements/tss-relative-coordinates.md
 
 ## `reference/python/gtf/gtf-utils.md`
 
@@ -10314,7 +10891,7 @@ for record in handle:
 - [GENCODE GTF format](../../formats/gtf/gencode.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/gtf/gtf-utils/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/gtf/gtf-utils.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/gtf/gtf-utils.md
 
 ## `reference/python/index.md`
 
@@ -10474,7 +11051,7 @@ MEME motif collections and synthetic sequence generation.
 - Canonical page: [`Motif generation`](motifs/motif-generation/)
 - Aliases: `MotifGeneration`
 - Status: Supported
-- Members: `MotifExclusion`, `SequenceGenerationExhaustedError`, `parse_motif_exclusion`, `parse_motif_exclusions`, `validate_motif_exclusions`, `candidate_violates_exclusions`, `make_anti_motifs`, `iter_pwm_sequences`, `iter_random_sequences`, `iter_barcodes`
+- Members: `MotifExclusion`, `SequenceGenerationExhaustedError`, `parse_motif_exclusion`, `parse_motif_exclusions`, `validate_motif_exclusions`, `candidate_violates_exclusions`, `make_anti_motifs`, `iter_pwm_sequences`, `iter_random_sequences`, `iter_barcodes`, `generate_dinucleotide_transversion`
 - Search terms: `RGTools.MotifGeneration`, `MotifGeneration`
 
 ## BigWig signal
@@ -10514,7 +11091,7 @@ Ensembl REST rsID lookup helpers.
 - Search terms: `RGTools.SNP_utils.EnsemblRestSearch`, `EnsemblRestSearch`
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/index.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/index.md
 
 ## `reference/python/motifs/meme-motif.md`
 
@@ -10635,7 +11212,7 @@ score = MemeMotif.calculate_pwm_score("ACGT", meme.get_motif_pwm("M1"))
 - [`MotifTools` CLI](../../cli/motif-tools/index.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/motifs/meme-motif/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/motifs/meme-motif.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/motifs/meme-motif.md
 
 ## `reference/python/motifs/motif-generation.md`
 
@@ -10661,6 +11238,7 @@ from RGTools.MotifGeneration import (
     iter_pwm_sequences,
     iter_random_sequences,
     iter_barcodes,
+    generate_dinucleotide_transversion,
     parse_motif_exclusion,
     parse_motif_exclusions,
     validate_motif_exclusions,
@@ -10685,6 +11263,7 @@ Curated module members rendered from the aligned release source:
         - iter_pwm_sequences
         - iter_random_sequences
         - iter_barcodes
+        - generate_dinucleotide_transversion
       show_root_heading: true
       show_source: false
       heading_level: 4
@@ -10702,13 +11281,18 @@ Curated module members rendered from the aligned release source:
   evaluator for one candidate sequence.
 - Generators accept `MemeMotif` collections, counts, optional seeds, alphabets,
   exclusions, and attempt budgets as documented on each function.
+- `RGTools.MotifGeneration.generate_dinucleotide_transversion(meme, motif_name)`
+  — one deterministic uppercase transversion string of full PWM width. The
+  function has no warning cutoff and writes no stderr diagnostics; CLI
+  `--warn_score_cutoff` stays on `MotifTools dinucleotide_transversion`.
 
 ## Return or yield behavior
 
 `make_anti_motifs` returns a new `MemeMotif`. Iterator functions yield
 sequence strings in generation or enumeration order. Parsers return
 `MotifExclusion` values or tuples thereof. `candidate_violates_exclusions`
-returns a boolean.
+returns a boolean. `generate_dinucleotide_transversion` returns one sequence
+string.
 
 ## Raised exceptions
 
@@ -10723,7 +11307,10 @@ Anti-motif transformation preserves source motif order and metadata provenance.
 With exclusions active, MEME alphabet must be exactly `ACGT` and generated
 alphabets must be uppercase subsets of `ACGT`. Scores equal to the cutoff count
 as matches. Identical inputs and a fixed seed reproduce order and sequences
-within the installed release.
+within the installed release. `generate_dinucleotide_transversion` requires a
+DNA alphabet of exactly A, C, G, and T, retains original PWM orientation, and
+does not prove motif knockout. It does not accept `--warn_score_cutoff` or
+emit source-motif warnings.
 
 ## Ordering
 
@@ -10762,9 +11349,10 @@ first = next(iter_pwm_sequences(meme, meme.get_motif_list()[0], 1, seed=0))
 - [`MemeMotif`](meme-motif.md)
 - [MEME motif format](../../formats/motifs/meme.md)
 - [`MotifTools` CLI](../../cli/motif-tools/index.md)
+- [`MotifTools dinucleotide_transversion`](../../cli/motif-tools/dinucleotide-transversion.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/motifs/motif-generation/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/motifs/motif-generation.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/motifs/motif-generation.md
 
 ## `reference/python/signal/bw-track.md`
 
@@ -10892,7 +11480,7 @@ value = track.count_single_region("chr1", 1000, 2000)
 - [BigWig signal format](../../formats/signal/bigwig.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/signal/bw-track/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/signal/bw-track.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/signal/bw-track.md
 
 ## `reference/python/snp/ensembl-rest-search.md`
 
@@ -10997,4 +11585,4 @@ client = EnsemblRestSearch(genome_version="hg38")
 - [Ensembl SNP simple-info format](../../formats/snp/ensembl-simple-info.md)
 
 Canonical: https://dignomor.github.io/xp-genomic-tools-docs/reference/python/snp/ensembl-rest-search/
-Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/48078a8f9d132b892160d6e7f53046a71a0ae133/docs/reference/python/snp/ensembl-rest-search.md
+Raw: https://raw.githubusercontent.com/DignoMor/xp-genomic-tools-docs/cbff2934d8a6185b0c3d7c808895c31bdf8fc0e1/docs/reference/python/snp/ensembl-rest-search.md
