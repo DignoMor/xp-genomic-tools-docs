@@ -10,7 +10,7 @@ task-oriented.
 
 | Task | Owner | Typical entrypoint |
 | --- | --- | --- |
-| Generate or transform motifs and synthetic sequences | **MotifTools** (motif-centric) | [`pwm_seq`](../reference/cli/motif-tools/pwm-seq.md), [`random_seq`](../reference/cli/motif-tools/random-seq.md) |
+| Generate or transform motifs and synthetic sequences | **MotifTools** (motif-centric) | [`pwm_seq`](../reference/cli/motif-tools/pwm-seq.md), [`random_seq`](../reference/cli/motif-tools/random-seq.md), [`dinucleotide_transversion`](../reference/cli/motif-tools/dinucleotide-transversion.md) |
 | Score genomic regions with motifs | **GenomicElementTools** (element-centric) | [`motif_search`](../reference/cli/genomic-element-tools/motif-search.md) |
 | Score exogenous FASTA collections with motifs | **ExogenousSequenceTools** (exogenous-sequence-centric) | [`motif_search`](../reference/cli/exogenous-sequence-tools/motif-search.md) |
 
@@ -50,6 +50,11 @@ GCG
 >pwm_QUICKSTART_MOTIF_1
 ACG
 ```
+
+For a deterministic full-width transversion target from the same PWM, use
+[`MotifTools dinucleotide_transversion`](../reference/cli/motif-tools/dinucleotide-transversion.md).
+Worked even-width, odd-width, and tied-column examples live on that command page.
+The target transverts every consensus position; it does not prove motif knockout.
 
 For uniform random sequences (optionally with motif exclusions), use
 [`MotifTools random_seq`](../reference/cli/motif-tools/random-seq.md) as shown in

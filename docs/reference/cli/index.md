@@ -30,4 +30,4 @@ MEME motif generation and transformation: sample PWM or uniform sequences, enume
 
 - Canonical landing: [`MotifTools`](motif-tools/index.md)
 - Search terms: `MotifTools`, `motif-tools`
-- Top-level command groups: `anti_motif`, `barcodes`, `pwm_seq`, `random_seq`
+- Top-level command groups: `anti_motif`, `barcodes`, `dinucleotide_transversion`, `pwm_seq`, `random_seq`

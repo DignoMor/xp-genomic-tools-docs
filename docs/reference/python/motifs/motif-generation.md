@@ -20,6 +20,7 @@ from RGTools.MotifGeneration import (
     iter_pwm_sequences,
     iter_random_sequences,
     iter_barcodes,
+    generate_dinucleotide_transversion,
     parse_motif_exclusion,
     parse_motif_exclusions,
     validate_motif_exclusions,
@@ -44,6 +45,7 @@ Curated module members rendered from the aligned release source:
         - iter_pwm_sequences
         - iter_random_sequences
         - iter_barcodes
+        - generate_dinucleotide_transversion
       show_root_heading: true
       show_source: false
       heading_level: 4
@@ -61,13 +63,16 @@ Curated module members rendered from the aligned release source:
   evaluator for one candidate sequence.
 - Generators accept `MemeMotif` collections, counts, optional seeds, alphabets,
   exclusions, and attempt budgets as documented on each function.
+- `RGTools.MotifGeneration.generate_dinucleotide_transversion(meme, motif_name)`
+  — one deterministic uppercase transversion string of full PWM width.
 
 ## Return or yield behavior
 
 `make_anti_motifs` returns a new `MemeMotif`. Iterator functions yield
 sequence strings in generation or enumeration order. Parsers return
 `MotifExclusion` values or tuples thereof. `candidate_violates_exclusions`
-returns a boolean.
+returns a boolean. `generate_dinucleotide_transversion` returns one sequence
+string.
 
 ## Raised exceptions
 
@@ -82,7 +87,9 @@ Anti-motif transformation preserves source motif order and metadata provenance.
 With exclusions active, MEME alphabet must be exactly `ACGT` and generated
 alphabets must be uppercase subsets of `ACGT`. Scores equal to the cutoff count
 as matches. Identical inputs and a fixed seed reproduce order and sequences
-within the installed release.
+within the installed release. `generate_dinucleotide_transversion` requires a
+DNA alphabet of exactly A, C, G, and T, retains original PWM orientation, and
+does not prove motif knockout.
 
 ## Ordering
 
@@ -121,3 +128,4 @@ first = next(iter_pwm_sequences(meme, meme.get_motif_list()[0], 1, seed=0))
 - [`MemeMotif`](meme-motif.md)
 - [MEME motif format](../../formats/motifs/meme.md)
 - [`MotifTools` CLI](../../cli/motif-tools/index.md)
+- [`MotifTools dinucleotide_transversion`](../../cli/motif-tools/dinucleotide-transversion.md)

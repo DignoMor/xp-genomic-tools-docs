@@ -196,7 +196,9 @@ MOTIF_TOOLS = ToolRegistry(
     console_name="MotifTools",
     slug="motif-tools",
     group_paths=frozenset(),
-    invocable_paths=frozenset({"anti_motif", "random_seq", "pwm_seq", "barcodes"}),
+    invocable_paths=frozenset(
+        {"anti_motif", "random_seq", "pwm_seq", "barcodes", "dinucleotide_transversion"}
+    ),
 )
 
 ALL_TOOLS: tuple[ToolRegistry, ...] = (

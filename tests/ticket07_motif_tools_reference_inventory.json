@@ -10,7 +10,8 @@
         "anti_motif",
         "random_seq",
         "pwm_seq",
-        "barcodes"
+        "barcodes",
+        "dinucleotide_transversion"
       ],
       "path": "reference/cli/motif-tools"
     }

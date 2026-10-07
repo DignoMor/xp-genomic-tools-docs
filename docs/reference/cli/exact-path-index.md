@@ -55,5 +55,6 @@ Every installed console script, invocable command path, and non-invocable comman
 | `GenomicElementTools tss_relative_mutagenesis` | [tss_relative_mutagenesis](genomic-element-tools/tss-relative-mutagenesis.md) |
 | `MotifTools anti_motif` | [anti_motif](motif-tools/anti-motif.md) |
 | `MotifTools barcodes` | [barcodes](motif-tools/barcodes.md) |
+| `MotifTools dinucleotide_transversion` | [dinucleotide_transversion](motif-tools/dinucleotide-transversion.md) |
 | `MotifTools pwm_seq` | [pwm_seq](motif-tools/pwm-seq.md) |
 | `MotifTools random_seq` | [random_seq](motif-tools/random-seq.md) |

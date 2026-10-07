@@ -17,7 +17,13 @@ REFERENCE = ROOT / "docs/reference/cli/motif-tools"
 class Ticket07MotifToolsReferenceTest(unittest.TestCase):
     def test_inventory_covers_every_command_path(self) -> None:
         inventory = json.loads((REFERENCE / "inventory.json").read_text())
-        expected = {"anti_motif", "random_seq", "pwm_seq", "barcodes"}
+        expected = {
+            "anti_motif",
+            "random_seq",
+            "pwm_seq",
+            "barcodes",
+            "dinucleotide_transversion",
+        }
         self.assertEqual(set(inventory["commands"]), expected)
         self.assertNotIn("parser_reference", inventory)
 

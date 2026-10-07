@@ -170,6 +170,7 @@ nav:
           - Overview: reference/cli/motif-tools/index.md
           - anti_motif: reference/cli/motif-tools/anti-motif.md
           - barcodes: reference/cli/motif-tools/barcodes.md
+          - dinucleotide_transversion: reference/cli/motif-tools/dinucleotide-transversion.md
           - pwm_seq: reference/cli/motif-tools/pwm-seq.md
           - random_seq: reference/cli/motif-tools/random-seq.md
   - Data formats:
