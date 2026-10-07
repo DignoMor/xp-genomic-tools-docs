@@ -1,6 +1,6 @@
 # Python API grouped index
 
-Supported `RGTools` release `0.4.0a1`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
+Supported `RGTools` release `0.4.0a2`. Browse by API area; each entry shows the exact qualified name and links to the canonical page.
 
 ## Foundation
 
@@ -154,7 +154,7 @@ MEME motif collections and synthetic sequence generation.
 - Canonical page: [`Motif generation`](motifs/motif-generation/)
 - Aliases: `MotifGeneration`
 - Status: Supported
-- Members: `MotifExclusion`, `SequenceGenerationExhaustedError`, `parse_motif_exclusion`, `parse_motif_exclusions`, `validate_motif_exclusions`, `candidate_violates_exclusions`, `make_anti_motifs`, `iter_pwm_sequences`, `iter_random_sequences`, `iter_barcodes`
+- Members: `MotifExclusion`, `SequenceGenerationExhaustedError`, `parse_motif_exclusion`, `parse_motif_exclusions`, `validate_motif_exclusions`, `candidate_violates_exclusions`, `make_anti_motifs`, `iter_pwm_sequences`, `iter_random_sequences`, `iter_barcodes`, `generate_dinucleotide_transversion`
 - Search terms: `RGTools.MotifGeneration`, `MotifGeneration`
 
 ## BigWig signal

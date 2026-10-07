@@ -1,9 +1,24 @@
-# Adapter, concatenation, and barcode outputs
+# Adapter, concatenation, barcode, reverse-complement, and collection-stacking outputs
 
 Assembly commands write ordinary FASTA records (no additional metadata).
 `add_adapter` emits `left + input + right` and preserves input IDs; each
-adapter file must contain exactly one record. `concat` emits positional
-`seq5 + seq3` pairs and IDs selected by `5`, `3`, or `5_3`.
+adapter file must contain exactly one record. `concat` performs paired
+sequence joining: positional `seq5 + seq3` pairs and IDs selected by `5`, `3`,
+or `5_3`.
+
+`combine` performs collection stacking: records from each `--input_fasta` are
+written unchanged, in command-line order and file order within each input.
+Each `--input_fasta` requires a paired `--id_suffix` (empty string allowed)
+appended to IDs with no extra separator. Output IDs must be unique; a count
+mismatch, a duplicate ID, or an existing output path fails with `ValueError`
+and does not replace the output file. An empty input contributes no records.
+
+`reverse_complement` rewrites one exogenous FASTA: every record is
+reverse-complemented under IUPAC DNA rules with letter case preserved.
+Optional `--id_suffix` is appended to each ID with no extra separator.
+Output IDs must be unique; a non-IUPAC symbol, a duplicate ID, or an existing
+output path fails with `ValueError` and does not replace the output file.
+An empty input writes an empty FASTA.
 
 `barcode` consumes barcodes and input records in order. Its output is
 `barcode + element`, `element + barcode`, or both sides. IDs are original
@@ -15,7 +30,7 @@ same order. Too few barcodes or invalid choices fail with `ValueError`.
 Serialized outputs from FASTA assembly operations.
 ## Availability
 
-Supported in the current reference release (`0.4.0a1`).
+Supported in the current reference release (`0.4.0a2`).
 
 Available since `0.1.0a2`.
 

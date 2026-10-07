@@ -1,5 +1,5 @@
 site_name: xp-genomic-tools
-site_description: User docs for RGTools and companion CLIs (GenomicElementTools, ExogenousSequenceTools, and MotifTools 0.4.0a1)
+site_description: User docs for RGTools and companion CLIs (GenomicElementTools, ExogenousSequenceTools, and MotifTools 0.4.0a2)
 site_url: https://dignomor.github.io/xp-genomic-tools-docs/
 repo_url: https://github.com/DignoMor/xp-genomic-tools
 repo_name: DignoMor/xp-genomic-tools
@@ -150,7 +150,9 @@ nav:
               - Overview: reference/cli/exogenous-sequence-tools/assemble.md
               - assemble add_adapter: reference/cli/exogenous-sequence-tools/assemble/add-adapter.md
               - assemble barcode: reference/cli/exogenous-sequence-tools/assemble/barcode.md
+              - assemble combine: reference/cli/exogenous-sequence-tools/assemble/combine.md
               - assemble concat: reference/cli/exogenous-sequence-tools/assemble/concat.md
+              - assemble reverse_complement: reference/cli/exogenous-sequence-tools/assemble/reverse-complement.md
           - gen_track:
               - Overview: reference/cli/exogenous-sequence-tools/gen-track.md
               - gen_track single_loc: reference/cli/exogenous-sequence-tools/gen-track/single-loc.md
@@ -168,6 +170,7 @@ nav:
           - Overview: reference/cli/motif-tools/index.md
           - anti_motif: reference/cli/motif-tools/anti-motif.md
           - barcodes: reference/cli/motif-tools/barcodes.md
+          - dinucleotide_transversion: reference/cli/motif-tools/dinucleotide-transversion.md
           - pwm_seq: reference/cli/motif-tools/pwm-seq.md
           - random_seq: reference/cli/motif-tools/random-seq.md
   - Data formats:

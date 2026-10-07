@@ -7,7 +7,9 @@ Every installed console script, invocable command path, and non-invocable comman
 | `ExogenousSequenceTools assemble` | [assemble](exogenous-sequence-tools/assemble.md) |
 | `ExogenousSequenceTools assemble add_adapter` | [assemble add_adapter](exogenous-sequence-tools/assemble/add-adapter.md) |
 | `ExogenousSequenceTools assemble barcode` | [assemble barcode](exogenous-sequence-tools/assemble/barcode.md) |
+| `ExogenousSequenceTools assemble combine` | [assemble combine](exogenous-sequence-tools/assemble/combine.md) |
 | `ExogenousSequenceTools assemble concat` | [assemble concat](exogenous-sequence-tools/assemble/concat.md) |
+| `ExogenousSequenceTools assemble reverse_complement` | [assemble reverse_complement](exogenous-sequence-tools/assemble/reverse-complement.md) |
 | `ExogenousSequenceTools gen_track` | [gen_track](exogenous-sequence-tools/gen-track.md) |
 | `ExogenousSequenceTools gen_track single_loc` | [gen_track single_loc](exogenous-sequence-tools/gen-track/single-loc.md) |
 | `ExogenousSequenceTools motif_search` | [motif_search](exogenous-sequence-tools/motif-search.md) |
@@ -53,5 +55,6 @@ Every installed console script, invocable command path, and non-invocable comman
 | `GenomicElementTools tss_relative_mutagenesis` | [tss_relative_mutagenesis](genomic-element-tools/tss-relative-mutagenesis.md) |
 | `MotifTools anti_motif` | [anti_motif](motif-tools/anti-motif.md) |
 | `MotifTools barcodes` | [barcodes](motif-tools/barcodes.md) |
+| `MotifTools dinucleotide_transversion` | [dinucleotide_transversion](motif-tools/dinucleotide-transversion.md) |
 | `MotifTools pwm_seq` | [pwm_seq](motif-tools/pwm-seq.md) |
 | `MotifTools random_seq` | [random_seq](motif-tools/random-seq.md) |

@@ -4,7 +4,7 @@
     "Choices", "Constraints", "Outputs", "Ordering", "Side effects", "Failures"
   ],
   "entries": [
-    {"symbols": ["ExogenousSequenceTools", "assemble", "add_adapter", "concat", "barcode", "mutagenesis", "gen_track", "single_loc", "track_dim_reduction", "max", "argmax", "min", "argmin", "print_stat", "motif_search", "onehot"], "path": "reference/cli/exogenous-sequence-tools"},
+    {"symbols": ["ExogenousSequenceTools", "assemble", "add_adapter", "concat", "barcode", "reverse_complement", "combine", "mutagenesis", "gen_track", "single_loc", "track_dim_reduction", "max", "argmax", "min", "argmin", "print_stat", "motif_search", "onehot"], "path": "reference/cli/exogenous-sequence-tools"},
     {"symbols": ["Exogenous FASTA"], "path": "reference/formats/cli/exogenous-sequence-tools/exogenous-fasta"},
     {"symbols": ["Assembly outputs"], "path": "reference/formats/cli/exogenous-sequence-tools/assembly-outputs"},
     {"symbols": ["Mutagenesis"], "path": "reference/formats/cli/exogenous-sequence-tools/mutagenesis"},

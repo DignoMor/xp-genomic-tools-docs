@@ -22,7 +22,9 @@ Every subcommand accepts:
 | `--force` | Replace an existing destination file (not allowed with `--output -`) |
 
 Path outputs require an existing parent directory, refuse silent overwrite, and
-complete with an atomic rename. Successful path commands are silent.
+complete with an atomic rename. Successful path commands are silent on stdout.
+`dinucleotide_transversion` may emit a source-motif warning on stderr; other
+successful path commands remain silent on stderr as well.
 
 ## Commands
 
@@ -32,6 +34,7 @@ complete with an atomic rename. Successful path commands are silent.
 | `pwm_seq` | Implemented | Sample sequences from one named PWM |
 | `random_seq` | Implemented | Generate random sequences with optional motif exclusions |
 | `barcodes` | Implemented | Enumerate motif-filtered barcodes exhaustively |
+| `dinucleotide_transversion` | Supported | Generate one deterministic PWM-derived transversion target |
 
 ### `anti_motif`
 
@@ -104,6 +107,27 @@ MotifTools barcodes --barcode_length 4 --alphabet ACGT --motif_file motifs.meme 
 ```
 
 Reusable Python API: [`RGTools.MotifGeneration.iter_barcodes`](../reference/python/motifs/motif-generation.md).
+
+### `dinucleotide_transversion`
+
+Generate one deterministic full-width transversion target from a named motif PWM.
+Every position transverts relative to the source-PWM consensus. The FASTA
+identifier is `dinucleotide_transversion_<motif_name>`. Optional
+`--warn_score_cutoff` (default `0`) is a heuristic score threshold, not a
+p-value: if either strand scores at or above the cutoff, a warning is emitted
+on stderr after successful publication. There is no motif-knockout guarantee
+and no seed or method selector. Compose with ordinary-offset
+[`ExogenousSequenceTools mutagenesis`](ExogenousSequenceTools.md); callers
+reverse-complement the target for minus-strand hits.
+
+Example:
+
+```bash
+MotifTools dinucleotide_transversion --motif_file motifs.meme --motif_name MY_MOTIF --output dtv.fasta
+MotifTools dinucleotide_transversion --motif_file motifs.meme --motif_name MY_MOTIF --output -
+```
+
+Reusable Python API: [`RGTools.MotifGeneration.generate_dinucleotide_transversion`](../reference/python/motifs/motif-generation.md).
 
 ## Python module entrypoint
 

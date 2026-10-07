@@ -5,7 +5,7 @@
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a2`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 

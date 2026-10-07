@@ -86,7 +86,7 @@ class CliIndexAcceptanceTest(unittest.TestCase):
         for entry in site_index_entries(inventory):
             self.assertIn(entry["qualified_path"], exact)
             self.assertIn(entry["command_path"], exact)
-        self.assertEqual(len(site_index_entries(inventory)), 51)
+        self.assertEqual(len(site_index_entries(inventory)), 53)
 
     def test_release_build_validates_cli_indexes_and_retires_generated_links(self) -> None:
         """US53-US55: strict build proves indexes and canonical landings."""

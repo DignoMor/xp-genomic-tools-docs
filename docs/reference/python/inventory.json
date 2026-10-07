@@ -1,5 +1,5 @@
 {
-  "release": "0.4.0a1",
+  "release": "0.4.0a2",
   "internal_symbols": [
     "set_parser_genome",
     "set_parser_genomic_element_region",
@@ -292,12 +292,14 @@
       "index_entries": [
         {"name": "RGTools.MotifGeneration", "qualified_name": "RGTools.MotifGeneration"},
         {"name": "MotifExclusion", "qualified_name": "RGTools.MotifGeneration.MotifExclusion"},
-        {"name": "SequenceGenerationExhaustedError", "qualified_name": "RGTools.MotifGeneration.SequenceGenerationExhaustedError"}
+        {"name": "SequenceGenerationExhaustedError", "qualified_name": "RGTools.MotifGeneration.SequenceGenerationExhaustedError"},
+        {"name": "generate_dinucleotide_transversion", "qualified_name": "RGTools.MotifGeneration.generate_dinucleotide_transversion"}
       ],
       "symbols": [
         "MotifExclusion", "SequenceGenerationExhaustedError", "parse_motif_exclusion",
         "parse_motif_exclusions", "validate_motif_exclusions", "candidate_violates_exclusions",
-        "make_anti_motifs", "iter_pwm_sequences", "iter_random_sequences", "iter_barcodes"
+        "make_anti_motifs", "iter_pwm_sequences", "iter_random_sequences", "iter_barcodes",
+        "generate_dinucleotide_transversion"
       ]
     },
     {

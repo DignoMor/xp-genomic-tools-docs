@@ -4,7 +4,7 @@ This HTML page is the browser- and connector-readable peer of the compact
 plaintext agent index. Prefer it when a documentation connector returns
 empty content for `llms.txt`.
 
-**Documentation release:** `0.4.0a1`
+**Documentation release:** `0.4.0a2`
 
 **Code revision:** `34d0125061d41039d0d03b6cf2a5c5e0654ec5e8`
 

@@ -2,7 +2,7 @@
 
 `RGTools` is the importable Python library behind the CLIs. For end-to-end
 workflows, prefer the [CLI commands reference](reference/cli/index.md). This page
-is a light import overview for **0.4.0a1**.
+is a light import overview for **0.4.0a2**.
 
 ## Common imports
 
@@ -35,6 +35,7 @@ import RGTools.SNP_utils
 | FASTA-only sequence sets | `ExogenousSequences` |
 | MEME motif files | `MemeMotif` |
 | Anti-motif transforms | `RGTools.MotifGeneration.make_anti_motifs` |
+| PWM-derived transversion targets | `RGTools.MotifGeneration.generate_dinucleotide_transversion` |
 | TSS-relative coordinates | `RGTools.TSSRelativeCoordinates` |
 | BigWig signal | `SingleBwTrack` / paired track helpers |
 | One-item-per-line lists | `ListFile` |

@@ -2,6 +2,7 @@
   "commands": [
     "anti_motif",
     "barcodes",
+    "dinucleotide_transversion",
     "pwm_seq",
     "random_seq"
   ],
@@ -24,6 +25,13 @@
       "symbols": [
         "barcodes",
         "barcodes"
+      ]
+    },
+    {
+      "path": "reference/cli/motif-tools/dinucleotide-transversion",
+      "symbols": [
+        "dinucleotide_transversion",
+        "dinucleotide_transversion"
       ]
     },
     {

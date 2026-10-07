@@ -6,9 +6,10 @@ page and in the [site-wide exact-path index](../exact-path-index.md).
 
 ## Shared contract
 
-**Purpose.** Motif-centric generation and transformation. Release `0.4.0a1`
+**Purpose.** Motif-centric generation and transformation. Release `0.4.0a2`
 includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
-delivered in `0.2.0a1`.
+delivered in `0.2.0a1`. `dinucleotide_transversion` is supported on the
+MotifTools console script and is not bound to a completed release tag.
 
 **Availability.** `MotifTools` is the motif-generation console entry point.
 Motif scoring whose primary subject is a genomic-element or exogenous-sequence
@@ -31,7 +32,7 @@ on stdout when `--output -`.
 has no command-specific defaults beyond optional `--force`.
 
 **Choices.** Top-level subcommands: `anti_motif`, `random_seq`, `pwm_seq`,
-`barcodes`.
+`barcodes`, `dinucleotide_transversion`.
 
 **Constraints.**
 
@@ -40,7 +41,11 @@ has no command-specific defaults beyond optional `--force`.
 - Path outputs require an existing parent directory and refuse overwrite unless
   `--force` is supplied.
 - Completed path outputs are written atomically via temporary file + rename.
-- Successful path commands produce no stdout or stderr.
+- Successful path commands produce no stdout. `dinucleotide_transversion` may
+  emit a `--warn_score_cutoff` heuristic source-motif warning on stderr (not a
+  p-value, and not a knockout guarantee) after successful publication; other
+  successful path commands remain silent on stderr. Compose the FASTA with
+  ordinary-offset mutagenesis; callers reverse-complement minus-strand inserts.
 
 **Failures.**
 
@@ -54,7 +59,8 @@ has no command-specific defaults beyond optional `--force`.
 collections](../../../formats/motifs/meme.md) and synthetic sequence libraries
 derived from them. Use `pwm_seq` and `random_seq` to sample sequences from PWMs
 or uniform alphabets with optional motif exclusions; `barcodes` enumerates
-filtered barcode spaces in supplied-alphabet order; `anti_motif` derives
+filtered barcode spaces in supplied-alphabet order; `dinucleotide_transversion`
+emits one deterministic PWM-derived replacement sequence; `anti_motif` derives
 inverse-weight motif collections for screening. Motif scoring whose primary
 subject is a genomic-element or exogenous-sequence collection remains in
 `GenomicElementTools` and `ExogenousSequenceTools`.
@@ -63,4 +69,4 @@ subject is a genomic-element or exogenous-sequence collection remains in
 
 Sample two deterministic 3-mers from an inline PWM — see
 [`pwm_seq`](pwm-seq.md) for the seeded FASTA bytes produced in release
-`0.4.0a1`.
+`0.4.0a2`.

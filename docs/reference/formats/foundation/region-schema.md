@@ -8,7 +8,7 @@ the existing three-argument constructor.
 
 ## Availability
 
-Supported in the current reference release (`0.4.0a1`).
+Supported in the current reference release (`0.4.0a2`).
 
 ## Inputs
 

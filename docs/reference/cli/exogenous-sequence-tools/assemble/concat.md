@@ -5,7 +5,7 @@
 
 ## Availability
 
-Supported in `ExogenousSequenceTools` for release `0.4.0a1`. Invoke through the installed `ExogenousSequenceTools` console script.
+Supported in `ExogenousSequenceTools` for release `0.4.0a2`. Invoke through the installed `ExogenousSequenceTools` console script.
 
 ## Purpose
 
@@ -15,6 +15,11 @@ paired by positional `zip` order (extra records are ignored). Output sequence
 `i` is `seq5_i + seq3_i`; its ID is respectively `id5_i`, `id3_i`, or
 `id5_i_id3_i`. Invalid methods raise `ValueError`. The output is ordered by
 the paired inputs.
+
+This is **paired sequence joining**, not collection stacking. Use
+[`assemble combine`](combine.md) to append whole collections without changing
+sequences. See the
+[assembly output format](../../../formats/cli/exogenous-sequence-tools/assembly-outputs.md).
 
 ## Inputs
 

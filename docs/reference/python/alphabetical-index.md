@@ -32,6 +32,7 @@ Every supported class, function group, module, and standalone method page appear
 | `RGTools.logging.Logger` | [Logger](foundation/logger/) | Supported |
 | `RGTools.MemeMotif.MemeMotif` | [MemeMotif](motifs/meme-motif/) | Supported |
 | `RGTools.MotifGeneration` | [RGTools.MotifGeneration](motifs/motif-generation/) | Supported |
+| `RGTools.MotifGeneration.generate_dinucleotide_transversion` | [generate_dinucleotide_transversion](motifs/motif-generation/) | Supported |
 | `RGTools.MotifGeneration.MotifExclusion` | [MotifExclusion](motifs/motif-generation/) | Supported |
 | `RGTools.MotifGeneration.SequenceGenerationExhaustedError` | [SequenceGenerationExhaustedError](motifs/motif-generation/) | Supported |
 | `RGTools.SNP_utils.EnsemblRestSearch` | [EnsemblRestSearch](snp/ensembl-rest-search/) | Supported |

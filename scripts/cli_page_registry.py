@@ -177,6 +177,8 @@ EXOGENOUS_SEQUENCE_TOOLS = ToolRegistry(
             "assemble add_adapter",
             "assemble concat",
             "assemble barcode",
+            "assemble reverse_complement",
+            "assemble combine",
             "mutagenesis",
             "gen_track single_loc",
             "track_dim_reduction max",
@@ -194,7 +196,9 @@ MOTIF_TOOLS = ToolRegistry(
     console_name="MotifTools",
     slug="motif-tools",
     group_paths=frozenset(),
-    invocable_paths=frozenset({"anti_motif", "random_seq", "pwm_seq", "barcodes"}),
+    invocable_paths=frozenset(
+        {"anti_motif", "random_seq", "pwm_seq", "barcodes", "dinucleotide_transversion"}
+    ),
 )
 
 ALL_TOOLS: tuple[ToolRegistry, ...] = (
