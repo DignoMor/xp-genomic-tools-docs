@@ -77,7 +77,7 @@ def _restore_legacy_bootstrap_sources() -> None:
         target.write_text(completed.stdout)
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--code-root",
@@ -85,7 +85,7 @@ def main() -> None:
         default=None,
         help="Code checkout used to extract parser inventory.",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     code_root = _code_root(args.code_root)
     try:
         validate_authored_coverage()

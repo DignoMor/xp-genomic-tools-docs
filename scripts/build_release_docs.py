@@ -1127,7 +1127,7 @@ def main() -> None:
     validate_genomic_element_tools_inventory()
     _validate_source_contracts()
     _validate_raw_source_revision(raw_source_root, args.docs_revision, args.code_revision)
-    regenerate_cli_reference()
+    regenerate_cli_reference(["--code-root", str(code_root)])
     GENERATED_CLI_DIRECTORY.mkdir(parents=True, exist_ok=True)
     for tool, filename in (
         ("GenomicElementTools", "genomic-element-tools.md"),

@@ -64,7 +64,9 @@ Curated module members rendered from the aligned release source:
 - Generators accept `MemeMotif` collections, counts, optional seeds, alphabets,
   exclusions, and attempt budgets as documented on each function.
 - `RGTools.MotifGeneration.generate_dinucleotide_transversion(meme, motif_name)`
-  — one deterministic uppercase transversion string of full PWM width.
+  — one deterministic uppercase transversion string of full PWM width. The
+  function has no warning cutoff and writes no stderr diagnostics; CLI
+  `--warn_score_cutoff` stays on `MotifTools dinucleotide_transversion`.
 
 ## Return or yield behavior
 
@@ -89,7 +91,8 @@ alphabets must be uppercase subsets of `ACGT`. Scores equal to the cutoff count
 as matches. Identical inputs and a fixed seed reproduce order and sequences
 within the installed release. `generate_dinucleotide_transversion` requires a
 DNA alphabet of exactly A, C, G, and T, retains original PWM orientation, and
-does not prove motif knockout.
+does not prove motif knockout. It does not accept `--warn_score_cutoff` or
+emit source-motif warnings.
 
 ## Ordering
 

@@ -39,6 +39,21 @@ class Ticket07MotifToolsReferenceTest(unittest.TestCase):
         ):
             self.assertIn(phrase, text)
 
+    def test_semantic_reference_documents_dinucleotide_warning_and_composition(self) -> None:
+        text = (REFERENCE / "dinucleotide-transversion.md").read_text()
+        for phrase in (
+            "warn_score_cutoff",
+            "stderr",
+            "heuristic",
+            "p-value",
+            "nsites",
+            "knockout",
+            "original PWM orientation",
+            "ExogenousSequenceTools mutagenesis",
+            "reverse-complement",
+        ):
+            self.assertIn(phrase, text)
+
     def test_built_artifact_has_complete_cli_and_api_pages(self) -> None:
         inventory = json.loads((ROOT / "tests/ticket07_motif_tools_reference_inventory.json").read_text())
         with tempfile.TemporaryDirectory() as directory:

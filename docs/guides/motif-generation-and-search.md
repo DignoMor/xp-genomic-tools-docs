@@ -53,8 +53,18 @@ ACG
 
 For a deterministic full-width transversion target from the same PWM, use
 [`MotifTools dinucleotide_transversion`](../reference/cli/motif-tools/dinucleotide-transversion.md).
-Worked even-width, odd-width, and tied-column examples live on that command page.
-The target transverts every consensus position; it does not prove motif knockout.
+Worked even-width, odd-width, tied-column, warning, and mutagenesis-composition
+examples live on that command page. The target transverts every consensus
+position relative to the source PWM, not necessarily relative to an observed
+allele. Required matrix-header `nsites` and `E` stay in force.
+
+The CLI `--warn_score_cutoff` (default `0`) is a heuristic score threshold, not
+a p-value. A warning on stderr does not change FASTA bytes or exit status and
+does not prove motif knockout. The check scores only the source motif on the
+isolated target; evaluate other motifs or insertion boundaries separately if
+required. Callers reverse-complement the generated FASTA for minus-strand hits
+before ordinary-offset mutagenesis. The generation library function does not
+take a cutoff.
 
 For uniform random sequences (optionally with motif exclusions), use
 [`MotifTools random_seq`](../reference/cli/motif-tools/random-seq.md) as shown in
