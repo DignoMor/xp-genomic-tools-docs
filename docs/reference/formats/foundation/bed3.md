@@ -6,7 +6,7 @@ Represent one genomic interval with the BED3 schema.
 
 ## Availability
 
-Supported in the current reference release (`0.4.0a1`).
+Supported in the current reference release (`0.4.0a2`).
 
 Available since `0.1.0a2`.
 

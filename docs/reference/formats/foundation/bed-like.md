@@ -6,7 +6,7 @@ Define the supported tab-separated, headerless region representations used by Be
 
 ## Availability
 
-Supported in the current reference release (`0.4.0a1`).
+Supported in the current reference release (`0.4.0a2`).
 
 Available since `0.1.0a2`.
 

@@ -5,7 +5,7 @@
 
 ## Availability
 
-Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a2`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 

@@ -6,7 +6,7 @@ Represent intervals with BED3 coordinates plus name, score, and strand.
 
 ## Availability
 
-Supported in the current reference release (`0.4.0a1`).
+Supported in the current reference release (`0.4.0a2`).
 
 Available since `0.1.0a2`.
 

@@ -24,7 +24,7 @@ AUTHORED_MASK_INTERSECT = (
 )
 MKDOCS_CONFIG = DOCS_ROOT / "mkdocs.yml"
 BUILD_SCRIPT = DOCS_ROOT / "scripts/build_release_docs.py"
-TARGET_RELEASE = "0.4.0a1"
+TARGET_RELEASE = "0.4.0a2"
 
 API_SEMANTIC_FIELDS = (
     "Status",

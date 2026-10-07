@@ -5,7 +5,7 @@
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.4.0a1`. Invoke through the installed `GenomicElementTools` console script.
+Supported in `GenomicElementTools` for release `0.4.0a2`. Invoke through the installed `GenomicElementTools` console script.
 
 ## Purpose
 

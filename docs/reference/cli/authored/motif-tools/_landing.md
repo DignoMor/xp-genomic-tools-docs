@@ -6,7 +6,7 @@ page and in the [site-wide exact-path index](../exact-path-index.md).
 
 ## Shared contract
 
-**Purpose.** Motif-centric generation and transformation. Release `0.4.0a1`
+**Purpose.** Motif-centric generation and transformation. Release `0.4.0a2`
 includes `anti_motif`, `pwm_seq`, exclusion-enabled `random_seq`, and `barcodes`
 delivered in `0.2.0a1`. `dinucleotide_transversion` is supported on the
 MotifTools console script and is not bound to a completed release tag.
@@ -69,4 +69,4 @@ subject is a genomic-element or exogenous-sequence collection remains in
 
 Sample two deterministic 3-mers from an inline PWM — see
 [`pwm_seq`](pwm-seq.md) for the seeded FASTA bytes produced in release
-`0.4.0a1`.
+`0.4.0a2`.

@@ -30,7 +30,7 @@ same order. Too few barcodes or invalid choices fail with `ValueError`.
 Serialized outputs from FASTA assembly operations.
 ## Availability
 
-Supported in the current reference release (`0.4.0a1`).
+Supported in the current reference release (`0.4.0a2`).
 
 Available since `0.1.0a2`.
 

@@ -2,7 +2,7 @@
 
 ## Availability
 
-Supported in `MotifTools` for release `0.4.0a1`. Invoke through the installed `MotifTools` console script.
+Supported in `MotifTools` for release `0.4.0a2`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -89,7 +89,7 @@ MotifTools barcodes \
   --output /tmp/barcodes-spec.fasta
 ```
 
-Identical inputs reproduce these FASTA bytes in release `0.4.0a1`:
+Identical inputs reproduce these FASTA bytes in release `0.4.0a2`:
 
 ```text
 >barcode_0

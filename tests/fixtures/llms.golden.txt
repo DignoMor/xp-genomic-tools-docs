@@ -1,4 +1,4 @@
-# xp-genomic-tools public reference (0.4.0a1)
+# xp-genomic-tools public reference (0.4.0a2)
 
 Code revision: `34d0125061d41039d0d03b6cf2a5c5e0654ec5e8`
 
