@@ -7,15 +7,14 @@ This is boolean array algebra, not genomic interval intersection.
 
 ## Availability
 
-Supported in `GenomicElementTools` for release `0.4.0a2`. Invoke it through the
+Supported in `GenomicElementTools` for release `0.5.0a1`. Invoke it through the
 installed `GenomicElementTools` console script.
 
 ## Inputs
 
 - `--region_file_path`: a headerless supported BED-like region table. Its row
   count establishes mask length and alignment.
-- Exactly one of `--region_file_type` (named format choices) or
-  `--region_file_schema` (version-1 region-schema JSON path).
+- `--region_file_type`: the region schema key shown in the generated choices.
 - `--mask_npy`: a `.npy` array or `.npz` containing exactly one array. Supply
   the flag at least twice.
 
@@ -35,14 +34,14 @@ Every input mask and the output use NumPy boolean dtype. See the
 
 ## Defaults
 
-No semantic input or output default applies: region path, one schema selector,
-masks, and `--opath` are required.
+No semantic input or output default applies: all four non-help flags are
+required. The parser metadata default for `--region_file_type` is described
+under Syntax because the required flag prevents that default from taking effect.
 
 ## Choices
 
-`--region_file_type` accepts exactly the parser-derived named-format choices.
-`--region_file_schema` accepts a filesystem path. The remaining flags have no
-enumerated choices.
+`--region_file_type` accepts exactly the parser-derived choices in the table.
+The remaining flags have no enumerated choices.
 
 ## Constraints
 
@@ -69,10 +68,10 @@ modified.
 
 ## Failures
 
-Argparse exits for missing required flags, invalid named-format choices, or
-providing both selectors. The command raises `ValueError` for fewer than two
-masks, non-boolean masks, shape or region-count mismatches, multi-array NPZ
-input, or an unsupported region schema encountered while loading.
+Argparse exits for missing required flags or invalid region-type choices. The
+command raises `ValueError` for fewer than two masks, non-boolean masks, shape
+or region-count mismatches, multi-array NPZ input, or an unsupported region
+schema encountered while loading.
 
 ## Example
 

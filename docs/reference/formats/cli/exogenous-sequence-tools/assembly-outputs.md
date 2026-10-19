@@ -24,9 +24,8 @@ An empty input writes an empty FASTA.
 `barcode + element`, `element + barcode`, identical barcodes at both ends, or
 canonical B + element + reverse-complement(B) for `5_3_rc`. The default stays
 `5_3`; `5_3_rc` is opt-in. The new mode and all-mode assigned-barcode
-validation are development changes after reference release `0.4.0a2`, pending
-the next release. Assigned barcodes in every mode must contain only
-A/C/G/T (case-insensitive); original letter case is retained. Invalid assigned
+validation are available in reference release `0.5.0a1`. Assigned barcodes in
+every mode must contain only A/C/G/T (case-insensitive); original letter case is retained. Invalid assigned
 barcodes fail before either output is written. Unused barcodes and element
 sequences are not checked by this rule. IDs are original element IDs
 (`original`) or barcode sequences (`barcode`). Its metadata CSV has exactly
@@ -44,7 +43,7 @@ original interpretation.
 Serialized outputs from FASTA assembly operations.
 ## Availability
 
-Supported in the current reference release (`0.4.0a2`).
+Supported in the current reference release (`0.5.0a1`).
 
 Available since `0.1.0a2`.
 

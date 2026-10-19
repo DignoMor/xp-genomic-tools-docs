@@ -2,7 +2,7 @@
 
 This page redirects to the canonical [CLI commands grouped index](../reference/cli/index.md).
 
-Three console scripts ship with **0.4.0a2**:
+Three console scripts ship with **0.5.0a1**:
 
 | Command | Canonical landing |
 | --- | --- |
