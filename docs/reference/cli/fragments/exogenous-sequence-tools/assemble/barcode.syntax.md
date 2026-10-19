@@ -3,7 +3,7 @@
 Parser-derived invocation for `ExogenousSequenceTools assemble barcode`:
 
 ```text
-ExogenousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --input_fasta INPUT_FASTA --input_class INPUT_CLASS --output_fasta OUTPUT_FASTA [--fasta_id_type {original,barcode}] --metadata_path METADATA_PATH [--barcode_method {5,3,5_3}]
+ExogenousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --input_fasta INPUT_FASTA --input_class INPUT_CLASS --output_fasta OUTPUT_FASTA [--fasta_id_type {original,barcode}] --metadata_path METADATA_PATH [--barcode_method {5,3,5_3,5_3_rc}]
 ```
 
 ### Options
@@ -16,4 +16,4 @@ ExogenousSequenceTools assemble barcode [-h] --barcode_fasta BARCODE_FASTA --inp
 | `--output_fasta` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output fasta file. |
 | `--fasta_id_type` | no | `inapplicable` | `original`, `barcode` | `original` | no | Type of the fasta id. |
 | `--metadata_path` | yes | `inapplicable` | inapplicable | `none` | no | Path to the output metadata file. |
-| `--barcode_method` | no | `inapplicable` | `5`, `3`, `5_3` | `5_3` | no | Method to use to add barcode to the exogenous sequences. |
+| `--barcode_method` | no | `inapplicable` | `5`, `3`, `5_3`, `5_3_rc` | `5_3` | no | Barcode layout: 5, 3, 5_3, or 5_3_rc (default 5_3). Assigned barcodes must use A/C/G/T. |
