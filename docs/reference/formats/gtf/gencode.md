@@ -6,7 +6,7 @@ Describe the supported annotation input consumed by `RGTools.GTF_utils`.
 
 ## Availability
 
-Supported in the current reference release (`0.4.0a2`).
+Supported in the current reference release (`0.5.0a1`).
 
 Available since `0.1.0a2`.
 

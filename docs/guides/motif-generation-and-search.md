@@ -42,7 +42,7 @@ MotifTools pwm_seq \
   --output pwm-sequences.fasta
 ```
 
-Release **0.4.0a2** reproduces:
+Release **0.5.0a1** reproduces:
 
 ```text
 >pwm_QUICKSTART_MOTIF_0
