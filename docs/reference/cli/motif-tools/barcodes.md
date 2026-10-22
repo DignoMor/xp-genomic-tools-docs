@@ -5,7 +5,7 @@
 
 ## Availability
 
-Barcode enumeration is supported in release `0.5.0a1`. The opt-in reverse-complement collision flag described below is an unreleased addition available from the development build. Invoke through the installed `MotifTools` console script.
+Barcode enumeration and opt-in reverse-complement collision exclusion are supported in release `0.5.0a2`. Invoke through the installed `MotifTools` console script.
 
 ## Purpose
 
@@ -21,14 +21,14 @@ Barcode enumeration is supported in release `0.5.0a1`. The opt-in reverse-comple
 | `--exclude` | no | Repeatable `MOTIF=CUTOFF` |
 | `--max_candidates` | no | Pre-exclusion candidate limit (default `1000000`) |
 | `--output` | yes | Output FASTA path or `-` |
-| `--exclude_rc_collisions` | no | Unreleased; keep the first accepted barcode from each distinct reverse-complement pair |
+| `--exclude_rc_collisions` | no | Keep the first accepted barcode from each distinct reverse-complement pair |
 | `--force` | no | Replace an existing destination file |
 
 ## Constraints
 
 Preflight the candidate count `len(alphabet) ** barcode_length` against
 `--max_candidates`, then stream the Cartesian product in supplied-alphabet order.
-Shared motif exclusions retain only surviving candidates. When the unreleased
+Shared motif exclusions retain only surviving candidates. When the
 `--exclude_rc_collisions` flag is set, motif-eligible candidates are also rejected
 if their reverse complement was accepted earlier in this run. Palindromes remain
 eligible. The flag works without a motif file and requires a nonempty unique
@@ -97,7 +97,7 @@ MotifTools barcodes \
   --output /tmp/barcodes-spec.fasta
 ```
 
-Identical inputs reproduce these FASTA bytes in release `0.5.0a1`:
+Identical inputs reproduce these FASTA bytes in release `0.5.0a2`:
 
 ```text
 >barcode_0

@@ -4,7 +4,7 @@
 
 The barcode command is available through the installed `ExogenousSequenceTools`
 console script. The `5_3_rc` mode and assigned-barcode alphabet restriction are
-available in release `0.5.0a1`.
+available in release `0.5.0a2`.
 
 ## Purpose
 

@@ -99,7 +99,7 @@ Optional motif exclusions retain only candidates that pass the same cutoff rules
 `barcode_<index>` in accepted order. When no barcodes survive exclusion, the command
 succeeds silently and writes zero-byte FASTA output.
 
-The development build also provides the unreleased opt-in
+Release `0.5.0a2` provides the opt-in
 `--exclude_rc_collisions` flag. It keeps the first motif-eligible member of each
 distinct reverse-complement pair, retains palindromes, and works without a motif
 file. When enabled, `--alphabet` must be a nonempty unique-character uppercase

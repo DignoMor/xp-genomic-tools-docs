@@ -7,7 +7,7 @@ PINTS-compatible six-column TSS-annotated BED serialization.
 
 ## Availability
 
-Supported in the current reference release (`0.5.0a1`).
+Supported in the current reference release (`0.5.0a2`).
 
 Available since `0.3.0a3`.
 
