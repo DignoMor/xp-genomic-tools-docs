@@ -18,6 +18,12 @@ barcode records and element sequences keep their existing handling. See the
 [barcode command](reference/cli/exogenous-sequence-tools/assemble/barcode.md)
 for construction and terminal-normalization guidance.
 
+The development build also contains the unreleased opt-in
+`MotifTools barcodes --exclude_rc_collisions` option. It is available from the
+development branch and will ship in a future release; no release version has
+been assigned. It keeps the first accepted barcode from each distinct
+reverse-complement pair and does not change default enumeration.
+
 ## What ships in 0.5.0a1
 
 | Component | Kind | Role |
