@@ -110,7 +110,7 @@ no assembly method. `ExogenousSequenceTools assemble barcode` adds an opt-in
 `5_3_rc` layout that places canonical B before the element and reverse-complement
 B after it, while the default remains `5_3`. Assigned barcodes in every mode
 must use only A/C/G/T, preserving case; this stricter input rule takes effect
-in release `0.5.0a1`. See the
+in release `0.5.0a2`. See the
 [barcode command reference](../../cli/exogenous-sequence-tools/assemble/barcode.md)
 for construction, normalization, and compatibility guidance.
 

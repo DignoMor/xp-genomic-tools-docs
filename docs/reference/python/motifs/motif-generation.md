@@ -63,6 +63,11 @@ Curated module members rendered from the aligned release source:
   evaluator for one candidate sequence.
 - Generators accept `MemeMotif` collections, counts, optional seeds, alphabets,
   exclusions, and attempt budgets as documented on each function.
+- `iter_barcodes(..., exclude_rc_collisions=False)` has an opt-in
+  keyword supported in release `0.5.0a2`. When enabled, it requires a
+  nonempty unique uppercase A/C/G/T alphabet and keeps the first motif-eligible
+  member of each distinct reverse-complement pair in supplied-alphabet order.
+  Palindromes remain eligible, and the option works without motif exclusions.
 - `RGTools.MotifGeneration.generate_dinucleotide_transversion(meme, motif_name)`
   — one deterministic uppercase transversion string of full PWM width. The
   function has no warning cutoff and writes no stderr diagnostics; CLI

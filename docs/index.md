@@ -3,22 +3,22 @@
 Regulatory genomic utilities for BED-like regions, sequences, motifs, and BigWig
 tracks.
 
-This site documents release **0.5.0a1**.
+This site documents release **0.5.0a2**.
 
-## Changes in 0.5.0a1
+## Changes in 0.5.0a2
 
-`ExogenousSequenceTools assemble barcode` adds the opt-in `5_3_rc` layout:
-canonical barcode + element + reverse-complemented barcode. The existing
-`5`, `3`, and `5_3` layouts and default stay the same.
+`MotifTools barcodes --exclude_rc_collisions` keeps the first accepted barcode
+from each distinct reverse-complement pair in supplied-alphabet order. The
+option retains palindromes and works with or without motif exclusions. When
+enabled, it requires a nonempty unique uppercase A/C/G/T alphabet; subsets and
+custom order are supported. Default enumeration stays the same.
 
-Assigned barcodes in **every layout** must now contain only A/C/G/T
-(case-insensitive, with original letter case preserved). Ambiguous or unsupported
-symbols raise `ValueError` before FASTA or metadata output is written. Unused
-barcode records and element sequences keep their existing handling. See the
-[barcode command](reference/cli/exogenous-sequence-tools/assemble/barcode.md)
-for construction and terminal-normalization guidance.
+The Python iterator exposes the matching keyword-only
+`exclude_rc_collisions=False` option. See the
+[barcode command](reference/cli/motif-tools/barcodes.md) and
+[Python API](reference/python/motifs/motif-generation.md) for details.
 
-## What ships in 0.5.0a1
+## What ships in 0.5.0a2
 
 | Component | Kind | Role |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ for construction and terminal-normalization guidance.
 | `MotifTools` | CLI | Generate random/PWM sequences, enumerate barcodes, and transform motifs |
 
 !!! warning "Alpha release"
-    **0.5.0a1** is a pre-release. APIs and CLI flags may change. Pin the tag if
+    **0.5.0a2** is a pre-release. APIs and CLI flags may change. Pin the tag if
     you need a fixed cut.
 
 `CountTableTools` is **not** included in this release.
@@ -36,9 +36,9 @@ for construction and terminal-normalization guidance.
 ## Where to start
 
 1. Open [Get started](get-started/index.md) and pick the [Python](get-started/python-quickstart.md) or [CLI](get-started/cli-quickstart.md) quickstart
-2. [Install](install.md) from the `0.5.0a1` code tag when you need setup detail
+2. [Install](install.md) from the `0.5.0a2` code tag when you need setup detail
 3. Skim [Concepts](concepts.md) and [Data formats](formats.md)
 4. Use [Python API](library.md) or [CLI commands](reference/cli/index.md) for exact lookup; browse [How-to guides](guides/index.md) for workflows
 5. Agents: start from the [Agent reference](agent-reference.md) HTML index or the compact [`llms.txt`](llms.txt) peer
 
-Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.5.0a1`).
+Code repository: [DignoMor/xp-genomic-tools](https://github.com/DignoMor/xp-genomic-tools) (tag `0.5.0a2`).

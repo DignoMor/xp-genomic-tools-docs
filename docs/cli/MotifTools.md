@@ -99,11 +99,18 @@ Optional motif exclusions retain only candidates that pass the same cutoff rules
 `barcode_<index>` in accepted order. When no barcodes survive exclusion, the command
 succeeds silently and writes zero-byte FASTA output.
 
+Release `0.5.0a2` provides the opt-in
+`--exclude_rc_collisions` flag. It keeps the first motif-eligible member of each
+distinct reverse-complement pair, retains palindromes, and works without a motif
+file. When enabled, `--alphabet` must be a nonempty unique-character uppercase
+subset of A/C/G/T; its supplied order determines which partner is retained.
+
 Example:
 
 ```bash
 MotifTools barcodes --barcode_length 6 --output barcodes.fasta
 MotifTools barcodes --barcode_length 4 --alphabet ACGT --motif_file motifs.meme --exclude MY_MOTIF=8.5 --output filtered.fasta
+MotifTools barcodes --barcode_length 6 --exclude_rc_collisions --output unique_rc.fasta
 ```
 
 Reusable Python API: [`RGTools.MotifGeneration.iter_barcodes`](../reference/python/motifs/motif-generation.md).
